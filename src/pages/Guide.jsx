@@ -34,7 +34,7 @@ export default function Guide({ narrow }) {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 14 }}>
         <Column pill="KEY ELEMENT" pillBg="#00638E" pillFg="#fff" top="#00638E" title="Read and know" text="Start here. These chapters set out your role, the model and the routines you are expected to run." items={read} />
         <Column pill="KEY ELEMENT" pillBg="#142850" pillFg="#fff" top="#142850" title="Use every week" text="Open these before and during your meetings and visits. Each one guides you through the meeting as you run it." items={use} />
-        <Column pill="FOR INSPIRATION" pillBg="#D6B874" pillFg="#142850" top="#D6B874" title="Dip in when useful" text="Come back to these when you want to build a coaching skill, lead a change or find a template." items={insp} />
+        <Column pill="FOR INSPIRATION" pillBg="#D6B874" pillFg="#142850" top="#D6B874" title="Draw on when needed" text="Come back to these when you want to build a coaching skill, lead a change or find a template." items={insp} />
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '22px 24px', background: '#F2F3F4', borderRadius: 4 }}>
         <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', color: '#63666A' }}>A GOOD FIRST WEEK</span>

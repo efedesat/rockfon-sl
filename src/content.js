@@ -68,7 +68,7 @@ export function tierOf(item) {
   const key = tool ? isKeyTool(item) : isKeyChapter(item);
   return key
     ? { label: 'Key element', hint: tool ? 'Use every week' : 'Read and know', bg: '#00638E', fg: '#fff' }
-    : { label: 'For inspiration', hint: 'Dip in when useful', bg: '#D6B874', fg: '#142850' };
+    : { label: 'For inspiration', hint: 'Draw on when needed', bg: '#D6B874', fg: '#142850' };
 }
 
 const wordsOf = sec => sec ? strip([sec.title, ...[sec.intro, ...sec.subs.map(s => s.blocks)].flat().map(b => [b.h, ...(b.items || []), ...(b.rows || []).flat()].join(' ')), ...sec.subs.map(s => s.title)].join(' ')).split(/\s+/).length : 0;
