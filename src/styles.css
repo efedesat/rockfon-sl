@@ -13,7 +13,16 @@
   --blue-pressed: #00466A;
   --navy: #142850;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Scale for large screens. The design is sized for laptops and tablets;
+     on wider screens the whole layout grows in proportion so line lengths
+     stay the same. Viewport heights are divided by --z to stay full height. */
+  --z: 1;
 }
+@media (min-width: 1440px) { :root { --z: 1.08; } }
+@media (min-width: 1600px) { :root { --z: 1.15; } }
+@media (min-width: 1880px) { :root { --z: 1.25; } }
+@media (min-width: 2400px) { :root { --z: 1.4; } }
+.app-root { zoom: var(--z); height: calc(100vh / var(--z)); }
 *, *::before, *::after { box-sizing: border-box; }
 html, body, #root { margin: 0; height: 100%; background: #fff; }
 body { font-family: var(--font-brand); color: #1A1A1A; -webkit-font-smoothing: antialiased; }
@@ -76,6 +85,7 @@ textarea::placeholder { color: #8A8D91; }
 
 @media print {
   html, body, #root { height: auto !important; }
+  :root { --z: 1; }
   .app-root { height: auto !important; overflow: visible !important; display: block !important; }
   .app-main { overflow: visible !important; }
   .no-print, header { display: none !important; }

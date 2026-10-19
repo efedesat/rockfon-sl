@@ -55,8 +55,12 @@ Vercel's own Password Protection (a paid add-on) would also work and could repla
 - Change text in `content/playbook.json`, commit and push. Vercel rebuilds the site.
 - Missing content shows as grey placeholder bars. A section with `"placeholder": true` shows a "Placeholder" tag on its tool page.
 - Meeting guides are read from sub-section titles: "Format and intended decisions", "Before the meeting", "During the meeting" (agenda table with Minutes / topic / questions), "After the meeting", "What good looks like and red flags". Frequency and duration come from the "The minimum commercial rhythm" table in "Four instances". Keep these titles stable.
-- Structure (chapters, topic order, tiers, photos, tool types) lives in `content/site-map.json`. For v0.1 the toolbox entries there also carry a few display settings from the prototype: `aka`, `format`, `accordion` and `files`.
+- Structure (chapters, topic order, tiers, photos, tool types) lives in `content/site-map.json`. `keyTools` sets which tools are Key element; `keyToolGroups` sets how they are grouped on the Toolbox page (Meeting guides, CRM guides, Change management guides). For v0.1 the toolbox entries there also carry a few display settings from the prototype: `aka`, `format`, `accordion` and `files`.
 - `src/settings.js` → `storyPages: false` shows the story topic as an ordinary article.
+
+## Large screens
+
+The design is sized for laptops and tablets. From 1440px wide the whole layout scales up in proportion (1.08× at 1440, 1.15× at 1600, 1.25× at 1880, 1.4× at 2400), so pages fill more of the screen while line lengths stay readable. The steps are in `src/styles.css` (`--z`).
 
 ## Routes
 

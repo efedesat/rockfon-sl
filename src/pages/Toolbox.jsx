@@ -1,5 +1,5 @@
 import { Link, useSearchParams } from 'react-router-dom';
-import { BY, KEY_TOOLS, TOOL_GROUPS, toolMeta } from '../content.js';
+import { BY, KEY_TOOL_GROUPS, KEY_TOOLS, TOOL_GROUPS, toolMeta } from '../content.js';
 import { PickUp } from './Home.jsx';
 
 const BAR = { 'tk-devmeet': '#1AB092', 'rh-visit': '#D6B874', 'tk-winroom': '#142850' };
@@ -20,10 +20,13 @@ export default function Toolbox({ narrow }) {
       <section style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <h2 style={{ margin: 0, display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 12px' }}>
           <span style={{ flex: 'none', whiteSpace: 'nowrap', padding: '4px 10px', borderRadius: 999, fontSize: 10.5, fontWeight: 800, letterSpacing: '.12em', background: '#00638E', color: '#fff' }}>KEY ELEMENT</span>
-          <span style={{ whiteSpace: 'nowrap', fontSize: 13, fontWeight: 700, color: '#63666A' }}>Use every week: meetings and visits</span>
+          <span style={{ whiteSpace: 'nowrap', fontSize: 13, fontWeight: 700, color: '#63666A' }}>Use every week</span>
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(260px,1fr))', gap: 12 }}>
-          {KEY_TOOLS.map(id => {
+        {KEY_TOOL_GROUPS.map(g => (
+          <div key={g.label} style={{ display: 'flex', flexDirection: 'column', gap: 10, paddingTop: 8 }}>
+            {g.label && <h3 style={{ margin: 0, fontSize: 15, fontWeight: 800, color: '#142850' }}>{g.label}</h3>}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(260px,1fr))', gap: 12 }}>
+          {g.tools.map(id => {
             const t = BY[id];
             return (
               <Link key={id} to={`/toolbox/${id}`} className="hv-shadow tr" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 16, minHeight: 120, padding: 20, border: '1px solid #D8D9DA', borderTop: `3px solid ${BAR[id] || '#00638E'}`, borderRadius: 4 }}>
@@ -32,11 +35,13 @@ export default function Toolbox({ narrow }) {
               </Link>
             );
           })}
-        </div>
+            </div>
+          </div>
+        ))}
       </section>
       <section style={{ display: 'flex', flexDirection: 'column', gap: 20, paddingTop: 8, borderTop: '1px solid #D8D9DA' }}>
         <button type="button" aria-expanded={more} aria-controls="more-tools" onClick={() => setParams(more ? {} : { more: '1' }, { replace: true })} className="tap" style={{ alignSelf: 'flex-start', display: 'flex', alignItems: 'center', gap: 8, padding: '8px 0', fontSize: 14, fontWeight: 800, color: '#00638E' }}>
-          {more ? 'Fewer tools ↑' : 'For inspiration: records, CRM, change guides, downloads ↓'}
+          {more ? 'Fewer tools ↑' : 'For inspiration: coaching questions, records, downloads ↓'}
         </button>
         {more && (
           <div id="more-tools" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: '28px 32px' }}>

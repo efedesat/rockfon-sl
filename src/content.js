@@ -34,6 +34,8 @@ export const CHAPTERS = siteMap.chapters.map(c => {
 });
 
 export const KEY_TOOLS = siteMap.keyTools;
+// Key tools grouped by type for the Toolbox page.
+export const KEY_TOOL_GROUPS = siteMap.keyToolGroups || [{ label: '', tools: KEY_TOOLS }];
 
 export const TOOL_GROUPS = siteMap.toolbox.map(g => ({
   label: g.group,

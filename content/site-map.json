@@ -897,7 +897,7 @@
           "title": "CRM glossary and data requirements",
           "type": "glossary",
           "kind": "Glossary",
-          "tier": "inspiration",
+          "tier": "key-weekly",
           "contentRef": null
         },
         {
@@ -905,7 +905,7 @@
           "title": "Dashboards",
           "type": "dashboard",
           "kind": "Dashboard guide",
-          "tier": "inspiration",
+          "tier": "key-weekly",
           "contentRef": null
         }
       ]
@@ -918,7 +918,7 @@
           "title": "Landmines and how to avoid them",
           "type": "accordion",
           "kind": "Landmines",
-          "tier": "inspiration",
+          "tier": "key-weekly",
           "contentRef": null,
           "accordion": {
             "item": "Landmine",
@@ -933,7 +933,7 @@
           "title": "Communication guides",
           "type": "accordion",
           "kind": "Communication guide",
-          "tier": "inspiration",
+          "tier": "key-weekly",
           "contentRef": null,
           "accordion": {
             "item": "Situation",
@@ -1034,6 +1034,38 @@
     "mt-act",
     "mt-team",
     "tk-devmeet",
-    "rh-visit"
+    "rh-visit",
+    "tk-gloss",
+    "tk-dash",
+    "ch-mines",
+    "ch-comms"
+  ],
+  "keyToolGroups": [
+    {
+      "label": "Meeting guides",
+      "tools": [
+        "mt-pipe",
+        "tk-winroom",
+        "mt-acc",
+        "mt-act",
+        "mt-team",
+        "tk-devmeet",
+        "rh-visit"
+      ]
+    },
+    {
+      "label": "CRM guides",
+      "tools": [
+        "tk-gloss",
+        "tk-dash"
+      ]
+    },
+    {
+      "label": "Change management guides",
+      "tools": [
+        "ch-mines",
+        "ch-comms"
+      ]
+    }
   ]
 }

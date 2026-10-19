@@ -243,7 +243,7 @@ export default function App() {
   };
 
   return (
-    <div className="app-root" style={{ position: 'relative', height: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', background: '#fff', color: '#1A1A1A' }}>
+    <div className="app-root" style={{ position: 'relative', display: 'flex', flexDirection: 'column', overflow: 'hidden', background: '#fff', color: '#1A1A1A' }}>
       <Header readSide={readSide} narrow={narrow} onContents={() => setContents(true)} />
       <div style={{ flex: 1, minHeight: 0, position: 'relative', display: 'flex' }}>
         <main ref={mainRef} id="main" className="app-main" onClick={onMainClick} style={{ flex: 1, minWidth: 0, overflowY: 'auto', position: 'relative' }}>

@@ -32,7 +32,7 @@ export default function Chapter({ ch, narrow }) {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,5fr) minmax(0,7fr)', minHeight: '100%' }}>
       <div style={{ position: 'relative' }}>
-        <div role="img" aria-label="" style={{ position: 'sticky', top: 0, height: 'calc(100vh - 60px)', background: `#D8D9DA url(${ch.img}) center/cover` }} />
+        <div role="img" aria-label="" style={{ position: 'sticky', top: 0, height: 'calc(100vh / var(--z) - 60px)', background: `#D8D9DA url(${ch.img}) center/cover` }} />
       </div>
       <div style={{ padding: narrow ? '76px 28px 120px' : '80px 56px 120px', display: 'flex', flexDirection: 'column', gap: 28, maxWidth: 640 }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>

@@ -48,7 +48,7 @@ function Story({ t, sec, narrow, mainRef }) {
     const m = mainRef.current;
     if (!m) return;
     const on = () => {
-      const mid = m.getBoundingClientRect().top + m.clientHeight * 0.55;
+      const mid = m.getBoundingClientRect().top + m.getBoundingClientRect().height * 0.55;
       let a = 0;
       refs.current.forEach((r, i) => { if (r && r.getBoundingClientRect().top < mid) a = i; });
       setIdea(a);
@@ -60,7 +60,7 @@ function Story({ t, sec, narrow, mainRef }) {
   const tier = tierOf(t.ch);
   return (
     <>
-      <div style={{ position: 'relative', minHeight: 'calc(100vh - 60px)', background: '#F2F3F4', display: 'flex', alignItems: 'flex-end' }}>
+      <div style={{ position: 'relative', minHeight: 'calc(100vh / var(--z) - 60px)', background: '#F2F3F4', display: 'flex', alignItems: 'flex-end' }}>
         <div style={{ width: '100%', maxWidth: 960, margin: '0 auto', padding: '96px 32px 64px', display: 'flex', flexDirection: 'column', gap: 20 }}>
           <TierLabel tier={tier} />
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.16em', color: '#63666A', textTransform: 'uppercase' }}>Chapter {t.ch.n} · {t.ch.title}</span>
@@ -75,13 +75,13 @@ function Story({ t, sec, narrow, mainRef }) {
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)' }}>
         <div style={{ position: 'relative' }}>
-          <div className="no-print" style={{ position: 'sticky', top: 0, height: 'calc(100vh - 60px)', overflow: 'hidden', background: '#142850' }}>
+          <div className="no-print" style={{ position: 'sticky', top: 0, height: 'calc(100vh / var(--z) - 60px)', overflow: 'hidden', background: '#142850' }}>
             {t.imgs.map((src, i) => <div key={i} aria-hidden="true" style={{ position: 'absolute', inset: 0, background: `#D8D9DA url(${src}) center/cover`, opacity: idea % t.imgs.length === i ? 1 : 0, transition: 'opacity 500ms ease' }} />)}
           </div>
         </div>
         <div style={{ padding: `0 ${narrow ? 32 : 64}px`, display: 'flex', flexDirection: 'column' }}>
           {ideas.map((b, i) => (
-            <div key={i} ref={el => { refs.current[i] = el; }} style={{ minHeight: '76vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 16, opacity: reduced || idea === i ? 1 : 0.28, transition: 'opacity 350ms ease' }}>
+            <div key={i} ref={el => { refs.current[i] = el; }} style={{ minHeight: 'calc(76vh / var(--z))', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 16, opacity: reduced || idea === i ? 1 : 0.28, transition: 'opacity 350ms ease' }}>
               <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: '.12em', color: '#00638E' }}>{String(i + 1).padStart(2, '0')}</span>
               {b ? <Rich as="p" style={{ margin: 0, fontSize: 22, lineHeight: 1.55, color: '#142850', textWrap: 'pretty' }} html={b.h} />
                 : <>
