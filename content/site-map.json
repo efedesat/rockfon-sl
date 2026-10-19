@@ -1,0 +1,1039 @@
+{
+  "version": "0.1",
+  "tiers": {
+    "key-read": "Key element · Read and know",
+    "key-weekly": "Key element · Use every week",
+    "inspiration": "For inspiration · Dip in when useful"
+  },
+  "chapters": [
+    {
+      "id": "ch1",
+      "number": 1,
+      "title": "The role",
+      "tier": "key-read",
+      "intro": "What being a sales leader at Rockfon involves, what leaders and reps can expect from each other, and what the role will ask of you.",
+      "photo": "assets/photos/image35.jpeg",
+      "relatedTools": [
+        "tk-kit",
+        "tk-voices"
+      ],
+      "topics": [
+        {
+          "id": "role-meaning",
+          "title": "What it means to be a sales leader at Rockfon",
+          "group": null,
+          "pageType": "story",
+          "module": null,
+          "contentRef": {
+            "part": "the-role",
+            "sectionIndex": 0
+          },
+          "relatedTool": null,
+          "photos": [
+            "assets/photos/image35.jpeg",
+            "assets/photos/image52.jpeg",
+            "assets/photos/image51.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "role-expect",
+          "title": "Expectations of sales leaders and sales reps",
+          "group": null,
+          "pageType": "editorial",
+          "module": "expect",
+          "contentRef": {
+            "part": "the-role",
+            "sectionIndex": 1
+          },
+          "relatedTool": "tk-kit",
+          "photos": [
+            "assets/photos/image56.jpeg",
+            "assets/photos/image31.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "role-require",
+          "title": "What it will require from you",
+          "group": null,
+          "pageType": "editorial",
+          "module": "selfcheck",
+          "contentRef": {
+            "part": "the-role",
+            "sectionIndex": 2
+          },
+          "relatedTool": null,
+          "photos": [
+            "assets/photos/image55.jpeg",
+            "assets/photos/image42.jpeg"
+          ],
+          "startHere": false
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "number": 2,
+      "title": "Coaching fundamentals",
+      "tier": "inspiration",
+      "intro": "The core coaching skills: choosing the right support, listening, asking questions, giving feedback and building trust.",
+      "photo": "assets/photos/image32.jpeg",
+      "relatedTools": [
+        "tk-qbank"
+      ],
+      "topics": [
+        {
+          "id": "sct-1",
+          "title": "Coaching in Rockfon sales",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 0
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image32.jpeg",
+            "assets/photos/image36.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-2",
+          "title": "Choose the right kind of support",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 1
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image49.jpeg",
+            "assets/photos/image60.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-3",
+          "title": "Keep your own thinking open",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 2
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image55.jpeg",
+            "assets/photos/image35.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-4",
+          "title": "Decide where coaching can help",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 3
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image31.jpeg",
+            "assets/photos/image52.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-5",
+          "title": "Listen before you decide",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 4
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image29.jpeg",
+            "assets/photos/image51.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-6",
+          "title": "Use questions to build ownership",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 5
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image56.jpeg",
+            "assets/photos/image42.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-7",
+          "title": "Build motivation and recognise progress",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 6
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image37.jpeg",
+            "assets/photos/image27.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-8",
+          "title": "Give clear feedback without blame",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 7
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image22.jpeg",
+            "assets/photos/image30.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-9",
+          "title": "Build trust and address difficult issues",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 8
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image50.jpeg",
+            "assets/photos/image41.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-10",
+          "title": "Make coaching a daily leadership practice",
+          "group": "Sales coaching training",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 9
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image36.jpeg",
+            "assets/photos/image45.jpeg"
+          ],
+          "startHere": false
+        }
+      ]
+    },
+    {
+      "id": "ch-smm",
+      "number": 3,
+      "title": "Sales management model",
+      "tier": "key-read",
+      "intro": "The model behind the routines: commercial priorities, the personal development wheel and the sales coaching program.",
+      "photo": "assets/photos/image29.jpeg",
+      "relatedTools": [
+        "tk-seg",
+        "tk-plan",
+        "tk-pdp",
+        "tk-qbank"
+      ],
+      "topics": [
+        {
+          "id": "sct-11",
+          "title": "Coach for strategic growth",
+          "group": "Commercial priorities and routines",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 10
+          },
+          "relatedTool": "tk-seg",
+          "photos": [
+            "assets/photos/image60.jpeg",
+            "assets/photos/image46.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-12",
+          "title": "Manage customer segmentation",
+          "group": "Commercial priorities and routines",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 11
+          },
+          "relatedTool": "tk-seg",
+          "photos": [
+            "assets/photos/image35.jpeg",
+            "assets/photos/image54.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-13",
+          "title": "Build a professional planning habit",
+          "group": "Commercial priorities and routines",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 12
+          },
+          "relatedTool": "tk-plan",
+          "photos": [
+            "assets/photos/image52.jpeg",
+            "assets/photos/image43.png"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-14",
+          "title": "Protect proactive and strategic time",
+          "group": "Commercial priorities and routines",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 13
+          },
+          "relatedTool": "tk-plan",
+          "photos": [
+            "assets/photos/image51.jpeg",
+            "assets/photos/image26.png"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "sct-15",
+          "title": "Coach effective AI use",
+          "group": "Commercial priorities and routines",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionIndex": 14
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image42.jpeg",
+            "assets/photos/image58.png"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "scp-5",
+          "title": "Begin coaching with the annual personal development plan",
+          "group": "Personal development wheel",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-program",
+            "sectionIndex": 4
+          },
+          "relatedTool": "tk-pdp",
+          "photos": [
+            "assets/photos/image54.jpeg",
+            "assets/photos/image56.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "scp-1",
+          "title": "Start with a clear working relationship",
+          "group": "Sales coaching program",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-program",
+            "sectionIndex": 0
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image30.jpeg",
+            "assets/photos/image49.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "scp-2",
+          "title": "Make time for development",
+          "group": "Sales coaching program",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-program",
+            "sectionIndex": 1
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image41.jpeg",
+            "assets/photos/image55.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "scp-3",
+          "title": "Seven conditions that make coaching workable",
+          "group": "Sales coaching program",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-program",
+            "sectionIndex": 2
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image45.jpeg",
+            "assets/photos/image31.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "scp-4",
+          "title": "Choose useful measures of progress",
+          "group": "Sales coaching program",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-program",
+            "sectionIndex": 3
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image46.jpeg",
+            "assets/photos/image29.jpeg"
+          ],
+          "startHere": false
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "number": 4,
+      "title": "Routines",
+      "tier": "key-read",
+      "intro": "The Rockfon routines: the personal development wheel and the sales development wheel, with a practical guide to running each meeting.",
+      "photo": "assets/photos/image30.jpeg",
+      "relatedTools": [
+        "tk-winroom",
+        "tk-devmeet"
+      ],
+      "topics": [
+        {
+          "id": "scp-6",
+          "title": "Run connected personal development and sales development wheels",
+          "group": "The two wheels",
+          "pageType": "editorial",
+          "module": "wheels",
+          "contentRef": {
+            "part": "sales-coaching-program",
+            "sectionIndex": 5
+          },
+          "relatedTool": "tk-devmeet",
+          "photos": [
+            "assets/photos/image43.png",
+            "assets/photos/image37.jpeg"
+          ],
+          "startHere": true
+        },
+        {
+          "id": "cw-three-commercial-management-disciplines",
+          "title": "Three commercial management disciplines",
+          "group": "Sales development wheel",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "three-commercial-management-disciplines"
+          },
+          "relatedTool": "mt-pipe",
+          "photos": [
+            "assets/photos/image31.jpeg",
+            "assets/photos/image52.jpeg"
+          ],
+          "startHere": true
+        },
+        {
+          "id": "cw-four-instances",
+          "title": "Four instances",
+          "group": "Sales development wheel",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "four-instances"
+          },
+          "relatedTool": "mt-pipe",
+          "photos": [
+            "assets/photos/image56.jpeg",
+            "assets/photos/image42.jpeg"
+          ],
+          "startHere": true
+        },
+        {
+          "id": "cw-common-operating-rules",
+          "title": "Common operating rules",
+          "group": "Sales development wheel",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "common-operating-rules"
+          },
+          "relatedTool": "mt-team",
+          "photos": [
+            "assets/photos/image22.jpeg",
+            "assets/photos/image30.jpeg"
+          ],
+          "startHere": true
+        },
+        {
+          "id": "door-mt-pipe",
+          "kind": "meeting-card",
+          "group": "Sales development wheel",
+          "opensTool": "mt-pipe",
+          "title": "1:1 Pipeline and Opportunity meeting"
+        },
+        {
+          "id": "door-winroom",
+          "kind": "meeting-card",
+          "group": "Sales development wheel",
+          "opensTool": "tk-winroom",
+          "title": "Must-Win Deal Room"
+        },
+        {
+          "id": "door-mt-acc",
+          "kind": "meeting-card",
+          "group": "Sales development wheel",
+          "opensTool": "mt-acc",
+          "title": "1:1 Account meeting"
+        },
+        {
+          "id": "door-mt-act",
+          "kind": "meeting-card",
+          "group": "Sales development wheel",
+          "opensTool": "mt-act",
+          "title": "1:1 Visit and Activity meeting"
+        },
+        {
+          "id": "door-mt-team",
+          "kind": "meeting-card",
+          "group": "Sales development wheel",
+          "opensTool": "mt-team",
+          "title": "Team Pipeline and Opportunity meeting"
+        },
+        {
+          "id": "door-devmeet",
+          "kind": "meeting-card",
+          "group": "Personal development wheel",
+          "opensTool": "tk-devmeet",
+          "title": "Personal development meetings"
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "number": 5,
+      "title": "Leading change",
+      "tier": "inspiration",
+      "intro": "How to prepare people for new ways of working, build commitment, keep quality and accountability, and respond when change stalls.",
+      "photo": "assets/photos/image43.png",
+      "relatedTools": [
+        "tk-qbank",
+        "ch-comms",
+        "ch-mines",
+        "tk-kit"
+      ],
+      "topics": [
+        {
+          "id": "lptc-1",
+          "title": "Prepare people before asking for change",
+          "group": "Leading people through change",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionIndex": 0
+          },
+          "relatedTool": "ch-comms",
+          "photos": [
+            "assets/photos/image43.png",
+            "assets/photos/image37.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "lptc-2",
+          "title": "Build commitment to change",
+          "group": "Leading people through change",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionIndex": 1
+          },
+          "relatedTool": "ch-comms",
+          "photos": [
+            "assets/photos/image26.png",
+            "assets/photos/image22.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "lptc-3",
+          "title": "Maintain quality and accountability",
+          "group": "Leading people through change",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionIndex": 2
+          },
+          "relatedTool": "ch-comms",
+          "photos": [
+            "assets/photos/image58.png",
+            "assets/photos/image50.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "lptc-4",
+          "title": "Prepare a change conversation",
+          "group": "Leading people through change",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionIndex": 3
+          },
+          "relatedTool": "ch-comms",
+          "photos": [
+            "assets/photos/image32.jpeg",
+            "assets/photos/image36.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "lptc-5",
+          "title": "Optional practice: leading change",
+          "group": "Leading people through change",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionIndex": 4
+          },
+          "relatedTool": "ch-comms",
+          "photos": [
+            "assets/photos/image49.jpeg",
+            "assets/photos/image60.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "lptc-6",
+          "title": "Turn understanding into action",
+          "group": "Leading people through change",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionIndex": 5
+          },
+          "relatedTool": "ch-comms",
+          "photos": [
+            "assets/photos/image55.jpeg",
+            "assets/photos/image35.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "lptc-8",
+          "title": "Address persistent failure to change",
+          "group": "Leading people through change",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionIndex": 7
+          },
+          "relatedTool": "ch-comms",
+          "photos": [
+            "assets/photos/image29.jpeg",
+            "assets/photos/image51.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "lptc-7",
+          "title": "Make Rocksell useful to the salesperson",
+          "group": "CRM and governance",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionIndex": 6
+          },
+          "relatedTool": "tk-gloss",
+          "photos": [
+            "assets/photos/image31.jpeg",
+            "assets/photos/image52.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "ch-gov",
+          "title": "Governing and following up on change",
+          "group": "CRM and governance",
+          "pageType": "editorial",
+          "module": "tracker",
+          "contentRef": null,
+          "relatedTool": null,
+          "photos": [
+            "assets/photos/image37.jpeg",
+            "assets/photos/image54.jpeg"
+          ],
+          "startHere": false
+        }
+      ]
+    }
+  ],
+  "toolbox": [
+    {
+      "group": "MEETINGS AND VISITS",
+      "tools": [
+        {
+          "id": "mt-pipe",
+          "title": "1:1 Pipeline and Opportunity meeting",
+          "type": "meeting",
+          "kind": "Meeting guide",
+          "tier": "key-weekly",
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "1-1-pipeline-and-opportunity-meeting"
+          },
+          "rhythmRow": "Individual Pipeline and Opportunity",
+          "pocketCard": 0
+        },
+        {
+          "id": "mt-acc",
+          "title": "1:1 Account meeting",
+          "type": "meeting",
+          "kind": "Meeting guide",
+          "tier": "key-weekly",
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "1-1-account-meeting"
+          },
+          "rhythmRow": "Individual Account",
+          "pocketCard": 1
+        },
+        {
+          "id": "mt-act",
+          "title": "1:1 Visit and Activity meeting",
+          "type": "meeting",
+          "kind": "Meeting guide",
+          "tier": "key-weekly",
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "1-1-visit-and-activity-meeting"
+          },
+          "rhythmRow": "Individual Visit and Activity",
+          "pocketCard": 2
+        },
+        {
+          "id": "mt-team",
+          "title": "Team Pipeline and Opportunity meeting",
+          "type": "meeting",
+          "kind": "Meeting guide",
+          "tier": "key-weekly",
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "team-pipeline-and-opportunity-meeting"
+          },
+          "rhythmRow": "Team Pipeline and Opportunity",
+          "pocketCard": 3
+        },
+        {
+          "id": "tk-devmeet",
+          "title": "Personal development meetings",
+          "type": "doc",
+          "kind": "Meeting guide",
+          "tier": "key-weekly",
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "personal-development-meeting-rhythm"
+          },
+          "aka": "Personal development meeting rhythm"
+        },
+        {
+          "id": "rh-visit",
+          "title": "Joint visit guide",
+          "type": "meeting",
+          "kind": "Visit guide",
+          "tier": "key-weekly",
+          "contentRef": null,
+          "pocketCard": 4,
+          "format": "Joint visit"
+        }
+      ]
+    },
+    {
+      "group": "COACHING METHODS",
+      "tools": [
+        {
+          "id": "tk-winroom",
+          "title": "Must-Win Deal Room",
+          "type": "doc",
+          "kind": "Coaching method",
+          "tier": "key-weekly",
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "the-must-win-deal-room-as-part-of-1-1-pipeline-and-opportunity-meeting"
+          },
+          "subtitle": "Part of the 1:1 Pipeline and Opportunity meeting",
+          "aka": "The Must-Win Deal Room (as part of 1:1 Pipeline and Opportunity meeting)"
+        },
+        {
+          "id": "tk-qbank",
+          "title": "Coaching questions",
+          "type": "qbank",
+          "kind": "Question bank",
+          "tier": "inspiration",
+          "contentRef": {
+            "part": "shared-toolbox"
+          }
+        }
+      ]
+    },
+    {
+      "group": "RECORDS",
+      "tools": [
+        {
+          "id": "tk-pdp",
+          "title": "Personal development plan",
+          "type": "record",
+          "kind": "Record",
+          "tier": "inspiration",
+          "contentRef": {
+            "part": "shared-toolbox",
+            "sectionIndex": 2
+          }
+        },
+        {
+          "id": "tk-qdr",
+          "title": "Quarterly development review",
+          "type": "record",
+          "kind": "Record",
+          "tier": "inspiration",
+          "contentRef": {
+            "part": "shared-toolbox",
+            "sectionIndex": 3
+          }
+        },
+        {
+          "id": "tk-seg",
+          "title": "Account segmentation and growth",
+          "type": "record",
+          "kind": "Record",
+          "tier": "inspiration",
+          "contentRef": {
+            "part": "shared-toolbox",
+            "sectionIndex": 4
+          }
+        },
+        {
+          "id": "tk-plan",
+          "title": "Rolling two-week plan",
+          "type": "record",
+          "kind": "Record",
+          "tier": "inspiration",
+          "contentRef": {
+            "part": "shared-toolbox",
+            "sectionIndex": 5
+          }
+        }
+      ]
+    },
+    {
+      "group": "CRM AND DATA",
+      "tools": [
+        {
+          "id": "tk-gloss",
+          "title": "CRM glossary and data requirements",
+          "type": "glossary",
+          "kind": "Glossary",
+          "tier": "inspiration",
+          "contentRef": null
+        },
+        {
+          "id": "tk-dash",
+          "title": "Dashboards",
+          "type": "dashboard",
+          "kind": "Dashboard guide",
+          "tier": "inspiration",
+          "contentRef": null
+        }
+      ]
+    },
+    {
+      "group": "LEADING CHANGE",
+      "tools": [
+        {
+          "id": "ch-mines",
+          "title": "Landmines and how to avoid them",
+          "type": "accordion",
+          "kind": "Landmines",
+          "tier": "inspiration",
+          "contentRef": null,
+          "accordion": {
+            "item": "Landmine",
+            "count": 5,
+            "mark": "#FF7768",
+            "label1": "WHY IT HAPPENS",
+            "label2": "HOW TO AVOID IT"
+          }
+        },
+        {
+          "id": "ch-comms",
+          "title": "Communication guides",
+          "type": "accordion",
+          "kind": "Communication guide",
+          "tier": "inspiration",
+          "contentRef": null,
+          "accordion": {
+            "item": "Situation",
+            "count": 4,
+            "mark": "#00638E",
+            "label1": "WHEN TO USE IT",
+            "label2": "KEY MESSAGES"
+          }
+        }
+      ]
+    },
+    {
+      "group": "TO SHARE AND CARRY",
+      "tools": [
+        {
+          "id": "tk-pocket",
+          "title": "Pocket cards",
+          "type": "pocket",
+          "kind": "Pocket cards",
+          "tier": "inspiration",
+          "contentRef": null
+        },
+        {
+          "id": "tk-kit",
+          "title": "Team kit",
+          "type": "downloads",
+          "kind": "Downloads",
+          "tier": "inspiration",
+          "contentRef": null,
+          "files": [
+            [
+              "PPTX",
+              "Download"
+            ],
+            [
+              "PAGE",
+              "Open"
+            ],
+            [
+              "PAGE",
+              "Share"
+            ],
+            [
+              "TEXT",
+              "Copy"
+            ],
+            [
+              "PPTX",
+              "Download"
+            ]
+          ]
+        },
+        {
+          "id": "tk-tpl",
+          "title": "Templates and checklists",
+          "type": "downloads",
+          "kind": "Downloads",
+          "tier": "inspiration",
+          "contentRef": null,
+          "files": [
+            [
+              "DOCX",
+              "Download"
+            ],
+            [
+              "XLSX",
+              "Download"
+            ],
+            [
+              "PDF",
+              "Download"
+            ],
+            [
+              "PDF",
+              "Download"
+            ],
+            [
+              "DOCX",
+              "Download"
+            ]
+          ]
+        },
+        {
+          "id": "tk-voices",
+          "title": "Leader voices",
+          "type": "voices",
+          "kind": "Video & quotes",
+          "tier": "inspiration",
+          "contentRef": null
+        }
+      ]
+    }
+  ],
+  "keyTools": [
+    "mt-pipe",
+    "tk-winroom",
+    "mt-acc",
+    "mt-act",
+    "mt-team",
+    "tk-devmeet",
+    "rh-visit"
+  ]
+}

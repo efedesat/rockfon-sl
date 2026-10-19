@@ -1,0 +1,48 @@
+/* ============================================================
+   ROCKFON · Spacing, radius, shadow, motion tokens
+   ROCKWOOL/Rockfon brand reads as precise & architectural:
+   restrained radii, crisp hairline borders, soft low shadows.
+   ============================================================ */
+:root {
+  /* ---- Spacing scale (4px base grid) ---- */
+  --sp-1:  0.25rem;  /*  4 */
+  --sp-2:  0.5rem;   /*  8 */
+  --sp-3:  0.75rem;  /* 12 */
+  --sp-4:  1rem;     /* 16 */
+  --sp-5:  1.5rem;   /* 24 */
+  --sp-6:  2rem;     /* 32 */
+  --sp-7:  3rem;     /* 48 */
+  --sp-8:  4rem;     /* 64 */
+  --sp-9:  6rem;     /* 96 */
+
+  /* ---- Radius (kept tight — architectural, not playful) ---- */
+  --radius-none: 0;
+  --radius-sm:   3px;
+  --radius-md:   6px;
+  --radius-lg:   12px;
+  --radius-pill: 999px;
+
+  /* ---- Borders ---- */
+  --border-hair:  1px solid var(--rf-gray-light);
+  --border-mid:   1px solid var(--rf-gray-mid);
+  --border-brand: 2px solid var(--rf-blue);
+  --border-width: 1px;
+
+  /* ---- Elevation (soft, cool-grey based) ---- */
+  --shadow-xs: 0 1px 2px rgba(20, 40, 80, 0.06);
+  --shadow-sm: 0 1px 3px rgba(20, 40, 80, 0.08), 0 1px 2px rgba(20, 40, 80, 0.06);
+  --shadow-md: 0 4px 12px rgba(20, 40, 80, 0.10);
+  --shadow-lg: 0 12px 32px rgba(20, 40, 80, 0.14);
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-out:      cubic-bezier(0.0, 0, 0.2, 1); /* @kind other */
+  --dur-fast:   120ms; /* @kind other */
+  --dur-base:   200ms; /* @kind other */
+  --dur-slow:   320ms; /* @kind other */
+
+  /* ---- Layout ---- */
+  --container:    1200px; /* @kind other */
+  --slide-w:      1280px; /* @kind other */
+  --slide-h:      720px;  /* @kind other */
+}

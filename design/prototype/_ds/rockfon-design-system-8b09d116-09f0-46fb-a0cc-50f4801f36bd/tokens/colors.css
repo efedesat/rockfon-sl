@@ -1,0 +1,59 @@
+/* ============================================================
+   ROCKFON · Color tokens
+   Derived from the official PowerPoint theme (theme1.xml).
+   Base palette + semantic aliases.
+   ============================================================ */
+:root {
+  /* ---- Brand core ---- */
+  --rf-blue:        #00638E;  /* Rockfon Blue · accent1 · primary */
+  --rf-navy:        #142850;  /* Deep navy · accent4 · covers, breakers */
+  --rf-navy-2:      #253355;  /* Secondary navy */
+
+  /* ---- Neutrals ---- */
+  --rf-black:       #000000;
+  --rf-ink:         #1A1A1A;  /* near-black body text */
+  --rf-gray:        #63666A;  /* dk2 · ROCKWOOL grey · body/captions */
+  --rf-gray-mid:    #B1B2B4;  /* accent3 · dividers, disabled */
+  --rf-gray-light:  #D8D9DA;  /* lt2 · hairlines, fills */
+  --rf-cloud:       #F2F3F4;  /* page tint / surface */
+  --rf-white:       #FFFFFF;
+
+  /* ---- Expressive / data accents (from theme) ---- */
+  --rf-sand:        #D6B874;  /* accent5 · warm gold */
+  --rf-sky:         #45A6DE;  /* accent6 · light blue */
+  --rf-sky-soft:    #73BCE6;
+  --rf-teal:        #1AB092;  /* green-teal */
+  --rf-teal-soft:   #54C4AD;
+  --rf-coral:       #FF7768;
+  --rf-yellow:      #EBEA79;
+  --rf-red:         #D20014;  /* alert / error */
+
+  /* ============================================================
+     Semantic aliases — reference these in product UI & slides
+     ============================================================ */
+  --text-strong:    var(--rf-ink);
+  --text-body:      var(--rf-gray);
+  --text-on-dark:   var(--rf-white);
+  --text-brand:     var(--rf-blue);
+  --text-muted:     var(--rf-gray-mid);
+
+  --surface-page:   var(--rf-white);
+  --surface-tint:   var(--rf-cloud);
+  --surface-card:   var(--rf-white);
+  --surface-dark:   var(--rf-navy);
+  --surface-brand:  var(--rf-blue);
+
+  --border-subtle:  var(--rf-gray-light);
+  --border-strong:  var(--rf-gray-mid);
+
+  --action:         var(--rf-blue);
+  --action-hover:   #00547A;   /* blue, darkened */
+  --action-active:  #00466A;
+  --action-contrast: var(--rf-white);
+
+  --focus-ring:     var(--rf-sky);
+  --success:        var(--rf-teal);
+  --warning:        var(--rf-sand);
+  --danger:         var(--rf-red);
+  --info:           var(--rf-sky);
+}

@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/rockfon-design-system-8b09d116-09f0-46fb-a0cc-50f4801f36bd/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/rockfon-design-system-8b09d116-09f0-46fb-a0cc-50f4801f36bd/tokens/colors.css">
+<link rel="stylesheet" href="_ds/rockfon-design-system-8b09d116-09f0-46fb-a0cc-50f4801f36bd/tokens/typography.css">
+<link rel="stylesheet" href="_ds/rockfon-design-system-8b09d116-09f0-46fb-a0cc-50f4801f36bd/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/rockfon-design-system-8b09d116-09f0-46fb-a0cc-50f4801f36bd/styles.css">
+<script src="_ds/rockfon-design-system-8b09d116-09f0-46fb-a0cc-50f4801f36bd/_ds_bundle.js"></script>
+<style>body{margin:0;background:#F2F3F4;font-family:Mulish,system-ui,sans-serif;color:#1A1A1A}a{color:#00638E}a:hover{color:#00547A}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#142850;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:700 15px/1.2 Mulish,sans-serif;color:#142850}.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1A1A1A;border-radius:4px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:700 13px/1.3 Mulish,sans-serif;color:#142850}.dv-card{max-width:100%;background:#fff;border:1px solid #D8D9DA;border-radius:4px;box-shadow:0 1px 3px rgba(20,40,80,.06);overflow:hidden}.dv-opt:target .dv-oid{background:#00638E;color:#fff}.dv-next{margin:22px 0 0;font:12px/1.5 Mulish,sans-serif;color:#63666A}</style>
+</helmet>
+
+<section style="padding:48px 44px 40px;border-bottom:1px solid rgba(0,0,0,.08);background:#fff">
+  <div style="max-width:1240px;display:flex;flex-direction:column;gap:36px">
+    <div style="display:flex;flex-direction:column;gap:10px;max-width:760px">
+      <div style="font:700 11px/1 Mulish;letter-spacing:.14em;text-transform:uppercase;color:#63666A">Sales Leadership Playbook · UX concept · Wireframes</div>
+      <h1 style="margin:0;font:800 40px/1.1 Mulish;color:#00638E;text-wrap:pretty">A playbook leaders use in the moment, not one they read once</h1>
+      <p style="margin:0;font:400 17px/1.55 Mulish;color:#63666A;text-wrap:pretty">The content stays the same as in a PDF. What changes is how fast a leader gets from "I have a pipeline review in 10 minutes" to the right agenda, questions and checklist. Below: why clickable, the content map, then wireframes of the navigation options and key screens.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:32px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font:700 14px Mulish;color:#142850">Flat PDF vs. clickable playbook</div>
+        <div style="display:grid;grid-template-columns:140px minmax(0,1fr) minmax(0,1fr);border:1px solid #D8D9DA;border-radius:4px;overflow:hidden;font:400 13px/1.45 Mulish">
+          <div style="padding:9px 12px;background:#142850;color:#fff;font-weight:700"></div>
+          <div style="padding:9px 12px;background:#142850;color:#fff;font-weight:700">PDF / PPTX</div>
+          <div style="padding:9px 12px;background:#00638E;color:#fff;font-weight:700">Clickable</div>
+          <div style="padding:10px 12px;font-weight:700;border-top:1px solid #D8D9DA">Finding things</div>
+          <div style="padding:10px 12px;color:#63666A;border-top:1px solid #D8D9DA">Scroll 60+ pages or remember the page number</div>
+          <div style="padding:10px 12px;border-top:1px solid #D8D9DA">Start from the situation ("Run a 1:1") or search. Any tool in 2 clicks</div>
+          <div style="padding:10px 12px;font-weight:700;border-top:1px solid #D8D9DA;background:#F2F3F4">Using it live</div>
+          <div style="padding:10px 12px;color:#63666A;border-top:1px solid #D8D9DA;background:#F2F3F4">Read beforehand, then work from memory</div>
+          <div style="padding:10px 12px;border-top:1px solid #D8D9DA;background:#F2F3F4">Agenda, questions and checklist on one screen, on laptop or phone</div>
+          <div style="padding:10px 12px;font-weight:700;border-top:1px solid #D8D9DA">Staying current</div>
+          <div style="padding:10px 12px;color:#63666A;border-top:1px solid #D8D9DA">"Playbook_v4_final.pdf" in many inboxes</div>
+          <div style="padding:10px 12px;border-top:1px solid #D8D9DA">One link, always the latest. A "What changed" note per update</div>
+          <div style="padding:10px 12px;font-weight:700;border-top:1px solid #D8D9DA;background:#F2F3F4">Reading → doing</div>
+          <div style="padding:10px 12px;color:#63666A;border-top:1px solid #D8D9DA;background:#F2F3F4">Passive reading</div>
+          <div style="padding:10px 12px;border-top:1px solid #D8D9DA;background:#F2F3F4">Checklists, self-check, cadence that goes straight into Outlook</div>
+          <div style="padding:10px 12px;font-weight:700;border-top:1px solid #D8D9DA">Is it used?</div>
+          <div style="padding:10px 12px;color:#63666A;border-top:1px solid #D8D9DA">No way to know</div>
+          <div style="padding:10px 12px;border-top:1px solid #D8D9DA">Optional page-view stats and a feedback button on each page</div>
+          <div style="padding:10px 12px;font-weight:700;border-top:1px solid #D8D9DA;background:#F2F3F4">Print</div>
+          <div style="padding:10px 12px;color:#63666A;border-top:1px solid #D8D9DA;background:#F2F3F4">Yes</div>
+          <div style="padding:10px 12px;border-top:1px solid #D8D9DA;background:#F2F3F4">Yes. Every page prints as a one-pager, and the full playbook still exports to PDF</div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font:700 14px Mulish;color:#142850">Rules that keep it simple</div>
+        <div style="display:flex;flex-direction:column;gap:8px;font:400 14px/1.45 Mulish">
+          <div style="display:flex;gap:12px;padding:12px 14px;border:1px solid #D8D9DA;border-radius:4px"><span style="font-weight:800;color:#00638E;min-width:18px">1</span><span><strong>Two clicks to any tool.</strong> No menus inside menus.</span></div>
+          <div style="display:flex;gap:12px;padding:12px 14px;border:1px solid #D8D9DA;border-radius:4px"><span style="font-weight:800;color:#00638E;min-width:18px">2</span><span><strong>One topic, one screen.</strong> Same page template everywhere, so it's learned once.</span></div>
+          <div style="display:flex;gap:12px;padding:12px 14px;border:1px solid #D8D9DA;border-radius:4px"><span style="font-weight:800;color:#00638E;min-width:18px">3</span><span><strong>Nothing to install, no extra login.</strong> A link on the intranet or in CRM.</span></div>
+          <div style="display:flex;gap:12px;padding:12px 14px;border:1px solid #D8D9DA;border-radius:4px"><span style="font-weight:800;color:#00638E;min-width:18px">4</span><span><strong>Works on a phone</strong> in the car park before a visit.</span></div>
+          <div style="display:flex;gap:12px;padding:12px 14px;border:1px solid #D8D9DA;border-radius:4px"><span style="font-weight:800;color:#00638E;min-width:18px">5</span><span><strong>Interactive only where it saves time:</strong> tabs, checklists, expand/collapse. No gamification, no animations.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font:700 14px Mulish;color:#142850">Content map: your content in five sections</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <div style="border:1px solid #D8D9DA;border-top:3px solid #00638E;border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:8px;font:400 13px/1.4 Mulish">
+          <div style="font:800 15px Mulish;color:#00638E">1 · The role</div>
+          <div>What it means to be a sales leader at Rockfon</div><div>Expectations: leaders and reps</div><div>What it will require from you</div>
+        </div>
+        <div style="border:1px solid #D8D9DA;border-top:3px solid #00638E;border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:8px;font:400 13px/1.4 Mulish">
+          <div style="font:800 15px Mulish;color:#00638E">2 · Coaching</div>
+          <div>Coaching for growth</div><div>From salesperson to sales champion</div><div>Pipeline, account and activity/visit coaching</div>
+        </div>
+        <div style="border:1px solid #D8D9DA;border-top:3px solid #00638E;border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:8px;font:400 13px/1.4 Mulish">
+          <div style="font:800 15px Mulish;color:#00638E">3 · Rhythm</div>
+          <div>Required cadence</div><div>The three meeting guides</div><div>Joint visit guide</div><div>Dashboards and how to read them</div>
+        </div>
+        <div style="border:1px solid #D8D9DA;border-top:3px solid #00638E;border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:8px;font:400 13px/1.4 Mulish">
+          <div style="font:800 15px Mulish;color:#00638E">4 · Leading change</div>
+          <div>Leading people through change</div><div>Getting teams to adopt CRM</div><div>Landmines and communication guides</div><div>Governance and follow-up</div>
+        </div>
+        <div style="border:1px dashed #B1B2B4;border-top:3px solid #D6B874;border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:8px;font:400 13px/1.4 Mulish;background:#FBFAF6">
+          <div style="font:800 15px Mulish;color:#142850">5 · Toolkit</div>
+          <div>Pocket cards</div><div>Team kit</div><div>Leader voices</div><div>CRM glossary, definitions and data requirements</div><div>Templates and checklists</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dv-turn" id="t3">
+  <div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Less LMS, more immersive: three directions</span></div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px;max-width:1240px;margin:0 0 36px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="font:800 14px Mulish;color:#142850">What's causing the LMS feel</div>
+      <div style="font:400 13.5px/1.55 Mulish;color:#63666A;text-wrap:pretty">The prototype treats every page the same: a unit to finish. Counters, ticks, "Mark as complete", previous/next and the completion message all reward moving on, not thinking. It also puts the big topics (what leadership means) and the working tools (meeting guides) in the same list, so both feel like coursework.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="font:800 14px Mulish;color:#142850">Proposed fix, whichever direction you pick</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font:400 13px/1.45 Mulish">
+        <div style="display:flex;gap:10px"><strong style="min-width:62px;color:#D20014">Remove</strong><span style="color:#63666A">Progress %, chapter counts, ticks, "Mark as complete", the completion message</span></div>
+        <div style="display:flex;gap:10px"><strong style="min-width:62px;color:#00638E">Split</strong><span style="color:#1A1A1A"><strong>Read</strong> (immersive big topics) and <strong>Use</strong> (meeting guides, cards, glossary: fast and functional, as they are now)</span></div>
+        <div style="display:flex;gap:10px"><strong style="min-width:62px;color:#00638E">Replace</strong><span style="color:#1A1A1A">Progress with private reflection notes. "Mark as complete" with "Take it to your team"</span></div>
+        <div style="display:flex;gap:10px"><strong style="min-width:62px;color:#00638E">Keep</strong><span style="color:#1A1A1A">A quiet "Pick up where you left off" link for returning visitors, with no score attached</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dv-opts">
+
+    <div class="dv-opt" id="3a">
+      <div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Editorial: read it like a feature article</div>
+      <div class="dv-card" style="width:480px">
+        <div style="position:relative;height:300px;background:#142850 url(assets/photo-office.jpg) center/cover">
+          <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,40,80,.92) 0%,rgba(20,40,80,.35) 65%,rgba(20,40,80,.55) 100%)"></div>
+          <div style="position:absolute;top:0;left:0;right:0;display:flex;align-items:center;gap:14px;padding:14px 18px;color:#fff;font:700 11.5px Mulish">
+            <img src="assets/logo-rockfon-white.png" alt="Rockfon" style="height:15px">
+            <span style="margin-left:auto">Contents</span><span>Toolbox</span>
+          </div>
+          <div style="position:absolute;left:24px;right:24px;bottom:24px;display:flex;flex-direction:column;gap:10px;color:#fff">
+            <span style="font:700 10px Mulish;letter-spacing:.16em">CHAPTER ONE</span>
+            <span style="font:800 26px/1.12 Mulish;text-wrap:pretty">What it means to be a sales leader at Rockfon</span>
+            <div style="height:8px;border-radius:2px;background:rgba(255,255,255,.35);width:70%"></div>
+            <span style="font:700 11px Mulish;opacity:.85;margin-top:6px">↓ Scroll to begin · 12 min read</span>
+          </div>
+        </div>
+        <div style="padding:26px 30px;display:flex;flex-direction:column;gap:22px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="height:9px;border-radius:2px;background:#E4E5E6;width:100%"></div><div style="height:9px;border-radius:2px;background:#E4E5E6;width:96%"></div><div style="height:9px;border-radius:2px;background:#E4E5E6;width:72%"></div>
+          </div>
+          <div style="padding:6px 0 6px 18px;border-left:3px solid #00638E;display:flex;flex-direction:column;gap:8px">
+            <div style="height:15px;border-radius:2px;background:#B1B2B4;width:92%"></div><div style="height:15px;border-radius:2px;background:#B1B2B4;width:58%"></div>
+            <span style="font:600 10.5px Mulish;color:#63666A">Leader name · Country</span>
+          </div>
+          <div style="height:150px;margin:0 -30px;background:#D8D9DA url(assets/photo-curved.jpg) center/cover"></div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="height:9px;border-radius:2px;background:#E4E5E6;width:100%"></div><div style="height:9px;border-radius:2px;background:#E4E5E6;width:84%"></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding:18px;background:#F2F3F4;border-radius:4px">
+            <span style="font:700 10px Mulish;letter-spacing:.14em;color:#00638E">PAUSE AND REFLECT</span>
+            <div style="height:12px;border-radius:2px;background:#B1B2B4;width:80%"></div>
+            <div style="height:54px;background:#fff;border:1px solid #D8D9DA;border-radius:3px;padding:8px 10px;font:400 11px Mulish;color:#63666A;box-sizing:border-box">Your private notes…</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;border-top:1px solid #D8D9DA;padding-top:18px">
+            <div style="display:flex;flex-direction:column;gap:4px"><span style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">TAKE IT TO YOUR TEAM</span><span style="font:800 13px Mulish;color:#00638E">Team kit for this topic →</span></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><span style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">KEEP READING</span><span style="font:800 13px Mulish;color:#00638E">Coaching for growth →</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="width:480px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.5 Mulish;color:#63666A">
+        <div>Each big topic is one long, well-paced page: full-bleed photography, large type, leader quotes and video inline, a reflection prompt partway through. No sidebar; "Contents" opens as an overlay. Closest to what your content team already writes, and the easiest to build.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="3b">
+      <div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a>Ceiling grid: explore it like a space</div>
+      <div class="dv-card" style="width:480px">
+        <div style="background:#142850;padding:14px 18px 22px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:14px;color:#fff;font:700 11.5px Mulish">
+            <img src="assets/logo-rockfon-white.png" alt="Rockfon" style="height:15px"><span style="margin-left:auto">Toolbox</span>
+          </div>
+          <span style="font:800 20px/1.2 Mulish;color:#fff">Sales leadership at Rockfon</span>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:62px;gap:3px;background:rgba(255,255,255,.12);padding:3px">
+            <div style="grid-column:span 2;grid-row:span 2;background:#142850 url(assets/photo-office.jpg) center/cover;position:relative;display:flex;align-items:flex-end;padding:10px"><div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,40,80,.85),rgba(20,40,80,.1))"></div><span style="position:relative;font:800 13px/1.2 Mulish;color:#fff">The role</span></div>
+            <div style="grid-column:span 2;background:#00638E;display:flex;align-items:flex-end;padding:10px;font:800 13px Mulish;color:#fff">Coaching</div>
+            <div style="background:#1E3A66;display:flex;align-items:flex-end;padding:10px;font:800 12px Mulish;color:#fff">Rhythm</div>
+            <div style="background:#1E3A66;display:flex;align-items:flex-end;padding:10px;font:800 12px/1.15 Mulish;color:#fff">Leading change</div>
+            <div style="grid-column:span 3;background:#1E3A66;display:flex;align-items:center;gap:10px;padding:0 12px;font:600 11px Mulish;color:rgba(255,255,255,.8)"><span style="width:28px;height:28px;border-radius:50%;background:#00638E;display:flex;align-items:center;justify-content:center;color:#fff">▶</span>Leader voices</div>
+            <div style="background:#D6B874;display:flex;align-items:flex-end;padding:10px;font:800 12px Mulish;color:#142850">Toolbox</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="padding:10px 18px;font:700 10.5px Mulish;color:#63666A;border-bottom:1px solid #D8D9DA">← Back to the grid &nbsp;·&nbsp; <span style="color:#00638E">The role</span></div>
+          <div style="display:grid;grid-template-columns:180px 1fr">
+            <div style="background:#D8D9DA url(assets/photo-curved.jpg) center/cover;min-height:250px"></div>
+            <div style="padding:20px;display:flex;flex-direction:column;gap:12px">
+              <span style="font:800 18px/1.2 Mulish;color:#00638E">The role</span>
+              <div style="height:9px;border-radius:2px;background:#E4E5E6;width:100%"></div><div style="height:9px;border-radius:2px;background:#E4E5E6;width:80%"></div>
+              <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px">
+                <div style="padding:11px 12px;border:1px solid #D8D9DA;border-radius:3px;font:800 12px Mulish;color:#142850;display:flex">What it means to lead here<span style="margin-left:auto;color:#00638E">→</span></div>
+                <div style="padding:11px 12px;border:1px solid #D8D9DA;border-radius:3px;font:800 12px Mulish;color:#142850;display:flex">What we expect, both ways<span style="margin-left:auto;color:#00638E">→</span></div>
+                <div style="padding:11px 12px;border:1px solid #D8D9DA;border-radius:3px;font:800 12px Mulish;color:#142850;display:flex">What it asks of you<span style="margin-left:auto;color:#00638E">→</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width:480px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.5 Mulish;color:#63666A">
+        <div>Home is a grid of tiles of different sizes, a nod to a Rockfon ceiling. There's no set order: leaders open what interests them, and each tile opens a "room" with a large image and a few clear doors onward. Strong brand moment and invites exploring. It needs good photography to work, and is less suited to reading front to back.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="3c">
+      <div class="dv-olabel"><a class="dv-oid" href="#3c">3c</a>Guided story: one idea per screen</div>
+      <div class="dv-card" style="width:480px">
+        <div style="background:#F2F3F4;padding:14px 18px 30px;display:flex;flex-direction:column;gap:22px">
+          <div style="display:flex;align-items:center;gap:14px;font:700 11.5px Mulish;color:#142850">
+            <img src="assets/logo-rockfon-blue.png" alt="Rockfon" style="height:15px"><span style="margin-left:auto">Contents</span><span>Toolbox</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;padding:10px 6px 0">
+            <span style="font:700 10px Mulish;letter-spacing:.16em;color:#63666A">THE ROLE</span>
+            <span style="font:800 26px/1.15 Mulish;color:#00638E;text-wrap:pretty">What does your team need from you that it doesn't get today?</span>
+            <span style="font:700 11px Mulish;color:#63666A">↓ Scroll</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:200px 1fr;border-top:1px solid #D8D9DA">
+          <div style="position:relative;background:#D8D9DA url(assets/photo-office.jpg) center/cover;min-height:300px">
+            <span style="position:absolute;left:10px;bottom:10px;padding:4px 8px;background:rgba(20,40,80,.85);color:#fff;font:600 10px Mulish;border-radius:2px">Image stays put, changes per idea</span>
+          </div>
+          <div style="padding:18px;display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;flex-direction:column;gap:8px;opacity:.35">
+              <span style="font:800 13px Mulish;color:#142850">Idea 1</span>
+              <div style="height:8px;border-radius:2px;background:#D8D9DA;width:100%"></div><div style="height:8px;border-radius:2px;background:#D8D9DA;width:70%"></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font:800 15px Mulish;color:#00638E">Idea 2</span>
+              <div style="height:9px;border-radius:2px;background:#D8D9DA;width:100%"></div><div style="height:9px;border-radius:2px;background:#D8D9DA;width:92%"></div><div style="height:9px;border-radius:2px;background:#D8D9DA;width:60%"></div>
+              <div style="margin-top:6px;padding:12px;border:1px solid #00638E;border-radius:3px;display:flex;flex-direction:column;gap:6px">
+                <span style="font:700 10px Mulish;letter-spacing:.12em;color:#00638E">ASK YOURSELF</span>
+                <div style="height:10px;border-radius:2px;background:#B1B2B4;width:85%"></div>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;opacity:.35">
+              <span style="font:800 13px Mulish;color:#142850">Idea 3</span>
+              <div style="height:8px;border-radius:2px;background:#D8D9DA;width:90%"></div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:16px 18px;background:#142850;color:#fff;display:flex;flex-direction:column;gap:6px">
+          <span style="font:700 10px Mulish;letter-spacing:.14em;opacity:.8">ONE THING TO TRY THIS WEEK</span>
+          <div style="height:11px;border-radius:2px;background:rgba(255,255,255,.5);width:76%"></div>
+        </div>
+      </div>
+      <div style="width:480px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.5 Mulish;color:#63666A">
+        <div>Each big topic opens with a question rather than a heading. The text is split into a few ideas: as you scroll, the current one comes into focus and the image beside it changes. Each topic ends with one concrete action, not a completion state. The most reflective of the three. It asks writers for tight, idea-by-idea content.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="3d">
+      <div class="dv-olabel"><a class="dv-oid" href="#3d">3d</a>Applies to all: the Toolbox stays practical</div>
+      <div class="dv-card" style="width:380px">
+        <div style="background:#142850;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px;font:700 12px Mulish">Toolbox<span style="margin-left:auto;width:120px;height:22px;border:1px solid rgba(255,255,255,.35);border-radius:3px"></span></div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">MEETING GUIDES</span>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font:800 11.5px/1.3 Mulish;color:#00638E">
+              <div style="padding:10px;border:1px solid #D8D9DA;border-radius:3px">1:1 · Pipeline &amp; opportunity</div>
+              <div style="padding:10px;border:1px solid #D8D9DA;border-radius:3px">1:1 · Account</div>
+              <div style="padding:10px;border:1px solid #D8D9DA;border-radius:3px">1:1 · Activity &amp; visits</div>
+              <div style="padding:10px;border:1px solid #D8D9DA;border-radius:3px">Team · Pipeline &amp; opportunity</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">IN THE FIELD AND IN CRM</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;font:700 11px Mulish">
+              <span style="padding:6px 10px;background:#F2F3F4;border-radius:999px">Joint visit</span><span style="padding:6px 10px;background:#F2F3F4;border-radius:999px">Pocket cards</span><span style="padding:6px 10px;background:#F2F3F4;border-radius:999px">Dashboards</span><span style="padding:6px 10px;background:#F2F3F4;border-radius:999px">CRM glossary</span><span style="padding:6px 10px;background:#F2F3F4;border-radius:999px">Landmines</span><span style="padding:6px 10px;background:#F2F3F4;border-radius:999px">Team kit</span>
+            </div>
+          </div>
+          <div style="padding:12px;border-top:1px solid #D8D9DA;display:flex;flex-direction:column;gap:4px">
+            <span style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">PICK UP WHERE YOU LEFT OFF</span>
+            <span style="font:800 12.5px Mulish;color:#00638E">Coaching for growth →</span>
+          </div>
+        </div>
+      </div>
+      <div style="width:380px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.5 Mulish;color:#63666A">
+        <div>Replaces "Jump right back in". The working tools from the current prototype move here unchanged. It's always one click away, whichever reading direction you choose, and no completion is needed to unlock it.</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="dv-next">My suggestion: <a class="dv-oid" href="#3a">3a</a> for most chapters, borrowing the question-led opening from <a class="dv-oid" href="#3c">3c</a> for the biggest topics, plus <a class="dv-oid" href="#3d">3d</a>. <a class="dv-oid" href="#3b">3b</a> can work as the home page on top of either.</p>
+</section>
+
+<section class="dv-turn" id="t2">
+  <div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Backbone: <a class="dv-oid" href="#1c">1c</a> by default, <a class="dv-oid" href="#1a">1a</a> after completion, plus the new screens</span></div>
+  <div class="dv-opts">
+
+    <div class="dv-opt" id="2a">
+      <div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>First visits: the handbook is home</div>
+      <div class="dv-card" style="width:460px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>Sales Leadership Playbook<span style="margin-left:auto;padding:4px 8px;border:1px solid rgba(255,255,255,.5);border-radius:3px;font:700 10.5px Mulish">Jump right back in</span><span style="width:18px;height:18px;border-radius:50%;background:#fff;color:#00638E;font:700 10px/18px Mulish;text-align:center">2</span></div>
+        <div style="display:grid;grid-template-columns:150px 1fr">
+          <div style="background:#F2F3F4;padding:14px 12px;display:flex;flex-direction:column;gap:10px;font:600 11.5px/1.3 Mulish;border-right:1px solid #D8D9DA">
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div style="font:700 10px Mulish;letter-spacing:.1em;color:#63666A">YOUR PROGRESS</div>
+              <div style="height:5px;background:#D8D9DA;border-radius:3px"><div style="height:5px;width:40%;background:#00638E;border-radius:3px"></div></div>
+              <div style="font:600 10.5px Mulish;color:#63666A">2 of 5 chapters</div>
+            </div>
+            <div style="display:flex;align-items:center">1 The role<span style="margin-left:auto;color:#1AB092;font-weight:800">✓</span></div>
+            <div style="display:flex;align-items:center">2 Coaching<span style="margin-left:auto;color:#1AB092;font-weight:800">✓</span></div>
+            <div style="color:#00638E;font-weight:800">3 Rhythm</div>
+            <div style="padding-left:10px;color:#00638E;border-left:2px solid #00638E">Joint visit guide</div>
+            <div>4 Leading change</div><div>5 Toolkit</div>
+            <span style="width:18px;height:18px;border-radius:50%;background:#00638E;color:#fff;font:700 10px/18px Mulish;text-align:center">1</span>
+          </div>
+          <div style="padding:16px;display:flex;flex-direction:column;gap:10px">
+            <div style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">3 · RHYTHM</div>
+            <div style="font:800 17px/1.2 Mulish;color:#00638E">Joint visit guide</div>
+            <div style="height:6px;background:#D8D9DA;border-radius:3px;width:95%"></div><div style="height:6px;background:#D8D9DA;border-radius:3px;width:85%"></div><div style="height:6px;background:#D8D9DA;border-radius:3px;width:65%"></div>
+            <div style="height:60px;background:#F2F3F4;border:1px dashed #B1B2B4;border-radius:4px;display:flex;align-items:center;justify-content:center;font:600 11px Mulish;color:#63666A">guide, see <a class="dv-oid" href="#2c" style="margin-left:6px">2c</a></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #D8D9DA;padding-top:10px;font:700 11px Mulish;color:#00638E"><span>← Meeting guides</span><span style="padding:5px 9px;background:#00638E;color:#fff;border-radius:3px">Mark as read</span><span>Dashboards →</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="width:460px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div><strong style="color:#00638E">1</strong> Opens to the handbook. Progress shows where you are, and the playbook remembers where you left off.</div>
+        <div><strong style="color:#00638E">2</strong> "Jump right back in" is always in the header for leaders who need a tool before they've finished reading.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="2b">
+      <div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>After completion: "Jump right back in" becomes home</div>
+      <div class="dv-card" style="width:420px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>Sales Leadership Playbook<span style="margin-left:auto;font:600 10.5px Mulish;opacity:.85">Read the playbook</span></div>
+        <div style="padding:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="display:flex;align-items:center;gap:6px;font:700 10px Mulish;letter-spacing:.12em;color:#1AB092">✓ PLAYBOOK COMPLETED</div>
+            <div style="font:800 18px/1.2 Mulish;color:#00638E">Jump right back in</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;border:1px solid #B1B2B4;border-radius:4px;padding:9px 10px;font:400 12px Mulish;color:#63666A"><span style="width:10px;height:10px;border:2px solid #63666A;border-radius:50%"></span>Search the playbook</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Prepare a pipeline review</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Run a 1:1 coaching</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Prepare a joint visit</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Handle CRM pushback</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Check my dashboards</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Look up a CRM term</div>
+          </div>
+          <div style="border-top:1px solid #D8D9DA;padding-top:12px;display:flex;flex-direction:column;gap:6px">
+            <div style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">RECENTLY OPENED</div>
+            <div style="font:600 12px Mulish;color:#00638E">Joint visit guide · Landmines · Cadence</div>
+          </div>
+        </div>
+      </div>
+      <div style="width:420px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>Once all chapters are marked as read, the home page switches to the task tiles from <a class="dv-oid" href="#1a">1a</a>. The full handbook stays one click away ("Read the playbook").</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="2c">
+      <div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>Joint visit guide (clickable)</div>
+      <div class="dv-card" style="width:440px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>3 · Rhythm › Joint visit guide</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="font:800 18px/1.2 Mulish;color:#00638E">Joint customer visit</div>
+            <div style="font:400 12.5px/1.4 Mulish;color:#63666A">Coach the rep in the field. The rep leads, you observe.</div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;font:600 11px Mulish">
+            <span style="padding:4px 8px;background:#F2F3F4;border-radius:3px">Monthly per rep</span><span style="padding:4px 8px;background:#F2F3F4;border-radius:3px">+ 15 min debrief</span><span style="padding:4px 8px;background:#F2F3F4;border-radius:3px">Leader + rep</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:2px solid #D8D9DA;font:700 12px Mulish">
+            <sc-for list="{{ jvTabs }}" as="p" hint-placeholder-count="3">
+              <div onClick="{{ p.pick }}" style="padding:8px 0;text-align:center;cursor:pointer;margin-bottom:-2px;border-bottom:2px solid {{ p.line }};color:{{ p.fg }}">{{ p.label }}</div>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;min-height:150px">
+            <sc-for list="{{ jvRows }}" as="r" hint-placeholder-count="4">
+              <div style="display:flex;gap:10px;align-items:center;padding:8px 10px;border:1px solid #D8D9DA;border-radius:4px;font:600 12.5px/1.35 Mulish">
+                <span style="min-width:52px;font:800 11px Mulish;color:#00638E">{{ r.tag }}</span>{{ r.text }}
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:8px;font:700 11.5px Mulish">
+            <span style="padding:7px 10px;background:#00638E;color:#fff;border-radius:3px">Open pocket card</span>
+            <span style="padding:7px 10px;border:1px solid #00638E;color:#00638E;border-radius:3px">Debrief questions</span>
+          </div>
+        </div>
+      </div>
+      <div style="width:440px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>Same layout as the meeting guides in <a class="dv-oid" href="#1e">1e</a>, so it needs no extra learning. Linked from activity/visit coaching and the cadence page. Sample copy.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="2d">
+      <div class="dv-olabel"><a class="dv-oid" href="#2d">2d</a>Pocket cards on a phone (clickable)</div>
+      <div style="width:260px;background:#1A1A1A;border-radius:28px;padding:10px;box-shadow:0 1px 3px rgba(20,40,80,.1)">
+        <div style="background:#fff;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;height:480px">
+          <div style="background:#142850;color:#fff;padding:22px 14px 10px;font:700 11.5px Mulish;display:flex;align-items:center;gap:6px"><span style="width:12px;height:12px;background:#00638E"></span>Pocket cards</div>
+          <div style="padding:14px;display:flex;flex-direction:column;gap:10px;flex:1">
+            <div style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">{{ pocketCount }}</div>
+            <div style="font:800 17px/1.2 Mulish;color:#00638E">{{ pocket.title }}</div>
+            <div style="font:400 11.5px/1.4 Mulish;color:#63666A">{{ pocket.sub }}</div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <sc-for list="{{ pocket.items }}" as="it" hint-placeholder-count="3">
+                <div style="display:flex;gap:8px;padding:9px 10px;background:#F2F3F4;border-radius:4px;font:600 12px/1.35 Mulish"><span style="color:#00638E;font-weight:800">{{ it.n }}</span>{{ it.t }}</div>
+              </sc-for>
+            </div>
+            <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px">
+              <div onClick="{{ pocketPrev }}" style="width:44px;height:44px;border:1px solid #00638E;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;font:700 16px Mulish;color:#00638E">‹</div>
+              <div style="display:flex;gap:5px">
+                <sc-for list="{{ pocketDots }}" as="d" hint-placeholder-count="4">
+                  <span style="width:7px;height:7px;border-radius:50%;background:{{ d.bg }}"></span>
+                </sc-for>
+              </div>
+              <div onClick="{{ pocketNext }}" style="width:44px;height:44px;background:#00638E;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;font:700 16px Mulish;color:#fff">›</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width:260px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>The essentials of each guide on one phone screen, for the minutes before a meeting or visit. Can be saved to the home screen. Use the arrows to flip.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="2e">
+      <div class="dv-olabel"><a class="dv-oid" href="#2e">2e</a>Team kit</div>
+      <div class="dv-card" style="width:420px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>5 · Toolkit › Team kit</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="font:800 17px/1.2 Mulish;color:#00638E">Present the change to your team</div>
+            <div style="font:400 12.5px/1.4 Mulish;color:#63666A">Everything you need for the kick-off and the first three months.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;font:600 12.5px/1.35 Mulish">
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid #D8D9DA;border-radius:4px"><span style="min-width:38px;padding:3px 0;text-align:center;font:800 9.5px Mulish;background:#D6B874;border-radius:2px">PPTX</span>Team kick-off slides<span style="margin-left:auto;font:700 11px Mulish;color:#00638E">Download</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid #D8D9DA;border-radius:4px"><span style="min-width:38px;padding:3px 0;text-align:center;font:800 9.5px Mulish;background:#F2F3F4;border-radius:2px">PAGE</span>Talk track for the kick-off<span style="margin-left:auto;font:700 11px Mulish;color:#00638E">Open</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid #D8D9DA;border-radius:4px"><span style="min-width:38px;padding:3px 0;text-align:center;font:800 9.5px Mulish;background:#F2F3F4;border-radius:2px">PAGE</span>Rep FAQ: "What changes for me?"<span style="margin-left:auto;font:700 11px Mulish;color:#00638E">Share</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid #D8D9DA;border-radius:4px"><span style="min-width:38px;padding:3px 0;text-align:center;font:800 9.5px Mulish;background:#F2F3F4;border-radius:2px">TEXT</span>Email templates: announcement, follow-up<span style="margin-left:auto;font:700 11px Mulish;color:#00638E">Copy</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid #D8D9DA;border-radius:4px"><span style="min-width:38px;padding:3px 0;text-align:center;font:800 9.5px Mulish;background:#D6B874;border-radius:2px">PPTX</span>Monthly team meeting template<span style="margin-left:auto;font:700 11px Mulish;color:#00638E">Download</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="width:420px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>Every leader tells the same story with the same materials. Slides open in the Rockfon PowerPoint template; FAQ pages can be shared with reps as a link.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="2f">
+      <div class="dv-olabel"><a class="dv-oid" href="#2f">2f</a>Leader voices</div>
+      <div class="dv-card" style="width:400px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>5 · Toolkit › Leader voices</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;font:600 11px Mulish">
+            <span style="padding:5px 9px;background:#00638E;color:#fff;border-radius:999px">All</span><span style="padding:5px 9px;background:#F2F3F4;border-radius:999px">Coaching</span><span style="padding:5px 9px;background:#F2F3F4;border-radius:999px">Cadence</span><span style="padding:5px 9px;background:#F2F3F4;border-radius:999px">CRM adoption</span>
+          </div>
+          <div style="height:150px;background:#F2F3F4;border:1px dashed #B1B2B4;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font:600 11px Mulish;color:#63666A">
+            <span style="width:38px;height:38px;border-radius:50%;background:#00638E;display:flex;align-items:center;justify-content:center"><span style="width:0;height:0;border-left:12px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px"></span></span>
+            2-min video · leader name, country
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="padding:10px 12px;border-left:2px solid #00638E;display:flex;flex-direction:column;gap:4px"><span style="font:600 12.5px/1.4 Mulish">"Quote from a Rockfon leader on how they run their pipeline reviews."</span><span style="font:400 11px Mulish;color:#63666A">Name · Role · Country</span></div>
+            <div style="padding:10px 12px;border-left:2px solid #00638E;display:flex;flex-direction:column;gap:4px"><span style="font:600 12.5px/1.4 Mulish">"Quote on what made their team start using CRM."</span><span style="font:400 11px Mulish;color:#63666A">Name · Role · Country</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="width:400px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>Short clips and quotes from Rockfon's own leaders, tagged by topic. The same clips also appear on the relevant chapter pages. Requires recording a few internal interviews.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="2g">
+      <div class="dv-olabel"><a class="dv-oid" href="#2g">2g</a>CRM glossary, definitions and data requirements (clickable)</div>
+      <div class="dv-card" style="width:480px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>5 · Toolkit › CRM glossary</div>
+        <div style="display:grid;grid-template-columns:130px 1fr">
+          <div style="background:#F2F3F4;padding:12px 10px;display:flex;flex-direction:column;gap:4px;border-right:1px solid #D8D9DA">
+            <div style="border:1px solid #B1B2B4;background:#fff;border-radius:3px;padding:6px 8px;font:400 11px Mulish;color:#63666A;margin-bottom:6px">Find a term</div>
+            <sc-for list="{{ terms }}" as="t" hint-placeholder-count="4">
+              <div onClick="{{ t.pick }}" style="padding:7px 8px;border-radius:3px;cursor:pointer;font:700 12px Mulish;background:{{ t.bg }};color:{{ t.fg }}">{{ t.name }}</div>
+            </sc-for>
+          </div>
+          <div style="padding:14px 16px;display:flex;flex-direction:column;gap:10px">
+            <div style="font:800 17px/1.2 Mulish;color:#00638E">{{ term.name }}</div>
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <div style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">DEFINITION</div>
+              <div style="font:400 12.5px/1.45 Mulish">{{ term.def }}</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">DATA REQUIREMENTS</div>
+              <div style="display:grid;grid-template-columns:1.3fr .7fr 1.2fr;border:1px solid #D8D9DA;border-radius:4px;overflow:hidden;font:600 11px/1.3 Mulish">
+                <div style="padding:6px 8px;background:#F2F3F4;font-weight:800">Field</div><div style="padding:6px 8px;background:#F2F3F4;font-weight:800">Who</div><div style="padding:6px 8px;background:#F2F3F4;font-weight:800">When</div>
+                <sc-for list="{{ term.req }}" as="r" hint-placeholder-count="3">
+                  <div style="padding:6px 8px;border-top:1px solid #D8D9DA">{{ r.f }}</div><div style="padding:6px 8px;border-top:1px solid #D8D9DA;color:#63666A">{{ r.w }}</div><div style="padding:6px 8px;border-top:1px solid #D8D9DA;color:#63666A">{{ r.t }}</div>
+                </sc-for>
+              </div>
+            </div>
+            <div style="font:700 11px Mulish;color:#00638E">Used in: pipeline coaching · dashboards</div>
+          </div>
+        </div>
+      </div>
+      <div style="width:480px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>One agreed definition per term, plus the minimum data that must be in the CRM, who enters it and when. Terms are underlined wherever they appear in the playbook, so a click shows the definition. Sample terms; we'd fill these from your CRM setup.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="2h">
+      <div class="dv-olabel"><a class="dv-oid" href="#2h">2h</a>Feedback button (clickable)</div>
+      <div class="dv-card" style="width:380px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>Any page</div>
+        <div style="position:relative;padding:16px;height:300px;display:flex;flex-direction:column;gap:9px;box-sizing:border-box">
+          <div style="height:12px;background:#B1B2B4;border-radius:3px;width:55%"></div>
+          <div style="height:6px;background:#D8D9DA;border-radius:3px;width:95%"></div><div style="height:6px;background:#D8D9DA;border-radius:3px;width:88%"></div><div style="height:6px;background:#D8D9DA;border-radius:3px;width:72%"></div><div style="height:6px;background:#D8D9DA;border-radius:3px;width:90%"></div><div style="height:6px;background:#D8D9DA;border-radius:3px;width:60%"></div>
+          <sc-if value="{{ fbClosed }}" hint-placeholder-val="{{ true }}">
+            <div onClick="{{ fbOpen }}" style="position:absolute;right:14px;bottom:14px;padding:9px 14px;background:#00638E;color:#fff;border-radius:3px;cursor:pointer;font:700 12px Mulish;box-shadow:0 2px 6px rgba(20,40,80,.18)">Feedback</div>
+          </sc-if>
+          <sc-if value="{{ fbIsOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;right:14px;bottom:14px;width:240px;background:#fff;border:1px solid #D8D9DA;border-radius:4px;box-shadow:0 4px 14px rgba(20,40,80,.14);padding:12px;display:flex;flex-direction:column;gap:9px">
+              <div style="display:flex;align-items:center;font:800 12.5px Mulish">Was this page useful?<span onClick="{{ fbClose }}" style="margin-left:auto;cursor:pointer;color:#63666A">×</span></div>
+              <div style="display:flex;gap:6px">
+                <div onClick="{{ fbYes }}" style="flex:1;padding:7px 0;text-align:center;cursor:pointer;border:1px solid #00638E;border-radius:3px;font:700 11.5px Mulish;background:{{ fbYesBg }};color:{{ fbYesFg }}">Yes</div>
+                <div onClick="{{ fbNo }}" style="flex:1;padding:7px 0;text-align:center;cursor:pointer;border:1px solid #00638E;border-radius:3px;font:700 11.5px Mulish;background:{{ fbNoBg }};color:{{ fbNoFg }}">Not really</div>
+              </div>
+              <div style="height:52px;border:1px solid #B1B2B4;border-radius:3px;padding:6px 8px;font:400 11px Mulish;color:#63666A;box-sizing:border-box">What's missing or unclear?</div>
+              <div onClick="{{ fbSend }}" style="padding:7px 0;text-align:center;cursor:pointer;background:#00638E;color:#fff;border-radius:3px;font:700 11.5px Mulish">Send</div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ fbSent }}" hint-placeholder-val="{{ false }}">
+            <div onClick="{{ fbClose }}" style="position:absolute;right:14px;bottom:14px;padding:9px 14px;background:#1AB092;color:#fff;border-radius:3px;cursor:pointer;font:700 12px Mulish">Thanks, sent to the playbook team</div>
+          </sc-if>
+        </div>
+      </div>
+      <div style="width:380px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>One button on every page. Answers go to the playbook owner with the page name attached, so the next update is based on what leaders actually ask for.</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="dv-next">Try next: "build 2a/2b in hi-fi as a clickable prototype" · "fill 2c with our joint visit process" · "show the full flow from first visit to completion"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">A · Home and navigation: pick one backbone</span></div>
+  <div class="dv-opts">
+
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Start from the situation <span style="font:700 10px Mulish;letter-spacing:.08em;color:#fff;background:#1AB092;padding:3px 7px;border-radius:999px">RECOMMENDED</span></div>
+      <div class="dv-card" style="width:400px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>Sales Leadership Playbook</div>
+        <div style="padding:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="font:800 18px/1.2 Mulish;color:#00638E">What do you need right now?</div>
+          <div style="display:flex;align-items:center;gap:8px;border:1px solid #B1B2B4;border-radius:4px;padding:9px 10px;font:400 12px Mulish;color:#63666A"><span style="width:10px;height:10px;border:2px solid #63666A;border-radius:50%"></span>Search: "stalled deal", "CRM pushback"…<span style="margin-left:auto;width:18px;height:18px;border-radius:50%;background:#00638E;color:#fff;font:700 10px/18px Mulish;text-align:center">2</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;position:relative">
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Prepare a pipeline review</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Run a 1:1 coaching</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Plan my week's cadence</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Handle CRM pushback</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Check my dashboards</div>
+            <div style="border:1px solid #D8D9DA;border-radius:4px;padding:10px;font:700 12px/1.3 Mulish">Brief my team on change</div>
+            <span style="position:absolute;top:-8px;right:-8px;width:18px;height:18px;border-radius:50%;background:#00638E;color:#fff;font:700 10px/18px Mulish;text-align:center">1</span>
+          </div>
+          <div style="border-top:1px solid #D8D9DA;padding-top:12px;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;gap:8px;font:700 10px Mulish;letter-spacing:.12em;color:#63666A">BROWSE THE PLAYBOOK <span style="width:18px;height:18px;border-radius:50%;background:#00638E;color:#fff;font:700 10px/18px Mulish;text-align:center;letter-spacing:0">3</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;font:600 11px Mulish">
+              <span style="padding:5px 9px;background:#F2F3F4;border-radius:999px">1 The role</span><span style="padding:5px 9px;background:#F2F3F4;border-radius:999px">2 Coaching</span><span style="padding:5px 9px;background:#F2F3F4;border-radius:999px">3 Rhythm</span><span style="padding:5px 9px;background:#F2F3F4;border-radius:999px">4 Leading change</span><span style="padding:5px 9px;background:#F2F3F4;border-radius:999px">5 Toolkit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width:400px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div><strong style="color:#00638E">1</strong> Six tiles for the jobs leaders do every week. Each opens the exact page.</div>
+        <div><strong style="color:#00638E">2</strong> One search across all content, templates and scripts.</div>
+        <div><strong style="color:#00638E">3</strong> Chapters stay available for reading front to back.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>One playbook, two views (leader / rep)</div>
+      <div class="dv-card" style="width:400px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>Sales Leadership Playbook</div>
+        <div style="padding:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="display:flex;border:1px solid #00638E;border-radius:4px;overflow:hidden;font:700 12px Mulish">
+              <div onClick="{{ setLeader }}" style="padding:7px 12px;cursor:pointer;background:{{ roleTab.leader.bg }};color:{{ roleTab.leader.fg }}">I lead a team</div>
+              <div onClick="{{ setRep }}" style="padding:7px 12px;cursor:pointer;background:{{ roleTab.rep.bg }};color:{{ roleTab.rep.fg }}">I'm a sales rep</div>
+            </div>
+            <span style="width:18px;height:18px;border-radius:50%;background:#00638E;color:#fff;font:700 10px/18px Mulish;text-align:center">1</span>
+          </div>
+          <div style="font:800 18px/1.2 Mulish;color:#00638E">{{ roleTitle }}</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <sc-for list="{{ roleItems }}" as="it" hint-placeholder-count="4">
+              <div style="display:flex;gap:10px;align-items:flex-start;padding:9px 10px;border:1px solid #D8D9DA;border-radius:4px;font:600 12.5px/1.35 Mulish"><span style="width:12px;height:12px;border:2px solid #00638E;border-radius:2px;flex:none;margin-top:1px"></span>{{ it }}</div>
+            </sc-for>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font:600 11px Mulish;color:#00638E">Share this view with your team ↗ <span style="width:18px;height:18px;border-radius:50%;background:#00638E;color:#fff;font:700 10px/18px Mulish;text-align:center">2</span></div>
+        </div>
+      </div>
+      <div style="width:400px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div><strong style="color:#00638E">1</strong> Same source, filtered. Click the toggle to switch.</div>
+        <div><strong style="color:#00638E">2</strong> Reps get a link to the part that concerns them, so expectations are explicit on both sides.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Handbook with chapters</div>
+      <div class="dv-card" style="width:460px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>Sales Leadership Playbook<span style="margin-left:auto;width:90px;height:20px;border:1px solid rgba(255,255,255,.4);border-radius:3px"></span></div>
+        <div style="display:grid;grid-template-columns:140px 1fr">
+          <div style="background:#F2F3F4;padding:14px 12px;display:flex;flex-direction:column;gap:10px;font:600 11.5px/1.3 Mulish;border-right:1px solid #D8D9DA">
+            <div style="display:flex;align-items:center;gap:6px">1 The role <span style="margin-left:auto;color:#1AB092;font-weight:800">✓</span></div>
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <div style="color:#00638E;font-weight:800">2 Coaching</div>
+              <div style="padding-left:10px;color:#00638E;border-left:2px solid #00638E">For growth</div>
+              <div style="padding-left:12px;color:#63666A">To champion</div>
+              <div style="padding-left:12px;color:#63666A">Disciplines</div>
+            </div>
+            <div>3 Rhythm</div><div>4 Leading change</div><div>5 Toolkit</div>
+            <span style="width:18px;height:18px;border-radius:50%;background:#00638E;color:#fff;font:700 10px/18px Mulish;text-align:center">1</span>
+          </div>
+          <div style="padding:16px;display:flex;flex-direction:column;gap:10px">
+            <div style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">2 · COACHING</div>
+            <div style="font:800 17px/1.2 Mulish;color:#00638E">Coaching for growth</div>
+            <div style="height:6px;background:#D8D9DA;border-radius:3px;width:95%"></div><div style="height:6px;background:#D8D9DA;border-radius:3px;width:88%"></div><div style="height:6px;background:#D8D9DA;border-radius:3px;width:70%"></div>
+            <div style="height:70px;background:#F2F3F4;border:1px dashed #B1B2B4;border-radius:4px;display:flex;align-items:center;justify-content:center;font:600 11px Mulish;color:#63666A">diagram / short video</div>
+            <div style="height:6px;background:#D8D9DA;border-radius:3px;width:92%"></div><div style="height:6px;background:#D8D9DA;border-radius:3px;width:60%"></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #D8D9DA;padding-top:10px;font:700 11px Mulish;color:#00638E"><span>← The role</span><span style="width:18px;height:18px;border-radius:50%;background:#00638E;color:#fff;font:700 10px/18px Mulish;text-align:center">2</span><span>To champion →</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="width:460px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div><strong style="color:#00638E">1</strong> Chapters always visible, with ticks for what you've read. Closest to the PDF, so the lowest change for readers.</div>
+        <div><strong style="color:#00638E">2</strong> Previous / next keeps the "read it like a book" flow.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1d">
+      <div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>90-day leader journey</div>
+      <div class="dv-card" style="width:420px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>Sales Leadership Playbook</div>
+        <div style="padding:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="font:800 18px/1.2 Mulish;color:#00638E">Your first 90 days</div>
+          <div style="display:flex;flex-direction:column;gap:0;position:relative">
+            <div style="display:grid;grid-template-columns:62px 14px 1fr;gap:10px;align-items:start;padding-bottom:12px">
+              <div style="font:700 11px Mulish;color:#63666A">Week 1</div><span style="width:14px;height:14px;border-radius:50%;background:#1AB092"></span>
+              <div style="display:flex;flex-direction:column;gap:3px"><div style="font:700 12.5px Mulish">Understand the role</div><div style="font:400 11px Mulish;color:#63666A">Read section 1 · Do the self-check</div></div>
+            </div>
+            <div style="display:grid;grid-template-columns:62px 14px 1fr;gap:10px;align-items:start;padding-bottom:12px">
+              <div style="font:700 11px Mulish;color:#63666A">Month 1</div><span style="width:14px;height:14px;border-radius:50%;border:3px solid #00638E;background:#fff;box-sizing:border-box"></span>
+              <div style="display:flex;flex-direction:column;gap:3px;background:#F2F3F4;padding:8px;border-radius:4px"><div style="font:700 12.5px Mulish;color:#00638E">Set up your cadence</div><div style="font:400 11px Mulish;color:#63666A">Book the three meetings · Add to Outlook</div><div style="height:4px;background:#D8D9DA;border-radius:2px"><div style="height:4px;width:60%;background:#00638E;border-radius:2px"></div></div></div>
+            </div>
+            <div style="display:grid;grid-template-columns:62px 14px 1fr;gap:10px;align-items:start;padding-bottom:12px">
+              <div style="font:700 11px Mulish;color:#63666A">Month 2</div><span style="width:14px;height:14px;border-radius:50%;border:2px solid #B1B2B4;box-sizing:border-box"></span>
+              <div style="display:flex;flex-direction:column;gap:3px"><div style="font:700 12.5px Mulish">Coach the disciplines</div><div style="font:400 11px Mulish;color:#63666A">Pipeline · account · activity/visit</div></div>
+            </div>
+            <div style="display:grid;grid-template-columns:62px 14px 1fr;gap:10px;align-items:start">
+              <div style="font:700 11px Mulish;color:#63666A">Month 3</div><span style="width:14px;height:14px;border-radius:50%;border:2px solid #B1B2B4;box-sizing:border-box"></span>
+              <div style="display:flex;flex-direction:column;gap:3px"><div style="font:700 12.5px Mulish">Lead the change</div><div style="font:400 11px Mulish;color:#63666A">CRM adoption · governance check-in</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width:420px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>The same content, ordered as a rollout plan. Useful during launch and for newly appointed leaders; can sit as a tab next to <a class="dv-oid" href="#1a">1a</a> rather than replace it.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dv-thd" style="margin-top:48px"><span class="dv-tname">B · Key screens: these work with any backbone</span></div>
+  <div class="dv-opts">
+
+    <div class="dv-opt" id="1e">
+      <div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>Meeting guide (clickable)</div>
+      <div class="dv-card" style="width:440px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>3 · Rhythm › Meeting guides</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <sc-for list="{{ meetingPills }}" as="m" hint-placeholder-count="3">
+              <div onClick="{{ m.pick }}" style="padding:6px 10px;border-radius:999px;cursor:pointer;font:700 11.5px Mulish;border:1px solid #00638E;background:{{ m.bg }};color:{{ m.fg }}">{{ m.name }}</div>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="font:800 18px/1.2 Mulish;color:#00638E">{{ meeting.name }}</div>
+            <div style="font:400 12.5px/1.4 Mulish;color:#63666A">{{ meeting.purpose }}</div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;font:600 11px Mulish">
+            <span style="padding:4px 8px;background:#F2F3F4;border-radius:3px">{{ meeting.freq }}</span><span style="padding:4px 8px;background:#F2F3F4;border-radius:3px">{{ meeting.length }}</span><span style="padding:4px 8px;background:#F2F3F4;border-radius:3px">{{ meeting.who }}</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:2px solid #D8D9DA;font:700 12px Mulish">
+            <sc-for list="{{ phaseTabs }}" as="p" hint-placeholder-count="3">
+              <div onClick="{{ p.pick }}" style="padding:8px 0;text-align:center;cursor:pointer;margin-bottom:-2px;border-bottom:2px solid {{ p.line }};color:{{ p.fg }}">{{ p.label }}</div>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;min-height:150px">
+            <sc-for list="{{ phaseRows }}" as="r" hint-placeholder-count="4">
+              <div style="display:flex;gap:10px;align-items:center;padding:8px 10px;border:1px solid #D8D9DA;border-radius:4px;font:600 12.5px/1.35 Mulish">
+                <span style="min-width:30px;font:800 11px Mulish;color:#00638E">{{ r.tag }}</span>{{ r.text }}
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:8px;font:700 11.5px Mulish">
+            <span style="padding:7px 10px;background:#00638E;color:#fff;border-radius:3px">Print one-pager</span>
+            <span style="padding:7px 10px;border:1px solid #00638E;color:#00638E;border-radius:3px">Copy agenda to invite</span>
+          </div>
+        </div>
+      </div>
+      <div style="width:440px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>Click the meeting types and the Before / During / After tabs. All three meetings use the same layout, so a leader learns it once. Meeting names and content are placeholders until you confirm your three types.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1f">
+      <div class="dv-olabel"><a class="dv-oid" href="#1f">1f</a>Coaching discipline card (clickable)</div>
+      <div class="dv-card" style="width:420px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>2 · Coaching › Disciplines</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px">
+            <sc-for list="{{ discTabs }}" as="d" hint-placeholder-count="4">
+              <div onClick="{{ d.pick }}" style="padding:8px 4px;text-align:center;cursor:pointer;font:700 11px/1.2 Mulish;border-radius:3px;background:{{ d.bg }};color:{{ d.fg }}">{{ d.name }}</div>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding:10px 12px;background:#F2F3F4;border-radius:4px">
+            <div style="font:700 10px Mulish;letter-spacing:.12em;color:#1AB092">WHAT GOOD LOOKS LIKE</div>
+            <div style="font:700 13px/1.35 Mulish">{{ disc.good }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">QUESTIONS TO ASK</div>
+            <sc-for list="{{ disc.qs }}" as="q" hint-placeholder-count="3">
+              <div style="padding:8px 10px;border-left:2px solid #00638E;font:600 12.5px/1.35 Mulish">"{{ q }}"</div>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding:10px 12px;border:1px solid #FF7768;border-radius:4px">
+            <div style="font:700 10px Mulish;letter-spacing:.12em;color:#D20014">RED FLAG</div>
+            <div style="font:600 12.5px/1.35 Mulish">{{ disc.red }}</div>
+          </div>
+          <div style="font:700 11.5px Mulish;color:#00638E">Open the matching CRM dashboard ↗</div>
+        </div>
+      </div>
+      <div style="width:420px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>Four disciplines, one card each: what good looks like, questions to ask, red flag, link to the data. A leader can keep it open next to the CRM during a review. Sample copy only.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1g">
+      <div class="dv-olabel"><a class="dv-oid" href="#1g">1g</a>From salesperson to champion (clickable)</div>
+      <div class="dv-card" style="width:400px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>2 · Coaching › To champion</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="font:700 13px/1.35 Mulish">Where is this rep today? Pick a box.</div>
+          <div style="display:grid;grid-template-columns:18px 1fr;gap:6px">
+            <div style="writing-mode:vertical-rl;transform:rotate(180deg);font:700 10px Mulish;letter-spacing:.1em;color:#63666A;text-align:center">WILL →</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+              <sc-for list="{{ quads }}" as="q" hint-placeholder-count="4">
+                <div onClick="{{ q.pick }}" style="height:58px;padding:8px;cursor:pointer;border-radius:4px;font:700 11.5px/1.25 Mulish;display:flex;align-items:flex-end;border:1px solid #D8D9DA;background:{{ q.bg }};color:{{ q.fg }}">{{ q.name }}</div>
+              </sc-for>
+            </div>
+            <div></div>
+            <div style="font:700 10px Mulish;letter-spacing:.1em;color:#63666A;text-align:center">SKILL →</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;padding:12px;background:#F2F3F4;border-radius:4px">
+            <div style="font:800 14px Mulish;color:#00638E">{{ quad.how }}</div>
+            <div style="font:400 12.5px/1.45 Mulish">{{ quad.detail }}</div>
+          </div>
+        </div>
+      </div>
+      <div style="width:400px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>Turns a model that would be a static diagram in a PDF into a quick decision: pick where the rep is, get the coaching approach. Model shown is an example; we'd use Rockfon's own.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1h">
+      <div class="dv-olabel"><a class="dv-oid" href="#1h">1h</a>Self-check: what this requires from you</div>
+      <div class="dv-card" style="width:400px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>1 · The role › Self-check</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:700 13px/1.35 Mulish">How true is this for you today?</div>
+          <sc-for list="{{ checks }}" as="c" hint-placeholder-count="4">
+            <div style="display:flex;flex-direction:column;gap:6px;padding-bottom:8px;border-bottom:1px solid #D8D9DA">
+              <div style="font:600 12px/1.35 Mulish">{{ c.text }}</div>
+              <div style="display:flex;gap:4px">
+                <sc-for list="{{ c.dots }}" as="d" hint-placeholder-count="5">
+                  <div onClick="{{ d.pick }}" style="flex:1;height:22px;cursor:pointer;border-radius:3px;font:700 10px/22px Mulish;text-align:center;border:1px solid #B1B2B4;background:{{ d.bg }};color:{{ d.fg }}">{{ d.n }}</div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+          <div style="display:flex;flex-direction:column;gap:4px;padding:10px 12px;background:#F2F3F4;border-radius:4px">
+            <div style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">YOUR FOCUS AREA</div>
+            <div style="font:800 13px Mulish;color:#00638E">{{ focus }} →</div>
+          </div>
+        </div>
+      </div>
+      <div style="width:400px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>A two-minute reflection that points to the section to read first. Answers stay on the leader's device and aren't shared.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1i">
+      <div class="dv-olabel"><a class="dv-oid" href="#1i">1i</a>Cadence at a glance</div>
+      <div class="dv-card" style="width:440px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>3 · Rhythm › Cadence</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="font:800 17px/1.2 Mulish;color:#00638E">Your leadership week</div>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;font:600 10.5px/1.25 Mulish">
+            <div style="font:700 10px Mulish;color:#63666A;text-align:center">MON</div><div style="font:700 10px Mulish;color:#63666A;text-align:center">TUE</div><div style="font:700 10px Mulish;color:#63666A;text-align:center">WED</div><div style="font:700 10px Mulish;color:#63666A;text-align:center">THU</div><div style="font:700 10px Mulish;color:#63666A;text-align:center">FRI</div>
+            <div style="height:44px;padding:5px;background:#00638E;color:#fff;border-radius:3px">Pipeline reviews</div>
+            <div style="height:44px;padding:5px;background:#D6B874;border-radius:3px">Joint visit</div>
+            <div style="height:44px;padding:5px;background:#F2F3F4;border:1px dashed #B1B2B4;border-radius:3px;color:#63666A">Own time</div>
+            <div style="height:44px;padding:5px;background:#D6B874;border-radius:3px">Joint visit</div>
+            <div style="height:44px;padding:5px;background:#1AB092;color:#fff;border-radius:3px">1:1 coaching</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;font:600 12px/1.35 Mulish">
+            <div style="display:flex;justify-content:space-between;padding:8px 10px;border:1px solid #D8D9DA;border-radius:4px"><span>Monthly team meeting</span><span style="color:#63666A">1st Monday</span></div>
+            <div style="display:flex;justify-content:space-between;padding:8px 10px;border:1px solid #D8D9DA;border-radius:4px"><span>Account plan review</span><span style="color:#63666A">Quarterly</span></div>
+          </div>
+          <div style="display:flex;gap:8px;font:700 11.5px Mulish">
+            <span style="padding:7px 10px;background:#00638E;color:#fff;border-radius:3px">Add all to Outlook</span>
+            <span style="padding:7px 10px;border:1px solid #00638E;color:#00638E;border-radius:3px">Open meeting guide</span>
+          </div>
+        </div>
+      </div>
+      <div style="width:440px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>The required cadence as one picture. "Add to Outlook" downloads the recurring invites with the agenda already inside, which removes a setup step that rarely happens after a PDF.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1j">
+      <div class="dv-olabel"><a class="dv-oid" href="#1j">1j</a>Dashboard guide</div>
+      <div class="dv-card" style="width:460px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>3 · Rhythm › Dashboards</div>
+        <div style="padding:16px;display:grid;grid-template-columns:1fr 150px;gap:12px">
+          <div style="position:relative;background:#F2F3F4;border:1px dashed #B1B2B4;border-radius:4px;height:200px;padding:10px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:40px 1fr;gap:6px">
+            <div style="background:#D8D9DA;border-radius:3px"></div><div style="background:#D8D9DA;border-radius:3px"></div>
+            <div style="background:#fff;border:1px solid #D8D9DA;border-radius:3px;grid-column:span 2;display:flex;align-items:flex-end;gap:6px;padding:10px">
+              <div style="flex:1;height:40%;background:#B1B2B4"></div><div style="flex:1;height:65%;background:#B1B2B4"></div><div style="flex:1;height:50%;background:#B1B2B4"></div><div style="flex:1;height:80%;background:#B1B2B4"></div>
+            </div>
+            <span style="position:absolute;top:18px;left:18px;width:20px;height:20px;border-radius:50%;background:#00638E;color:#fff;font:700 10px/20px Mulish;text-align:center;box-shadow:0 0 0 4px rgba(0,99,142,.2)">1</span>
+            <span style="position:absolute;top:18px;right:40px;width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid #00638E;color:#00638E;font:700 10px/16px Mulish;text-align:center;box-sizing:border-box">2</span>
+            <span style="position:absolute;bottom:30px;left:45%;width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid #00638E;color:#00638E;font:700 10px/16px Mulish;text-align:center;box-sizing:border-box">3</span>
+            <span style="position:absolute;bottom:4px;right:8px;font:600 9px Mulish;color:#63666A">CRM dashboard screenshot</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font:800 12.5px/1.25 Mulish;color:#00638E">1 · Pipeline coverage</div>
+            <div style="font:400 11px/1.4 Mulish;color:#63666A">What it shows</div>
+            <div style="height:5px;background:#D8D9DA;border-radius:3px"></div><div style="height:5px;background:#D8D9DA;border-radius:3px;width:80%"></div>
+            <div style="font:400 11px/1.4 Mulish;color:#63666A;margin-top:4px">Good looks like</div>
+            <div style="height:5px;background:#D8D9DA;border-radius:3px;width:70%"></div>
+            <div style="font:400 11px/1.4 Mulish;color:#63666A;margin-top:4px">Ask your rep</div>
+            <div style="height:5px;background:#D8D9DA;border-radius:3px"></div>
+            <div style="font:700 11px Mulish;color:#00638E;margin-top:auto">Open live ↗</div>
+          </div>
+        </div>
+      </div>
+      <div style="width:460px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>The playbook explains, the CRM shows the numbers. Click a hotspot on the dashboard image to learn what it means and what to ask; "Open live" jumps to the real dashboard. No data is copied into the playbook, so nothing goes stale.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1k">
+      <div class="dv-olabel"><a class="dv-oid" href="#1k">1k</a>Landmines and what to say (clickable)</div>
+      <div class="dv-card" style="width:440px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>4 · Leading change › Landmines</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:8px">
+          <sc-for list="{{ mines }}" as="m" hint-placeholder-count="3">
+            <div style="border:1px solid #D8D9DA;border-radius:4px;overflow:hidden">
+              <div onClick="{{ m.toggle }}" style="display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer;font:700 12.5px/1.3 Mulish;background:{{ m.headBg }}">
+                <span style="width:8px;height:8px;background:#FF7768;transform:rotate(45deg);flex:none"></span>{{ m.title }}<span style="margin-left:auto;color:#00638E;font-size:14px">{{ m.sign }}</span>
+              </div>
+              <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:4px 12px 12px;display:flex;flex-direction:column;gap:8px;font:400 12px/1.45 Mulish">
+                  <div><strong>Why it happens: </strong><span style="color:#63666A">{{ m.why }}</span></div>
+                  <div><strong>Avoid it: </strong><span style="color:#63666A">{{ m.avoid }}</span></div>
+                  <div style="padding:10px 12px;background:#F2F3F4;border-left:2px solid #00638E;display:flex;flex-direction:column;gap:3px">
+                    <span style="font:700 10px Mulish;letter-spacing:.12em;color:#00638E">SAY THIS</span>
+                    <span style="font:600 12.5px/1.4 Mulish">"{{ m.say }}"</span>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="width:440px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>Each landmine is closed until needed, then gives the cause, how to avoid it and a ready line to say. Communication guides (team kick-off, "CRM is just admin" pushback) use the same pattern. Sample copy only.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1l">
+      <div class="dv-olabel"><a class="dv-oid" href="#1l">1l</a>Change governance tracker</div>
+      <div class="dv-card" style="width:440px">
+        <div style="background:#142850;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;font:700 12px Mulish"><span style="width:14px;height:14px;background:#00638E"></span>4 · Leading change › Governance</div>
+        <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="font:800 17px/1.2 Mulish;color:#00638E">Adoption check-in · monthly</div>
+          <div style="display:grid;grid-template-columns:1.4fr repeat(4,1fr);border:1px solid #D8D9DA;border-radius:4px;overflow:hidden;font:600 11px/1.25 Mulish;text-align:center">
+            <div style="padding:8px;background:#F2F3F4;text-align:left">Team</div><div style="padding:8px;background:#F2F3F4">Cadence held</div><div style="padding:8px;background:#F2F3F4">CRM current</div><div style="padding:8px;background:#F2F3F4">Visits logged</div><div style="padding:8px;background:#F2F3F4">Coaching done</div>
+            <div style="padding:8px;text-align:left;border-top:1px solid #D8D9DA">Team North</div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1AB092"></span></div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1AB092"></span></div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#D6B874"></span></div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1AB092"></span></div>
+            <div style="padding:8px;text-align:left;border-top:1px solid #D8D9DA">Team South</div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#D6B874"></span></div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#D20014"></span></div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#D6B874"></span></div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1AB092"></span></div>
+            <div style="padding:8px;text-align:left;border-top:1px solid #D8D9DA">Team Key Acc.</div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1AB092"></span></div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#D6B874"></span></div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1AB092"></span></div><div style="padding:8px;border-top:1px solid #D8D9DA"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#D6B874"></span></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;font:600 12px/1.35 Mulish">
+            <div style="font:700 10px Mulish;letter-spacing:.12em;color:#63666A">IF A DOT IS RED</div>
+            <div style="padding:8px 10px;border:1px solid #D8D9DA;border-radius:4px">Use the matching landmine page and the follow-up script →</div>
+          </div>
+        </div>
+      </div>
+      <div style="width:440px;display:flex;flex-direction:column;gap:6px;font:400 12.5px/1.45 Mulish;color:#63666A">
+        <div>Governance as a simple monthly check, not a project-management tool. Version 1: a downloadable template the leader fills in. Later: dots fed from CRM data.</div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1m">
+      <div class="dv-olabel"><a class="dv-oid" href="#1m">1m</a>Other ideas to consider</div>
+      <div class="dv-card" style="width:380px;padding:18px;display:flex;flex-direction:column;gap:10px;font:400 13px/1.45 Mulish">
+        <div style="display:flex;flex-direction:column;gap:2px;padding-bottom:10px;border-bottom:1px solid #D8D9DA"><strong>Pocket cards</strong><span style="color:#63666A">Phone-sized summary of each meeting and discipline, for the minutes before a visit.</span></div>
+        <div style="display:flex;flex-direction:column;gap:2px;padding-bottom:10px;border-bottom:1px solid #D8D9DA"><strong>Team kit</strong><span style="color:#63666A">Ready slides and talk track for leaders to present the change to their own team.</span></div>
+        <div style="display:flex;flex-direction:column;gap:2px;padding-bottom:10px;border-bottom:1px solid #D8D9DA"><strong>Leader voices</strong><span style="color:#63666A">Short clips or quotes from Rockfon leaders who already run the cadence well.</span></div>
+        <div style="display:flex;flex-direction:column;gap:2px;padding-bottom:10px;border-bottom:1px solid #D8D9DA"><strong>"What changed" log</strong><span style="color:#63666A">One line per update, so leaders trust they're on the current version.</span></div>
+        <div style="display:flex;flex-direction:column;gap:2px;padding-bottom:10px;border-bottom:1px solid #D8D9DA"><strong>CRM glossary</strong><span style="color:#63666A">Stages, fields and terms defined once, linked wherever they appear.</span></div>
+        <div style="display:flex;flex-direction:column;gap:2px"><strong>Feedback button</strong><span style="color:#63666A">"Was this useful? What's missing?" on every page, to improve the playbook after launch.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="dv-next">Suggested starting point: <a class="dv-oid" href="#1a">1a</a> as home with <a class="dv-oid" href="#1c">1c</a> chapters behind it, and <a class="dv-oid" href="#1e">1e</a> <a class="dv-oid" href="#1f">1f</a> <a class="dv-oid" href="#1k">1k</a> as the first screens. Try next: "build 1e in hi-fi with our real meeting types" · "show 1a on a phone" · "combine 1a and 1d"</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { role: 'leader', mtype: 0, mtab: 'during', disc: 0, quad: 1, mine: 0, checks: [3, 2, 4, 2] };
+  renderVals() {
+    const s = this.state;
+    const tab = (on) => ({ bg: on ? '#00638E' : '#fff', fg: on ? '#fff' : '#1A1A1A' });
+    const roles = {
+      leader: { title: 'What we expect from you as a leader', items: ['Run the cadence every week, without exceptions', 'Coach from CRM data, not from gut feel', 'Join each rep on a customer visit every month', 'Use the CRM yourself first, in every meeting'] },
+      rep: { title: 'What we expect from you as a rep', items: ['Keep the CRM current, the same day', 'Come prepared to pipeline reviews', 'Plan visits two weeks ahead', 'Share wins and lessons with the team'] }
+    };
+    const meetings = [
+      { name: 'Weekly pipeline review', purpose: 'Move the right deals forward and spot gaps early.', freq: 'Weekly', length: '45 min', who: 'Leader + rep',
+        before: ['Rep updates all opportunities in CRM', 'Leader scans the pipeline dashboard', 'Pick three deals to discuss'],
+        during: [['5′', 'Check last week\'s actions'], ['25′', 'Deep-dive on three deals'], ['10′', 'Pipeline health: gaps and stalled deals'], ['5′', 'Agree next steps and dates']],
+        after: ['Log agreed actions in CRM', 'Send a three-line recap', 'Confirm next review in calendar'] },
+      { name: '1:1 coaching', purpose: 'Grow the person, not just the numbers.', freq: 'Every 2 weeks', length: '30 min', who: 'Leader + rep',
+        before: ['Review activity and visit data', 'Note one strength and one growth area'],
+        during: [['5′', 'How are you doing?'], ['10′', 'Rep\'s own agenda'], ['10′', 'One skill to build'], ['5′', 'Commitment until next time']],
+        after: ['Record the commitment in the coaching log', 'Plan a joint visit if relevant'] },
+      { name: 'Monthly team meeting', purpose: 'Align the team, share wins, keep the change moving.', freq: 'Monthly', length: '60 min', who: 'Whole team',
+        before: ['Pull the team dashboard', 'Ask one rep to share a win'],
+        during: [['10′', 'Results vs. target'], ['15′', 'Win story from a rep'], ['20′', 'Topic of the month (e.g. a CRM habit)'], ['15′', 'Priorities for next month']],
+        after: ['Share priorities in writing', 'Update the change tracker'] }
+    ];
+    const m = meetings[s.mtype];
+    const phaseRows = s.mtab === 'during' ? m.during.map(([tag, text]) => ({ tag, text })) : m[s.mtab].map(text => ({ tag: '☐', text }));
+    const discs = [
+      { name: 'Pipeline', good: 'Every opportunity has a clear next step and a date.', qs: ['What has to happen for this to close?', 'Who else is involved in the decision?', 'What happens if the customer does nothing?'], red: 'Deals sitting in the same stage for more than 60 days.' },
+      { name: 'Account', good: 'Key accounts have a plan with named contacts.', qs: ['Where is this account growing?', 'Which architects or specifiers are we missing?', 'What share of their projects do we win?'], red: 'Revenue rests on a single contact.' },
+      { name: 'Activity / visit', good: 'Visits are planned two weeks ahead and logged the same day.', qs: ['Which visits moved a deal forward?', 'Who did you meet for the first time?', 'What will you do differently next visit?'], red: 'Many visits, no new opportunities.' },
+      { name: 'Cadence', good: 'Each meeting happens at its fixed rhythm and ends with actions.', qs: ['Which meeting slipped last month, and why?', 'Is each meeting producing actions?', 'Do reps prepare in CRM beforehand?'], red: 'Reviews cancelled for "urgent" work.' }
+    ];
+    const quads = [
+      { name: 'High will · low skill', how: 'Instruct and show', detail: 'Joint visits, role-play before key meetings, short frequent feedback.' },
+      { name: 'High will · high skill', how: 'Stretch and delegate', detail: 'Your future champions. Give them bigger accounts, let them coach peers and share wins at team meetings.' },
+      { name: 'Low will · low skill', how: 'Direct and check often', detail: 'Clear, small goals with weekly follow-up. Decide together what support is needed.' },
+      { name: 'Low will · high skill', how: 'Re-engage', detail: 'Find what has changed for them. Listen first, then agree one goal that matters to them.' }
+    ];
+    const checkTexts = ['I spend more time coaching than reporting', 'I run my meetings from CRM data', 'My team knows what I expect from them', 'I talk openly about the change and why'];
+    const focusMap = ['Coaching for growth', 'Pipeline coaching', 'Expectations', 'Leading people through change'];
+    const low = s.checks.indexOf(Math.min(...s.checks));
+    const mineData = [
+      { title: 'Launching CRM as a control tool', why: 'Reps hear "surveillance" before they hear any benefit.', avoid: 'Show what is in it for them first: fewer status calls, better deal support.', say: 'This is how I will help you win deals, not how I check on you.' },
+      { title: 'The leader doesn\'t use CRM in meetings', why: 'Teams copy what the leader does, not what the leader says.', avoid: 'Run every pipeline review from the CRM screen from day one.', say: 'If it\'s not in CRM, we\'ll talk about it once it is.' },
+      { title: 'Changing everything at once', why: 'Too many new habits at the same time and none of them stick.', avoid: 'Introduce one new habit per month and follow it up.', say: 'This month we focus on one thing: a next step on every opportunity.' }
+    ];
+    const jv = {
+      before: ['Agree the visit objective with the rep', 'Agree roles: the rep leads, you support', 'Pick one skill you will observe', 'Check the account history in CRM'].map(text => ({ tag: '☐', text })),
+      during: [['Open', 'Rep opens and leads the meeting'], ['Observe', 'Note what works, hold back'], ['Step in', 'Only if the deal is at risk'], ['Close', 'Rep agrees the next step with the customer']].map(([tag, text]) => ({ tag, text })),
+      after: ['Debrief within 24 h: what went well?', 'One thing to do differently next time', 'Rep logs the visit and next step in CRM', 'Note it in the coaching log'].map(text => ({ tag: '☐', text }))
+    };
+    const pockets = [
+      { title: 'Joint visit', sub: 'You observe, the rep leads.', items: ['Agree objective and roles', 'Observe one skill', 'Debrief within 24 h'] },
+      { title: 'Pipeline review', sub: '45 min · weekly', items: ['Check last week\'s actions', 'Deep-dive on three deals', 'Agree next steps and dates'] },
+      { title: '1:1 coaching', sub: '30 min · every 2 weeks', items: ['Rep\'s agenda first', 'One skill to build', 'One commitment'] },
+      { title: 'CRM pushback', sub: 'When you hear "it\'s just admin"', items: ['Listen, then ask what slows them down', 'Show one thing CRM saves them', '"If it\'s not in CRM, we\'ll discuss it once it is."'] }
+    ];
+    const pk = pockets[s.pocket ?? 0];
+    const termData = [
+      { name: 'Opportunity', def: 'A specific project where a customer may buy Rockfon products.', req: [['Stage', 'Rep', 'At creation, then weekly'], ['Estimated value', 'Rep', 'At creation'], ['Close date', 'Rep', 'At creation'], ['Next step + date', 'Rep', 'After every contact']] },
+      { name: 'Account', def: 'A company we sell to or influence: contractor, distributor, architect or building owner.', req: [['Segment', 'Rep', 'At creation'], ['Key contacts', 'Rep', 'Kept current'], ['Account owner', 'Leader', 'At creation']] },
+      { name: 'Visit', def: 'A planned customer meeting, in person or online.', req: [['Date and type', 'Rep', 'Same day'], ['Contacts met', 'Rep', 'Same day'], ['Outcome / next step', 'Rep', 'Same day']] },
+      { name: 'Stage', def: 'Where an opportunity sits in the buying process, from lead to won or lost.', req: [['Stage criteria met', 'Rep', 'Before moving stage'], ['Lost reason', 'Rep', 'When closed lost']] }
+    ];
+    const ti = s.term ?? 0, fb = s.fb ?? 'closed', fu = s.fbUseful;
+    return {
+      jvTabs: ['before', 'during', 'after'].map(k => ({ label: k[0].toUpperCase() + k.slice(1), line: k === (s.jvTab ?? 'before') ? '#00638E' : 'transparent', fg: k === (s.jvTab ?? 'before') ? '#00638E' : '#63666A', pick: () => this.setState({ jvTab: k }) })),
+      jvRows: jv[s.jvTab ?? 'before'],
+      pocket: { ...pk, items: pk.items.map((t, i) => ({ n: i + 1, t })) },
+      pocketCount: `CARD ${(s.pocket ?? 0) + 1} OF ${pockets.length}`,
+      pocketDots: pockets.map((_, i) => ({ bg: i === (s.pocket ?? 0) ? '#00638E' : '#D8D9DA' })),
+      pocketPrev: () => this.setState(st => ({ pocket: ((st.pocket ?? 0) + pockets.length - 1) % pockets.length })),
+      pocketNext: () => this.setState(st => ({ pocket: ((st.pocket ?? 0) + 1) % pockets.length })),
+      terms: termData.map((t, i) => ({ name: t.name, bg: i === ti ? '#00638E' : 'transparent', fg: i === ti ? '#fff' : '#1A1A1A', pick: () => this.setState({ term: i }) })),
+      term: { ...termData[ti], req: termData[ti].req.map(([f, w, t]) => ({ f, w, t })) },
+      fbClosed: fb === 'closed', fbIsOpen: fb === 'open', fbSent: fb === 'sent',
+      fbOpen: () => this.setState({ fb: 'open' }), fbClose: () => this.setState({ fb: 'closed', fbUseful: null }), fbSend: () => this.setState({ fb: 'sent' }),
+      fbYes: () => this.setState({ fbUseful: 'yes' }), fbNo: () => this.setState({ fbUseful: 'no' }),
+      fbYesBg: fu === 'yes' ? '#00638E' : '#fff', fbYesFg: fu === 'yes' ? '#fff' : '#00638E',
+      fbNoBg: fu === 'no' ? '#00638E' : '#fff', fbNoFg: fu === 'no' ? '#fff' : '#00638E',
+      roleTab: { leader: tab(s.role === 'leader'), rep: tab(s.role === 'rep') },
+      setLeader: () => this.setState({ role: 'leader' }),
+      setRep: () => this.setState({ role: 'rep' }),
+      roleTitle: roles[s.role].title,
+      roleItems: roles[s.role].items,
+      meetingPills: meetings.map((x, i) => ({ name: x.name, ...tab(i === s.mtype), pick: () => this.setState({ mtype: i }) })),
+      meeting: m,
+      phaseTabs: ['before', 'during', 'after'].map(k => ({ label: k[0].toUpperCase() + k.slice(1), line: k === s.mtab ? '#00638E' : 'transparent', fg: k === s.mtab ? '#00638E' : '#63666A', pick: () => this.setState({ mtab: k }) })),
+      phaseRows,
+      discTabs: discs.map((d, i) => ({ name: d.name, bg: i === s.disc ? '#00638E' : '#F2F3F4', fg: i === s.disc ? '#fff' : '#1A1A1A', pick: () => this.setState({ disc: i }) })),
+      disc: discs[s.disc],
+      quads: quads.map((q, i) => ({ name: q.name, bg: i === s.quad ? '#00638E' : '#fff', fg: i === s.quad ? '#fff' : '#1A1A1A', pick: () => this.setState({ quad: i }) })),
+      quad: quads[s.quad],
+      checks: checkTexts.map((text, ci) => ({ text, dots: [1, 2, 3, 4, 5].map(n => ({ n, bg: n === s.checks[ci] ? '#00638E' : '#fff', fg: n === s.checks[ci] ? '#fff' : '#63666A', pick: () => this.setState(st => { const c = [...st.checks]; c[ci] = n; return { checks: c }; }) })) })),
+      focus: focusMap[low],
+      mines: mineData.map((x, i) => ({ ...x, open: i === s.mine, sign: i === s.mine ? '−' : '+', headBg: i === s.mine ? '#F2F3F4' : '#fff', toggle: () => this.setState({ mine: s.mine === i ? -1 : i }) }))
+    };
+  }
+}
+</script>
+</body>
+</html>
