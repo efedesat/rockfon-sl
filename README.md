@@ -60,7 +60,7 @@ Vercel's own Password Protection (a paid add-on) would also work and could repla
 
 ## Large screens
 
-The design is sized for laptops and tablets. From 1440px wide the whole layout scales up in proportion (1.08× at 1440, 1.15× at 1600, 1.25× at 1880, 1.4× at 2400), so pages fill more of the screen while line lengths stay readable. The steps are in `src/styles.css` (`--z`).
+The design is sized for laptops and tablets. From 1440px wide the whole layout scales up in proportion (1.04× at 1440, 1.08× at 1600, 1.12× at 1880, 1.2× at 2400), so pages fill more of the screen while line lengths stay readable. The steps are in `src/styles.css` (`--z`).
 
 ## Routes
 

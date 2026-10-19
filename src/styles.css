@@ -18,10 +18,10 @@
      stay the same. Viewport heights are divided by --z to stay full height. */
   --z: 1;
 }
-@media (min-width: 1440px) { :root { --z: 1.08; } }
-@media (min-width: 1600px) { :root { --z: 1.15; } }
-@media (min-width: 1880px) { :root { --z: 1.25; } }
-@media (min-width: 2400px) { :root { --z: 1.4; } }
+@media (min-width: 1440px) { :root { --z: 1.04; } }
+@media (min-width: 1600px) { :root { --z: 1.08; } }
+@media (min-width: 1880px) { :root { --z: 1.12; } }
+@media (min-width: 2400px) { :root { --z: 1.2; } }
 .app-root { zoom: var(--z); height: calc(100vh / var(--z)); }
 *, *::before, *::after { box-sizing: border-box; }
 html, body, #root { margin: 0; height: 100%; background: #fff; }
