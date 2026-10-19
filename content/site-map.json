@@ -438,6 +438,23 @@
             "assets/photos/image29.jpeg"
           ],
           "startHere": false
+        },
+        {
+          "id": "lptc-3",
+          "title": "Maintain quality and accountability",
+          "group": "Sales coaching program",
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionIndex": 2
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image58.png",
+            "assets/photos/image50.jpeg"
+          ],
+          "startHere": false
         }
       ]
     },
@@ -610,23 +627,6 @@
           "photos": [
             "assets/photos/image26.png",
             "assets/photos/image22.jpeg"
-          ],
-          "startHere": false
-        },
-        {
-          "id": "lptc-3",
-          "title": "Maintain quality and accountability",
-          "group": "Leading people through change",
-          "pageType": "editorial",
-          "module": null,
-          "contentRef": {
-            "part": "leading-people-through-change",
-            "sectionIndex": 2
-          },
-          "relatedTool": "ch-comms",
-          "photos": [
-            "assets/photos/image58.png",
-            "assets/photos/image50.jpeg"
           ],
           "startHere": false
         },
