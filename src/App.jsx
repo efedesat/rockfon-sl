@@ -160,10 +160,12 @@ function Feedback({ page }) {
   const [state, setState] = useState('closed');
   const [val, setVal] = useState(null);
   const [comment, setComment] = useState('');
+  // Remembered on this device so it doesn't need retyping.
+  const [name, setName] = useStored('feedbackName', '');
   const { pathname } = useLocation();
   useEffect(() => { setState(s => (s === 'sent' ? 'closed' : s)); }, [pathname]);
   const send = () => {
-    fetch('/api/feedback', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ page: pathname, title: page, answer: val, comment }) }).catch(() => {});
+    fetch('/api/feedback', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ page: pathname, title: page, answer: val, name: name.trim(), comment }) }).catch(() => {});
     setState('sent'); setVal(null); setComment('');
   };
   const box = { position: 'absolute', right: 24, bottom: 24, zIndex: 25 };
@@ -180,6 +182,7 @@ function Feedback({ page }) {
         <button type="button" aria-pressed={val === 'yes'} onClick={() => setVal('yes')} className="tap" style={yn(val === 'yes')}>Yes</button>
         <button type="button" aria-pressed={val === 'no'} onClick={() => setVal('no')} className="tap" style={yn(val === 'no')}>Not really</button>
       </div>
+      <input type="text" aria-label="Your name (optional)" autoComplete="name" value={name} onChange={e => setName(e.target.value)} placeholder="Your name (optional)" style={{ height: 38, border: '1px solid #B1B2B4', borderRadius: 3, padding: '0 10px', fontSize: 13, outline: 'none' }} />
       <textarea aria-label="Comment (optional)" value={comment} onChange={e => setComment(e.target.value)} placeholder="What's missing or unclear? (optional)" style={{ height: 72, resize: 'none', border: '1px solid #B1B2B4', borderRadius: 3, padding: '8px 10px', fontSize: 13, outline: 'none' }} />
       <button type="button" className="btn btn-primary btn-full tap" onClick={send}>Send feedback</button>
     </div>

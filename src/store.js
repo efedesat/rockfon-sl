@@ -1,9 +1,10 @@
-// Personal data stays in this browser (localStorage) and is never sent anywhere.
+// Personal data stays in this browser (localStorage) and is never sent anywhere
+// (the remembered feedback name is only sent when the user sends feedback).
 import { useSyncExternalStore, useCallback } from 'react';
 
 const PREFIX = 'slp:';
 // Persisted keys: lastRead, notes, selfCheck, checks, tracker, worksheet,
-// worksheetName, records, cockpitNotes, meetingView.
+// worksheetName, records, cockpitNotes, meetingView, feedbackName.
 const listeners = new Set();
 const cache = {};
 

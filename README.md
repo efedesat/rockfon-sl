@@ -72,7 +72,7 @@ Notes, self-check answers, checklist ticks, tracker dots, worksheet scores, reco
 
 ## Feedback
 
-The feedback card posts `{ page, title, answer, comment }` to `/api/feedback`. The destination is still open, so for now each entry is written to the Vercel function log (**Project → Logs**, search for `playbook-feedback`). Set `FEEDBACK_WEBHOOK_URL` to forward entries as JSON to a Teams, Slack or Power Automate webhook.
+The feedback card posts `{ page, title, answer, name, comment }` to `/api/feedback`. The destination is still open, so for now each entry is written to the Vercel function log (**Project → Logs**, search for `playbook-feedback`). Set `FEEDBACK_WEBHOOK_URL` to forward entries as JSON to a Teams, Slack or Power Automate webhook.
 
 ## Open items (from the handoff)
 

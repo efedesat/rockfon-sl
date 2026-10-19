@@ -2,7 +2,7 @@
 // The final destination is still to be decided. Until then every entry is
 // written to the Vercel function log, and, when FEEDBACK_WEBHOOK_URL is set
 // (for example a Teams, Slack or Power Automate webhook), forwarded there
-// as JSON. Only the page id, the answer and the comment are sent.
+// as JSON. Only the page id, the answer, the optional name and the comment are sent.
 export async function POST(request) {
   let body;
   try { body = await request.json(); } catch { return new Response('Bad request', { status: 400 }); }
@@ -10,6 +10,7 @@ export async function POST(request) {
     page: String(body.page || '').slice(0, 200),
     title: String(body.title || '').slice(0, 300),
     answer: body.answer === 'yes' || body.answer === 'no' ? body.answer : null,
+    name: String(body.name || '').slice(0, 200),
     comment: String(body.comment || '').slice(0, 4000),
     at: new Date().toISOString(),
   };
