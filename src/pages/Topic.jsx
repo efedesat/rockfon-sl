@@ -62,7 +62,7 @@ function Story({ t, sec, narrow, mainRef }) {
     <>
       <div style={{ position: 'relative', minHeight: 'calc(100vh / var(--z) - 60px)', background: '#F2F3F4', display: 'flex', alignItems: 'flex-end' }}>
         <div style={{ width: '100%', maxWidth: 960, margin: '0 auto', padding: '96px 32px 64px', display: 'flex', flexDirection: 'column', gap: 20 }}>
-          <TierLabel tier={tier} />
+          <TierLabel tier={tier} hint={false} />
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.16em', color: '#63666A', textTransform: 'uppercase' }}>Chapter {t.ch.n} · {t.ch.title}</span>
           <h1 style={{ margin: 0, fontSize: 22, lineHeight: 1.25, fontWeight: 800, color: '#142850' }}>{t.title}</h1>
           {lede ? <p style={{ margin: 0, padding: '8px 0 10px', maxWidth: 820, fontSize: narrow ? 34 : 40, lineHeight: 1.2, fontWeight: 800, color: '#00638E', textWrap: 'pretty' }}>{lede}</p>
@@ -122,7 +122,7 @@ function Article({ t, sec }) {
       <div style={{ position: 'relative', height: 440, background: `#142850 url(${t.imgs[0]}) center/cover`, display: 'flex', alignItems: 'flex-end' }}>
         <div className="scrim" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg,rgba(20,40,80,.94) 0%,rgba(20,40,80,.35) 60%,rgba(20,40,80,.5) 100%)' }} />
         <div style={{ position: 'relative', width: '100%', maxWidth: 760, margin: '0 auto', padding: '0 32px 44px', display: 'flex', flexDirection: 'column', gap: 14, color: '#fff' }}>
-          <TierLabel tier={tier} dark />
+          <TierLabel tier={tier} dark hint={false} />
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.16em', opacity: 0.8, textTransform: 'uppercase' }}>Chapter {t.ch.n} · {t.ch.title}</span>
           <h1 style={{ margin: 0, fontSize: 42, lineHeight: 1.1, fontWeight: 800, textWrap: 'pretty' }}>{t.title}</h1>
           <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.75, paddingTop: 6 }}>{minsOf(t)} min read</span>

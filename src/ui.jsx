@@ -20,12 +20,12 @@ export const Icon = {
 };
 
 // Tier label: pill + hint. Clicking opens "How to use this playbook".
-export function TierLabel({ tier, dark }) {
+export function TierLabel({ tier, dark, hint = true }) {
   if (!tier) return null;
   return (
     <Link to="/guide" title="How to use this playbook" style={{ alignSelf: 'flex-start', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '6px 10px' }}>
       <span style={{ flex: 'none', whiteSpace: 'nowrap', padding: '4px 10px', borderRadius: 999, fontSize: 10.5, fontWeight: 800, letterSpacing: '.12em', textTransform: 'uppercase', background: tier.bg, color: tier.fg }}>{tier.label}</span>
-      <span style={{ flex: 'none', whiteSpace: 'nowrap', fontSize: 12.5, fontWeight: 700, color: dark ? 'rgba(255,255,255,.9)' : '#63666A' }}>{tier.hint}</span>
+      {hint && <span style={{ flex: 'none', whiteSpace: 'nowrap', fontSize: 12.5, fontWeight: 700, color: dark ? 'rgba(255,255,255,.9)' : '#63666A' }}>{tier.hint}</span>}
     </Link>
   );
 }
