@@ -11,6 +11,7 @@ An interactive playbook for Rockfon EA sales leaders, built from the design hand
 | `content/templates/` | Author templates from the earlier round (for reference). |
 | `src/` | The app. No playbook copy is hard-coded in components. |
 | `public/assets/` | Logos and photography. |
+| `public/fonts/` | Avenir LT Pro (licensed). |
 | `middleware.js` | The password gate (Vercel Routing Middleware). |
 | `api/feedback.js` | Receives "Was this page useful?" feedback. |
 | `design/` | The original handoff: README (`HANDOFF.md`), clickable prototype, offline copy, design-system tokens. Not deployed. |
@@ -71,7 +72,7 @@ The feedback card posts `{ page, title, answer, comment }` to `/api/feedback`. T
 
 ## Open items (from the handoff)
 
-- Licensed Avenir Next LT Pro webfonts: the site uses Mulish as a stand-in. Add the font files and an `@font-face` for "Avenir Next LT Pro"; the CSS already lists it first.
+- Fonts: Avenir LT Pro is in `public/fonts/` (Book, Oblique, Medium, Black), served only behind the password. With those four files the design's weights map 400 → Book, 500–600 → Medium, 700–800 → Black. Adding Avenir LT Pro **Heavy** (85) would match the 700/800 headings more closely. The password page uses Mulish because the fonts sit behind the gate.
 - Feedback destination, Rocksell deep links and dashboard screenshots.
 - Content placeholders listed in `design/HANDOFF.md` → "Known gaps in v0.1".
 - Photo usage rights and high-resolution originals.

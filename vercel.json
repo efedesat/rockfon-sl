@@ -4,7 +4,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/((?!api/|assets/|static/).*)", "destination": "/index.html" }
+    { "source": "/((?!api/|assets/|static/|fonts/).*)", "destination": "/index.html" }
   ],
   "headers": [
     {

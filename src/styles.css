@@ -1,5 +1,13 @@
+/* Avenir LT Pro (licensed, supplied by Rockfon). Only Book, Oblique, Medium
+   and Black are available, so the design's weights map as:
+   400 → Book, 500–600 → Medium, 700–900 → Black. */
+@font-face { font-family: 'Avenir LT Pro'; src: url('/fonts/AvenirLTPro-Book.ttf') format('truetype'); font-weight: 100 450; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Avenir LT Pro'; src: url('/fonts/AvenirLTPro-Oblique.ttf') format('truetype'); font-weight: 100 450; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Avenir LT Pro'; src: url('/fonts/AvenirLTPro-Medium.ttf') format('truetype'); font-weight: 451 650; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Avenir LT Pro'; src: url('/fonts/AvenirLTPro-Black.ttf') format('truetype'); font-weight: 651 1000; font-style: normal; font-display: swap; }
+
 :root {
-  --font-brand: 'Avenir Next LT Pro', Mulish, system-ui, sans-serif;
+  --font-brand: 'Avenir LT Pro', Mulish, system-ui, sans-serif;
   --blue: #00638E;
   --blue-hover: #00547A;
   --blue-pressed: #00466A;
