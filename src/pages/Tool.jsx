@@ -306,19 +306,12 @@ export default function Tool({ tool, narrow }) {
   const hasContent = !!secOf(tool) || tool.type === 'qbank' || tool.type === 'meeting';
   const { state } = useLocation();
   const from = state && state.from;
-  // Meeting guides keep a lighter header: no "Use every week" hint, no type tag.
-  const meetingGuide = tool.type === 'meeting' || tool.kind === 'Meeting guide';
   return (
     <div className="tool-page" style={{ maxWidth: 900, margin: '0 auto', padding: narrow ? '76px 28px 140px' : '80px 48px 140px', display: 'flex', flexDirection: 'column', gap: 30 }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-        <TierLabel tier={tierOf(tool)} hint={!meetingGuide} />
+        <TierLabel tier={tierOf(tool)} hint={false} />
         <h1 style={{ margin: 0, fontSize: 34, lineHeight: 1.15, fontWeight: 800, color: '#00638E', textWrap: 'pretty' }}>{tool.title}</h1>
-        {(!meetingGuide || tool.note) && (
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {!meetingGuide && <Tag>{tool.kind}</Tag>}
-            {tool.note && <Tag tone="sand">{tool.note}</Tag>}
-          </div>
-        )}
+        {tool.note && <div style={{ display: 'flex' }}><Tag tone="sand">{tool.note}</Tag></div>}
         {!hasContent && <Bars widths={['100%', '68%']} h={11} style={{ maxWidth: 640, paddingTop: 4 }} />}
       </div>
       {Body && <Body tool={tool} narrow={narrow} from={from} />}
