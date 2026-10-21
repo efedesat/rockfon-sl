@@ -3838,7 +3838,7 @@
         },
         {
          "t": "p",
-         "h": "The salesperson updates the source records and draft actions; the sales leader confirms the action record by the next working day. For a team meeting, the sales leader circulates the shared record and each opportunity owner updates their opportunity. Close an action when evidence supports completion; distinguish action completion from achievement of the commercial outcome. Review overdue or blocked actions at the next relevant meeting and act earlier where waiting would put business at risk."
+         "h": "The salesperson updates the source records. The sales leader emails the meeting notes from the cockpit straight after the meeting, and the salesperson replies with any corrections by the next working day. For a team meeting, the sales leader circulates the shared record and each opportunity owner updates their opportunity. Close an action when evidence supports completion; distinguish action completion from achievement of the commercial outcome. Review overdue or blocked actions at the next relevant meeting and act earlier where waiting would put business at risk."
         }
        ]
       },
@@ -3871,7 +3871,7 @@
         },
         {
          "t": "p",
-         "h": "Use the pipeline dashboard, two selected opportunity records, the must-win deal room evidence and the previous action list. Leave with a diagnosis of pipeline health, priorities for creation or progression, a plan for each coached opportunity and any quality corrections or support decisions."
+         "h": "Use the Pipeline dashboard, the two pinned opportunities, the deal room in the cockpit and the notes from the previous meeting. Leave with a diagnosis of pipeline health, priorities for creation or progression, a plan for each coached opportunity and any quality corrections or support decisions."
         }
        ]
       },
@@ -3884,9 +3884,9 @@
           "<strong>Salesperson:</strong> Update open opportunities, current decision points, realistic values, product and vertical classifications, timing, next actions and owners. Mark important unknowns.",
           "<strong>Salesperson:</strong> Check opportunities created since the previous review: source, qualification evidence and relevance. Distinguish discovery of new business from late entry of already-known business.",
           "<strong>Salesperson:</strong> Review the largest open opportunities by estimated Rockfon value. Flag strategically important opportunities whose value is still unknown.",
-          "<strong>Salesperson:</strong> Check the quarter profile, stalled or slipped opportunities, missing next steps and the mix against agreed priorities.",
+          "<strong>Salesperson:</strong> In the Pipeline dashboard, check the quarter runway, stalled or slipped opportunities, missing next steps and the mix against agreed priorities.",
           "<strong>Salesperson:</strong> Choose two important opportunities for coaching and send them to the coach by the previous working day, explaining the decision, obstacle or uncertainty on which help is needed.",
-          "<strong>Salesperson:</strong> Prepare the five scores and supporting evidence, the position required for the next decision, a proposed next move and a specific request for help.",
+          "<strong>Salesperson:</strong> Prepare the five deal room scores and supporting evidence, a proposed next move and a specific request for help.",
           "<strong>Sales leader (coach):</strong> Review the pipeline views, selected opportunities and previous actions before the meeting. Identify the main questions, exceptions and support commitments to revisit.",
           "<strong>Sales leader (coach):</strong> Select a separate random record for the quality check and invite any specialist needed for a selected opportunity."
          ]
@@ -3968,7 +3968,7 @@
         },
         {
          "t": "p",
-         "h": "Progression and conversion: examine meaningful advances, stalled records, lost business and slipped dates. Use comparable role and opportunity cohorts when calculating conversion. A CRM edit or a stage change without new evidence is not progress."
+         "h": "Progression and conversion: examine meaningful advances, stalled records, lost business and slipped dates. The velocity tiles show which input moved most against last period: open opportunities, average value, win rate or cycle length. Use comparable role and opportunity cohorts when calculating conversion. A CRM edit or a stage change without new evidence is not progress."
         }
        ]
       },
@@ -4012,10 +4012,10 @@
         {
          "t": "ul",
          "items": [
-          "<strong>Salesperson:</strong> Update the two opportunity plans, scores, evidence and next actions. Retain earlier assumptions where a change explains the decision.",
+          "<strong>Salesperson:</strong> Update the two opportunities in Rocksell with the agreed next moves, evidence and next actions. Retain earlier assumptions where a change explains the decision.",
           "<strong>Salesperson:</strong> Record generation or progression priorities, put the work in the diary and complete the agreed record corrections by their due dates.",
-          "<strong>Salesperson:</strong> Update the draft action list by the next working day with owners, dates and expected outcomes.",
-          "<strong>Sales leader (coach):</strong> Confirm the action list by the next working day and secure named owners and dates for support requests.",
+          "<strong>Salesperson:</strong> Check the emailed meeting notes and reply with any corrections by the next working day.",
+          "<strong>Sales leader (coach):</strong> Email the meeting notes from the cockpit straight after the meeting, with owners, dates and expected outcomes. Secure named owners and dates for support requests.",
           "<strong>Sales leader (coach):</strong> Deliver their own support commitments and check urgent milestones before the next monthly meeting. Follow up blocked or overdue actions with the responsible person."
          ]
         }
@@ -4063,7 +4063,7 @@
           ],
           [
            "Right solution",
-           "Appropriate fit with the known requirement, a clear proposition and the technical or commercial checks needed",
+           "Appropriate fit with the known requirement at a competitive price, a clear proposition and the technical or commercial checks needed",
            "Why would our offer fit? What remains unverified? Who needs to evaluate it? Are we assuming a requirement that has not been established?"
           ],
           [
@@ -4133,11 +4133,11 @@
        ]
       },
       {
-       "title": "Agree the required position for the next decision",
+       "title": "Choose the gap that matters for the next decision",
        "blocks": [
         {
          "t": "p",
-         "h": "Record a current and required score for each dimension. The required position depends on the next decision, timing and role. Early discovery may appropriately contain unknowns; those unknowns become unacceptable when the team is about to commit resources or make a firm commercial assumption that depends on them."
+         "h": "Score each dimension where the opportunity is today, then read the verdict. Early discovery may appropriately contain unknowns; those unknowns become unacceptable when the team is about to commit resources or make a firm commercial assumption that depends on them."
         },
         {
          "t": "p",
@@ -4145,7 +4145,7 @@
         },
         {
          "t": "p",
-         "h": "For each material gap ask: Where are we now? Where do we need to be for the next decision? What evidence is missing? What will we do to obtain or change it? Who owns the action, and when will we review the result?"
+         "h": "For each material gap ask: Where are we now? What evidence is missing for the next decision? What will we do to obtain or change it? Who owns the action, and when will we review the result?"
         }
        ]
       },
@@ -4167,8 +4167,8 @@
           ],
           [
            "2 to 6",
-           "Evidence profile",
-           "Compare the prepared current and required scores. Which claims are confirmed, indirect, assumed or unknown?"
+           "Scores and verdicts",
+           "Review the prepared scores and verdicts. Which claims are confirmed, indirect, assumed or unknown?"
           ],
           [
            "6 to 12",
@@ -4213,7 +4213,7 @@
         },
         {
          "t": "p",
-         "h": "Use the account dashboard, current segmentation, stakeholder records, concise account plans and the previous action list. The outcome is an agreed allocation of account effort, credible classifications, current account plans and clear actions for relationships and business development."
+         "h": "Use the Accounts dashboard, current segmentation, stakeholder records, concise account plans and the notes from the previous meeting. The outcome is an agreed allocation of account effort, credible classifications, current account plans and clear actions for relationships and business development."
         },
         {
          "t": "p",
@@ -4329,7 +4329,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Time by segment and activity type shows whether the engagement approach is being executed. Use recorded duration as a reasonable approximation and keep missing classifications visible. Examine whether high effort reflects valuable development, required service, inefficient work or familiarity."
+         "h": "Start at segment level. Time by segment and activity type shows whether the engagement approach is being executed. Use recorded duration as a reasonable approximation and keep missing classifications visible. Examine whether high effort reflects valuable development, required service, inefficient work or familiarity."
         },
         {
          "t": "p",
@@ -4350,8 +4350,8 @@
           "<strong>Sales leader (coach):</strong> Confirm segmentation decisions, reasons and any exception or review date.",
           "<strong>Salesperson:</strong> Update segmentation and every reviewed account plan. Record the named owner and date for missing evidence and stakeholder actions.",
           "<strong>Salesperson:</strong> Put engagement decisions into the activity plan and diary, including what will receive less effort when another account receives more.",
-          "<strong>Salesperson:</strong> Update the draft action list by the next working day and complete the agreed customer and relationship actions.",
-          "<strong>Sales leader (coach):</strong> Confirm the action list by the next working day and arrange agreed introductions and support, with a named owner and date.",
+          "<strong>Salesperson:</strong> Check the emailed meeting notes, reply with any corrections by the next working day and complete the agreed customer and relationship actions.",
+          "<strong>Sales leader (coach):</strong> Email the meeting notes from the cockpit straight after the meeting and arrange agreed introductions and support, with a named owner and date.",
           "<strong>Sales leader (coach):</strong> Complete any additional review block within the quarter and confirm that every in-scope plan has been reviewed. Follow up material changes before the next quarterly meeting when necessary."
          ]
         }
@@ -4386,7 +4386,7 @@
         },
         {
          "t": "p",
-         "h": "Use the activity dashboard, completed activity records, account and opportunity priorities, and the actual calendar for the next two weeks. The outcome is a realistic forward plan, corrected coverage gaps, better preparation and an agreed balance of proactive work and reactive capacity."
+         "h": "Use the Visits & activity dashboard, completed activity records, account and opportunity priorities, and the actual calendar for the next two weeks. The outcome is a realistic forward plan, corrected coverage gaps, better preparation and an agreed balance of proactive work and reactive capacity."
         },
         {
          "t": "p",
@@ -4403,7 +4403,7 @@
           "<strong>Salesperson:</strong> Refresh completed activity, outcomes and next actions for the review period. Distinguish completed, cancelled, postponed and planned work.",
           "<strong>Salesperson:</strong> Check activity classifications and account or opportunity context using the shared CRM requirements.",
           "<strong>Salesperson:</strong> Review required coverage of A and other priority accounts, large opportunities, strategic target groups and important stakeholder roles. Flag due and overdue engagement or visits.",
-          "<strong>Salesperson:</strong> Prepare the next two weeks in the calendar, including customer commitments, proactive work, preparation, follow-up, records, travel and realistic reactive capacity.",
+          "<strong>Salesperson:</strong> Prepare the next two weeks in the calendar, including customer commitments, proactive work, preparation, follow-up, records, travel and realistic reactive capacity. Add a location to each customer booking so the visit map can show the routes.",
           "<strong>Salesperson:</strong> Review routes and time between appointments. Identify weak long-trip purposes and opportunities to combine relevant contact.",
           "<strong>Salesperson:</strong> Prepare one example of reactive work displacing a priority, with a proposed response. Update the material by the previous working day.",
           "<strong>Sales leader (coach):</strong> Review activity, coverage, the forward diary and previous actions. Prepare questions about priorities, execution and capacity.",
@@ -4547,7 +4547,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Group suitable customer contact by geography and practical travel windows. Check the sequence, distance, travel time and time needed at the customer. Use a simple area or town view if no route-planning feature is available."
+         "h": "Group suitable customer contact by geography and practical travel windows. Check the sequence, distance, travel time and time needed at the customer. Use the visit map in the dashboard, or a simple area or town view."
         },
         {
          "t": "p",
@@ -4569,8 +4569,8 @@
           "<strong>Salesperson:</strong> Book or initiate contact for coverage gaps, with an intended outcome and due date.",
           "<strong>Salesperson:</strong> Improve preparation for the sampled upcoming activity and record its outcome afterwards.",
           "<strong>Salesperson:</strong> Record proactive commitments, reactive capacity and any rescheduled or deliberately cancelled priority work. Correct routes and unnecessary travel.",
-          "<strong>Salesperson:</strong> Update the draft action record by the next working day and complete the agreed activity and planning actions.",
-          "<strong>Sales leader (coach):</strong> Confirm the action record by the next working day and arrange the agreed leader or specialist support.",
+          "<strong>Salesperson:</strong> Check the emailed meeting notes, reply with any corrections by the next working day and complete the agreed activity and planning actions.",
+          "<strong>Sales leader (coach):</strong> Email the meeting notes from the cockpit straight after the meeting and arrange the agreed leader or specialist support.",
           "<strong>Sales leader (coach):</strong> Deliver support commitments and review recurring capacity or execution problems at the next meeting. Check urgent coverage gaps earlier where needed."
          ]
         }
@@ -4605,7 +4605,7 @@
         },
         {
          "t": "p",
-         "h": "Use the team-filtered pipeline views, the traffic changes since the previous review, must-win records and the common action list. The purpose is to coordinate work and improve important opportunities. Individual development feedback that does not help the team belongs in the individual setting."
+         "h": "Use the Pipeline dashboard with team scope, the opportunity table sorted by last updated, the owners’ deal room scores and the notes from the previous meeting. The purpose is to coordinate work and improve important opportunities. Individual development feedback that does not help the team belongs in the individual setting."
         }
        ]
       },
@@ -4620,7 +4620,7 @@
           "<strong>Opportunity owner:</strong> Check shared records and possible duplicates, and flag disputed ownership to the sales leader before the meeting.",
           "<strong>Sales leader (coach):</strong> Review team traffic and previous commitments. Resolve ownership questions that can be settled beforehand and prepare the decisions requiring the team.",
           "<strong>Sales leader (coach):</strong> Select normally two must-win opportunities using business importance, strategy, timing, risk and need for shared support. Tell each owner the decision the deep dive should address.",
-          "<strong>Selected opportunity owner:</strong> Prepare the five-dimension evidence profile, required position, proposed next move and specific help needed for the selected deep dive.",
+          "<strong>Selected opportunity owner:</strong> Score the five deal room dimensions with evidence, and prepare a proposed next move and the specific help needed for the selected deep dive.",
           "<strong>Sales leader (coach):</strong> Circulate the agenda and invite the contributors needed for the selected decisions.",
           "<strong>All participants:</strong> Read the main changes and relevant deep-dive material before attending. Prepare any contribution requested; a separate pipeline presentation is unnecessary."
          ]
@@ -4661,7 +4661,7 @@
           [
            "60 to 85",
            "First must-win deep dive",
-           "Test the evidence profile, hear relevant contributions and decide the next move and support commitments."
+           "Test the deal room scores, hear relevant contributions and decide the next move and support commitments."
           ],
           [
            "85 to 110",
@@ -4712,7 +4712,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Use the same five-dimension scale as the individual meeting. In each 25-minute deep dive, use three minutes to define the decision, five to test the evidence profile, ten to explore the main gap and options, five to decide actions and support, and two to confirm the commitments."
+         "h": "Use the same five-dimension scale as the individual meeting. In each 25-minute deep dive, use three minutes to define the decision, five to test the deal room scores, ten to explore the main gap and options, five to decide actions and support, and two to confirm the commitments."
         },
         {
          "t": "p",
@@ -4731,7 +4731,7 @@
          "t": "ul",
          "items": [
           "<strong>Opportunity owner:</strong> Update the opportunity and next actions, confirm any accepted handover with the receiving owner and integrate agreed support into the next customer-facing move.",
-          "<strong>Sales leader (coach):</strong> Circulate one concise decision and action record by the next working day, with accountable owners, dates and support commitments.",
+          "<strong>Sales leader (coach):</strong> Email the meeting notes from the cockpit to the team by the next working day, with accountable owners, dates and support commitments.",
           "<strong>Named contributor:</strong> Complete the assigned support action by its due date and tell the opportunity owner the result or any barrier.",
           "<strong>Sales leader (coach):</strong> Deliver their own support actions, check time-critical commitments before the next monthly meeting and remove cross-functional barriers.",
           "<strong>Sales leader (coach):</strong> Carry relevant skill needs into individual coaching and recurring account or activity issues into the appropriate individual review."
@@ -4827,7 +4827,7 @@
         },
         {
          "t": "p",
-         "h": "Keep the two opportunities selected for individual coaching and the team must-win selections identifiable in these lists or through a saved filter. Make the five scores, required positions, evidence gaps and actions available for the coaching discussion."
+         "h": "Keep the two opportunities selected for individual coaching and the team must-win selections identifiable in these lists or through a saved filter. Make the five scores, evidence gaps and actions available for the coaching discussion."
         },
         {
          "t": "p",
@@ -5070,6 +5070,112 @@
      ]
     },
     {
+     "id": "driving-change-through-coaching",
+     "title": "Driving change through coaching",
+     "intro": [
+      {
+       "t": "p",
+       "h": "Rockfon will keep changing. Markets move, customers change what they need, competitors change how they sell, and sometimes we simply want to do things better. Every one of those changes ends up at the frontline. Until the way our salespeople work changes, nothing has changed."
+      },
+      {
+       "t": "p",
+       "h": "The easy response is to instruct, train or tell. Send the email, run the workshop, repeat it at the team meeting. It feels like action. It rarely changes what happens in front of a customer next Tuesday."
+      },
+      {
+       "t": "statement",
+       "items": [
+        "Cadence creates accountability.",
+        "Questions create ownership."
+       ]
+      }
+     ],
+     "subs": [
+      {
+       "title": "Use the cadence to govern change",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "The meetings in this playbook are where change happens: one account, one opportunity and one visit at a time. Every change we want shows up in the work your team already brings to you. Use it, every time."
+        },
+        {
+         "t": "swap",
+         "items": [
+          {
+           "instead": "Asking the team to be more proactive.",
+           "coach": "Coach proactive work through their accounts and visits. Open the coverage list together and ask which customer they will contact before that customer calls them."
+          },
+          {
+           "instead": "Telling them to focus on Design and Mono.",
+           "coach": "Look at the opportunity list together. Where Design or Mono fits, suggest presenting it as an option, or bringing a specialist to talk about it."
+          },
+          {
+           "instead": "Telling specification sales to make sure fire requirements are in the architect’s specification.",
+           "coach": "While they present their pipeline, ask: “Is the fire requirement in the specification for this project?”"
+          }
+         ]
+        },
+        {
+         "t": "p",
+         "h": "<strong>This is not policing.</strong> You are helping. The aim is that people contribute, and that they do it the right way, because they understand why it matters."
+        }
+       ]
+      },
+      {
+       "title": "Doing the right things, and doing them right",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "Your coaching covers both. <strong>Doing the right things</strong> is about choices: which accounts, which opportunities, which people and which products. <strong>Doing them right</strong> is about quality: the purpose, the preparation, the conversation in the room and the follow-up."
+        },
+        {
+         "t": "p",
+         "h": "Instructions usually reach only the first. Most of the value sits in the second. Your role is to coach both, in every meeting."
+        },
+        {
+         "t": "pair",
+         "items": [
+          {
+           "k": "The right thing, done right?",
+           "title": "Visits",
+           "h": "The number of visits matters less than their quality. We register visits and talk about them to govern purpose and quality, not to count them. Ask what the visit was for, what changed and what happens next."
+          },
+          {
+           "k": "Done right, but the right thing?",
+           "title": "A well-prepared presentation",
+           "h": "A carefully prepared presentation to a contact who cannot influence the decision is done right, but it is not the right thing. Ask who decides, and whether this person can get us there."
+          }
+         ]
+        },
+        {
+         "t": "p",
+         "h": "Every meeting in your cadence is a chance to move the team a little further. Ask one more question than feels comfortable, and let them own the answer."
+        }
+       ]
+      },
+      {
+       "title": "Why we built this playbook",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "We built this playbook as a base to work from. It sets out a few fundamentals we agree on as sales leaders: a shared rhythm, common questions and practical tools. How you lead within it is up to you. Every leader has their own style, and this playbook is there to support it."
+        },
+        {
+         "t": "p",
+         "h": "In it you will find what the role asks of you, the coaching skills behind good conversations, the sales management model and the routines of both wheels. Every meeting has its guide, instructions and a cockpit to run it live, with the dashboards, the must-win deal room and the notes you send afterwards. The toolbox holds the rest, for when you need it."
+        },
+        {
+         "t": "p",
+         "h": "It will help you prepare faster, ask better questions and follow up on what was agreed. Above all, it will help you turn every meeting into a step forward for your team."
+        },
+        {
+         "t": "p",
+         "h": "We hope you find it useful, and we wish you every success with your new <em>modus operandi</em>."
+        }
+       ]
+      }
+     ]
+    },
+    {
      "id": "what-it-will-require-from-you",
      "title": "What it will require from you",
      "subs": [],
@@ -5102,5 +5208,601 @@
     }
    ]
   }
+ },
+ "cockpit": {
+  "mt-pipe": {
+   "Previous commitments and focus": {
+    "purpose": "Close the loop on the last review and agree what today must decide.",
+    "data": [
+     "Pipeline · Opportunity table: “No next step” flags",
+     "Pipeline · Opportunity table, sorted by last updated",
+     "Pipeline · Opportunity table: the two opportunities pinned for coaching"
+    ],
+    "ask": [
+     "What has changed since we last met?",
+     "Which actions from last time are done?",
+     "What is still open, and what is stopping it?",
+     "Did I deliver the support I promised?",
+     "What do we need to decide today?"
+    ],
+    "run": [
+     "Go through each action in the notes you emailed after the last meeting.",
+     "Let the salesperson report first, and count only what is done.",
+     "Report on your own commitments too.",
+     "Agree in one sentence what today must decide."
+    ],
+    "watch": [
+     "Turning the recap into a full review. Keep to the time.",
+     "Accepting “in progress” without a date."
+    ]
+   },
+   "Pipeline overview": {
+    "purpose": "Check how much Rockfon value is in the pipeline, when it is expected to deliver, and that enough new business is coming in.",
+    "data": [
+     "Pipeline · Top line: open opportunities, known open Rockfon value, opportunities with unknown value",
+     "Pipeline · Quarter runway: expected Rockfon value per delivery quarter, plus Unallocated",
+     "Pipeline · Opportunity table, sorted by newest",
+     "Pipeline · Opportunity table, sorted by biggest"
+    ],
+    "ask": [
+     "What new opportunities have you created since last time?",
+     "Which are the largest, and are they still real?",
+     "How much do you expect to deliver each quarter?",
+     "How much has no quarter or no value yet?",
+     "Where are the gaps, and where do we depend on a few deals?"
+    ],
+    "run": [
+     "Open the Pipeline page in the dashboard for this salesperson.",
+     "Read the top line together, then the quarter runway.",
+     "Sort the opportunity table by newest, then by biggest, and let the salesperson comment.",
+     "Note gaps between quarters and large unknown values. Don’t solve them yet."
+    ],
+    "watch": [
+     "Going deep on single deals. That belongs in the selected opportunities.",
+     "Treating unknown value as zero."
+    ]
+   },
+   "Main pipeline diagnosis": {
+    "purpose": "Find the one main constraint in the pipeline and agree where effort should go.",
+    "data": [
+     "Pipeline · Velocity: open opportunities, average value, win rate and cycle length against last period",
+     "Pipeline · Quarter runway split by vertical, then by product mix",
+     "Pipeline · Opportunity table: “Stalled” and “No next step” flags",
+     "Pipeline · Opportunity table, showing won and lost with reasons"
+    ],
+    "ask": [
+     "Where is the pipeline getting stuck?",
+     "Is it creating, qualifying, getting access, moving forward or closing?",
+     "What is behind that?",
+     "What will you do differently?",
+     "Where should you spend more time, and where less?"
+    ],
+    "run": [
+     "Look at the four velocity tiles and find the input that moved most.",
+     "Ask where the salesperson thinks the pipeline is stuck before you say what you see.",
+     "Agree one main constraint, not a list.",
+     "Agree what they will do more of, and less of."
+    ],
+    "watch": [
+     "Choosing more than one constraint.",
+     "Explaining the problem for them instead of asking."
+    ]
+   },
+   "Random quality check": {
+    "purpose": "Test that one record, chosen by the leader, tells a true and complete story.",
+    "data": [
+     "Pipeline · Opportunity table: open one opportunity record",
+     "Rockfon value or “unknown”, delivery quarter, vertical and product mix",
+     "Next decision, next action and due date",
+     "Linked accounts and decision makers"
+    ],
+    "ask": [
+     "Talk me through this opportunity.",
+     "How did you arrive at this value?",
+     "Where does it stand right now?",
+     "What is the next decision, and when?",
+     "Who owns it on the customer side?",
+     "What needs correcting in Rocksell?"
+    ],
+    "run": [
+     "Choose one opportunity yourself, not one of the two pinned for coaching.",
+     "Ask the salesperson to talk it through from the record.",
+     "Compare what they say with the value, quarter, next step and contacts in Rocksell.",
+     "Agree corrections on the spot."
+    ],
+    "watch": [
+     "Letting the salesperson choose the record.",
+     "Making it feel like an audit. The aim is reliable information."
+    ]
+   },
+   "First selected opportunity": {
+    "purpose": "Coach the owner to choose the next move on the first must-win opportunity.",
+    "data": [
+     "Deal room: need, solution, access, decision process, momentum",
+     "Rockfon value, delivery quarter and product mix"
+    ],
+    "ask": [],
+    "run": [
+     "Enter the opportunity name in the deal room.",
+     "Ask each dimension question as written and let the salesperson score first.",
+     "Read the verdict together and use the radar to find the weakest point.",
+     "Agree one next move on the gap that most affects the next decision."
+    ],
+    "watch": [
+     "Scores that rise without new evidence.",
+     "Agreeing several actions that won’t happen."
+    ]
+   },
+   "Second selected opportunity": {
+    "purpose": "Coach the owner to choose the next move on the second must-win opportunity.",
+    "data": [
+     "Deal room: need, solution, access, decision process, momentum",
+     "Rockfon value, delivery quarter and product mix"
+    ],
+    "ask": [],
+    "run": [
+     "Run the deal room for the second pinned opportunity.",
+     "If time is short, start from the weakest dimension instead of scoring everything.",
+     "Agree one next move and the support needed."
+    ],
+    "watch": [
+     "Running into the time for decisions.",
+     "Copying the scores from the first opportunity."
+    ]
+   },
+   "Decisions and commitments": {
+    "purpose": "Agree priorities, actions, support and dates, and how progress will show.",
+    "data": [
+     "Pipeline · Opportunity table: owner, next action and due date on each agreed opportunity",
+     "Pin the two opportunities for the next coaching"
+    ],
+    "ask": [
+     "What are your top priorities until we next meet?",
+     "What will you do on each opportunity?",
+     "What do you need from me, and by when?",
+     "How will we know it has happened?",
+     "What will change in your diary?"
+    ],
+    "run": [
+     "Ask the salesperson to read back priorities, actions and dates.",
+     "Add what you will do to support them.",
+     "Pin the two opportunities for the next coaching.",
+     "Press “Finish and review notes”, check the summary and email it."
+    ],
+    "watch": [
+     "Ending without dates.",
+     "Leader commitments that nobody records."
+    ]
+   }
+  },
+  "mt-acc": {
+   "Previous account commitments": {
+    "purpose": "Close the loop on last review’s account actions and confirm today’s scope.",
+    "data": [
+     "Accounts · Due list: missing plans, unreviewed classifications, stakeholder gaps, overdue engagement"
+    ],
+    "ask": [
+     "What has changed in your accounts since last time?",
+     "Which relationship or data actions are still open?",
+     "What is blocking them?",
+     "Does any account need extra time today?"
+    ],
+    "run": [
+     "Go through last review’s account actions from the emailed notes.",
+     "Check the Due list on the Accounts page.",
+     "Agree which accounts need extra time today."
+    ],
+    "watch": [
+     "Reopening segment decisions that were already made."
+    ]
+   },
+   "Segmentation governance": {
+    "purpose": "Make sure the whole portfolio is segmented consistently and on evidence.",
+    "data": [
+     "Accounts · Coverage grid, complete portfolio: segment per account",
+     "Accounts · Due list: unreviewed classifications",
+     "Actual account business and associated open pipeline per account"
+    ],
+    "ask": [
+     "Have you reviewed the full portfolio?",
+     "Which accounts should change segment, and why?",
+     "What evidence supports the change?",
+     "Are we judging potential, fit and our position the same way for every account?",
+     "Which A-accounts are missing data or key contacts?"
+    ],
+    "run": [
+     "Open the coverage grid with the complete portfolio.",
+     "Ask for proposed segment changes and the evidence for each.",
+     "Use the same criteria for every account.",
+     "Check A-accounts that are missing a plan or key contacts."
+    ],
+    "watch": [
+     "Changing segments on feeling or one recent event.",
+     "Accounts left unclassified."
+    ]
+   },
+   "Portfolio effort and return": {
+    "purpose": "Compare where time went with what it produced, and rebalance.",
+    "data": [
+     "Accounts · Effort by segment: customer-activity hours by segment and activity type",
+     "Actual business and open pipeline per segment, each opportunity counted once",
+     "Unclassified and unlinked time"
+    ],
+    "ask": [
+     "Where did your time go, by segment and activity?",
+     "What pipeline and business came from that time?",
+     "Which accounts deserve more of your time?",
+     "Which deserve less, or a different approach?"
+    ],
+    "run": [
+     "Open Effort by segment.",
+     "Compare hours per segment with business and pipeline per segment.",
+     "Ask the salesperson where time should move.",
+     "Look at unclassified and unlinked time."
+    ],
+    "watch": [
+     "Reading one quiet quarter as a trend.",
+     "Ignoring unlinked time. It often hides reactive work."
+    ]
+   },
+   "In-scope account plans": {
+    "purpose": "Review each in-scope account plan and agree what changes next quarter.",
+    "data": [
+     "Accounts · Coverage grid, A and in-scope accounts: plan review, stakeholder coverage, last meaningful and next required engagement",
+     "The account plan",
+     "Actual account business and associated open pipeline"
+    ],
+    "ask": [
+     "What is the focus for this account?",
+     "Who matters most, and do we know them?",
+     "What is your approach for the next quarter?",
+     "What will be different three months from now?",
+     "Where do you need help?"
+    ],
+    "run": [
+     "Open each in-scope account plan from the coverage grid.",
+     "Ask for the focus, the key people and the approach for the next quarter.",
+     "Check stakeholder coverage and the next required engagement.",
+     "Note where the salesperson needs help."
+    ],
+    "watch": [
+     "Reviewing every account. Stay with the in-scope ones.",
+     "Plans that describe the account but not what will change."
+    ]
+   },
+   "Decisions and actions": {
+    "purpose": "Agree classifications, priorities, contact actions and what to do less of.",
+    "data": [
+     "Accounts · Due list",
+     "Next required engagement on each priority account"
+    ],
+    "ask": [
+     "Which classifications are we changing?",
+     "Which accounts are the priority?",
+     "What are the next actions with key contacts?",
+     "What support do you need, and from whom?",
+     "What work will you do less of?"
+    ],
+    "run": [
+     "Read back segment changes, priorities, contact actions and what to do less of.",
+     "Agree owners and dates.",
+     "Press “Finish and review notes” and email the summary."
+    ],
+    "watch": [
+     "Adding work without removing any."
+    ]
+   }
+  },
+  "mt-act": {
+   "Previous commitments": {
+    "purpose": "Check that agreed activity and calendar changes happened.",
+    "data": [
+     "Visits & activity · Completed activity: next actions from last time",
+     "Two-week calendar: the agreed changes"
+    ],
+    "ask": [
+     "What happened with the activities we agreed?",
+     "Did the calendar changes happen?",
+     "What is still blocked?"
+    ],
+    "run": [
+     "Check the agreed activities and calendar changes from the emailed notes.",
+     "Confirm what happened and what is still blocked."
+    ],
+    "watch": [
+     "Long explanations of why something didn’t happen."
+    ]
+   },
+   "Completed work and reactive demand": {
+    "purpose": "Learn from completed work and see how incoming requests used time.",
+    "data": [
+     "Visits & activity · Completed activity: purpose, contact, outcome, duration and next action",
+     "Visits & activity · Meetings per week: the last four weeks held"
+    ],
+    "ask": [
+     "Which visits or activities gave a useful result?",
+     "How many meetings did you have each week?",
+     "How many of them were proactive, and how many reactive?",
+     "What did you change, miss or cancel, and why?",
+     "What would you do differently?"
+    ],
+    "run": [
+     "Open Completed activity and Meetings per week.",
+     "Ask which activities gave a useful result.",
+     "Ask how many meetings were proactive and how many reactive.",
+     "Agree one thing to do differently."
+    ],
+    "watch": [
+     "Counting activity instead of discussing outcomes.",
+     "Blaming reactive work without looking at how it was handled."
+    ]
+   },
+   "Coverage and strategic priorities": {
+    "purpose": "Check that priority accounts, deals and target groups get the attention agreed.",
+    "data": [
+     "Visits & activity · Coverage due: priority accounts, large opportunities, target groups and stakeholder roles",
+     "Last relevant engagement and due date for each"
+    ],
+    "ask": [
+     "Are your priority accounts getting enough attention?",
+     "Are the large opportunities covered?",
+     "Are you reaching the new target groups?",
+     "Which contacts have we not met for too long?",
+     "Which gaps will you close first?"
+    ],
+    "run": [
+     "Open Coverage due.",
+     "Go through the priority accounts, large opportunities and target groups that need contact.",
+     "Agree which gaps close first."
+    ],
+    "watch": [
+     "Spreading attention thinly across every gap."
+    ]
+   },
+   "Quality spot-checks": {
+    "purpose": "Test the purpose, preparation and next step of one past and one upcoming activity.",
+    "data": [
+     "One completed activity record: purpose, contact, outcome, next action",
+     "One upcoming booking in the two-week calendar"
+    ],
+    "ask": [
+     "Pick one recent visit. What was the purpose?",
+     "What did you want to achieve, and did you?",
+     "How did you prepare?",
+     "What is the next step?",
+     "Now one upcoming activity. What is the purpose and the outcome you want?"
+    ],
+    "run": [
+     "Choose one completed and one upcoming activity.",
+     "Ask for the purpose, the preparation and the next step.",
+     "Give one piece of feedback."
+    ],
+    "watch": [
+     "Turning it into a review of every visit."
+    ]
+   },
+   "Diary capacity and routes": {
+    "purpose": "Make sure the next two weeks are realistic and protect proactive work.",
+    "data": [
+     "Visits & activity · Meetings per week: the next four weeks booked",
+     "Two-week calendar: open time for reactive work",
+     "Visits & activity · Visit map: the next two weeks by location"
+    ],
+    "ask": [
+     "Let’s look at your next two weeks.",
+     "Where is your proactive time protected?",
+     "How much room is left for incoming requests?",
+     "Do the routes make sense?",
+     "Is the full workload realistic?"
+    ],
+    "run": [
+     "Open the two-week calendar and the visit map.",
+     "Check that proactive time is protected and there is room for reactive work.",
+     "Look at the routes: clusters and long hops."
+    ],
+    "watch": [
+     "A full diary with no proactive work.",
+     "Accepting an overbooked fortnight."
+    ]
+   },
+   "Actions and follow-up": {
+    "purpose": "Agree calendar changes, contacts, preparation and what to stop or move.",
+    "data": [
+     "Two-week calendar",
+     "Visits & activity · Coverage due"
+    ],
+    "ask": [
+     "What will change in your calendar?",
+     "Who will you contact, and when?",
+     "What do you need to prepare?",
+     "What will you stop, hand over or move?",
+     "What do you need from me?"
+    ],
+    "run": [
+     "Read back calendar changes, contacts, preparation and what to stop.",
+     "Agree what you will do to help.",
+     "Press “Finish and review notes” and email the summary."
+    ],
+    "watch": [
+     "Changes agreed but not put in the calendar during the meeting."
+    ]
+   }
+  },
+  "mt-team": {
+   "Previous team commitments": {
+    "purpose": "Close the loop on shared actions and set today’s decisions.",
+    "data": [
+     "Pipeline, team scope · Opportunity table: “No next step” flags",
+     "Shared actions from the last meeting"
+    ],
+    "ask": [
+     "Which shared actions are done?",
+     "What is still blocked, and who can unblock it?",
+     "What do we need to decide today?",
+     "Does anything need attention right now?"
+    ],
+    "run": [
+     "Go through the shared actions from the last meeting’s notes.",
+     "Unblock what can be unblocked in the room.",
+     "Say what today must decide."
+    ],
+    "watch": [
+     "One person’s issue taking over the meeting."
+    ]
+   },
+   "Opportunity traffic": {
+    "purpose": "Review what entered, moved, was won, lost or slipped, and act on the exceptions.",
+    "data": [
+     "Pipeline, team scope · Opportunity table, sorted by last updated",
+     "Pipeline, team scope · Opportunity table, showing won and lost with reasons",
+     "Pipeline, team scope · Opportunity table: “Stalled” flags"
+    ],
+    "ask": [
+     "What is new in the pipeline since last time?",
+     "What moved forward?",
+     "What did we win or lose, and why?",
+     "What slipped or was removed?",
+     "Which opportunities need an owner or more coordination?"
+    ],
+    "run": [
+     "Open the Pipeline page with team scope and sort by last updated.",
+     "Let each owner comment on what is new, moved, won, lost or slipped.",
+     "Show won and lost with their reasons.",
+     "Flag opportunities that need an owner or more coordination."
+    ],
+    "watch": [
+     "Status reports from every salesperson. Discuss the exceptions only.",
+     "Skipping the reasons behind losses."
+    ]
+   },
+   "Quarter profile mix and concentration": {
+    "purpose": "See how much Rockfon value is expected to deliver each quarter, to which building segments and in which product mix.",
+    "data": [
+     "Pipeline, team scope · Quarter runway: expected Rockfon value per delivery quarter, plus Unallocated",
+     "Split by vertical (building segment)",
+     "Split by product mix: tile-only, grid-only, tile-and-grid",
+     "Share of value in the largest opportunities"
+    ],
+    "ask": [
+     "How much do we expect to deliver this quarter, and how sure are we?",
+     "And next quarter?",
+     "Which building segments and products does it come from?",
+     "How much has no quarter yet?",
+     "Do we depend too much on a few large deals?",
+     "Is there a capacity or support issue to solve?"
+    ],
+    "run": [
+     "Open the quarter runway with team scope.",
+     "Read the value per quarter, then split it by vertical and by product mix.",
+     "Look at how much is unallocated and how much sits in the largest deals.",
+     "Name one risk to act on."
+    ],
+    "watch": [
+     "Treating the runway as a forecast commitment.",
+     "Overlooking value with no quarter."
+    ]
+   },
+   "Priorities and handovers": {
+    "purpose": "Agree the must-win list, the owners and the handovers needed.",
+    "data": [
+     "Pipeline, team scope · Opportunity table, sorted by biggest"
+    ],
+    "ask": [
+     "Which opportunities are must-win right now?",
+     "Who owns the next decision on each?",
+     "Which handovers or introductions are needed?",
+     "Does anything need management action?"
+    ],
+    "run": [
+     "Agree the must-win list from the table sorted by biggest.",
+     "Confirm who owns the next decision on each.",
+     "Agree handovers and introductions."
+    ],
+    "watch": [
+     "Too many must-wins. If everything is a must-win, nothing is."
+    ]
+   },
+   "First must-win deep dive": {
+    "purpose": "Use the team’s experience to decide the next move on the first must-win.",
+    "data": [
+     "Deal room: need, solution, access, decision process, momentum",
+     "Rockfon value, delivery quarter and product mix"
+    ],
+    "ask": [
+     "What decision are we facing on this opportunity?",
+     "Where is the evidence weakest?",
+     "Who in the room has seen something similar?",
+     "What is the next move?",
+     "Who will support the owner, and how?"
+    ],
+    "run": [
+     "The owner presents the deal room scores they prepared.",
+     "Ask the team where the evidence is weakest.",
+     "Invite one person with similar experience to suggest a move.",
+     "The owner chooses the next move."
+    ],
+    "watch": [
+     "The team taking over the deal.",
+     "The leader giving the answer first."
+    ]
+   },
+   "Second must-win deep dive": {
+    "purpose": "Use the team’s experience to decide the next move on the second must-win.",
+    "data": [
+     "Deal room: need, solution, access, decision process, momentum",
+     "Rockfon value, delivery quarter and product mix"
+    ],
+    "ask": [
+     "What decision are we facing on this one?",
+     "What makes it different from the first?",
+     "Where is the evidence weakest?",
+     "What is the next move, and who owns it?",
+     "What does the owner need from the team?"
+    ],
+    "run": [
+     "Use the same format for the second opportunity.",
+     "Keep to the time.",
+     "Agree what the owner needs from the team."
+    ],
+    "watch": [
+     "Running into the time for decisions."
+    ]
+   },
+   "Team decisions and actions": {
+    "purpose": "Read back who owns what, by when, and how it will show.",
+    "data": [
+     "Pipeline, team scope · Opportunity table: owner, next action and due date"
+    ],
+    "ask": [
+     "Let’s read back: who owns what?",
+     "Which customer actions are agreed?",
+     "Which handovers are agreed?",
+     "What support was promised, and by whom?",
+     "What are the dates, and how will we see it is done?",
+     "When will we check the urgent items?"
+    ],
+    "run": [
+     "Read back who owns what, and by when.",
+     "Confirm handovers and the support promised.",
+     "Press “Finish and review notes” and email the summary to the team."
+    ],
+    "watch": [
+     "Actions without names.",
+     "Support promised but not recorded."
+    ]
+   }
+  }
+ },
+ "cockpitPhases": {
+  "before": [
+   "Open the cockpit and enter who you are meeting.",
+   "Tick the preparation checklist.",
+   "Open the dashboard view for the first agenda point."
+  ],
+  "after": [
+   "Press “Finish and review notes” in the cockpit.",
+   "Check the notes, then email them or copy them into Rocksell.",
+   "Tick the follow-up checklist."
+  ]
  }
 }

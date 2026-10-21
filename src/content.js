@@ -4,6 +4,18 @@ import siteMap from '../content/site-map.json';
 import playbook from '../content/playbook.json';
 
 export const LIB = playbook.parts;
+// Cockpit content per meeting and agenda topic: purpose, data, ask, run, watch.
+export const COCKPIT = playbook.cockpit || {};
+export const COCKPIT_PHASES = playbook.cockpitPhases || {};
+export const DEAL_ROOM = siteMap.dealRoom;
+export const DASHBOARD = siteMap.dashboard || [];
+export const DASH_MEETS = ['mt-pipe', 'mt-acc', 'mt-act', 'mt-team'];
+// Finds the dashboard element a "Data to look at" line refers to: [page, element].
+export function dashMatch(str) {
+  const l = (str || '').toLowerCase();
+  for (let p = 0; p < DASHBOARD.length; p++) for (let i = 0; i < DASHBOARD[p].elements.length; i++) if (l.includes(DASHBOARD[p].elements[i].id.toLowerCase())) return [p, i];
+  return null;
+}
 export const strip = h => (h || '').replace(/<[^>]+>/g, '');
 // Site-map asset paths are relative to the site root.
 const asset = p => (p && !/^(\/|https?:)/.test(p) ? '/' + p : p);
@@ -71,7 +83,7 @@ export function tierOf(item) {
     : { label: 'For inspiration', hint: 'Draw on when needed', bg: '#D6B874', fg: '#142850' };
 }
 
-const wordsOf = sec => sec ? strip([sec.title, ...[sec.intro, ...sec.subs.map(s => s.blocks)].flat().map(b => [b.h, ...(b.items || []), ...(b.rows || []).flat()].join(' ')), ...sec.subs.map(s => s.title)].join(' ')).split(/\s+/).length : 0;
+const wordsOf = sec => sec ? strip([sec.title, ...[sec.intro, ...sec.subs.map(s => s.blocks)].flat().map(b => [b.h, ...(b.items || []).map(x => typeof x === 'string' ? x : Object.values(x).join(' ')), ...(b.rows || []).flat()].join(' ')), ...sec.subs.map(s => s.title)].join(' ')).split(/\s+/).length : 0;
 export const minsOf = t => { const sec = secOf(t); return sec ? Math.max(2, Math.round(wordsOf(sec) / 220)) : 5; };
 
 export function rhythmTable() {

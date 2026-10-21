@@ -115,7 +115,8 @@ function Article({ t, sec }) {
   else if (t.contentRef && t.contentRef.sectionId === 'four-instances' && sec) body = <FourInstances sec={sec} chId={t.ch.id} />;
   else {
     if (t.module === 'wheels' && sec) intro = <div style={ST.stack}><Blocks list={sec.intro} lede /></div>;
-    body = <Section sec={sec} toc noIntro={t.module === 'wheels'} linkFrom={t.ch.id} />;
+    // The role's articles read straight through, without an "In this topic" list.
+    body = <Section sec={sec} toc={(t.contentRef || {}).part !== 'the-role'} noIntro={t.module === 'wheels'} linkFrom={t.ch.id} />;
   }
   return (
     <>

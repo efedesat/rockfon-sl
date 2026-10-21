@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "tiers": {
     "key-read": "Key element · Read and know",
     "key-weekly": "Key element · Use every week",
@@ -11,7 +11,7 @@
       "number": 1,
       "title": "The role",
       "tier": "key-read",
-      "intro": "What being a sales leader at Rockfon involves, what leaders and reps can expect from each other, and what the role will ask of you.",
+      "intro": "What being a sales leader at Rockfon involves, what leaders and reps can expect from each other, what the role will ask of you, and how to drive change through coaching.",
       "photo": "assets/photos/image35.jpeg",
       "relatedTools": [
         "tk-kit",
@@ -61,12 +61,29 @@
           "module": "selfcheck",
           "contentRef": {
             "part": "the-role",
-            "sectionIndex": 2
+            "sectionIndex": 3
           },
           "relatedTool": null,
           "photos": [
             "assets/photos/image55.jpeg",
             "assets/photos/image42.jpeg"
+          ],
+          "startHere": false
+        },
+        {
+          "id": "role-change",
+          "title": "Driving change through coaching",
+          "group": null,
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "the-role",
+            "sectionIndex": 2
+          },
+          "relatedTool": "mt-pipe",
+          "photos": [
+            "assets/photos/image41.jpeg",
+            "assets/photos/image36.jpeg"
           ],
           "startHere": false
         }
@@ -803,7 +820,7 @@
         {
           "id": "rh-visit",
           "title": "Joint visit guide",
-          "type": "meeting",
+          "type": "visit",
           "kind": "Visit guide",
           "tier": "key-weekly",
           "contentRef": null,
@@ -1065,6 +1082,158 @@
       "tools": [
         "ch-mines",
         "ch-comms"
+      ]
+    }
+  ],
+  "dealRoom": {
+    "scale": [
+      "Unknown",
+      "Partly supported",
+      "Confirmed",
+      "Tested through action"
+    ],
+    "dimensions": [
+      {
+        "name": "Need or pain",
+        "question": "Do we know the pain or need, like fire, light or access to the plenum?",
+        "verdicts": [
+          "We are guessing what matters to them. Find out who can confirm the need.",
+          "We have a view of the need, but the customer has not confirmed it. Confirm it with the person who owns it.",
+          "The customer has confirmed the need. Note who confirmed it and when.",
+          "The customer is acting on the need, for example through an evaluation or a decision. Keep it current."
+        ]
+      },
+      {
+        "name": "Right solution",
+        "question": "Do we have a solution that fits the need well at a competitive price?",
+        "verdicts": [
+          "We cannot yet say why our offer fits or whether the price competes. Check the requirement first.",
+          "We believe it fits, but technical or price checks are still open. Name what is unverified.",
+          "The customer agrees the solution fits the need at an acceptable price.",
+          "A sample, test or evaluation has proven the fit. Protect the position."
+        ]
+      },
+      {
+        "name": "Access to power",
+        "question": "Do we know the full decision-maker landscape, and do we have access to the decision makers?",
+        "verdicts": [
+          "We do not know who decides. Map who can approve, specify, influence or block.",
+          "We know some of the decision makers, or reach them only through others. Find the missing support.",
+          "We know the decision makers and have a credible route to each of them.",
+          "We have met the relevant decision makers and they are involved in the next step."
+        ]
+      },
+      {
+        "name": "Decision process",
+        "question": "Are we aware of the decision process they will go through, and the steps they will take?",
+        "verdicts": [
+          "We do not know how or when they will decide. Ask what happens next, and through whom.",
+          "We have an idea of the steps, but the timing or responsibilities are assumed.",
+          "The customer has confirmed the steps, the timing and who is responsible.",
+          "A real milestone in their process has happened as agreed."
+        ]
+      },
+      {
+        "name": "Momentum",
+        "question": "Do we have next steps planned, and is there clear momentum?",
+        "verdicts": [
+          "No recent progress and no agreed next step. Decide whether to re-engage or deprioritise.",
+          "There is a next step, but the customer has not agreed the date or owner.",
+          "The next step has an owner and a date the customer has agreed to.",
+          "An agreed step was completed and the next commitment is in place."
+        ]
+      }
+    ]
+  },
+  "dashboard": [
+    {
+      "page": "Pipeline",
+      "question": "Where should we intervene?",
+      "elements": [
+        {
+          "n": 1,
+          "id": "Top line",
+          "title": "Top line",
+          "shows": "Open opportunities, known open Rockfon value and the number of opportunities with unknown value."
+        },
+        {
+          "n": 2,
+          "id": "Quarter runway",
+          "title": "Quarter runway",
+          "shows": "Expected Rockfon value as one bar per delivery quarter, plus an Unallocated bar. Each bar is split by vertical, or by product mix: tile-only, grid-only, tile-and-grid. Timing, concentration and strategic mix are visible in seconds."
+        },
+        {
+          "n": 3,
+          "id": "Velocity",
+          "title": "Velocity",
+          "shows": "The four inputs of sales velocity, each against last period: open opportunities, average value, win rate and cycle length. The input that moved most shows where the pipeline is stuck."
+        },
+        {
+          "n": 4,
+          "id": "Opportunity table",
+          "title": "Opportunity table",
+          "shows": "One table of opportunities with owner, Rockfon value or “unknown”, created date, last update, next action and due date. Sort by last updated, newest or biggest. Show won and lost with their reasons. The two coaching opportunities are pinned at the top; a missing next step and a stalled opportunity are flagged in the row."
+        }
+      ]
+    },
+    {
+      "page": "Accounts",
+      "question": "Where should we change our attention?",
+      "elements": [
+        {
+          "n": 1,
+          "id": "Coverage grid",
+          "title": "Portfolio coverage grid",
+          "shows": "One row per account: segment, plan review, stakeholder coverage, last meaningful engagement, next required engagement, actual business and open pipeline. Due, overdue and unknown are shown distinctly. Defaults to A and other in-scope accounts, with a switch to the complete portfolio. A click opens the account and its plan."
+        },
+        {
+          "n": 2,
+          "id": "Effort by segment",
+          "title": "Effort by segment",
+          "shows": "Recorded customer-activity hours per account segment, split by activity type, with actual business and open pipeline per segment beside them. Each opportunity counts once. Unclassified and unlinked time stay visible. Click a segment to see its accounts."
+        },
+        {
+          "n": 3,
+          "id": "Due list",
+          "title": "Due list",
+          "shows": "Missing plans, unreviewed classifications, stakeholder gaps and overdue engagement."
+        }
+      ]
+    },
+    {
+      "page": "Visits & activity",
+      "question": "Is the next fortnight workable?",
+      "elements": [
+        {
+          "n": 1,
+          "id": "Meetings per week",
+          "title": "Meetings per week",
+          "shows": "Customer meetings per week: the last four weeks held and the next four booked. The leader asks how much of it was proactive and how much reactive."
+        },
+        {
+          "n": 2,
+          "id": "Two-week calendar",
+          "title": "Two-week calendar",
+          "shows": "The actual calendar for the next two weeks, with location or area for route discussions, kept alongside this page."
+        },
+        {
+          "n": 3,
+          "id": "Coverage due",
+          "title": "Coverage due",
+          "shows": "The priority accounts, large opportunities, target groups and stakeholder roles that need contact, with the last relevant engagement and the due date."
+        },
+        {
+          "n": 4,
+          "id": "Completed activity",
+          "title": "Completed activity",
+          "shows": "Purpose, contact, outcome, duration and next action for each completed activity. A click opens the record."
+        },
+        {
+          "n": 5,
+          "id": "Visit map",
+          "title": "Visit map",
+          "shows": "Customer bookings for the next two weeks placed by location, per week. Clusters and long hops show whether the routes make sense. Needs a location on each booking."
+        }
       ]
     }
   ]

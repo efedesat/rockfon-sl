@@ -113,6 +113,38 @@ export function Block({ b, lede, dark }) {
     return <Rich as="p" style={dark ? { ...ST.p, color: '#fff' } : ST.p} html={b.h} />;
   }
   if (b.t === 'quote') return <Rich as="blockquote" style={ST.quote} html={b.h} />;
+  if (b.t === 'statement') return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 4, padding: '30px 0', borderTop: '3px solid #142850', borderBottom: '1px solid #D8D9DA' }}>
+      {b.items.map((h, j) => <Rich key={j} style={{ fontSize: 34, lineHeight: 1.15, fontWeight: 800, letterSpacing: '-.01em', color: j ? '#00638E' : '#142850', textWrap: 'balance' }} html={h} />)}
+    </div>
+  );
+  if (b.t === 'swap') return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+      {b.items.map((it, j) => (
+        <div key={j} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', border: '1px solid #D8D9DA', borderRadius: 4, overflow: 'hidden' }}>
+          <div style={{ padding: '20px 22px', background: '#F2F3F4', display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <span style={{ ...ST.eyebrow, color: '#63666A' }}>Instead of</span>
+            <Rich style={{ fontSize: 16, lineHeight: 1.5, color: '#63666A', textWrap: 'pretty' }} html={it.instead} />
+          </div>
+          <div style={{ padding: '20px 22px', background: '#fff', display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <span style={ST.eyebrow}>Coach it</span>
+            <Rich style={{ fontSize: 17.5, lineHeight: 1.5, fontWeight: 700, color: '#142850', textWrap: 'pretty' }} html={it.coach} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+  if (b.t === 'pair') return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 16 }}>
+      {b.items.map((it, j) => (
+        <div key={j} style={{ padding: '22px 24px', border: '1px solid #D8D9DA', borderTop: '3px solid ' + (j ? '#00638E' : '#142850'), borderRadius: 4, display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <span style={{ ...ST.eyebrow, color: j ? '#00638E' : '#142850' }}>{it.k}</span>
+          <span style={{ fontSize: 20, lineHeight: 1.25, fontWeight: 800, color: '#142850' }}>{it.title}</span>
+          <Rich style={{ fontSize: 16, lineHeight: 1.6, color: '#1A1A1A', textWrap: 'pretty' }} html={it.h} />
+        </div>
+      ))}
+    </div>
+  );
   if (b.t === 'ul') return <ul style={ST.ul}>{b.items.map((h, j) => <Rich as="li" key={j} style={dark ? { ...ST.li, color: '#fff' } : ST.li} html={h} />)}</ul>;
   if (b.t === 'ol') {
     const line = '1px solid ' + (dark ? 'rgba(255,255,255,.2)' : '#EEEFF0');
