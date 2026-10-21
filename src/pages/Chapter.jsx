@@ -19,10 +19,11 @@ function meetingCard(t, ch) {
 }
 
 export default function Chapter({ ch, narrow }) {
-  const cards = ch.topics.filter(t => t.link);
+  const methods = ch.topics.filter(t => t.kind === 'method-card');
+  const cards = ch.topics.filter(t => t.link && t.kind !== 'method-card');
   const start = ch.topics.filter(t => t.startHere && !t.link);
   const doors = ch.topics.filter(t => !t.startHere && !t.link);
-  const rhythm = cards.length > 0 || start.length > 0;
+  const rhythm = cards.length > 0 || methods.length > 0 || start.length > 0;
   const groups = [];
   cards.forEach(t => { let g = groups.find(x => x.label === t.group); if (!g) groups.push(g = { label: t.group, items: [] }); g.items.push(t); });
   // Sales development wheel first, then Personal development wheel.
@@ -67,6 +68,23 @@ export default function Chapter({ ch, narrow }) {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: 10 }}>{g.items.map(t => meetingCard(t, ch))}</div>
                   </div>
                 ))}
+              </div>
+            )}
+            {methods.length > 0 && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <h2 style={{ ...H, margin: 0 }}>USED INSIDE THE MEETINGS</h2>
+                {methods.map(t => {
+                  const tl = BY[t.link];
+                  return (
+                    <Link key={t.id} to={`/toolbox/${tl.id}`} state={{ from: ch.id }} className="hv-tint tr" style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 16px', border: '1px solid #D8D9DA', borderRadius: 4 }}>
+                      <span style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 3 }}>
+                        <span style={{ fontSize: 15, fontWeight: 800, color: '#142850' }}>{tl.title}</span>
+                        {tl.sub && <span style={{ fontSize: 12.5, color: '#63666A' }}>{tl.sub}</span>}
+                      </span>
+                      {Icon.arrow(18)}
+                    </Link>
+                  );
+                })}
               </div>
             )}
             {doors.length > 0 && <h2 style={{ ...H, margin: '0 0 -24px' }}>GO DEEPER</h2>}

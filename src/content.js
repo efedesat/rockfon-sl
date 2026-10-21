@@ -27,7 +27,8 @@ export const TOOLS = [];
 export const CHAPTERS = siteMap.chapters.map(c => {
   const ch = { ...c, n: c.number, img: asset(c.photo), tools: c.relatedTools || [], isChapter: true };
   ch.topics = c.topics.map((t, idx) => {
-    const isCard = t.kind === 'meeting-card';
+    // Cards on the Routines chapter that open a tool: meetings, and methods used inside them.
+    const isCard = t.kind === 'meeting-card' || t.kind === 'method-card';
     const topic = {
       ...t,
       ch,
