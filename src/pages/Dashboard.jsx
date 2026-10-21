@@ -2,8 +2,8 @@
 // Page questions and element texts come from site-map.json → dashboard. The sample
 // layout data below only draws the wireframe; it is not real.
 import { useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
-import { BY, COCKPIT, DASH_MEETS, DASHBOARD } from '../content.js';
+import { useSearchParams } from 'react-router-dom';
+import { DASHBOARD } from '../content.js';
 import { useMem } from '../store.js';
 import { PillToggle } from '../ui.jsx';
 
@@ -260,16 +260,7 @@ function VisitsPage({ els, sel, onSel }) {
 
 const PAGES = [PipelinePage, AccountsPage, VisitsPage];
 
-// Agenda points whose "Data to look at" names this element; each opens the cockpit there.
-function usedIn(el) {
-  const k = el.id.toLowerCase(), out = [];
-  DASH_MEETS.forEach(m => Object.keys(COCKPIT[m] || {}).forEach((topic, i) => {
-    if ((COCKPIT[m][topic].data || []).some(x => x.toLowerCase().includes(k))) out.push({ meet: BY[m] ? BY[m].title : m, point: topic, to: `/toolbox/${m}?view=cockpit&phase=during&point=${i}` });
-  }));
-  return out;
-}
-
-export default function Dashboard() {
+export default function Dashboard({ narrow }) {
   const [params, setParams] = useSearchParams();
   const [tab, setTab] = useMem('dashTab', 0);
   const [selMap, setSelMap] = useMem('dashSel', {});
@@ -287,7 +278,6 @@ export default function Dashboard() {
   const sel = Math.min(selMap[P] ?? (P === 0 ? 1 : 0), pg.elements.length - 1), el = pg.elements[sel];
   const onSel = i => setSelMap(s => ({ ...s, [P]: i }));
   const Page = PAGES[P];
-  const used = usedIn(el);
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 10 }}>
@@ -296,53 +286,43 @@ export default function Dashboard() {
         </div>
         <span style={{ padding: '4px 10px', border: '1px dashed #B1B2B4', borderRadius: 3, fontSize: 11.5, fontWeight: 700, color: '#63666A' }}>Wireframe until Power BI is ready</span>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 14, padding: 18, background: '#F2F3F4', borderRadius: 4 }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 12 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <span style={LBL}>{pg.page}</span>
-            <h2 style={{ margin: 0, fontSize: 22, fontWeight: 800, lineHeight: 1.2, color: '#142850' }}>{pg.question}</h2>
+      <div style={{ display: 'grid', gridTemplateColumns: narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) 280px', gap: narrow ? 24 : 36, alignItems: 'start' }}>
+        {/* The wireframe, framed as a screen so it reads as "the dashboard", not as page content. */}
+        <figure aria-label={'Wireframe of the ' + pg.page + ' dashboard page'} style={{ margin: 0, border: '1px solid #B1B2B4', borderRadius: 6, overflow: 'hidden', boxShadow: '0 6px 20px rgba(20,40,80,.10)' }}>
+          <div aria-hidden="true" style={{ display: 'flex', alignItems: 'center', gap: 10, height: 34, padding: '0 14px', background: '#142850', color: '#fff' }}>
+            <span style={{ display: 'flex', gap: 5 }}>{[0, 1, 2].map(i => <span key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: 'rgba(255,255,255,.35)' }} />)}</span>
+            <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.85 }}>Power BI · {pg.page}</span>
           </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-            {['Owner or team', 'Market', 'Period', 'Currency', 'Refreshed'].map(x => (
-              <div key={x} style={{ display: 'flex', flexDirection: 'column', gap: 5, padding: '6px 10px', background: '#fff', border: '1px solid #D8D9DA', borderRadius: 3, minWidth: 74 }}>
-                <span style={{ fontSize: 10, fontWeight: 700, color: '#63666A' }}>{x}</span><span style={{ height: 7, width: '70%', background: '#E4E5E6', borderRadius: 2 }} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14, padding: 18, background: '#F2F3F4' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 12 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                <span style={LBL}>{pg.page}</span>
+                <span style={{ fontSize: 20, fontWeight: 800, lineHeight: 1.2, color: '#142850' }}>{pg.question}</span>
               </div>
-            ))}
-          </div>
-        </div>
-        <Page els={pg.elements} sel={sel} onSel={onSel} />
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 16px', fontSize: 11.5, color: '#1A1A1A' }}>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}><span style={{ width: 10, height: 10, borderRadius: '50%', border: '1.5px solid #00638E' }} />Needs a decision</span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}><span style={{ width: 10, height: 10, borderRadius: '50%', background: '#D20014' }} />Overdue</span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}><span style={{ width: 10, height: 10, borderRadius: '50%', background: '#D8D9DA' }} />Unknown data</span>
-          <span style={{ color: '#63666A' }}>Every bar, segment and row opens the records behind it.</span>
-        </div>
-      </div>
-      <div aria-live="polite" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '20px 32px', padding: '22px 24px', border: '1px solid #D8D9DA', borderTop: '3px solid #00638E', borderRadius: 4 }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ flex: 'none', width: 26, height: 26, borderRadius: '50%', background: '#00638E', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 800 }}>{sel + 1}</span>
-            <span style={{ fontSize: 18, fontWeight: 800, color: '#142850' }}>{el.title}</span>
-          </div>
-          <span style={LBL}>What it shows</span>
-          <span style={{ fontSize: 15, lineHeight: 1.55, color: '#1A1A1A', textWrap: 'pretty' }}>{el.shows}</span>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          <span style={LBL}>Used in the meetings</span>
-          {used.length ? (
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {used.map(u => (
-                <Link key={u.to} to={u.to} className="hv-tint" style={{ display: 'flex', alignItems: 'baseline', gap: 10, padding: '9px 0', borderTop: '1px solid #EEEFF0' }}>
-                  <span style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 2 }}>
-                    <span style={{ fontSize: 11.5, fontWeight: 700, color: '#63666A' }}>{u.meet}</span>
-                    <span style={{ fontSize: 14, fontWeight: 700, color: '#142850' }}>{u.point}</span>
-                  </span>
-                  <span aria-hidden="true" style={{ fontSize: 14, fontWeight: 700, color: '#00638E' }}>→</span>
-                </Link>
-              ))}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                {['Owner or team', 'Market', 'Period', 'Currency', 'Refreshed'].map(x => (
+                  <div key={x} style={{ display: 'flex', flexDirection: 'column', gap: 5, padding: '6px 10px', background: '#fff', border: '1px solid #D8D9DA', borderRadius: 3, minWidth: 74 }}>
+                    <span style={{ fontSize: 10, fontWeight: 700, color: '#63666A' }}>{x}</span><span style={{ height: 7, width: '70%', background: '#E4E5E6', borderRadius: 2 }} />
+                  </div>
+                ))}
+              </div>
             </div>
-          ) : <span style={{ fontSize: 14, color: '#63666A' }}>Not referenced in a meeting agenda yet.</span>}
-        </div>
+            <Page els={pg.elements} sel={sel} onSel={onSel} />
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 16px', fontSize: 11.5, color: '#1A1A1A' }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}><span style={{ width: 10, height: 10, borderRadius: '50%', border: '1.5px solid #00638E' }} />Needs a decision</span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}><span style={{ width: 10, height: 10, borderRadius: '50%', background: '#D20014' }} />Overdue</span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}><span style={{ width: 10, height: 10, borderRadius: '50%', background: '#D8D9DA' }} />Unknown data</span>
+              <span style={{ color: '#63666A' }}>Every bar, segment and row opens the records behind it.</span>
+            </div>
+          </div>
+        </figure>
+        {/* The explanation: plain text beside the screen, following the selected element. */}
+        <aside aria-live="polite" style={{ position: narrow ? 'static' : 'sticky', top: 80, display: 'flex', flexDirection: 'column', gap: 12, paddingLeft: narrow ? 0 : 20, borderLeft: narrow ? 'none' : '3px solid #00638E' }}>
+          <span style={LBL}>Element {sel + 1} of {pg.elements.length}</span>
+          <h2 style={{ margin: 0, fontSize: 22, lineHeight: 1.2, fontWeight: 800, color: '#00638E' }}>{el.title}</h2>
+          <p style={{ margin: 0, fontSize: 16, lineHeight: 1.6, color: '#1A1A1A', textWrap: 'pretty' }}>{el.shows}</p>
+          <span style={{ fontSize: 12.5, lineHeight: 1.5, color: '#63666A' }}>Click a numbered element to read what it shows.</span>
+        </aside>
       </div>
     </div>
   );

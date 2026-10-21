@@ -283,7 +283,7 @@ export default function Tool({ tool, narrow }) {
   const { state } = useLocation();
   const from = state && state.from;
   return (
-    <div className="tool-page" style={{ maxWidth: 900, margin: '0 auto', padding: narrow ? '76px 28px 140px' : '80px 48px 140px', display: 'flex', flexDirection: 'column', gap: 30 }}>
+    <div className="tool-page" style={{ maxWidth: tool.type === 'dashboard' ? 1240 : 900, margin: '0 auto', padding: narrow ? '76px 28px 140px' : '80px 48px 140px', display: 'flex', flexDirection: 'column', gap: 30 }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         <TierLabel tier={tierOf(tool)} hint={false} />
         <h1 style={{ margin: 0, fontSize: 34, lineHeight: 1.15, fontWeight: 800, color: '#00638E', textWrap: 'pretty' }}>{tool.title}</h1>

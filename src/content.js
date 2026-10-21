@@ -9,7 +9,6 @@ export const COCKPIT = playbook.cockpit || {};
 export const COCKPIT_PHASES = playbook.cockpitPhases || {};
 export const DEAL_ROOM = siteMap.dealRoom;
 export const DASHBOARD = siteMap.dashboard || [];
-export const DASH_MEETS = ['mt-pipe', 'mt-acc', 'mt-act', 'mt-team'];
 // Finds the dashboard element a "Data to look at" line refers to: [page, element].
 export function dashMatch(str) {
   const l = (str || '').toLowerCase();
