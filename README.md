@@ -81,7 +81,15 @@ Vercel Web Analytics (`@vercel/analytics/react` in `src/main.jsx`) counts page v
 
 ## Feedback
 
-The feedback card posts `{ page, title, answer, name, comment }` to `/api/feedback`. The destination is still open, so for now each entry is written to the Vercel function log (**Project → Logs**, search for `playbook-feedback`). Set `FEEDBACK_WEBHOOK_URL` to forward entries as JSON to a Teams, Slack or Power Automate webhook.
+The feedback card posts `{ page, title, answer, name, comment }` to `/api/feedback`. Each entry is written to the Vercel function log, saved in a Redis store when one is connected, and forwarded to `FEEDBACK_WEBHOOK_URL` when that is set.
+
+**Reading feedback:** open `/admin/feedback` on the site (it isn't linked anywhere) and enter the admin password. It lists every entry with filters and a CSV download. One-time setup in Vercel:
+
+1. **Storage → Create Database → Upstash → Redis** (free plan), and connect it to this project. That adds `KV_REST_API_URL` and `KV_REST_API_TOKEN`.
+2. **Settings → Environment Variables:** add `ADMIN_PASSWORD`. Use a different password from the site password, which every leader knows.
+3. Redeploy.
+
+Only feedback sent after step 1 is stored; earlier entries exist only in the function log.
 
 ## Open items (from the handoff)
 

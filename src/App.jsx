@@ -9,6 +9,7 @@ import Chapter from './pages/Chapter.jsx';
 import Topic from './pages/Topic.jsx';
 import Toolbox from './pages/Toolbox.jsx';
 import Tool from './pages/Tool.jsx';
+import AdminFeedback from './pages/AdminFeedback.jsx';
 
 export function useNarrow() {
   const get = () => typeof window !== 'undefined' && window.innerWidth < 1000;
@@ -23,6 +24,7 @@ function usePage() {
   const parts = pathname.split('/').filter(Boolean);
   if (!parts.length) return { view: 'home' };
   if (parts[0] === 'guide') return { view: 'guide' };
+  if (parts[0] === 'admin') return { view: 'admin' };
   if (parts[0] === 'read' && parts[2] && BY[parts[2]] && !BY[parts[2]].isTool) return { view: 'topic', cur: BY[parts[2]] };
   if (parts[0] === 'read' && BY[parts[1]] && BY[parts[1]].isChapter) return { view: 'room', cur: BY[parts[1]] };
   if (parts[0] === 'toolbox' && parts[1] && BY[parts[1]] && BY[parts[1]].isTool) return { view: 'tool', cur: BY[parts[1]], from: state && state.from };
@@ -221,7 +223,7 @@ export default function App() {
   useEffect(() => { if (mainRef.current) mainRef.current.scrollTop = 0; setContents(false); }, [pathname]);
   useEffect(() => { if (page.view === 'topic') setLastRead(page.cur.id); }, [page.view, page.cur, setLastRead]);
   useEffect(() => {
-    const t = page.cur ? page.cur.title : page.view === 'toolbox' ? 'Toolbox' : page.view === 'guide' ? 'How to use this playbook' : '';
+    const t = page.cur ? page.cur.title : page.view === 'toolbox' ? 'Toolbox' : page.view === 'guide' ? 'How to use this playbook' : page.view === 'admin' ? 'Feedback' : '';
     document.title = (t ? t + ' · ' : '') + 'Sales Leadership Playbook';
   }, [page]);
 
@@ -258,11 +260,12 @@ export default function App() {
             <Route path="/read/:chapterId/:topicId" element={<TopicRoute narrow={narrow} mainRef={mainRef} />} />
             <Route path="/toolbox" element={<Toolbox narrow={narrow} />} />
             <Route path="/toolbox/:toolId" element={<ToolRoute narrow={narrow} />} />
+            <Route path="/admin/feedback" element={<AdminFeedback narrow={narrow} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         {contents && <Contents onClose={() => setContents(false)} />}
-        <Feedback page={fbPage} />
+        {page.view !== 'admin' && <Feedback page={fbPage} />}
       </div>
     </div>
   );
