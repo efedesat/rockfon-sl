@@ -75,6 +75,10 @@ The design is sized for laptops and tablets. From 1440px wide the whole layout s
 
 Notes, self-check answers, checklist ticks, tracker dots, record entries, cockpit notes, asked questions, deal room scores, "Meeting with" name and email, and the chosen meeting view are stored in the browser's `localStorage` (keys prefixed `slp:`). They leave the device only when the user chooses to: emailing or copying meeting notes, or sending feedback. "Clear my notes" in the Contents overlay removes them all; "Clear notes for this meeting" on a cockpit's After tab removes one meeting's notes and deal room scores.
 
+## Analytics
+
+Vercel Web Analytics (`@vercel/analytics/react` in `src/main.jsx`) counts page views per route, without cookies. Turn it on in Vercel under **Project → Analytics → Enable**; until then the script does nothing. Personal notes and scores are never part of it.
+
 ## Feedback
 
 The feedback card posts `{ page, title, answer, name, comment }` to `/api/feedback`. The destination is still open, so for now each entry is written to the Vercel function log (**Project → Logs**, search for `playbook-feedback`). Set `FEEDBACK_WEBHOOK_URL` to forward entries as JSON to a Teams, Slack or Power Automate webhook.
