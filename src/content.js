@@ -119,5 +119,3 @@ export const W = ['92%', '74%', '86%', '62%', '80%', '68%', '88%', '56%'];
 
 // Pocket cards: one per tool with a pocketCard index.
 export const POCKETS = TOOLS.filter(t => t.pocket != null).sort((a, b) => a.pocket - b.pocket).map(t => ({ name: t.title.replace(/ (meeting|guide)$/, ''), tool: t.id }));
-// Commercial disciplines used by the dashboard guide.
-export const DISC = ['Pipeline and Opportunity', 'Account', 'Visit and Activity'];

@@ -1,10 +1,11 @@
-// Personal data stays in this browser (localStorage) and is never sent anywhere
-// (the remembered feedback name is only sent when the user sends feedback).
-import { useSyncExternalStore, useCallback } from 'react';
+// Personal data stays in this browser (localStorage). It leaves the device only
+// when the user chooses to: sending feedback (with the remembered name), or
+// emailing or copying meeting notes from the cockpit.
+import { useSyncExternalStore, useCallback, useRef } from 'react';
 
 const PREFIX = 'slp:';
-// Persisted keys: lastRead, notes, selfCheck, checks, tracker, worksheet,
-// worksheetName, records, cockpitNotes, meetingView, feedbackName.
+// Persisted keys: lastRead, notes, selfCheck, checks, tracker, records,
+// cockpitNotes, cockpitAsked, dealRoom, meetingWith, meetingView, feedbackName.
 const listeners = new Set();
 const cache = {};
 
@@ -24,8 +25,10 @@ function write(key, value) {
 const subscribe = l => { listeners.add(l); return () => listeners.delete(l); };
 
 export function useStored(key, fallback) {
+  const fb = useRef(fallback); fb.current = fallback;
   const value = useSyncExternalStore(subscribe, () => read(key, fallback));
-  const set = useCallback(v => write(key, typeof v === 'function' ? v(read(key, fallback)) : v), [key, fallback]);
+  // Stable setter: callers may pass a fresh fallback literal on every render.
+  const set = useCallback(v => write(key, typeof v === 'function' ? v(read(key, fb.current)) : v), [key]);
   return [value, set];
 }
 
@@ -50,7 +53,8 @@ const mem = {};
 const memListeners = new Set();
 const memSubscribe = l => { memListeners.add(l); return () => memListeners.delete(l); };
 export function useMem(key, fallback) {
+  const fb = useRef(fallback); fb.current = fallback;
   const value = useSyncExternalStore(memSubscribe, () => { if (!(key in mem)) mem[key] = fallback; return mem[key]; });
-  const set = useCallback(v => { mem[key] = typeof v === 'function' ? v(key in mem ? mem[key] : fallback) : v; memListeners.forEach(l => l()); }, [key, fallback]);
+  const set = useCallback(v => { mem[key] = typeof v === 'function' ? v(key in mem ? mem[key] : fb.current) : v; memListeners.forEach(l => l()); }, [key]);
   return [value, set];
 }

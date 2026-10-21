@@ -1,19 +1,39 @@
 // Meeting guides: Overview, Instructions and the live Cockpit.
 // Parsed from the meeting's section by sub-section title: "Format and intended
 // decisions", "Before the meeting", "During the meeting" (agenda table),
-// "After the meeting", "What good looks like and red flags".
+// "After the meeting", "What good looks like and red flags". Per-point cockpit
+// content (purpose, data, ask, run, watch) comes from playbook.json → cockpit,
+// keyed by the agenda topic exactly as written in the During table.
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { rhythmRow, rhythmTable, secOf, strip, W } from '../content.js';
+import { COCKPIT, COCKPIT_PHASES, dashMatch, rhythmRow, rhythmTable, secOf, strip, W } from '../content.js';
 import { Blocks, Section, ST } from '../blocks.jsx';
 import { useMem, useStoredMap } from '../store.js';
 import { Bar, Bars, Btn, Icon } from '../ui.jsx';
+import DealRoom, { dealRoomLines, dealRoomPlan } from './DealRoom.jsx';
 
 const LBL = { fontSize: 10.5, fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: '#63666A' };
 const VIEWS = [['overview', 'Overview', 'What it is and what good looks like'], ['instructions', 'Instructions', 'How the meeting should be run'], ['cockpit', 'Cockpit', 'Run it live']];
 const ownerFg = o => (/^Sales leader/.test(o) ? '#0E7C66' : /^Salesperson/.test(o) ? '#00638E' : '#63666A');
 const split = h => { const m = /^([^:]{3,40}):\s*([\s\S]*)$/.exec(strip(h)); return m ? { owner: m[1], text: m[2] } : { owner: '', text: strip(h) }; };
 const mmss = ms => { const t = Math.max(0, Math.floor(ms / 1000)); return Math.floor(t / 60) + ':' + String(t % 60).padStart(2, '0'); };
+const pointContent = (id, g) => ((COCKPIT[id] || {})[g.topic]) || {};
+// The deal room runs inside the 1:1 Pipeline cockpit at the two selected-opportunity points.
+const isDealRoomPoint = (id, g) => id === 'mt-pipe' && /selected opportunity/i.test(g.topic || '');
+const inputStyle = { flex: 1, minWidth: 180, height: 40, padding: '0 12px', border: '1px solid #D8D9DA', borderRadius: 3, fontSize: 14, color: '#1A1A1A', background: '#fff', outline: 'none' };
+
+function BulletList({ items, color = '#00638E', size = 16 }) {
+  return (
+    <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+      {items.map((x, i) => (
+        <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'baseline' }}>
+          <span aria-hidden="true" style={{ flex: 'none', width: 6, height: 6, borderRadius: 1, background: color, transform: 'translateY(-3px)' }} />
+          <span style={{ fontSize: size, lineHeight: 1.55, color: '#1A1A1A', textWrap: 'pretty' }}>{x}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 function parse(tool) {
   const sec = secOf(tool);
@@ -144,8 +164,14 @@ function Instructions({ tool, m, narrow, go }) {
               <span style={LBL}>Questions and decision</span>
               {tn.g.q ? <span style={{ fontSize: 17, lineHeight: 1.6, color: '#1A1A1A' }}>{tn.g.q}</span> : <Bars widths={['92%', '64%']} />}
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}><span style={LBL}>How to run this part</span><Bars widths={['100%', '96%', '88%', '45%']} /></div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '16px 18px', border: '1px solid #FF7768', borderRadius: 4 }}><span style={{ ...LBL, color: '#D20014' }}>WATCH FOR</span><Bars widths={['84%', '58%']} /></div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <span style={LBL}>How to run this part</span>
+              {(pointContent(id, tn.g).run || []).length ? <BulletList items={pointContent(id, tn.g).run} /> : <Bars widths={['100%', '96%', '88%', '45%']} />}
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '16px 18px', border: '1px solid #FF7768', borderRadius: 4 }}>
+              <span style={{ ...LBL, color: '#D20014' }}>WATCH FOR</span>
+              {(pointContent(id, tn.g).watch || []).length ? <BulletList items={pointContent(id, tn.g).watch} color="#FF7768" /> : <Bars widths={['84%', '58%']} />}
+            </div>
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -155,6 +181,12 @@ function Instructions({ tool, m, narrow, go }) {
                 {r.real ? <span style={{ fontSize: 15.5, lineHeight: 1.55, color: '#1A1A1A' }}>{r.text}</span> : <Bar w={r.w} />}
               </div>
             ))}
+            {(COCKPIT_PHASES[ts === 0 ? 'before' : 'after'] || []).length > 0 && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 18, padding: '16px 18px', background: '#F2F3F4', borderRadius: 4 }}>
+                <span style={LBL}>In the playbook</span>
+                <BulletList items={COCKPIT_PHASES[ts === 0 ? 'before' : 'after']} />
+              </div>
+            )}
           </div>
         )}
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 10, paddingTop: 4 }}>
@@ -211,12 +243,13 @@ function Checklist({ tool, phase, list }) {
   );
 }
 
-function During({ tool, m }) {
+function During({ tool, m, onFinish }) {
   const id = tool.id, segs = m.segs, total = m.total;
   const [clock, setClock] = useMem('clock', null);
   const [follow, setFollow] = useMem('cFollow', true);
   const [selMap, setSelMap] = useMem('cSel', {});
   const [notes, setNote] = useStoredMap('cockpitNotes');
+  const [asked, setAsked] = useStoredMap('cockpitAsked');
   const [, tick] = useState(0);
   const ck = clock && clock.id === id ? clock : { id, acc: 0, start: null };
   useEffect(() => { if (!ck.start) return undefined; const t = setInterval(() => tick(x => x + 1), 1000); return () => clearInterval(t); }, [ck.start]);
@@ -227,6 +260,10 @@ function During({ tool, m }) {
   const pick = i => { setFollow(false); setSelMap(s => ({ ...s, [id]: i })); };
   const live = started && sel === curI && !over;
   const toggle = () => { if (ck.start) setClock({ id, acc: ck.acc + Date.now() - ck.start, start: null }); else { setClock({ id, acc: ck.acc, start: Date.now() }); setFollow(true); } };
+  const finish = () => { if (ck.start) setClock({ id, acc: ck.acc + Date.now() - ck.start, start: null }); onFinish(); };
+  const pc = pointContent(id, g), dr = isDealRoomPoint(id, g);
+  const dash = (pc.data || []).map(dashMatch).find(Boolean);
+  const ask = pc.ask || [];
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '16px 24px', padding: '18px 22px', background: '#142850', borderRadius: 4, color: '#fff' }}>
@@ -238,9 +275,10 @@ function During({ tool, m }) {
           <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.12em', opacity: 0.75 }}>NOW</span>
           <span style={{ fontSize: 15, fontWeight: 800, lineHeight: 1.3 }}>{!started ? 'Not started' : over ? 'Over time by ' + mmss(el - total * 60000) : segs[curI].topic || 'Agenda point ' + (curI + 1)}</span>
         </div>
-        <div style={{ display: 'flex', gap: 8 }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
           <button type="button" onClick={toggle} className="hv-grey tap" style={{ whiteSpace: 'nowrap', padding: '10px 18px', borderRadius: 3, fontSize: 14, fontWeight: 800, background: '#fff', color: '#142850' }}>{ck.start ? 'Pause' : started ? 'Resume' : 'Start meeting'}</button>
           <button type="button" onClick={() => { setClock({ id, acc: 0, start: null }); setFollow(true); }} className="hv-bd-white tap" style={{ whiteSpace: 'nowrap', padding: '10px 14px', borderRadius: 3, fontSize: 14, fontWeight: 700, border: '1px solid rgba(255,255,255,.4)', color: '#fff' }}>Reset</button>
+          <button type="button" onClick={finish} className="hv-primary tap" style={{ whiteSpace: 'nowrap', padding: '10px 14px', borderRadius: 3, fontSize: 14, fontWeight: 800, background: '#00638E', color: '#fff' }}>Finish and review notes</button>
         </div>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -271,16 +309,44 @@ function During({ tool, m }) {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '18px 20px', background: '#F2F3F4', borderRadius: 4 }}>
-            <span style={LBL}>Questions to ask</span>
-            {g.q ? <span style={{ fontSize: 16, lineHeight: 1.55, color: '#142850', fontWeight: 600 }}>{g.q}</span> : <Bars widths={['94%', '70%']} bg="#D8D9DA" />}
+            <span style={LBL}>Purpose</span>
+            {pc.purpose ? <span style={{ fontSize: 16, lineHeight: 1.55, color: '#142850', fontWeight: 600, textWrap: 'pretty' }}>{pc.purpose}</span> : <Bars widths={['94%', '70%']} bg="#D8D9DA" />}
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '18px 20px', border: '1px solid #D8D9DA', borderRadius: 4 }}>
-            <span style={LBL}>Data to look at</span>
-            <Bars widths={['80%', '62%', '70%']} />
-            <span style={{ alignSelf: 'flex-start', padding: '7px 12px', border: '1px dashed #B1B2B4', borderRadius: 3, fontSize: 12.5, fontWeight: 700, color: '#63666A' }}>Open in Rocksell</span>
-          </div>
+          {!dr && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '18px 20px', border: '1px solid #D8D9DA', borderRadius: 4 }}>
+              <span style={LBL}>Data to look at</span>
+              {(pc.data || []).length ? <BulletList items={pc.data} size={14.5} /> : <Bars widths={['80%', '62%', '70%']} />}
+              {dash
+                ? <Link to={`/toolbox/tk-dash?page=${dash[0]}&el=${dash[1]}`} className="hv-tint" style={{ alignSelf: 'flex-start', padding: '7px 12px', border: '1px solid #00638E', borderRadius: 3, fontSize: 12.5, fontWeight: 700, color: '#00638E' }}>Open in the dashboard →</Link>
+                : <span style={{ alignSelf: 'flex-start', padding: '7px 12px', border: '1px dashed #B1B2B4', borderRadius: 3, fontSize: 12.5, fontWeight: 700, color: '#63666A' }}>Open in Rocksell</span>}
+            </div>
+          )}
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}><span style={LBL}>Deep dive</span><Bars widths={['100%', '92%', '48%']} /></div>
+        {!dr && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', justifyContent: 'space-between', gap: '6px 16px' }}>
+              <span style={LBL}>Questions to ask</span>
+              {ask.length > 0 && <span style={{ fontSize: 12, color: '#63666A' }}>Tap a question once you have asked it.</span>}
+            </div>
+            {ask.length ? (
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                {ask.map((q, i) => {
+                  const k = nk + ':' + i, on = !!asked[k];
+                  return (
+                    <button key={i} type="button" aria-pressed={on} onClick={() => setAsked(k, !on)} className="hv-tint" style={{ display: 'flex', alignItems: 'baseline', gap: 14, padding: '13px 4px', borderTop: '1px solid #EEEFF0', opacity: on ? 0.4 : 1, transition: 'opacity 200ms ease', width: '100%' }}>
+                      <span style={{ flex: 'none', width: 22, fontSize: 15, fontWeight: 800, color: '#00638E', fontVariantNumeric: 'tabular-nums' }}>{i + 1}</span>
+                      <span style={{ fontSize: 18, lineHeight: 1.45, fontWeight: 600, color: '#142850', textDecoration: on ? 'line-through' : 'none', textWrap: 'pretty' }}>{q}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            ) : <Bars widths={['100%', '92%', '48%']} />}
+          </div>
+        )}
+        {dr && (
+          <DealRoom key={nk} storeKey={nk} eyebrow={'MUST-WIN DEAL ROOM · ' + (/second/i.test(g.topic) ? 'SECOND' : 'FIRST') + ' OPPORTUNITY'}
+            plan={{ steps: dealRoomPlan(), live, offset: elMin - g.s }} />
+        )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           <label htmlFor={'note-' + nk} style={LBL}>Notes for this point</label>
           <textarea id={'note-' + nk} value={notes[nk] || ''} onChange={e => setNote(nk, e.target.value)} placeholder="Saved on this device only" style={{ width: '100%', minHeight: 84, resize: 'vertical', border: '1px solid #D8D9DA', borderRadius: 3, padding: '10px 12px', fontSize: 14, lineHeight: 1.5, color: '#1A1A1A', outline: 'none' }} />
@@ -294,17 +360,95 @@ function During({ tool, m }) {
   );
 }
 
+// "Meeting with": name and email, stored per meeting, shown on every cockpit tab.
+function useMeetingWith(id) {
+  const [all, setEntry] = useStoredMap('meetingWith');
+  const w = all[id] || {};
+  return [w, (k, v) => setEntry(id, cur => ({ ...(cur || {}), [k]: v }))];
+}
+
+function MeetingWith({ id }) {
+  const [w, set] = useMeetingWith(id);
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px 12px', padding: '14px 16px', background: '#F2F3F4', borderRadius: 4 }}>
+      <span style={{ ...LBL, marginRight: 4 }}>Meeting with</span>
+      <input aria-label="Meeting with: name" value={w.name || ''} onChange={e => set('name', e.target.value)} placeholder="Name" style={inputStyle} />
+      <input aria-label="Meeting with: email" type="email" value={w.email || ''} onChange={e => set('email', e.target.value)} placeholder="Email, for the notes" style={inputStyle} />
+    </div>
+  );
+}
+
+// Meeting notes card at the top of the After tab: every point with notes or deal room scores.
+function NotesCard({ tool, m }) {
+  const id = tool.id;
+  const [w, set] = useMeetingWith(id);
+  const [notes, , setAllNotes] = useStoredMap('cockpitNotes');
+  const [dr, , setAllDr] = useStoredMap('dealRoom');
+  const [copied, setCopied] = useState(false);
+  const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  const items = m.segs.map((g, i) => {
+    const note = (notes[id + ':' + i] || '').trim(), d = dr[id + ':' + i] || {};
+    const lines = dealRoomLines(d);
+    return { n: i + 1, topic: g.topic || 'Agenda point ' + (i + 1), note, drName: d.name || '', lines };
+  }).filter(x => x.note || x.drName || x.lines.length);
+  const text = tool.title + '\nDate: ' + date + (w.name ? '\nWith: ' + w.name : '') + '\n\n'
+    + items.map(x => x.n + '. ' + x.topic + (x.drName ? '\nOpportunity: ' + x.drName : '') + (x.lines.length ? '\n' + x.lines.join('\n') : '') + (x.note ? '\n' + x.note : '')).join('\n\n');
+  const mailto = 'mailto:' + encodeURIComponent(w.email || '') + '?subject=' + encodeURIComponent(tool.title + ' · ' + date) + '&body=' + encodeURIComponent(text);
+  const copy = () => { try { navigator.clipboard.writeText(text); } catch { /* clipboard unavailable */ } setCopied(true); };
+  const clear = () => {
+    if (!window.confirm('Clear the notes and deal room scores for this meeting on this device?')) return;
+    const drop = o => { const r = { ...o }; Object.keys(r).forEach(k => { if (k.startsWith(id + ':')) delete r[k]; }); return r; };
+    setAllNotes(drop); setAllDr(drop); setCopied(false);
+  };
+  return (
+    <section aria-label="Meeting notes" style={{ display: 'flex', flexDirection: 'column', gap: 18, padding: '22px 24px', border: '1px solid #D8D9DA', borderTop: '3px solid #00638E', borderRadius: 4 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        <span style={LBL}>Meeting notes</span>
+        <span style={{ fontSize: 20, fontWeight: 800, color: '#142850' }}>{tool.title}</span>
+        <span style={{ fontSize: 13, color: '#63666A' }}>{date}{w.name ? ' · with ' + w.name : ''}</span>
+      </div>
+      {items.length ? (
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {items.map(x => (
+            <div key={x.n} style={{ display: 'grid', gridTemplateColumns: '28px minmax(0,1fr)', gap: '4px 10px', padding: '14px 0', borderTop: '1px solid #EEEFF0' }}>
+              <span style={{ fontSize: 14, fontWeight: 800, color: '#00638E' }}>{x.n}</span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6, minWidth: 0 }}>
+                <span style={{ fontSize: 15, fontWeight: 800, color: '#142850' }}>{x.topic}</span>
+                {(x.drName || x.lines.length > 0) && <span style={{ fontSize: 13, lineHeight: 1.5, color: '#63666A' }}>{[x.drName ? 'Opportunity: ' + x.drName : '', ...x.lines].filter(Boolean).join(' · ')}</span>}
+                {x.note && <span style={{ fontSize: 15, lineHeight: 1.55, color: '#1A1A1A', whiteSpace: 'pre-wrap' }}>{x.note}</span>}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : <span style={{ fontSize: 15, color: '#63666A' }}>No notes yet. Notes you type for each agenda point during the meeting appear here.</span>}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <label htmlFor={'send-' + id} style={LBL}>Send to</label>
+        <input id={'send-' + id} type="email" value={w.email || ''} onChange={e => set('email', e.target.value)} placeholder="Email address" style={{ ...inputStyle, flex: 'none', width: '100%' }} />
+      </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10 }}>
+        <a href={mailto} className="hv-primary" style={{ display: 'inline-flex', alignItems: 'center', height: 42, padding: '0 18px', borderRadius: 3, background: '#00638E', color: '#fff', fontSize: 14, fontWeight: 800 }}>Email the notes</a>
+        <button type="button" onClick={copy} className="hv-tint" style={{ display: 'inline-flex', alignItems: 'center', height: 42, padding: '0 16px', borderRadius: 3, border: '1px solid #00638E', color: '#00638E', fontSize: 14, fontWeight: 700 }}>{copied ? 'Notes copied' : 'Copy notes'}</button>
+        <button type="button" onClick={clear} className="tap" style={{ marginLeft: 'auto', fontSize: 13, fontWeight: 700, color: '#63666A', textDecoration: 'underline' }}>Clear notes for this meeting</button>
+      </div>
+      <span style={{ fontSize: 12, lineHeight: 1.5, color: '#63666A' }}>Opens a draft in your email program. Long notes may be cut off by some email programs; use Copy notes and paste instead. Notes stay on this device until you clear them.</span>
+    </section>
+  );
+}
+
 function Cockpit({ tool, m }) {
   const [phaseMap, setPhaseMap] = useMem('phase', {});
   const phase = phaseMap[tool.id] || 'before';
+  const setPhase = k => setPhaseMap(s => ({ ...s, [tool.id]: k }));
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
+      <MeetingWith id={tool.id} />
       <div role="tablist" aria-label="Meeting phase" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', borderBottom: '2px solid #D8D9DA' }}>
         {['before', 'during', 'after'].map(k => (
-          <button key={k} type="button" role="tab" aria-selected={phase === k} onClick={() => setPhaseMap(s => ({ ...s, [tool.id]: k }))} className="tap" style={{ padding: '12px 8px', marginBottom: -2, textAlign: 'center', fontSize: 14, fontWeight: 800, borderBottom: `2px solid ${phase === k ? '#00638E' : 'transparent'}`, color: phase === k ? '#00638E' : '#63666A' }}>{k[0].toUpperCase() + k.slice(1)}</button>
+          <button key={k} type="button" role="tab" aria-selected={phase === k} onClick={() => setPhase(k)} className="tap" style={{ padding: '12px 8px', marginBottom: -2, textAlign: 'center', fontSize: 14, fontWeight: 800, borderBottom: `2px solid ${phase === k ? '#00638E' : 'transparent'}`, color: phase === k ? '#00638E' : '#63666A' }}>{k[0].toUpperCase() + k.slice(1)}</button>
         ))}
       </div>
-      {phase === 'during' ? <During tool={tool} m={m} /> : <Checklist key={phase} tool={tool} phase={phase} list={phase === 'after' ? m.after : m.before} />}
+      {phase === 'after' && <NotesCard tool={tool} m={m} />}
+      {phase === 'during' ? <During tool={tool} m={m} onFinish={() => setPhase('after')} /> : <Checklist key={phase} tool={tool} phase={phase} list={phase === 'after' ? m.after : m.before} />}
     </div>
   );
 }
@@ -312,6 +456,18 @@ function Cockpit({ tool, m }) {
 export default function Meeting({ tool, narrow }) {
   const m = parse(tool);
   const [view, setView] = useMeetingView(tool);
+  // Deep links from the Dashboard guide: ?view=cockpit&phase=during&point=N.
+  const [params, setParams] = useSearchParams();
+  const [, setPhaseMap] = useMem('phase', {});
+  const [, setFollow] = useMem('cFollow', true);
+  const [, setSelMap] = useMem('cSel', {});
+  useEffect(() => {
+    const phase = params.get('phase'), point = params.get('point');
+    if (!phase && point == null) return;
+    if (phase) setPhaseMap(s => ({ ...s, [tool.id]: phase }));
+    if (point != null && !isNaN(+point)) { setFollow(false); setSelMap(s => ({ ...s, [tool.id]: +point })); }
+    const p = new URLSearchParams(params); p.delete('phase'); p.delete('point'); setParams(p, { replace: true });
+  }, [params, setParams, setPhaseMap, setFollow, setSelMap, tool.id]);
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
       <div role="tablist" aria-label="Meeting guide views" className="no-print" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 6, padding: 6, background: '#F2F3F4', borderRadius: 6 }}>

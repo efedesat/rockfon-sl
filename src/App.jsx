@@ -148,7 +148,7 @@ function Contents({ onClose }) {
           </div>
         </div>
         <div style={{ paddingTop: 12, borderTop: '1px solid rgba(255,255,255,.2)', display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', fontSize: 13 }}>
-          <button type="button" className="hv-underline" onClick={() => { if (window.confirm('Clear all your notes, answers, ticks and worksheet scores from this device?')) { clearMyNotes(); setCleared(true); } }} style={{ fontWeight: 700, color: 'rgba(255,255,255,.75)' }}>Clear my notes</button>
+          <button type="button" className="hv-underline" onClick={() => { if (window.confirm('Clear all your notes, answers, ticks and deal room scores from this device?')) { clearMyNotes(); setCleared(true); } }} style={{ fontWeight: 700, color: 'rgba(255,255,255,.75)' }}>Clear my notes</button>
           {cleared && <span role="status" style={{ color: '#1AB092', fontWeight: 700 }}>Cleared from this device</span>}
         </div>
       </div>

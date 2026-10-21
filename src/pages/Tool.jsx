@@ -1,68 +1,21 @@
 import { useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
-import { DISC, LIB, POCKETS, qbCats, secOf, strip, tierOf, W } from '../content.js';
+import { LIB, POCKETS, qbCats, secOf, strip, tierOf, W } from '../content.js';
 import { Blocks, jumpTo, Rich, Section, ST } from '../blocks.jsx';
-import { useStored, useStoredMap } from '../store.js';
+import { useStoredMap } from '../store.js';
 import { Bar, Bars, Btn, Icon, PillToggle, Tag, TierLabel } from '../ui.jsx';
 import Meeting from './Meeting.jsx';
+import DealRoom from './DealRoom.jsx';
+import Dashboard from './Dashboard.jsx';
 
 const LBL = { fontSize: 11, fontWeight: 700, letterSpacing: '.12em', color: '#63666A' };
 
 // ── Document tools (Personal development meetings, Must-Win Deal Room) ──
-function Worksheet({ sec }) {
-  const tbl = name => sec.subs.map(x => x.blocks.find(b => b.t === 'table' && strip(b.head[0]) === name)).find(Boolean);
-  const dimT = tbl('Dimension'), scT = tbl('Score');
-  const [wr, setWr, setAll] = useStoredMap('worksheet');
-  const [name, setName] = useStored('worksheetName', '');
-  if (!dimT) return null;
-  const grid = 'minmax(0,1.2fr) 168px 168px 84px';
-  const scoreBtns = (i, fld, v) => (
-    <div role="radiogroup" style={{ display: 'flex', gap: 4 }}>
-      {[1, 2, 3, 4].map(n => {
-        const on = v[fld] === n;
-        return <button key={n} type="button" role="radio" aria-checked={on} aria-label={`${fld === 'c' ? 'Current' : 'Required'} ${n}`} onClick={() => setWr(i, { ...v, [fld]: n })} className="tr" style={{ width: 39, height: 44, borderRadius: 3, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 800, border: `1px solid ${on ? '#00638E' : '#B1B2B4'}`, background: on ? '#00638E' : '#fff', color: on ? '#fff' : '#63666A' }}>{n}</button>;
-      })}
-    </div>
-  );
-  return (
-    <div style={{ border: '1px solid #D8D9DA', borderRadius: 4, overflow: 'hidden' }}>
-      <div style={{ background: '#142850', color: '#fff', padding: '20px 22px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px 20px' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4, flex: 1, minWidth: 220 }}>
-          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', opacity: 0.8 }}>MUST-WIN DEAL ROOM WORKSHEET</span>
-          <span style={{ fontSize: 14, lineHeight: 1.45 }}>Record a current and required score for each dimension.</span>
-        </div>
-        <input aria-label="Opportunity name" value={name} onChange={e => setName(e.target.value)} placeholder="Opportunity name" style={{ flex: 1, minWidth: 200, height: 44, padding: '0 12px', borderRadius: 3, border: '1px solid rgba(255,255,255,.3)', background: 'rgba(255,255,255,.1)', color: '#fff', fontSize: 14, outline: 'none' }} />
-      </div>
-      <div style={{ overflowX: 'auto' }}>
-        <div style={{ minWidth: 560 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: grid, columnGap: 20, alignItems: 'center', padding: '10px 22px', background: '#F2F3F4', fontSize: 10.5, fontWeight: 700, letterSpacing: '.12em', color: '#63666A' }}><span>DIMENSION</span><span>CURRENT</span><span>REQUIRED</span><span /></div>
-          {dimT.rows.map((r, i) => {
-            const v = wr[i] || {}, g = v.c && v.r ? v.r - v.c : null;
-            return (
-              <div key={i} role="group" aria-label={strip(r[0])} style={{ display: 'grid', gridTemplateColumns: grid, columnGap: 20, alignItems: 'center', padding: '12px 22px', borderTop: '1px solid #EEEFF0' }}>
-                <span style={{ fontSize: 15, fontWeight: 800, color: '#142850' }}>{strip(r[0])}</span>
-                {scoreBtns(i, 'c', v)}
-                {scoreBtns(i, 'r', v)}
-                <span style={{ fontSize: 12.5, fontWeight: 800, color: g > 0 ? '#D20014' : '#0E7C66' }}>{g == null ? '' : g > 0 ? 'Gap of ' + g : 'No gap'}</span>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      {scT && <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 20px', padding: '14px 22px', borderTop: '1px solid #D8D9DA', background: '#F7F8F8', fontSize: 12.5, color: '#63666A' }}>{scT.rows.map((r, j) => <span key={j}><strong style={{ color: '#00638E' }}>{strip(r[0])}</strong> {strip(r[1])}</span>)}</div>}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', padding: '12px 22px', borderTop: '1px solid #EEEFF0', fontSize: 12.5, color: '#63666A' }}>
-        <span>Saved on this device only.</span>
-        <button type="button" onClick={() => { setAll({}); setName(''); }} style={{ fontWeight: 700, color: '#00638E' }}>Clear worksheet</button>
-      </div>
-    </div>
-  );
-}
-
 function Doc({ tool, from }) {
   const sec = secOf(tool);
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 44 }}>
-      {sec && <Worksheet sec={sec} />}
+      {sec && /must-win deal room/i.test(sec.title) && <DealRoom storeKey={tool.id} eyebrow="MUST-WIN DEAL ROOM" />}
       <Section sec={sec} toc linkFrom={from || null} exceptTool={tool.id} />
     </div>
   );
@@ -147,30 +100,40 @@ function QBank({ narrow }) {
 }
 
 // ── Placeholder tool types (content to come) ─────────────────────────
-function Dashboard() {
-  const [tab, setTab] = useState(0);
-  const [hot, setHot] = useState(0);
-  const spot = (i, pos) => (
-    <button key={i} type="button" aria-pressed={hot === i} aria-label={`Area ${i + 1}`} onClick={() => setHot(i)} style={{ position: 'absolute', ...pos, width: 28, height: 28, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 800, border: '2px solid #00638E', background: hot === i ? '#00638E' : '#fff', color: hot === i ? '#fff' : '#00638E', boxShadow: '0 0 0 5px rgba(0,99,142,.18)' }}>{i + 1}</button>
+function Visit({ tool }) {
+  const card = (n, title, ws) => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 14, padding: '20px 22px', border: '1px solid #D8D9DA', borderTop: '3px solid #00638E', borderRadius: 4 }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}><span style={{ fontSize: 13, fontWeight: 800, color: '#00638E' }}>{n}</span><span style={{ fontSize: 17, fontWeight: 800, color: '#142850' }}>{title}</span></div>
+      <PhBullets widths={ws} />
+    </div>
   );
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>{DISC.map((d, i) => <PillToggle key={d} on={tab === i} onClick={() => setTab(i)}>{d}</PillToggle>)}</div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 20, alignItems: 'start' }}>
-        <div style={{ position: 'relative', height: 340, border: '1px dashed #B1B2B4', borderRadius: 4, background: '#F2F3F4', padding: 16, display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '64px 1fr', gap: 10 }}>
-          <div style={{ background: '#E4E5E6', borderRadius: 3 }} /><div style={{ background: '#E4E5E6', borderRadius: 3 }} /><div style={{ background: '#E4E5E6', borderRadius: 3 }} />
-          <div style={{ gridColumn: 'span 3', background: '#fff', border: '1px solid #D8D9DA', borderRadius: 3, display: 'flex', alignItems: 'flex-end', gap: 10, padding: '16px 16px 34px' }}>{['40%', '66%', '52%', '84%', '60%'].map((h, i) => <div key={i} style={{ flex: 1, height: h, background: '#D8D9DA' }} />)}</div>
-          <span style={{ position: 'absolute', left: 16, bottom: 10, fontSize: 11, fontWeight: 600, color: '#63666A' }}>Rocksell dashboard screenshot</span>
-          {spot(0, { top: 30, left: 30 })}{spot(1, { top: 30, right: 30 })}{spot(2, { bottom: 70, left: '46%' })}
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 20, border: '1px solid #D8D9DA', borderRadius: 4 }}>
-          <span style={{ fontSize: 15, fontWeight: 800, color: '#00638E' }}>{DISC[tab]} · area {hot + 1}</span>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}><span style={LBL}>WHAT IT SHOWS</span><Bars widths={['100%', '70%']} gap={8} /></div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}><span style={LBL}>WHAT GOOD LOOKS LIKE</span><Bars widths={['84%']} gap={8} /></div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}><span style={LBL}>ASK YOUR REP</span><Bars widths={['92%', '56%']} gap={8} /></div>
-          <div style={{ display: 'flex' }}><Btn variant="primary">Open in Rocksell</Btn></div>
-        </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(170px,1fr))', gap: 8 }}>
+        {['How often', 'How long', 'Who'].map(l => (
+          <div key={l} style={{ display: 'flex', flexDirection: 'column', gap: 8, padding: '16px 18px', background: '#F2F3F4', borderRadius: 4 }}>
+            <span style={{ ...LBL, fontSize: 10.5, textTransform: 'uppercase' }}>{l}</span><Bar h={14} w="55%" bg="#D8D9DA" />
+          </div>
+        ))}
       </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(230px,1fr))', gap: 14 }}>
+        {card(1, 'Before the visit', ['86%', '70%', '78%'])}
+        {card(2, 'During the visit', ['80%', '92%', '64%'])}
+        {card(3, 'After the visit', ['74%', '84%', '58%'])}
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 14 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '18px 20px', background: '#F2F3F4', borderRadius: 4 }}><span style={{ ...LBL, fontSize: 10.5, textTransform: 'uppercase', color: '#0E7C66' }}>Good</span><PhBullets widths={['88%', '66%']} /></div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '18px 20px', border: '1px solid #FF7768', borderRadius: 4 }}><span style={{ ...LBL, fontSize: 10.5, textTransform: 'uppercase', color: '#D20014' }}>Red flags</span><PhBullets widths={['82%', '60%']} /></div>
+      </div>
+      <div style={{ display: 'flex' }}><Link to={`/toolbox/tk-pocket?card=${tool.pocket ?? 0}`} className="btn btn-secondary tap">Open pocket card</Link></div>
+    </div>
+  );
+}
+
+function PhBullets({ widths }) {
+  return (
+    <div aria-hidden="true" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+      {widths.map((w, i) => <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ flex: 'none', width: 6, height: 6, borderRadius: 1, background: '#00638E' }} /><Bar w={w} /></div>)}
     </div>
   );
 }
@@ -299,7 +262,7 @@ function Glossary() {
   );
 }
 
-const BODY = { doc: Doc, record: Record, qbank: QBank, meeting: Meeting, dashboard: Dashboard, accordion: Accordion, pocket: Pocket, downloads: Downloads, voices: Voices, glossary: Glossary };
+const BODY = { doc: Doc, record: Record, qbank: QBank, meeting: Meeting, visit: Visit, dashboard: Dashboard, accordion: Accordion, pocket: Pocket, downloads: Downloads, voices: Voices, glossary: Glossary };
 
 export default function Tool({ tool, narrow }) {
   const Body = BODY[tool.type];
