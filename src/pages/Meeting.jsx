@@ -384,6 +384,8 @@ function NotesCard({ tool, m }) {
   const [w, set] = useMeetingWith(id);
   const [notes, , setAllNotes] = useStoredMap('cockpitNotes');
   const [dr, , setAllDr] = useStoredMap('dealRoom');
+  const [, , setAllAsked] = useStoredMap('cockpitAsked');
+  const [, , setAllChecks] = useStoredMap('checks');
   const [copied, setCopied] = useState(false);
   const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
   const items = m.segs.map((g, i) => {
@@ -396,9 +398,10 @@ function NotesCard({ tool, m }) {
   const mailto = 'mailto:' + encodeURIComponent(w.email || '') + '?subject=' + encodeURIComponent(tool.title + ' · ' + date) + '&body=' + encodeURIComponent(text);
   const copy = () => { try { navigator.clipboard.writeText(text); } catch { /* clipboard unavailable */ } setCopied(true); };
   const clear = () => {
-    if (!window.confirm('Clear the notes and deal room scores for this meeting on this device?')) return;
+    if (!window.confirm('Clear the notes, deal room scores, asked questions and checklist ticks for this meeting on this device?')) return;
+    // Resets the meeting for next time: every key for this meeting starts with "<id>:".
     const drop = o => { const r = { ...o }; Object.keys(r).forEach(k => { if (k.startsWith(id + ':')) delete r[k]; }); return r; };
-    setAllNotes(drop); setAllDr(drop); setCopied(false);
+    setAllNotes(drop); setAllDr(drop); setAllAsked(drop); setAllChecks(drop); setCopied(false);
   };
   return (
     <section aria-label="Meeting notes" style={{ display: 'flex', flexDirection: 'column', gap: 18, padding: '22px 24px', border: '1px solid #D8D9DA', borderTop: '3px solid #00638E', borderRadius: 4 }}>

@@ -13,10 +13,23 @@ const LBL = { fontSize: 11, fontWeight: 700, letterSpacing: '.12em', color: '#63
 // ── Document tools (Personal development meetings, Must-Win Deal Room) ──
 function Doc({ tool, from }) {
   const sec = secOf(tool);
+  const [params, setParams] = useSearchParams();
+  const body = <Section sec={sec} toc linkFrom={from || null} exceptTool={tool.id} />;
+  if (!(sec && /must-win deal room/i.test(sec.title))) return body;
+  // The deal room page has two tabs: the guide text and the tool itself (?view=tool).
+  const view = params.get('view') === 'tool' ? 'tool' : 'description';
+  const setView = v => setParams(v === 'tool' ? { view: 'tool' } : {}, { replace: true });
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 44 }}>
-      {sec && /must-win deal room/i.test(sec.title) && <DealRoom storeKey={tool.id} eyebrow="MUST-WIN DEAL ROOM" />}
-      <Section sec={sec} toc linkFrom={from || null} exceptTool={tool.id} />
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
+      <div role="tablist" aria-label="Deal room views" className="no-print" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 6, padding: 6, background: '#F2F3F4', borderRadius: 6 }}>
+        {[['description', 'Description'], ['tool', 'Tool']].map(([k, label]) => {
+          const on = view === k;
+          return (
+            <button key={k} type="button" role="tab" aria-selected={on} onClick={() => setView(k)} className="tr tap" style={{ padding: '12px 16px', borderRadius: 4, background: on ? '#fff' : 'transparent', boxShadow: on ? '0 1px 4px rgba(20,40,80,.14)' : 'none', fontSize: 15, fontWeight: 800, color: on ? '#00638E' : '#142850' }}>{label}</button>
+          );
+        })}
+      </div>
+      <div role="tabpanel">{view === 'tool' ? <DealRoom storeKey={tool.id} eyebrow="MUST-WIN DEAL ROOM" /> : body}</div>
     </div>
   );
 }
