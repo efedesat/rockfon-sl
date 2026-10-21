@@ -1,4 +1,4 @@
-// Dashboard guide: a wireframe of the three Power BI pages until Power BI is ready.
+// Dashboard guide: a wireframe of the three report pages until the report is ready.
 // Page questions and element texts come from site-map.json → dashboard. The sample
 // layout data below only draws the wireframe; it is not real.
 import { useEffect } from 'react';
@@ -284,14 +284,14 @@ export default function Dashboard({ narrow }) {
         <div role="tablist" aria-label="Dashboard pages" style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
           {DASHBOARD.map((d, i) => <PillToggle key={d.page} on={P === i} onClick={() => setTab(i)}>{d.page}</PillToggle>)}
         </div>
-        <span style={{ padding: '4px 10px', border: '1px dashed #B1B2B4', borderRadius: 3, fontSize: 11.5, fontWeight: 700, color: '#63666A' }}>Wireframe until Power BI is ready</span>
+        <span style={{ padding: '4px 10px', border: '1px dashed #B1B2B4', borderRadius: 3, fontSize: 11.5, fontWeight: 700, color: '#63666A' }}>Wireframe until the report is ready</span>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) 280px', gap: narrow ? 24 : 36, alignItems: 'start' }}>
         {/* The wireframe, framed as a screen so it reads as "the dashboard", not as page content. */}
         <figure aria-label={'Wireframe of the ' + pg.page + ' dashboard page'} style={{ margin: 0, border: '1px solid #B1B2B4', borderRadius: 6, overflow: 'hidden', boxShadow: '0 6px 20px rgba(20,40,80,.10)' }}>
           <div aria-hidden="true" style={{ display: 'flex', alignItems: 'center', gap: 10, height: 34, padding: '0 14px', background: '#142850', color: '#fff' }}>
             <span style={{ display: 'flex', gap: 5 }}>{[0, 1, 2].map(i => <span key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: 'rgba(255,255,255,.35)' }} />)}</span>
-            <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.85 }}>Power BI · {pg.page}</span>
+            <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.85 }}>Report · {pg.page}</span>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14, padding: 18, background: '#F2F3F4' }}>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 12 }}>
