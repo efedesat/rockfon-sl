@@ -3705,7 +3705,7 @@
        ]
       },
       {
-       "title": "1:1 Account management",
+       "title": "1:1 Account plan",
        "blocks": [
         {
          "t": "p",
@@ -4201,7 +4201,7 @@
     },
     {
      "id": "1-1-account-meeting",
-     "title": "1:1 Account management",
+     "title": "1:1 Account plan",
      "intro": [],
      "subs": [
       {
