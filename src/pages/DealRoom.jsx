@@ -12,16 +12,6 @@ const pt = (i, val) => { const a = (-90 + 72 * i) * Math.PI / 180, r = GEO.r * v
 const ring = v => [0, 1, 2, 3, 4].map(i => pt(i, v).map(x => x.toFixed(1)).join(',')).join(' ');
 const LABELS = [[210, 26, 'middle'], [318.4, 110.8, 'start'], [277, 244.2, 'start'], [143, 244.2, 'end'], [101.6, 110.8, 'end']];
 
-// The deep-dive's own 20-minute plan, from the "Minutes" table in its section.
-export function dealRoomPlan() {
-  const cw = LIB['commercial-wheel'];
-  const sec = cw && cw.sections.find(x => /must-win opportunity deep-dive/i.test(x.title));
-  const t = sec && sec.subs.map(x => x.blocks.find(b => b.t === 'table' && /minutes/i.test(strip(b.head[0])))).find(Boolean);
-  if (!t) return [];
-  let acc = 0;
-  return t.rows.map(r => { const m = /(\d+)\s*(?:to|–|-)\s*(\d+)/.exec(strip(r[0])), a = m ? +m[1] : acc, e = m ? +m[2] : acc + 4; acc = e; return { a, e, label: strip(r[1]) }; });
-}
-
 // Legend wording from the deep-dive's "Score / Evidence position" table, if present.
 function scaleLegend() {
   const cw = LIB['commercial-wheel'];
@@ -35,7 +25,7 @@ export function dealRoomLines(v) {
   return DEAL_ROOM.dimensions.map((d, j) => (sc[j] ? d.name + ': ' + sc[j] + ' · ' + DEAL_ROOM.scale[sc[j] - 1] : null)).filter(Boolean);
 }
 
-export default function DealRoom({ storeKey, eyebrow, plan }) {
+export default function DealRoom({ storeKey, eyebrow }) {
   const [all, setEntry, setAll] = useStoredMap('dealRoom');
   const v = all[storeKey] || {}, sc = v.sc || {};
   const dims = DEAL_ROOM.dimensions;
@@ -43,36 +33,15 @@ export default function DealRoom({ storeKey, eyebrow, plan }) {
   const score = (i, k) => update(c => { const o = { ...(c.sc || {}) }; if (o[i] === k) delete o[i]; else o[i] = k; return { sc: o }; });
   const clear = () => setAll(a => { const o = { ...a }; delete o[storeKey]; return o; });
 
-  const scored = dims.map((d, i) => ({ name: d.name, n: sc[i] })).filter(x => x.n);
-  const low = scored.filter(x => x.n <= 2).sort((a, b) => a.n - b.n).slice(0, 2);
-  const focus = !scored.length ? ['Score the five dimensions', 'The profile builds as you score.']
-    : low.length ? [low.map(x => x.name).join(' · '), 'Explore the one or two gaps that could most affect the next decision.']
-      : scored.length < 5 ? ['Finish scoring', 'Unknown counts as a 1, not as not applicable.'] : ['No major gap', 'Agree the next customer advance, its owner and its date.'];
   const poly = dims.map((d, i) => pt(i, sc[i] || 0).map(x => x.toFixed(1)).join(',')).join(' ');
 
   return (
     <div style={{ border: '1px solid #D8D9DA', borderRadius: 4, overflow: 'hidden', background: '#fff' }}>
       <div style={{ background: '#142850', color: '#fff', padding: '18px 22px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px 20px' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4, flex: 1, minWidth: 220 }}>
-          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', opacity: 0.8 }}>{eyebrow}</span>
-          <span style={{ fontSize: 14, lineHeight: 1.45 }}>Score where the opportunity is today. Each score gives a verdict.</span>
-        </div>
+        <span style={{ flex: 1, minWidth: 220, fontSize: 11, fontWeight: 700, letterSpacing: '.14em', opacity: 0.8 }}>{eyebrow}</span>
         <input aria-label="Opportunity name" value={v.name || ''} onChange={e => { const t = e.target.value; update(() => ({ name: t })); }} placeholder="Opportunity name"
           style={{ flex: 1, minWidth: 200, height: 44, padding: '0 12px', borderRadius: 3, border: '1px solid rgba(255,255,255,.3)', background: 'rgba(255,255,255,.1)', color: '#fff', fontSize: 14, outline: 'none' }} />
       </div>
-      {plan && plan.steps.length > 0 && (
-        <div aria-label="Twenty-minute plan" style={{ display: 'flex', gap: 3, padding: '12px 22px', background: '#F2F3F4', borderBottom: '1px solid #D8D9DA' }}>
-          {plan.steps.map((st, i) => {
-            const on = plan.live && plan.offset >= st.a && plan.offset < st.e;
-            return (
-              <div key={i} style={{ flex: `${st.e - st.a} 1 0`, minWidth: 0, display: 'flex', flexDirection: 'column', gap: 2, padding: '8px 10px', borderRadius: 3, background: on ? '#00638E' : '#fff', color: on ? '#fff' : '#142850', transition: 'background 300ms ease' }}>
-                <span style={{ fontSize: 11, fontWeight: 700, whiteSpace: 'nowrap', opacity: 0.8 }}>{st.a}–{st.e} min</span>
-                <span style={{ fontSize: 12.5, fontWeight: 800, lineHeight: 1.25 }}>{st.label}</span>
-              </div>
-            );
-          })}
-        </div>
-      )}
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         <div style={{ flex: '1 1 420px', minWidth: 0, display: 'flex', flexDirection: 'column' }}>
           {dims.map((d, i) => {
@@ -112,11 +81,6 @@ export default function DealRoom({ storeKey, eyebrow, plan }) {
             {dims.map((d, i) => <text key={i} x={LABELS[i][0]} y={LABELS[i][1]} textAnchor={LABELS[i][2]} style={{ fontSize: 13, fontWeight: 800, fill: '#142850' }}>{d.name}</text>)}
             {[1, 2, 3, 4].map(k => <text key={k} x="215" y={GEO.cy - 25 * k + 4} style={{ fontSize: 10, fontWeight: 700, fill: '#8A8D91' }}>{k}</text>)}
           </svg>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4, paddingTop: 12, borderTop: '1px solid #D8D9DA' }}>
-            <span style={LBL}>FOCUS THE CONVERSATION ON</span>
-            <span style={{ fontSize: 17, lineHeight: 1.3, fontWeight: 800, color: '#142850' }}>{focus[0]}</span>
-            <span style={{ fontSize: 13, lineHeight: 1.5, color: '#63666A' }}>{focus[1]}</span>
-          </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '6px 10px', alignItems: 'center', fontSize: 12.5, color: '#63666A' }}>
             {scaleLegend().map((s, j) => [
               <span key={'c' + j} style={{ width: 14, height: 14, borderRadius: 2, background: COL[j + 1].dot }} />,

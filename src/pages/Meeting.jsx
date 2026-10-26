@@ -11,7 +11,7 @@ import { Blocks, Section, ST } from '../blocks.jsx';
 import { SETTINGS } from '../settings.js';
 import { useMem, useStoredMap } from '../store.js';
 import { Bar, Bars, Btn, Icon } from '../ui.jsx';
-import DealRoom, { dealRoomLines, dealRoomPlan } from './DealRoom.jsx';
+import DealRoom, { dealRoomLines } from './DealRoom.jsx';
 
 const LBL = { fontSize: 10.5, fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: '#63666A' };
 const VIEWS = [['overview', 'Overview', 'What it is and what good looks like'], ['instructions', 'Instructions', 'How the meeting should be run'], ['cockpit', 'Cockpit', 'Run it live']];
@@ -345,8 +345,7 @@ function During({ tool, m, onFinish }) {
           </div>
         )}
         {dr && (
-          <DealRoom key={nk} storeKey={nk} eyebrow={'MUST-WIN OPPORTUNITY DEEP-DIVE · ' + (/second/i.test(g.topic) ? 'SECOND' : 'FIRST') + ' OPPORTUNITY'}
-            plan={{ steps: dealRoomPlan(), live, offset: elMin - g.s }} />
+          <DealRoom key={nk} storeKey={nk} eyebrow="MUST-WIN OPPORTUNITY DEEP-DIVE" />
         )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           <label htmlFor={'note-' + nk} style={LBL}>Notes for this point</label>
