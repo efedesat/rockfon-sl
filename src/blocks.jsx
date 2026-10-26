@@ -170,7 +170,8 @@ export function toolForTitle(title, exceptId) {
   return TOOLS.find(x => (x.title === title || x.aka === title) && x.id !== exceptId) || null;
 }
 
-export function Section({ sec, toc, tocLabel = 'In this topic', noIntro, linkFrom, exceptTool }) {
+// extraToc: [{ id, title }] adds entries for parts rendered after the section.
+export function Section({ sec, toc, tocLabel = 'In this topic', noIntro, linkFrom, exceptTool, extraToc = [] }) {
   if (!sec) return null;
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 52 }}>
@@ -180,6 +181,7 @@ export function Section({ sec, toc, tocLabel = 'In this topic', noIntro, linkFro
           <span style={{ ...ST.eyebrow, color: '#63666A' }}>{tocLabel}</span>
           <div style={{ display: 'flex', flexDirection: 'column', borderTop: '1px solid #D8D9DA' }}>
             {sec.subs.map((s, i) => <button key={i} type="button" className="hv-underline" onClick={() => jumpTo(sec.id + '--' + i)} style={ST.tocItem}>{s.title}</button>)}
+            {extraToc.map(x => <button key={x.id} type="button" className="hv-underline" onClick={() => jumpTo(x.id)} style={ST.tocItem}>{x.title}</button>)}
           </div>
         </nav>
       )}

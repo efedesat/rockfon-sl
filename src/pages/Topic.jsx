@@ -120,8 +120,8 @@ function Article({ t, sec }) {
     const fi = (LIB['commercial-wheel'] || { sections: [] }).sections.find(x => x.id === 'four-instances');
     body = (
       <>
-        <Section sec={sec} toc linkFrom={t.ch.id} />
-        {fi && <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}><h2 style={ST.h3}>Cadence</h2><FourInstances sec={fi} chId={t.ch.id} /></div>}
+        <Section sec={sec} toc linkFrom={t.ch.id} extraToc={fi ? [{ id: 'cadence', title: 'Cadence' }] : []} />
+        {fi && <div id="cadence" style={{ scrollMarginTop: 72, display: 'flex', flexDirection: 'column', gap: 24 }}><h2 style={ST.h3}>Cadence</h2><FourInstances sec={fi} chId={t.ch.id} /></div>}
       </>
     );
   }
