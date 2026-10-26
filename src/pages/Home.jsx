@@ -2,13 +2,16 @@ import { Link } from 'react-router-dom';
 import { BY, CHAPTERS, isKeyChapter, isShown, topicPath } from '../content.js';
 import { Icon } from '../ui.jsx';
 
-// Tile looks of the "ceiling grid", in chapter order.
+// Tile looks of the "ceiling grid", by position. Leading change keeps its own
+// photo wherever it lands (CHAPTER_TILE).
+const CURVED = { photo: '/assets/photo-curved.jpg', scrim: 'linear-gradient(0deg,rgba(20,40,80,.92) 0%,rgba(20,40,80,.3) 100%)' };
+const CHAPTER_TILE = { ch4: CURVED };
 const TILES = [
   { photo: '/assets/photo-office.jpg', scrim: 'linear-gradient(0deg,rgba(20,40,80,.9) 0%,rgba(20,40,80,.1) 70%)' },
   { bg: '#00638E', hover: 'hv-tile-blue' },
   { bg: '#00547A', hover: 'hv-tile-blue2' },
   { bg: '#1E3A66', hover: 'hv-navytile' },
-  { photo: '/assets/photo-curved.jpg', scrim: 'linear-gradient(0deg,rgba(20,40,80,.92) 0%,rgba(20,40,80,.3) 100%)' },
+  CURVED,
 ];
 
 // Tile sizes [columns, rows] on the 4-column grid, by how many tiles are shown
@@ -50,7 +53,7 @@ export default function Home({ narrow }) {
 
         <nav aria-label="Chapters" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,minmax(0,1fr))', gridAutoRows: `minmax(${narrow ? 130 : 150}px,auto)`, gap: 4, padding: 4, background: 'rgba(255,255,255,.12)' }}>
           {CHAPTERS.map((ch, i) => {
-            const tl = TILES[i] || TILES[3], sp = spans[i] || [1, 1];
+            const tl = CHAPTER_TILE[ch.id] || TILES[i] || TILES[3], sp = spans[i] || [1, 1];
             const tier = isKeyChapter(ch) ? 'KEY ELEMENT' : 'FOR INSPIRATION';
             return (
               <Link key={ch.id} to={`/read/${ch.id}`} className={(tl.photo ? 'hv-bright' : tl.hover) + ' tr'}
