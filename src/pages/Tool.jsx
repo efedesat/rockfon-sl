@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
-import { LIB, POCKETS, qbCats, secOf, strip, tierOf, W } from '../content.js';
+import { isShown, LIB, POCKETS, qbCats, secOf, strip, tierOf, W } from '../content.js';
 import { Blocks, jumpTo, Rich, Section, ST } from '../blocks.jsx';
 import { useStoredMap } from '../store.js';
 import { Bar, Bars, Btn, Icon, PillToggle, Tag, TierLabel } from '../ui.jsx';
@@ -138,7 +138,7 @@ function Visit({ tool }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '18px 20px', background: '#F2F3F4', borderRadius: 4 }}><span style={{ ...LBL, fontSize: 10.5, textTransform: 'uppercase', color: '#0E7C66' }}>Good</span><PhBullets widths={['88%', '66%']} /></div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '18px 20px', border: '1px solid #FF7768', borderRadius: 4 }}><span style={{ ...LBL, fontSize: 10.5, textTransform: 'uppercase', color: '#D20014' }}>Red flags</span><PhBullets widths={['82%', '60%']} /></div>
       </div>
-      <div style={{ display: 'flex' }}><Link to={`/toolbox/tk-pocket?card=${tool.pocket ?? 0}`} className="btn btn-secondary tap">Open pocket card</Link></div>
+      {isShown('tk-pocket') && <div style={{ display: 'flex' }}><Link to={`/toolbox/tk-pocket?card=${tool.id}`} className="btn btn-secondary tap">Open pocket card</Link></div>}
     </div>
   );
 }
@@ -184,9 +184,11 @@ function Accordion({ tool }) {
 
 function Pocket() {
   const [params, setParams] = useSearchParams();
-  const i = Math.max(0, Math.min(POCKETS.length - 1, +params.get('card') || 0));
-  const set = k => setParams({ card: String((k + POCKETS.length) % POCKETS.length) }, { replace: true });
+  // ?card= is the tool id of the card (positions shift when tools are hidden).
+  const i = Math.max(0, POCKETS.findIndex(x => x.tool === params.get('card')));
+  const set = k => setParams({ card: POCKETS[(k + POCKETS.length) % POCKETS.length].tool }, { replace: true });
   const p = POCKETS[i];
+  if (!p) return null;
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>{POCKETS.map((x, j) => <PillToggle key={x.tool} on={i === j} onClick={() => set(j)}>{x.name}</PillToggle>)}</div>

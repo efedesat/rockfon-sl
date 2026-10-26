@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BY, CHAPTERS, isKeyChapter, topicPath } from '../content.js';
+import { BY, CHAPTERS, isKeyChapter, isShown, topicPath } from '../content.js';
 import { useStored } from '../store.js';
 import { Icon } from '../ui.jsx';
 
@@ -14,7 +14,7 @@ const TILES = [
 
 export function PickUp({ dark }) {
   const [lastRead] = useStored('lastRead', null);
-  const last = lastRead && BY[lastRead];
+  const last = lastRead && BY[lastRead] && !BY[lastRead].hidden ? BY[lastRead] : null;
   if (!last || !last.ch) return null;
   return dark ? (
     <Link to={topicPath(last)} className="hv-white08" style={{ display: 'flex', flexDirection: 'column', gap: 4, padding: '14px 18px', border: '1px solid rgba(255,255,255,.25)', borderRadius: 4, maxWidth: 320, color: '#fff' }}>
@@ -64,6 +64,7 @@ export default function Home({ narrow }) {
               </Link>
             );
           })}
+          {isShown('tk-voices') && (
           <Link to="/toolbox/tk-voices" state={{ from: 'home' }} className="hv-navytile tr" style={{ position: 'relative', background: '#1E3A66', display: 'flex', alignItems: 'center', gap: 18, padding: '0 24px', color: '#fff' }}>
             <span style={{ width: 52, height: 52, flex: 'none', borderRadius: '50%', background: '#00638E', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{Icon.play()}</span>
             <span style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -71,6 +72,7 @@ export default function Home({ narrow }) {
               <span style={{ fontSize: 12, fontWeight: 600, opacity: 0.75 }}>Rockfon leaders on how they lead</span>
             </span>
           </Link>
+          )}
           <Link to="/toolbox" className="hv-bright6 tr" style={{ position: 'relative', background: '#D6B874', color: '#142850', display: 'flex', alignItems: 'flex-end' }}>
             <span style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: 6 }}>
               <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', opacity: 0.8 }}>USE</span>

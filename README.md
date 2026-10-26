@@ -79,6 +79,15 @@ Notes, self-check answers, checklist ticks, tracker dots, record entries, cockpi
 
 Vercel Web Analytics (`@vercel/analytics/react` in `src/main.jsx`) counts page views per route, without cookies. Turn it on in Vercel under **Project → Analytics → Enable**; until then the script does nothing. Personal notes and scores are never part of it.
 
+## Phased launch: hiding content
+
+On `/admin/visibility` (same admin password as the feedback page) you can hide any chapter, topic or Toolbox tool, then press **Save**. The list is stored in the same Redis store (`playbook:visibility`) and read by `/api/visibility` when the playbook loads, so leaders see the change the next time they open or reload it. No setup is needed beyond the feedback store.
+
+- Hidden items disappear from the home page, Contents, the guide, chapter pages, the Toolbox, search, "Keep reading" and links inside articles; their URLs show "Page not found".
+- Hiding a chapter hides all its topics (each topic keeps its own setting for when the chapter returns). Meeting cards in Routines follow their Toolbox tool.
+- Chapters keep their original numbers, so references such as "Chapter 4, Routines" stay valid.
+- It is a soft hide for focus, not access control: the text is still in the app and in this repository.
+
 ## Feedback
 
 The feedback card posts `{ page, title, answer, name, comment }` to `/api/feedback`. Each entry is written to the Vercel function log, saved in a Redis store when one is connected, and forwarded to `FEEDBACK_WEBHOOK_URL` when that is set.

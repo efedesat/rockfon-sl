@@ -74,6 +74,7 @@ textarea::placeholder { color: #8A8D91; }
 .btn-ghost { background: transparent; color: #00638E; }
 .btn-ghost:hover { background: #F2F3F4; }
 .btn-full { width: 100%; }
+.btn:disabled { opacity: .45; cursor: default; pointer-events: none; }
 
 @media (pointer: coarse) {
   .tap { min-height: 44px; min-width: 44px; }

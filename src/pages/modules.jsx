@@ -1,7 +1,7 @@
 // Interactive modules embedded in specific topics.
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BY, LIB, TOOLS, rhythmTable, strip, toolMeta } from '../content.js';
+import { BY, LIB, TOOLS, isShown, rhythmTable, strip, toolMeta } from '../content.js';
 import { Blocks, Rich, ST } from '../blocks.jsx';
 import { useStoredMap } from '../store.js';
 import { Btn, ToolLinkCard } from '../ui.jsx';
@@ -71,7 +71,7 @@ export function Wheels({ chId }) {
           </div>
         ))}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 10, paddingTop: 4 }}>
-          {wheel.links.map(id => (
+          {wheel.links.filter(isShown).map(id => (
             <Link key={id} to={`/toolbox/${id}`} state={{ from: chId }} className="hv-bd-blue tr" style={{ display: 'flex', flexDirection: 'column', gap: 4, padding: '14px 16px', border: '1px solid #D8D9DA', borderRadius: 4 }}>
               <span style={ST.fieldLabel}>{BY[id].kind}</span>
               <span style={{ fontSize: 14, lineHeight: 1.3, fontWeight: 800, color: '#00638E' }}>{BY[id].title}</span>

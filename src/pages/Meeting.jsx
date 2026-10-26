@@ -6,7 +6,7 @@
 // keyed by the agenda topic exactly as written in the During table.
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { COCKPIT, COCKPIT_PHASES, dashMatch, rhythmRow, rhythmTable, secOf, strip, W } from '../content.js';
+import { COCKPIT, COCKPIT_PHASES, dashMatch, isShown, rhythmRow, rhythmTable, secOf, strip, W } from '../content.js';
 import { Blocks, Section, ST } from '../blocks.jsx';
 import { useMem, useStoredMap } from '../store.js';
 import { Bar, Bars, Btn, Icon } from '../ui.jsx';
@@ -107,7 +107,7 @@ function Overview({ tool, m, go }) {
       <div className="no-print" style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
         <Btn onClick={() => window.print()}>Print one-pager</Btn>
         <Btn onClick={copyAgenda} disabled={!m.agendaReal}>{copied ? 'Agenda copied' : 'Copy agenda to invite'}</Btn>
-        <Link to={`/toolbox/tk-pocket?card=${tool.pocket ?? 0}`} className="btn btn-ghost tap">Open pocket card</Link>
+        {isShown('tk-pocket') && <Link to={`/toolbox/tk-pocket?card=${tool.id}`} className="btn btn-ghost tap">Open pocket card</Link>}
       </div>
     </div>
   );
@@ -262,7 +262,7 @@ function During({ tool, m, onFinish }) {
   const toggle = () => { if (ck.start) setClock({ id, acc: ck.acc + Date.now() - ck.start, start: null }); else { setClock({ id, acc: ck.acc, start: Date.now() }); setFollow(true); } };
   const finish = () => { if (ck.start) setClock({ id, acc: ck.acc + Date.now() - ck.start, start: null }); onFinish(); };
   const pc = pointContent(id, g), dr = isDealRoomPoint(id, g);
-  const dash = (pc.data || []).map(dashMatch).find(Boolean);
+  const dash = isShown('tk-dash') ? (pc.data || []).map(dashMatch).find(Boolean) : null;
   const ask = pc.ask || [];
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>

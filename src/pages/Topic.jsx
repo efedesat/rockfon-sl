@@ -10,7 +10,7 @@ import { CoachIntro, Expect, FourInstances, SelfCheck, Tracker, Wheels } from '.
 function TopicEnd({ t }) {
   const [notes, setNote] = useStoredMap('notes');
   const ch = t.ch, nextT = ch.topics[t.idx + 1], nextCh = CHAPTERS[CHAPTERS.indexOf(ch) + 1];
-  const team = BY[t.team] || BY['tk-kit'];
+  const team = [t.team, 'tk-kit'].map(id => BY[id]).find(x => x && !x.hidden);
   const next = nextT ? { label: 'KEEP READING', title: nextT.title, to: pathOf(nextT), state: nextT.link ? { from: ch.id } : undefined }
     : nextCh ? { label: 'NEXT CHAPTER', title: nextCh.title, to: `/read/${nextCh.id}` }
       : { label: 'WHEN YOU NEED IT', title: 'Toolbox', to: '/toolbox' };
@@ -25,10 +25,12 @@ function TopicEnd({ t }) {
         <span style={{ fontSize: 11, color: '#63666A' }}>{note ? 'Saved on this device' : 'Saved automatically on this device'}</span>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 14 }}>
+        {team && (
         <Link to={`/toolbox/${team.id}`} className="hv-bd-blue tr" style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: 20, border: '1px solid #D8D9DA', borderRadius: 4 }}>
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.12em', color: '#63666A' }}>TAKE IT TO YOUR TEAM</span>
           <span style={{ fontSize: 16, fontWeight: 800, color: '#00638E' }}>{team.title} →</span>
         </Link>
+        )}
         <Link to={next.to} state={next.state} className="hv-bd-blue tr" style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: 20, border: '1px solid #D8D9DA', borderRadius: 4 }}>
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.12em', color: '#63666A' }}>{next.label}</span>
           <span style={{ fontSize: 16, fontWeight: 800, color: '#00638E' }}>{next.title} →</span>

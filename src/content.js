@@ -24,7 +24,7 @@ export const TOPICS = [];
 export const TOOLS = [];
 
 export const CHAPTERS = siteMap.chapters.map(c => {
-  const ch = { ...c, n: c.number, img: asset(c.photo), tools: c.relatedTools || [], isChapter: true };
+  const ch = { ...c, n: c.number, img: asset(c.photo), tools: (c.relatedTools || []).slice(), isChapter: true };
   ch.topics = c.topics.map((t, idx) => {
     // Cards on the Routines chapter that open a tool: meetings, and methods used inside them.
     const isCard = t.kind === 'meeting-card' || t.kind === 'method-card';
@@ -45,9 +45,9 @@ export const CHAPTERS = siteMap.chapters.map(c => {
   return ch;
 });
 
-export const KEY_TOOLS = siteMap.keyTools;
+export const KEY_TOOLS = siteMap.keyTools.slice();
 // Key tools grouped by type for the Toolbox page.
-export const KEY_TOOL_GROUPS = siteMap.keyToolGroups || [{ label: '', tools: KEY_TOOLS }];
+export const KEY_TOOL_GROUPS = (siteMap.keyToolGroups || [{ label: '', tools: KEY_TOOLS }]).map(g => ({ ...g, tools: g.tools.slice() }));
 
 export const TOOL_GROUPS = siteMap.toolbox.map(g => ({
   label: g.group,
@@ -119,3 +119,38 @@ export const W = ['92%', '74%', '86%', '62%', '80%', '68%', '88%', '56%'];
 
 // Pocket cards: one per tool with a pocketCard index.
 export const POCKETS = TOOLS.filter(t => t.pocket != null).sort((a, b) => a.pocket - b.pocket).map(t => ({ name: t.title.replace(/ (meeting|guide)$/, ''), tool: t.id }));
+
+// ── Phased launch: hiding chapters, topics and tools ────────────────────
+// The admin page edits a list of hidden ids (stored on the server). It is
+// applied once at start-up, before the first render, by filtering the lists
+// above in place, so every page that reads them follows automatically.
+// A hidden chapter hides its topics; a hidden tool also hides the Routines
+// cards that open it. This is a soft hide, not access control.
+
+// The full structure, for the admin page.
+export const ALL_CHAPTERS = CHAPTERS.map(ch => ({ ch, topics: ch.topics.slice() }));
+export const ALL_TOOL_GROUPS = TOOL_GROUPS.map(g => ({ label: g.label, items: g.items.slice() }));
+
+const keepIf = (arr, ok) => { for (let i = arr.length - 1; i >= 0; i--) if (!ok(arr[i])) arr.splice(i, 1); };
+export const isShown = id => !!BY[id] && !BY[id].hidden;
+
+export function applyVisibility(hiddenIds) {
+  const H = new Set(hiddenIds || []);
+  if (!H.size) return;
+  TOOLS.forEach(t => { t.hidden = H.has(t.id); });
+  CHAPTERS.forEach(ch => {
+    ch.hidden = H.has(ch.id);
+    ch.topics.forEach(t => { t.hidden = ch.hidden || H.has(t.id) || (!!t.link && !!BY[t.link] && BY[t.link].hidden); });
+    keepIf(ch.topics, t => !t.hidden);
+    ch.topics.forEach((t, i) => { t.idx = i; });
+    keepIf(ch.tools, isShown);
+  });
+  keepIf(CHAPTERS, ch => !ch.hidden);
+  keepIf(TOPICS, t => !t.hidden);
+  keepIf(TOOLS, t => !t.hidden);
+  TOOL_GROUPS.forEach(g => keepIf(g.items, t => !t.hidden));
+  keepIf(KEY_TOOLS, isShown);
+  KEY_TOOL_GROUPS.forEach(g => keepIf(g.tools, isShown));
+  keepIf(KEY_TOOL_GROUPS, g => g.tools.length > 0);
+  keepIf(POCKETS, p => isShown(p.tool));
+}
