@@ -1,22 +1,9 @@
 import { Link } from 'react-router-dom';
-import { BY, LIB, minsOf, rhythmRow, strip, tierOf, topicPath } from '../content.js';
+import { BY, minsOf, tierOf, topicPath } from '../content.js';
 import { Icon, TierLabel } from '../ui.jsx';
+import { ToolCard } from './Toolbox.jsx';
 
 const H = { fontSize: 11, fontWeight: 700, letterSpacing: '.14em', color: '#63666A' };
-
-function meetingCard(t, ch) {
-  const tl = BY[t.link], r = rhythmRow(tl);
-  const devSec = LIB['commercial-wheel'] && LIB['commercial-wheel'].sections.find(x => x.id === 'personal-development-meeting-rhythm');
-  const freq = r ? strip(r[1]).split(';')[0] : tl.sub ? tl.kind : 'Development';
-  const meta = r ? strip(r[2]) + ' · ' + strip(r[3]) : tl.sub ? tl.sub : devSec ? devSec.subs.map(x => x.title).join(' · ') : '';
-  return (
-    <Link key={t.id} to={`/toolbox/${tl.id}`} state={{ from: ch.id }} className="hv-shadow hv-bd-blue tr" style={{ display: 'flex', flexDirection: 'column', gap: 8, minHeight: 128, padding: 18, border: '1px solid #D8D9DA', borderRadius: 4 }}>
-      <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: '#00638E' }}>{freq}</span>
-      <span style={{ fontSize: 16, fontWeight: 800, lineHeight: 1.3, color: '#142850' }}>{tl.title}</span>
-      <span style={{ fontSize: 12.5, lineHeight: 1.45, color: '#63666A', marginTop: 'auto' }}>{meta}</span>
-    </Link>
-  );
-}
 
 export default function Chapter({ ch, narrow }) {
   const methods = ch.topics.filter(t => t.kind === 'method-card');
@@ -37,7 +24,7 @@ export default function Chapter({ ch, narrow }) {
       </div>
       <div style={{ padding: narrow ? '76px 28px 120px' : '80px 56px 120px', display: 'flex', flexDirection: 'column', gap: 28, maxWidth: 640 }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <TierLabel tier={tierOf(ch)} />
+          <TierLabel tier={tierOf(ch)} hint={false} />
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.16em', color: '#63666A' }}>CHAPTER {ch.n}</span>
           <h1 style={{ margin: 0, fontSize: 40, lineHeight: 1.1, fontWeight: 800, color: '#00638E' }}>{ch.title}</h1>
           <p style={{ margin: 0, maxWidth: 640, fontSize: 19, lineHeight: 1.5, color: '#1A1A1A', textWrap: 'pretty' }}>{ch.intro}</p>
@@ -65,7 +52,7 @@ export default function Chapter({ ch, narrow }) {
                 {groups.map(g => (
                   <div key={g.label} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     <h3 style={{ margin: 0, fontSize: 15, fontWeight: 800, color: '#142850' }}>{g.label}</h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: 10 }}>{g.items.map(t => meetingCard(t, ch))}</div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: 10 }}>{g.items.map(t => <ToolCard key={t.id} id={t.link} state={{ from: ch.id }} />)}</div>
                   </div>
                 ))}
               </div>

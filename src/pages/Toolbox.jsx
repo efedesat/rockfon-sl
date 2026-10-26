@@ -3,6 +3,17 @@ import { BY, KEY_TOOL_GROUPS, KEY_TOOLS, TOOL_GROUPS, toolMeta } from '../conten
 
 const BAR = { 'tk-devmeet': '#1AB092', 'rh-visit': '#D6B874', 'tk-winroom': '#142850' };
 
+// Tool card: title and "Monthly · 90 minutes" (or kind). Also used for the meeting cards on chapter pages.
+export function ToolCard({ id, state }) {
+  const t = BY[id];
+  return (
+    <Link to={`/toolbox/${id}`} state={state} className="hv-shadow tr" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 16, minHeight: 120, padding: 20, border: '1px solid #D8D9DA', borderTop: `3px solid ${BAR[id] || '#00638E'}`, borderRadius: 4 }}>
+      <span style={{ fontSize: 17, fontWeight: 800, lineHeight: 1.3, color: '#142850' }}>{t.title}</span>
+      <span style={{ fontSize: 12.5, fontWeight: 600, lineHeight: 1.4, color: '#63666A' }}>{toolMeta(t)}</span>
+    </Link>
+  );
+}
+
 export default function Toolbox({ narrow }) {
   const [params, setParams] = useSearchParams();
   const more = params.get('more') === '1';
@@ -20,15 +31,7 @@ export default function Toolbox({ narrow }) {
           <div key={g.label} style={{ display: 'flex', flexDirection: 'column', gap: 10, paddingTop: 8 }}>
             {g.label && <h3 style={{ margin: 0, fontSize: 15, fontWeight: 800, color: '#142850' }}>{g.label}</h3>}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(260px,1fr))', gap: 12 }}>
-          {g.tools.map(id => {
-            const t = BY[id];
-            return (
-              <Link key={id} to={`/toolbox/${id}`} className="hv-shadow tr" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 16, minHeight: 120, padding: 20, border: '1px solid #D8D9DA', borderTop: `3px solid ${BAR[id] || '#00638E'}`, borderRadius: 4 }}>
-                <span style={{ fontSize: 17, fontWeight: 800, lineHeight: 1.3, color: '#142850' }}>{t.title}</span>
-                <span style={{ fontSize: 12.5, fontWeight: 600, lineHeight: 1.4, color: '#63666A' }}>{toolMeta(t)}</span>
-              </Link>
-            );
-          })}
+          {g.tools.map(id => <ToolCard key={id} id={id} />)}
             </div>
           </div>
         ))}
