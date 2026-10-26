@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { COCKPIT, COCKPIT_PHASES, dashMatch, isShown, rhythmRow, rhythmTable, secOf, strip, W } from '../content.js';
 import { Blocks, Section, ST } from '../blocks.jsx';
+import { SETTINGS } from '../settings.js';
 import { useMem, useStoredMap } from '../store.js';
 import { Bar, Bars, Btn, Icon } from '../ui.jsx';
 import DealRoom, { dealRoomLines, dealRoomPlan } from './DealRoom.jsx';
@@ -18,7 +19,7 @@ const ownerFg = o => (/^Sales leader/.test(o) ? '#0E7C66' : /^Salesperson/.test(
 const split = h => { const m = /^([^:]{3,40}):\s*([\s\S]*)$/.exec(strip(h)); return m ? { owner: m[1], text: m[2] } : { owner: '', text: strip(h) }; };
 const mmss = ms => { const t = Math.max(0, Math.floor(ms / 1000)); return Math.floor(t / 60) + ':' + String(t % 60).padStart(2, '0'); };
 const pointContent = (id, g) => ((COCKPIT[id] || {})[g.topic]) || {};
-// The deal room runs inside the 1:1 Pipeline cockpit at the two selected-opportunity points.
+// The deep-dive runs inside the 1:1 Pipeline cockpit at the two selected-opportunity points.
 const isDealRoomPoint = (id, g) => id === 'mt-pipe' && /selected opportunity/i.test(g.topic || '');
 const inputStyle = { flex: 1, minWidth: 180, height: 40, padding: '0 12px', border: '1px solid #D8D9DA', borderRadius: 3, fontSize: 14, color: '#1A1A1A', background: '#fff', outline: 'none' };
 
@@ -109,6 +110,14 @@ function Overview({ tool, m, go }) {
         <Btn onClick={copyAgenda} disabled={!m.agendaReal}>{copied ? 'Agenda copied' : 'Copy agenda to invite'}</Btn>
         {isShown('tk-pocket') && <Link to={`/toolbox/tk-pocket?card=${tool.id}`} className="btn btn-ghost tap">Open pocket card</Link>}
       </div>
+      {m.guide.length > 0 && (
+        <div style={{ paddingTop: 24 }}>
+          <div style={{ ...ST.stack, gap: 28 }}>
+            <h2 style={ST.h3}>More on this meeting</h2>
+            <Section sec={{ id: 'mgd', intro: [], subs: m.guide }} toc tocLabel="In this guide" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -196,14 +205,6 @@ function Instructions({ tool, m, narrow, go }) {
             : <button type="button" onClick={() => go('cockpit')} className="hv-navy tap" style={{ padding: '10px 16px', borderRadius: 3, fontSize: 13.5, fontWeight: 800, color: '#fff', background: '#142850' }}>Open the cockpit →</button>}
         </div>
       </div>
-      {m.guide.length > 0 && (
-        <div style={{ paddingTop: 24 }}>
-          <div style={{ ...ST.stack, gap: 28 }}>
-            <h2 style={ST.h3}>More on this meeting</h2>
-            <Section sec={{ id: 'mgd', intro: [], subs: m.guide }} toc tocLabel="In this guide" />
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -262,7 +263,7 @@ function During({ tool, m, onFinish }) {
   const toggle = () => { if (ck.start) setClock({ id, acc: ck.acc + Date.now() - ck.start, start: null }); else { setClock({ id, acc: ck.acc, start: Date.now() }); setFollow(true); } };
   const finish = () => { if (ck.start) setClock({ id, acc: ck.acc + Date.now() - ck.start, start: null }); onFinish(); };
   const pc = pointContent(id, g), dr = isDealRoomPoint(id, g);
-  const dash = isShown('tk-dash') ? (pc.data || []).map(dashMatch).find(Boolean) : null;
+  const dash = SETTINGS.cockpitData && isShown('tk-dash') ? (pc.data || []).map(dashMatch).find(Boolean) : null;
   const ask = pc.ask || [];
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
@@ -312,7 +313,7 @@ function During({ tool, m, onFinish }) {
             <span style={LBL}>Purpose</span>
             {pc.purpose ? <span style={{ fontSize: 16, lineHeight: 1.55, color: '#142850', fontWeight: 600, textWrap: 'pretty' }}>{pc.purpose}</span> : <Bars widths={['94%', '70%']} bg="#D8D9DA" />}
           </div>
-          {!dr && (
+          {!dr && SETTINGS.cockpitData && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '18px 20px', border: '1px solid #D8D9DA', borderRadius: 4 }}>
               <span style={LBL}>Data to look at</span>
               {(pc.data || []).length ? <BulletList items={pc.data} size={14.5} /> : <Bars widths={['80%', '62%', '70%']} />}
@@ -344,7 +345,7 @@ function During({ tool, m, onFinish }) {
           </div>
         )}
         {dr && (
-          <DealRoom key={nk} storeKey={nk} eyebrow={'MUST-WIN DEAL ROOM · ' + (/second/i.test(g.topic) ? 'SECOND' : 'FIRST') + ' OPPORTUNITY'}
+          <DealRoom key={nk} storeKey={nk} eyebrow={'MUST-WIN OPPORTUNITY DEEP-DIVE · ' + (/second/i.test(g.topic) ? 'SECOND' : 'FIRST') + ' OPPORTUNITY'}
             plan={{ steps: dealRoomPlan(), live, offset: elMin - g.s }} />
         )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -378,7 +379,7 @@ function MeetingWith({ id }) {
   );
 }
 
-// Meeting notes card at the top of the After tab: every point with notes or deal room scores.
+// Meeting notes card at the top of the After tab: every point with notes or deep-dive scores.
 function NotesCard({ tool, m }) {
   const id = tool.id;
   const [w, set] = useMeetingWith(id);
@@ -398,7 +399,7 @@ function NotesCard({ tool, m }) {
   const mailto = 'mailto:' + encodeURIComponent(w.email || '') + '?subject=' + encodeURIComponent(tool.title + ' · ' + date) + '&body=' + encodeURIComponent(text);
   const copy = () => { try { navigator.clipboard.writeText(text); } catch { /* clipboard unavailable */ } setCopied(true); };
   const clear = () => {
-    if (!window.confirm('Clear the notes, deal room scores, asked questions and checklist ticks for this meeting on this device?')) return;
+    if (!window.confirm('Clear the notes, deep-dive scores, asked questions and checklist ticks for this meeting on this device?')) return;
     // Resets the meeting for next time: every key for this meeting starts with "<id>:".
     const drop = o => { const r = { ...o }; Object.keys(r).forEach(k => { if (k.startsWith(id + ':')) delete r[k]; }); return r; };
     setAllNotes(drop); setAllDr(drop); setAllAsked(drop); setAllChecks(drop); setCopied(false);

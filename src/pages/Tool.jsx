@@ -10,18 +10,18 @@ import Dashboard from './Dashboard.jsx';
 
 const LBL = { fontSize: 11, fontWeight: 700, letterSpacing: '.12em', color: '#63666A' };
 
-// ── Document tools (Personal development meetings, Must-Win Deal Room) ──
+// ── Document tools (Personal development meetings, Must-Win Opportunity Deep-dive) ──
 function Doc({ tool, from }) {
   const sec = secOf(tool);
   const [params, setParams] = useSearchParams();
   const body = <Section sec={sec} toc linkFrom={from || null} exceptTool={tool.id} />;
-  if (!(sec && /must-win deal room/i.test(sec.title))) return body;
-  // The deal room page has two tabs: the guide text and the tool itself (?view=tool).
+  if (!(sec && /must-win opportunity deep-dive/i.test(sec.title))) return body;
+  // The deep-dive page has two tabs: the guide text and the tool itself (?view=tool).
   const view = params.get('view') === 'tool' ? 'tool' : 'description';
   const setView = v => setParams(v === 'tool' ? { view: 'tool' } : {}, { replace: true });
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
-      <div role="tablist" aria-label="Deal room views" className="no-print" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 6, padding: 6, background: '#F2F3F4', borderRadius: 6 }}>
+      <div role="tablist" aria-label="Deep-dive views" className="no-print" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 6, padding: 6, background: '#F2F3F4', borderRadius: 6 }}>
         {[['description', 'Description'], ['tool', 'Tool']].map(([k, label]) => {
           const on = view === k;
           return (
@@ -29,7 +29,7 @@ function Doc({ tool, from }) {
           );
         })}
       </div>
-      <div role="tabpanel">{view === 'tool' ? <DealRoom storeKey={tool.id} eyebrow="MUST-WIN DEAL ROOM" /> : body}</div>
+      <div role="tabpanel">{view === 'tool' ? <DealRoom storeKey={tool.id} eyebrow="MUST-WIN OPPORTUNITY DEEP-DIVE" /> : body}</div>
     </div>
   );
 }

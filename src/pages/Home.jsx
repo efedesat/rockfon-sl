@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { BY, CHAPTERS, isKeyChapter, isShown, topicPath } from '../content.js';
-import { useStored } from '../store.js';
 import { Icon } from '../ui.jsx';
 
 // Tile layout of the "ceiling grid", in chapter order.
@@ -11,23 +10,6 @@ const TILES = [
   { span: [1, 1], bg: '#1E3A66', hover: 'hv-navytile' },
   { span: [2, 1], photo: '/assets/photo-curved.jpg', scrim: 'linear-gradient(0deg,rgba(20,40,80,.92) 0%,rgba(20,40,80,.3) 100%)' },
 ];
-
-export function PickUp({ dark }) {
-  const [lastRead] = useStored('lastRead', null);
-  const last = lastRead && BY[lastRead] && !BY[lastRead].hidden ? BY[lastRead] : null;
-  if (!last || !last.ch) return null;
-  return dark ? (
-    <Link to={topicPath(last)} className="hv-white08" style={{ display: 'flex', flexDirection: 'column', gap: 4, padding: '14px 18px', border: '1px solid rgba(255,255,255,.25)', borderRadius: 4, maxWidth: 320, color: '#fff' }}>
-      <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.14em', opacity: 0.7 }}>PICK UP WHERE YOU LEFT OFF</span>
-      <span style={{ fontSize: 14, fontWeight: 800 }}>{last.title} →</span>
-    </Link>
-  ) : (
-    <Link to={topicPath(last)} className="hv-bd-blue" style={{ display: 'flex', flexDirection: 'column', gap: 4, padding: '12px 16px', border: '1px solid #D8D9DA', borderRadius: 4 }}>
-      <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.14em', color: '#63666A' }}>PICK UP WHERE YOU LEFT OFF</span>
-      <span style={{ fontSize: 14, fontWeight: 800, color: '#00638E' }}>{last.title} →</span>
-    </Link>
-  );
-}
 
 const tileText = (num, tier, title) => (
   <span style={{ position: 'relative', padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -44,12 +26,10 @@ export default function Home({ narrow }) {
       <div style={{ maxWidth: 1120, width: '100%', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 32 }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', gap: 24 }}>
           <div style={{ flex: 1, minWidth: 280, display: 'flex', flexDirection: 'column', gap: 14 }}>
-            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.16em', opacity: 0.75 }}>SALES LEADERSHIP PLAYBOOK</span>
             <h1 style={{ margin: 0, fontSize: 40, lineHeight: 1.1, fontWeight: 800 }}>Sales Excellence</h1>
             <p style={{ margin: 0, maxWidth: 520, fontSize: 18, lineHeight: 1.5, color: 'rgba(255,255,255,.88)' }}>Developing people and leading change in Rockfon EA sales.</p>
             <Link to="/guide" className="hv-grey tr" style={{ alignSelf: 'flex-start', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 16px', borderRadius: 3, background: '#fff', color: '#142850', fontSize: 14, fontWeight: 800, minHeight: 44 }}>How to use this playbook →</Link>
           </div>
-          <PickUp dark />
         </div>
 
         <nav aria-label="Chapters" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,minmax(0,1fr))', gridAutoRows: `minmax(${narrow ? 130 : 150}px,auto)`, gap: 4, padding: 4, background: 'rgba(255,255,255,.12)' }}>

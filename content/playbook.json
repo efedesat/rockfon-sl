@@ -3692,11 +3692,11 @@
      ],
      "subs": [
       {
-       "title": "1:1 Pipeline and Opportunity meeting",
+       "title": "1:1 Pipeline and Opportunity management",
        "blocks": [
         {
          "t": "p",
-         "h": "Why: maintain a relevant, credible pipeline and help the salesperson advance important opportunities. What: a review of the pipeline followed by coaching on two opportunities chosen beforehand. How: use the latest-created and largest-opportunity lists, diagnose the main pipeline gap, spot-check one record and run two must-win deal rooms."
+         "h": "Why: maintain a relevant, credible pipeline and help the salesperson advance important opportunities. What: a review of the pipeline followed by coaching on two opportunities chosen beforehand. How: use the latest-created and largest-opportunity lists, diagnose the main pipeline gap, spot-check one record and run two must-win opportunity deep-dives."
         },
         {
          "t": "p",
@@ -3705,7 +3705,7 @@
        ]
       },
       {
-       "title": "1:1 Account meeting",
+       "title": "1:1 Account management",
        "blocks": [
         {
          "t": "p",
@@ -3718,7 +3718,7 @@
        ]
       },
       {
-       "title": "1:1 Visit and Activity meeting",
+       "title": "1:1 Visit and Activity analysis",
        "blocks": [
         {
          "t": "p",
@@ -3859,7 +3859,7 @@
     },
     {
      "id": "1-1-pipeline-and-opportunity-meeting",
-     "title": "1:1 Pipeline and Opportunity meeting",
+     "title": "1:1 Pipeline and Opportunity management",
      "intro": [],
      "subs": [
       {
@@ -3871,7 +3871,7 @@
         },
         {
          "t": "p",
-         "h": "Use the Pipeline dashboard, the two pinned opportunities, the deal room in the cockpit and the notes from the previous meeting. Leave with a diagnosis of pipeline health, priorities for creation or progression, a plan for each coached opportunity and any quality corrections or support decisions."
+         "h": "Use the Pipeline dashboard, the two pinned opportunities, the deep-dive in the cockpit and the notes from the previous meeting. Leave with a diagnosis of pipeline health, priorities for creation or progression, a plan for each coached opportunity and any quality corrections or support decisions."
         }
        ]
       },
@@ -3886,7 +3886,7 @@
           "<strong>Salesperson:</strong> Review the largest open opportunities by estimated Rockfon value. Flag strategically important opportunities whose value is still unknown.",
           "<strong>Salesperson:</strong> In the Pipeline dashboard, check the quarter runway, stalled or slipped opportunities, missing next steps and the mix against agreed priorities.",
           "<strong>Salesperson:</strong> Choose two important opportunities for coaching and send them to the coach by the previous working day, explaining the decision, obstacle or uncertainty on which help is needed.",
-          "<strong>Salesperson:</strong> Prepare the five deal room scores and supporting evidence, a proposed next move and a specific request for help.",
+          "<strong>Salesperson:</strong> Prepare the five deep-dive scores and supporting evidence, a proposed next move and a specific request for help.",
           "<strong>Sales leader (coach):</strong> Review the pipeline views, selected opportunities and previous actions before the meeting. Identify the main questions, exceptions and support commitments to revisit.",
           "<strong>Sales leader (coach):</strong> Select a separate random record for the quality check and invite any specialist needed for a selected opportunity."
          ]
@@ -3927,7 +3927,7 @@
           [
            "40 to 60",
            "First selected opportunity",
-           "Run the 20-minute must-win deal room conversation. Agree the most important evidence gap and next external advance."
+           "Run the 20-minute must-win opportunity deep-dive conversation. Agree the most important evidence gap and next external advance."
           ],
           [
            "60 to 80",
@@ -3981,7 +3981,7 @@
         },
         {
          "t": "p",
-         "h": "If there are too few suitable opportunities for two honest must-win deal rooms, use the reserved blocks to qualify real leads and design the generation approach. Record this exception and the evidence required by the next review; do not manufacture opportunities or quietly abandon creation work."
+         "h": "If there are too few suitable opportunities for two honest must-win opportunity deep-dives, use the reserved blocks to qualify real leads and design the generation approach. Record this exception and the evidence required by the next review; do not manufacture opportunities or quietly abandon creation work."
         },
         {
          "t": "p",
@@ -4038,7 +4038,7 @@
     },
     {
      "id": "the-must-win-deal-room-as-part-of-1-1-pipeline-and-opportunity-meeting",
-     "title": "The Must-Win Deal Room (as part of 1:1 Pipeline and Opportunity meeting)",
+     "title": "The Must-Win Opportunity Deep-dive (as part of 1:1 Pipeline and Opportunity management)",
      "intro": [],
      "subs": [
       {
@@ -4046,7 +4046,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "A deal room part of the 1:1 Pipeline/Opportunity session helps the opportunity owner choose the next move. Start with the current decision and the outcome the owner wants to achieve. Examine five dimensions: need or pain, the right solution, access to power, the decision process and momentum. Use the questions to test the position and develop actions, rather than complete a scoring exercise for its own sake."
+         "h": "A deep-dive part of the 1:1 Pipeline/Opportunity session helps the opportunity owner choose the next move. Start with the current decision and the outcome the owner wants to achieve. Examine five dimensions: need or pain, the right solution, access to power, the decision process and momentum. Use the questions to test the position and develop actions, rather than complete a scoring exercise for its own sake."
         },
         {
          "t": "table",
@@ -4201,7 +4201,7 @@
     },
     {
      "id": "1-1-account-meeting",
-     "title": "1:1 Account meeting",
+     "title": "1:1 Account management",
      "intro": [],
      "subs": [
       {
@@ -4374,7 +4374,7 @@
     },
     {
      "id": "1-1-visit-and-activity-meeting",
-     "title": "1:1 Visit and Activity meeting",
+     "title": "1:1 Visit and Activity analysis",
      "intro": [],
      "subs": [
       {
@@ -4605,7 +4605,7 @@
         },
         {
          "t": "p",
-         "h": "Use the Pipeline dashboard with team scope, the opportunity table sorted by last updated, the owners’ deal room scores and the notes from the previous meeting. The purpose is to coordinate work and improve important opportunities. Individual development feedback that does not help the team belongs in the individual setting."
+         "h": "Use the Pipeline dashboard with team scope, the opportunity table sorted by last updated, the owners’ deep-dive scores and the notes from the previous meeting. The purpose is to coordinate work and improve important opportunities. Individual development feedback that does not help the team belongs in the individual setting."
         }
        ]
       },
@@ -4620,7 +4620,7 @@
           "<strong>Opportunity owner:</strong> Check shared records and possible duplicates, and flag disputed ownership to the sales leader before the meeting.",
           "<strong>Sales leader (coach):</strong> Review team traffic and previous commitments. Resolve ownership questions that can be settled beforehand and prepare the decisions requiring the team.",
           "<strong>Sales leader (coach):</strong> Select normally two must-win opportunities using business importance, strategy, timing, risk and need for shared support. Tell each owner the decision the deep dive should address.",
-          "<strong>Selected opportunity owner:</strong> Score the five deal room dimensions with evidence, and prepare a proposed next move and the specific help needed for the selected deep dive.",
+          "<strong>Selected opportunity owner:</strong> Score the five deep-dive dimensions with evidence, and prepare a proposed next move and the specific help needed for the selected deep dive.",
           "<strong>Sales leader (coach):</strong> Circulate the agenda and invite the contributors needed for the selected decisions.",
           "<strong>All participants:</strong> Read the main changes and relevant deep-dive material before attending. Prepare any contribution requested; a separate pipeline presentation is unnecessary."
          ]
@@ -4661,7 +4661,7 @@
           [
            "60 to 85",
            "First must-win deep dive",
-           "Test the deal room scores, hear relevant contributions and decide the next move and support commitments."
+           "Test the deep-dive scores, hear relevant contributions and decide the next move and support commitments."
           ],
           [
            "85 to 110",
@@ -4712,7 +4712,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Use the same five-dimension scale as the individual meeting. In each 25-minute deep dive, use three minutes to define the decision, five to test the deal room scores, ten to explore the main gap and options, five to decide actions and support, and two to confirm the commitments."
+         "h": "Use the same five-dimension scale as the individual meeting. In each 25-minute deep dive, use three minutes to define the decision, five to test the deep-dive scores, ten to explore the main gap and options, five to decide actions and support, and two to confirm the commitments."
         },
         {
          "t": "p",
@@ -5161,7 +5161,7 @@
         },
         {
          "t": "p",
-         "h": "In it you will find what the role asks of you, the coaching skills behind good conversations, the sales management model and the routines of both wheels. Every meeting has its guide, instructions and a cockpit to run it live, with the dashboards, the must-win deal room and the notes you send afterwards. The toolbox holds the rest, for when you need it."
+         "h": "In it you will find what the role asks of you, the coaching skills behind good conversations, the sales management model and the routines of both wheels. Every meeting has its guide, instructions and a cockpit to run it live, with the dashboards, the must-win opportunity deep-dive and the notes you send afterwards. The toolbox holds the rest, for when you need it."
         },
         {
          "t": "p",
@@ -5318,12 +5318,12 @@
    "First selected opportunity": {
     "purpose": "Coach the owner to choose the next move on the first must-win opportunity.",
     "data": [
-     "Deal room: need, solution, access, decision process, momentum",
+     "Deep-dive: need, solution, access, decision process, momentum",
      "Rockfon value, delivery quarter and product mix"
     ],
     "ask": [],
     "run": [
-     "Enter the opportunity name in the deal room.",
+     "Enter the opportunity name in the deep-dive.",
      "Ask each dimension question as written and let the salesperson score first.",
      "Read the verdict together and use the radar to find the weakest point.",
      "Agree one next move on the gap that most affects the next decision."
@@ -5336,12 +5336,12 @@
    "Second selected opportunity": {
     "purpose": "Coach the owner to choose the next move on the second must-win opportunity.",
     "data": [
-     "Deal room: need, solution, access, decision process, momentum",
+     "Deep-dive: need, solution, access, decision process, momentum",
      "Rockfon value, delivery quarter and product mix"
     ],
     "ask": [],
     "run": [
-     "Run the deal room for the second pinned opportunity.",
+     "Run the deep-dive for the second pinned opportunity.",
      "If time is short, start from the weakest dimension instead of scoring everything.",
      "Agree one next move and the support needed."
     ],
@@ -5725,7 +5725,7 @@
    "First must-win deep dive": {
     "purpose": "Use the team’s experience to decide the next move on the first must-win.",
     "data": [
-     "Deal room: need, solution, access, decision process, momentum",
+     "Deep-dive: need, solution, access, decision process, momentum",
      "Rockfon value, delivery quarter and product mix"
     ],
     "ask": [
@@ -5736,7 +5736,7 @@
      "Who will support the owner, and how?"
     ],
     "run": [
-     "The owner presents the deal room scores they prepared.",
+     "The owner presents the deep-dive scores they prepared.",
      "Ask the team where the evidence is weakest.",
      "Invite one person with similar experience to suggest a move.",
      "The owner chooses the next move."
@@ -5749,7 +5749,7 @@
    "Second must-win deep dive": {
     "purpose": "Use the team’s experience to decide the next move on the second must-win.",
     "data": [
-     "Deal room: need, solution, access, decision process, momentum",
+     "Deep-dive: need, solution, access, decision process, momentum",
      "Rockfon value, delivery quarter and product mix"
     ],
     "ask": [

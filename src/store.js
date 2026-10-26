@@ -4,7 +4,7 @@
 import { useSyncExternalStore, useCallback, useRef } from 'react';
 
 const PREFIX = 'slp:';
-// Persisted keys: lastRead, notes, selfCheck, checks, tracker, records,
+// Persisted keys: notes, selfCheck, checks, tracker, records,
 // cockpitNotes, cockpitAsked, dealRoom, meetingWith, meetingView, feedbackName.
 const listeners = new Set();
 const cache = {};

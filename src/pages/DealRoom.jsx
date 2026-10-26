@@ -1,4 +1,4 @@
-// Must-Win Deal Room: score five dimensions 1–4, read the verdict, see the radar.
+// Must-Win Opportunity Deep-dive: score five dimensions 1–4, read the verdict, see the radar.
 // Dimensions, questions, scale and verdicts come from site-map.json → dealRoom.
 // There is deliberately no "required" score.
 import { DEAL_ROOM, LIB, strip } from '../content.js';
@@ -12,20 +12,20 @@ const pt = (i, val) => { const a = (-90 + 72 * i) * Math.PI / 180, r = GEO.r * v
 const ring = v => [0, 1, 2, 3, 4].map(i => pt(i, v).map(x => x.toFixed(1)).join(',')).join(' ');
 const LABELS = [[210, 26, 'middle'], [318.4, 110.8, 'start'], [277, 244.2, 'start'], [143, 244.2, 'end'], [101.6, 110.8, 'end']];
 
-// The deal room's own 20-minute plan, from the "Minutes" table in its section.
+// The deep-dive's own 20-minute plan, from the "Minutes" table in its section.
 export function dealRoomPlan() {
   const cw = LIB['commercial-wheel'];
-  const sec = cw && cw.sections.find(x => /must-win deal room/i.test(x.title));
+  const sec = cw && cw.sections.find(x => /must-win opportunity deep-dive/i.test(x.title));
   const t = sec && sec.subs.map(x => x.blocks.find(b => b.t === 'table' && /minutes/i.test(strip(b.head[0])))).find(Boolean);
   if (!t) return [];
   let acc = 0;
   return t.rows.map(r => { const m = /(\d+)\s*(?:to|–|-)\s*(\d+)/.exec(strip(r[0])), a = m ? +m[1] : acc, e = m ? +m[2] : acc + 4; acc = e; return { a, e, label: strip(r[1]) }; });
 }
 
-// Legend wording from the deal room's "Score / Evidence position" table, if present.
+// Legend wording from the deep-dive's "Score / Evidence position" table, if present.
 function scaleLegend() {
   const cw = LIB['commercial-wheel'];
-  const sec = cw && cw.sections.find(x => /must-win deal room/i.test(x.title));
+  const sec = cw && cw.sections.find(x => /must-win opportunity deep-dive/i.test(x.title));
   const t = sec && sec.subs.map(x => x.blocks.find(b => b.t === 'table' && strip(b.head[0]) === 'Score')).find(Boolean);
   return t ? t.rows.map(r => strip(r[1])) : DEAL_ROOM.scale;
 }

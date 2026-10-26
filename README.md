@@ -55,12 +55,12 @@ Vercel's own Password Protection (a paid add-on) would also work and could repla
 - Change text in `content/playbook.json`, commit and push. Vercel rebuilds the site.
 - Missing content shows as grey placeholder bars. A section with `"placeholder": true` shows a "Placeholder" tag on its tool page.
 - Meeting guides are read from sub-section titles: "Format and intended decisions", "Before the meeting", "During the meeting" (agenda table with Minutes / topic / questions), "After the meeting", "What good looks like and red flags". Frequency and duration come from the "The minimum commercial rhythm" table in "Four instances". Keep these titles stable.
-- **Cockpit content** (v0.2) is in `playbook.json` → `cockpit[meetingId][agenda topic]` with `purpose`, `data`, `ask`, `run` and `watch`. The agenda topic must match the meeting's During table exactly, otherwise that point shows grey bars. A `data` line that names a dashboard element (for example "Pipeline · Opportunity table, sorted by newest") gets an "Open in the dashboard →" link. `cockpitPhases.before/after` fills the "In the playbook" box on the Before and After steps.
-- **Must-Win Deal Room:** dimensions, questions, scale and verdicts are in `site-map.json` → `dealRoom`. It runs inside the 1:1 Pipeline cockpit at the two "selected opportunity" points and on the Must-Win Deal Room tool page. There is no required score.
+- **Cockpit content** (v0.2) is in `playbook.json` → `cockpit[meetingId][agenda topic]` with `purpose`, `data`, `ask`, `run` and `watch`. The agenda topic must match the meeting's During table exactly, otherwise that point shows grey bars. The `data` lines ("Data to look at") are hidden for now; set `cockpitData: true` in `src/settings.js` to show them again. A `data` line that names a dashboard element (for example "Pipeline · Opportunity table, sorted by newest") then gets an "Open in the dashboard →" link. `cockpitPhases.before/after` fills the "In the playbook" box on the Before and After steps.
+- **Must-Win Opportunity Deep-dive:** dimensions, questions, scale and verdicts are in `site-map.json` → `dealRoom`. It runs inside the 1:1 Pipeline cockpit at the two "selected opportunity" points and on the Must-Win Opportunity Deep-dive tool page. There is no required score.
 - **Dashboard guide:** page questions and element texts are in `site-map.json` → `dashboard`. The wireframe's sample layout is not real data. Clicking an element explains it in the side column; cockpit "Data to look at" lines that name an element link to it.
 - Extra block types for any section: `statement` (large display lines), `swap` ("Instead of / Coach it" cards) and `pair` (two example cards).
 - The v0.2 design changes are recorded in `design/CHANGES_v0.2.md`; `design/prototype/Playbook Prototype v5.dc.html` is the current reference.
-- Structure (chapters, topic order, tiers, photos, tool types) lives in `content/site-map.json`. `keyTools` sets which tools are Key element; `keyToolGroups` sets how they are grouped on the Toolbox page (Meeting guides, CRM guides, Change management guides). For v0.1 the toolbox entries there also carry a few display settings from the prototype: `aka`, `format`, `accordion` and `files`.
+- Structure (chapters, topic order, tiers, photos, tool types) lives in `content/site-map.json`. `keyTools` sets which tools are Key element; `keyToolGroups` sets how they are grouped on the Toolbox page (Bilat meeting guides, Team meeting guides, Coaching methods, CRM guides, Change management guides). For v0.1 the toolbox entries there also carry a few display settings from the prototype: `aka`, `format`, `accordion` and `files`.
 - `src/settings.js` → `storyPages: false` shows the story topic as an ordinary article.
 
 ## Large screens
@@ -73,7 +73,7 @@ The design is sized for laptops and tablets. From 1440px wide the whole layout s
 
 ## Personal data
 
-Notes, self-check answers, checklist ticks, tracker dots, record entries, cockpit notes, asked questions, deal room scores, "Meeting with" name and email, and the chosen meeting view are stored in the browser's `localStorage` (keys prefixed `slp:`). They leave the device only when the user chooses to: emailing or copying meeting notes, or sending feedback. "Clear my notes" in the Contents overlay removes them all; "Clear notes for this meeting" on a cockpit's After tab removes one meeting's notes and deal room scores.
+Notes, self-check answers, checklist ticks, tracker dots, record entries, cockpit notes, asked questions, deep-dive scores, "Meeting with" name and email, and the chosen meeting view are stored in the browser's `localStorage` (keys prefixed `slp:`). They leave the device only when the user chooses to: emailing or copying meeting notes, or sending feedback. "Clear my notes" in the Contents overlay removes them all; "Clear notes for this meeting" on a cockpit's After tab removes one meeting's notes and deep-dive scores.
 
 ## Analytics
 

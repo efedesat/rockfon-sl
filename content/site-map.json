@@ -560,21 +560,21 @@
           "kind": "meeting-card",
           "group": "Sales development wheel",
           "opensTool": "mt-pipe",
-          "title": "1:1 Pipeline and Opportunity meeting"
+          "title": "1:1 Pipeline and Opportunity management"
         },
         {
           "id": "door-mt-acc",
           "kind": "meeting-card",
           "group": "Sales development wheel",
           "opensTool": "mt-acc",
-          "title": "1:1 Account meeting"
+          "title": "1:1 Account management"
         },
         {
           "id": "door-mt-act",
           "kind": "meeting-card",
           "group": "Sales development wheel",
           "opensTool": "mt-act",
-          "title": "1:1 Visit and Activity meeting"
+          "title": "1:1 Visit and Activity analysis"
         },
         {
           "id": "door-mt-team",
@@ -595,7 +595,7 @@
           "kind": "method-card",
           "group": "Used inside the meetings",
           "opensTool": "tk-winroom",
-          "title": "Must-Win Deal Room"
+          "title": "Must-Win Opportunity Deep-dive"
         }
       ]
     },
@@ -755,7 +755,7 @@
       "tools": [
         {
           "id": "mt-pipe",
-          "title": "1:1 Pipeline and Opportunity meeting",
+          "title": "1:1 Pipeline and Opportunity management",
           "type": "meeting",
           "kind": "Meeting guide",
           "tier": "key-weekly",
@@ -768,7 +768,7 @@
         },
         {
           "id": "mt-acc",
-          "title": "1:1 Account meeting",
+          "title": "1:1 Account management",
           "type": "meeting",
           "kind": "Meeting guide",
           "tier": "key-weekly",
@@ -781,7 +781,7 @@
         },
         {
           "id": "mt-act",
-          "title": "1:1 Visit and Activity meeting",
+          "title": "1:1 Visit and Activity analysis",
           "type": "meeting",
           "kind": "Meeting guide",
           "tier": "key-weekly",
@@ -810,7 +810,7 @@
           "title": "Personal development meetings",
           "type": "doc",
           "kind": "Meeting guide",
-          "tier": "key-weekly",
+          "tier": "inspiration",
           "contentRef": {
             "part": "commercial-wheel",
             "sectionId": "personal-development-meeting-rhythm"
@@ -822,7 +822,7 @@
           "title": "Joint visit guide",
           "type": "visit",
           "kind": "Visit guide",
-          "tier": "key-weekly",
+          "tier": "inspiration",
           "contentRef": null,
           "pocketCard": 4,
           "format": "Joint visit"
@@ -834,7 +834,7 @@
       "tools": [
         {
           "id": "tk-winroom",
-          "title": "Must-Win Deal Room",
+          "title": "Must-Win Opportunity Deep-dive",
           "type": "doc",
           "kind": "Coaching method",
           "tier": "key-weekly",
@@ -842,8 +842,8 @@
             "part": "commercial-wheel",
             "sectionId": "the-must-win-deal-room-as-part-of-1-1-pipeline-and-opportunity-meeting"
           },
-          "subtitle": "Part of the 1:1 Pipeline and Opportunity meeting",
-          "aka": "The Must-Win Deal Room (as part of 1:1 Pipeline and Opportunity meeting)"
+          "subtitle": "Part of 1:1 Pipeline and Opportunity management",
+          "aka": "The Must-Win Opportunity Deep-dive (as part of 1:1 Pipeline and Opportunity management)"
         },
         {
           "id": "tk-qbank",
@@ -1050,8 +1050,6 @@
     "mt-acc",
     "mt-act",
     "mt-team",
-    "tk-devmeet",
-    "rh-visit",
     "tk-gloss",
     "tk-dash",
     "ch-mines",
@@ -1059,14 +1057,17 @@
   ],
   "keyToolGroups": [
     {
-      "label": "Meeting guides",
+      "label": "Bilat meeting guides",
       "tools": [
         "mt-pipe",
         "mt-acc",
-        "mt-act",
-        "mt-team",
-        "tk-devmeet",
-        "rh-visit"
+        "mt-act"
+      ]
+    },
+    {
+      "label": "Team meeting guides",
+      "tools": [
+        "mt-team"
       ]
     },
     {

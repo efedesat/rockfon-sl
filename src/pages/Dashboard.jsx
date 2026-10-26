@@ -137,7 +137,7 @@ function PipelinePage({ els, sel, onSel }) {
         {stat === 'open'
           ? <Table minWidth={680} cols="minmax(0,1.9fr) minmax(0,.9fr) minmax(0,1fr) minmax(0,.8fr) minmax(0,.9fr) minmax(0,1.4fr) minmax(0,.8fr)" head={['Opportunity', 'Owner', 'Rockfon value', 'Created', 'Last update', 'Next action', 'Due']} rows={openRows} />
           : <Table minWidth={640} cols="minmax(0,1.9fr) minmax(0,.9fr) minmax(0,1fr) minmax(0,.8fr) minmax(0,.8fr) minmax(0,1.8fr)" head={['Opportunity', 'Owner', 'Rockfon value', 'Created', 'Closed', 'Reason']} rows={closedRows} />}
-        <span style={NOTE}>Pinned rows are the two opportunities chosen for coaching. Must-win opportunities open the deal room in the 1:1 cockpit.</span>
+        <span style={NOTE}>Pinned rows are the two opportunities chosen for coaching. Must-win opportunities open the deep-dive in the 1:1 cockpit.</span>
       </El>
     </div>
   );
