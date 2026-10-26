@@ -38,6 +38,8 @@ export const CHAPTERS = siteMap.chapters.map(c => {
       team: t.relatedTool,
     };
     BY[topic.id] = topic;
+    // Old ids of merged topics keep their links working.
+    (t.aliases || []).forEach(a => { BY[a] = topic; });
     TOPICS.push(topic);
     return topic;
   });
@@ -84,7 +86,9 @@ export function tierOf(item) {
 }
 
 const wordsOf = sec => sec ? strip([sec.title, ...[sec.intro, ...sec.subs.map(s => s.blocks)].flat().map(b => [b.h, ...(b.items || []).map(x => typeof x === 'string' ? x : Object.values(x).join(' ')), ...(b.rows || []).flat()].join(' ')), ...sec.subs.map(s => s.title)].join(' ')).split(/\s+/).length : 0;
-export const minsOf = t => { const sec = secOf(t); return sec ? Math.max(2, Math.round(wordsOf(sec) / 220)) : 5; };
+const fourInstances = () => (LIB['commercial-wheel'] || { sections: [] }).sections.find(x => x.id === 'four-instances');
+// The merged "disciplines and cadence" topic also counts the Four instances text.
+export const minsOf = t => { const sec = secOf(t); return sec ? Math.max(2, Math.round((wordsOf(sec) + (t.module === 'cadence' ? wordsOf(fourInstances()) : 0)) / 220)) : 5; };
 
 export function rhythmTable() {
   const cw = LIB['commercial-wheel'];

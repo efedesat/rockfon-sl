@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BY, CHAPTERS, minsOf, pathOf, secOf, strip, tierOf, W } from '../content.js';
+import { BY, CHAPTERS, LIB, minsOf, pathOf, secOf, strip, tierOf, W } from '../content.js';
 import { Blocks, Rich, Section, ST } from '../blocks.jsx';
 import { SETTINGS } from '../settings.js';
 import { useStoredMap } from '../store.js';
@@ -115,6 +115,16 @@ function Article({ t, sec }) {
   else if (t.module === 'selfcheck' && sec) body = <div style={ST.stack}><Blocks list={sec.intro} lede /></div>;
   else if (t.id === 'sct-1' && sec) body = <CoachIntro sec={sec} />;
   else if (t.contentRef && t.contentRef.sectionId === 'four-instances' && sec) body = <FourInstances sec={sec} chId={t.ch.id} />;
+  else if (t.module === 'cadence' && sec) {
+    // The disciplines, then the four meetings that give them their cadence.
+    const fi = (LIB['commercial-wheel'] || { sections: [] }).sections.find(x => x.id === 'four-instances');
+    body = (
+      <>
+        <Section sec={sec} toc linkFrom={t.ch.id} />
+        {fi && <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}><h2 style={ST.h3}>Cadence</h2><FourInstances sec={fi} chId={t.ch.id} /></div>}
+      </>
+    );
+  }
   else {
     if (t.module === 'wheels' && sec) intro = <div style={ST.stack}><Blocks list={sec.intro} lede /></div>;
     // The role's articles read straight through, without an "In this topic" list.

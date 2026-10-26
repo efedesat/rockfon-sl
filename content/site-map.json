@@ -506,10 +506,10 @@
         },
         {
           "id": "cw-three-commercial-management-disciplines",
-          "title": "Three commercial management disciplines",
+          "title": "Three sales management disciplines and cadence",
           "group": "Sales development wheel",
           "pageType": "editorial",
-          "module": null,
+          "module": "cadence",
           "contentRef": {
             "part": "commercial-wheel",
             "sectionId": "three-commercial-management-disciplines"
@@ -519,24 +519,10 @@
             "assets/photos/image31.jpeg",
             "assets/photos/image52.jpeg"
           ],
-          "startHere": true
-        },
-        {
-          "id": "cw-four-instances",
-          "title": "Four instances",
-          "group": "Sales development wheel",
-          "pageType": "editorial",
-          "module": null,
-          "contentRef": {
-            "part": "commercial-wheel",
-            "sectionId": "four-instances"
-          },
-          "relatedTool": "mt-pipe",
-          "photos": [
-            "assets/photos/image56.jpeg",
-            "assets/photos/image42.jpeg"
-          ],
-          "startHere": true
+          "startHere": true,
+          "aliases": [
+            "cw-four-instances"
+          ]
         },
         {
           "id": "cw-common-operating-rules",

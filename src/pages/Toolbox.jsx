@@ -1,13 +1,11 @@
 import { Link, useSearchParams } from 'react-router-dom';
 import { BY, KEY_TOOL_GROUPS, KEY_TOOLS, TOOL_GROUPS, toolMeta } from '../content.js';
 
-const BAR = { 'tk-devmeet': '#1AB092', 'rh-visit': '#D6B874', 'tk-winroom': '#142850' };
-
 // Tool card: title and "Monthly · 90 minutes" (or kind). Also used for the meeting cards on chapter pages.
 export function ToolCard({ id, state }) {
   const t = BY[id];
   return (
-    <Link to={`/toolbox/${id}`} state={state} className="hv-shadow tr" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 16, minHeight: 120, padding: 20, border: '1px solid #D8D9DA', borderTop: `3px solid ${BAR[id] || '#00638E'}`, borderRadius: 4 }}>
+    <Link to={`/toolbox/${id}`} state={state} className="hv-shadow tr" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 16, minHeight: 120, padding: 20, border: '1px solid #D8D9DA', borderRadius: 4 }}>
       <span style={{ fontSize: 17, fontWeight: 800, lineHeight: 1.3, color: '#142850' }}>{t.title}</span>
       <span style={{ fontSize: 12.5, fontWeight: 600, lineHeight: 1.4, color: '#63666A' }}>{toolMeta(t)}</span>
     </Link>
