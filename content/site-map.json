@@ -1117,7 +1117,7 @@
         "question": "Do we have a solution that fits the need well at a competitive price?",
         "verdicts": [
           "We cannot yet say why our offer fits or whether the price competes. Check the requirement first.",
-          "We believe it fits, but technical or price checks are still open. Name what is unverified.",
+          "We believe it fits, but technical or price checks are still open. Name what you have not yet checked.",
           "The customer agrees the solution fits the need at an acceptable price.",
           "A sample, test or evaluation has proven the fit. Protect the position."
         ]
@@ -1137,7 +1137,7 @@
         "question": "Are we aware of the decision process they will go through, and the steps they will take?",
         "verdicts": [
           "We do not know how or when they will decide. Ask what happens next, and through whom.",
-          "We have an idea of the steps, but the timing or responsibilities are assumed.",
+          "We have an idea of the steps, but we are assuming the timing or the responsibilities.",
           "The customer has confirmed the steps, the timing and who is responsible.",
           "A real milestone in their process has happened as agreed."
         ]
@@ -1169,7 +1169,7 @@
           "n": 2,
           "id": "Quarter runway",
           "title": "Quarter runway",
-          "shows": "Expected Rockfon value as one bar per delivery quarter, plus an Unallocated bar. Each bar is split by vertical, or by product mix: tile-only, grid-only, tile-and-grid. Timing, concentration and strategic mix are visible in seconds."
+          "shows": "Expected Rockfon value as one bar per delivery quarter, plus an Unallocated bar. Each bar is split by vertical, or by product mix: tile-only, grid-only, tile-and-grid. You can see timing, concentration and strategic mix in seconds."
         },
         {
           "n": 3,
@@ -1193,7 +1193,7 @@
           "n": 1,
           "id": "Coverage grid",
           "title": "Portfolio coverage grid",
-          "shows": "One row per account: segment, plan review, stakeholder coverage, last meaningful engagement, next required engagement, actual business and open pipeline. Due, overdue and unknown are shown distinctly. Defaults to A and other in-scope accounts, with a switch to the complete portfolio. A click opens the account and its plan."
+          "shows": "One row per account: segment, plan review, stakeholder coverage, last meaningful engagement, next required engagement, actual business and open pipeline. Due, overdue and unknown look different from each other. By default, it shows A and other in-scope accounts. A switch shows the complete portfolio. A click opens the account and its plan."
         },
         {
           "n": 2,
@@ -1241,7 +1241,7 @@
           "n": 5,
           "id": "Visit map",
           "title": "Visit map",
-          "shows": "Customer bookings for the next two weeks placed by location, per week. Clusters and long hops show whether the routes make sense. Needs a location on each booking."
+          "shows": "Customer bookings for the next two weeks, shown by location for each week. Clusters and long hops show whether the routes make sense. Needs a location on each booking."
         }
       ]
     }
