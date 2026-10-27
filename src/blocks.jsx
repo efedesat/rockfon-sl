@@ -1,5 +1,6 @@
-// Renders playbook.json blocks ({t: 'p'|'ul'|'ol'|'table'|'quote'}) exactly as
-// written. Layout only: the wording comes from the content file.
+// Renders playbook.json blocks ({t: 'p'|'ul'|'ol'|'table'|'quote'|'statement'|'swap'|'pair'|
+// 'runway'|'formula'|'levers'}) exactly as written. Layout only: the wording comes from the content file.
+import { useState } from 'react';
 import { strip, TOOLS } from './content.js';
 import { ToolLinkCard } from './ui.jsx';
 
@@ -78,6 +79,61 @@ function AgendaBlock({ b }) {
   );
 }
 
+// Series colours for the runway chart, in fixed order (checked for colour-blind separation).
+const SERIES = ['#142850', '#00638E', '#45A6DE', '#D6B874'];
+
+// Stacked bars of expected value per delivery quarter, with buttons to switch the breakdown.
+// bars: [{label, h (0–100), open}], views: [{button, title, legend, segs: per bar, bottom to top}].
+function RunwayBlock({ b }) {
+  const [v, setV] = useState(0);
+  const view = b.views[Math.min(v, b.views.length - 1)];
+  return (
+    <figure style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: 18, padding: '22px 24px', border: '1px solid #D8D9DA', borderRadius: 4, background: '#fff' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '12px 20px' }}>
+        <div style={{ flex: '1 1 260px', display: 'flex', flexDirection: 'column', gap: 6 }}>
+          {b.eyebrow && <span style={ST.eyebrow}>{b.eyebrow}</span>}
+          <span style={{ fontSize: 17, lineHeight: 1.35, fontWeight: 800, color: '#142850', textWrap: 'pretty' }}>{view.title}</span>
+        </div>
+        {b.views.length > 1 && (
+          <div style={{ display: 'flex', gap: 4, padding: 4, background: '#F2F3F4', borderRadius: 4 }}>
+            {b.views.map((w, i) => (
+              <button key={i} type="button" aria-pressed={i === v} onClick={() => setV(i)} className={i === v ? '' : 'hv-grey'}
+                style={{ padding: '7px 12px', borderRadius: 3, fontSize: 12.5, fontWeight: 700, background: i === v ? '#fff' : 'transparent', color: i === v ? '#142850' : '#63666A', boxShadow: i === v ? '0 1px 3px rgba(20,40,80,.15)' : 'none' }}>{w.button}</button>
+            ))}
+          </div>
+        )}
+      </div>
+      <div role="img" aria-label={view.title + '. ' + b.bars.map((bar, i) => bar.label + ': ' + view.legend.map((l, k) => l + ' ' + view.segs[i][k] + '%').join(', ')).join('; ')}
+        style={{ display: 'grid', gridTemplateColumns: `repeat(${b.bars.length},minmax(0,1fr))`, gap: 12, alignItems: 'end', height: 220, borderBottom: '1px solid #B1B2B4' }}>
+        {b.bars.map((bar, i) => {
+          const segs = view.segs[i] || [], sum = segs.reduce((a, x) => a + x, 0) || 1;
+          return (
+            <div key={i} style={{ height: bar.h + '%', width: '100%', maxWidth: 76, justifySelf: 'center', display: 'flex', flexDirection: 'column-reverse', gap: 2, padding: bar.open ? 2 : 0, border: bar.open ? '1.5px dashed #8A8D91' : 'none', borderBottom: 'none', borderRadius: '6px 6px 0 0' }}>
+              {segs.map((x, k) => (
+                <div key={k} title={`${bar.label} · ${view.legend[k]}: ${x}%`}
+                  style={{ flex: `${x / sum} 1 0`, minHeight: 0, background: SERIES[k % SERIES.length], opacity: bar.open ? 0.45 : 1, borderRadius: k === segs.length - 1 ? '4px 4px 0 0' : 0 }} />
+              ))}
+            </div>
+          );
+        })}
+      </div>
+      <div aria-hidden="true" style={{ display: 'grid', gridTemplateColumns: `repeat(${b.bars.length},minmax(0,1fr))`, gap: 12, marginTop: -10 }}>
+        {b.bars.map((bar, i) => <span key={i} style={{ textAlign: 'center', fontSize: 12.5, fontWeight: 700, color: bar.open ? '#63666A' : '#142850' }}>{bar.label}</span>)}
+      </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 18px' }}>
+        {view.legend.map((l, k) => (
+          <span key={k} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#1A1A1A' }}>
+            <span aria-hidden="true" style={{ width: 12, height: 12, borderRadius: 2, background: SERIES[k % SERIES.length] }} />{l}
+          </span>
+        ))}
+      </div>
+      {b.caption && <figcaption style={{ fontSize: 12.5, lineHeight: 1.5, color: '#63666A' }}>{b.caption}</figcaption>}
+    </figure>
+  );
+}
+
+const OPS = ['=', '×', '+', '−', '-', '÷'];
+
 export function Block({ b, lede, dark }) {
   if (b.t === 'p') {
     if (lede) return <Rich as="p" style={ST.lede} html={b.h} />;
@@ -141,6 +197,37 @@ export function Block({ b, lede, dark }) {
           <span style={{ ...ST.eyebrow, color: j ? '#00638E' : '#142850' }}>{it.k}</span>
           <span style={{ fontSize: 20, lineHeight: 1.25, fontWeight: 800, color: '#142850' }}>{it.title}</span>
           <Rich style={{ fontSize: 16, lineHeight: 1.6, color: '#1A1A1A', textWrap: 'pretty' }} html={it.h} />
+        </div>
+      ))}
+    </div>
+  );
+  if (b.t === 'runway') return <RunwayBlock b={b} />;
+  // One line of terms and operators, e.g. Forecast = sqm × average price × win probability.
+  if (b.t === 'formula') return (
+    <div role="math" aria-label={b.items.join(' ')} style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px 12px', padding: '22px 24px', background: '#F2F3F4', borderRadius: 4 }}>
+      {b.items.map((x, j) => OPS.includes(x)
+        ? <span key={j} aria-hidden="true" style={{ fontSize: 24, fontWeight: 500, color: '#63666A' }}>{x}</span>
+        : <span key={j} style={{ padding: '8px 14px', borderRadius: 3, fontSize: 18, fontWeight: 800, lineHeight: 1.2, background: j === 0 ? '#142850' : '#fff', color: j === 0 ? '#fff' : '#142850', border: j === 0 ? 'none' : '1px solid #D8D9DA' }}>{x}</span>)}
+    </div>
+  );
+  // Cards with a key label, a title, a short text and the questions to ask.
+  if (b.t === 'levers') return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 16 }}>
+      {b.items.map((it, j) => (
+        <div key={j} style={{ padding: '22px 22px 20px', border: '1px solid #D8D9DA', borderRadius: 4, display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <span style={ST.eyebrow}>{it.k}</span>
+          <span style={{ fontSize: 19, lineHeight: 1.25, fontWeight: 800, color: '#142850' }}>{it.title}</span>
+          <Rich style={{ fontSize: 15.5, lineHeight: 1.55, color: '#1A1A1A', textWrap: 'pretty' }} html={it.h} />
+          {(it.ask || []).length > 0 && (
+            <ul style={{ listStyle: 'none', margin: '6px 0 0', padding: '12px 0 0', borderTop: '1px solid #EEEFF0', display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {it.ask.map((q, k) => (
+                <li key={k} style={{ display: 'flex', gap: 10, alignItems: 'baseline' }}>
+                  <span aria-hidden="true" style={{ flex: 'none', width: 6, height: 6, borderRadius: 1, background: '#00638E', transform: 'translateY(-3px)' }} />
+                  <Rich style={{ fontSize: 14.5, lineHeight: 1.5, color: '#142850', fontWeight: 600 }} html={q} />
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       ))}
     </div>

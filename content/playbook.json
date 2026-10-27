@@ -516,7 +516,7 @@
           "Hearing only the information that fits your expectations.",
           "Missing relevant tone, facial expression, gestures or other nonverbal information.",
           "Allowing noise, notifications or other distractions to interfere.",
-          "Listening through assumptions formed by past experience, expected results or judgments about the speaker."
+          "Listening through assumptions formed by past experience, expected results or judgements about the speaker."
          ]
         },
         {
@@ -590,7 +590,7 @@
         },
         {
          "t": "p",
-         "h": "Restating and checking can improve shared understanding, stimulate thinking and help the person continue the conversation. It can also build credibility, strengthen the relationship and encourage both people to listen. Checking reduces premature judgment, unsolicited solutions and responses driven by assumptions. A confident summary that is never checked can still be wrong."
+         "h": "Restating and checking can improve shared understanding, stimulate thinking and help the person continue the conversation. It can also build credibility, strengthen the relationship and encourage both people to listen. Checking reduces premature judgement, unsolicited solutions and responses driven by assumptions. A confident summary that is never checked can still be wrong."
         }
        ]
       }
@@ -1198,7 +1198,7 @@
         },
         {
          "t": "p",
-         "h": "Keep three judgments visible: the account's attractiveness, our position and ability to win suitable business, and the next action worth funding. A highly attractive account with weak access may need development. A current major account may need protection. A time-critical project may justify temporary additional attention without permanently changing the account's category."
+         "h": "Keep three judgements visible: the account's attractiveness, our position and ability to win suitable business, and the next action worth funding. A highly attractive account with weak access may need development. A current major account may need protection. A time-critical project may justify temporary additional attention without permanently changing the account's category."
         }
        ]
       },
@@ -1222,7 +1222,7 @@
           ],
           [
            "Coach",
-           "Challenge assumptions and help the salesperson reach a better account judgment"
+           "Challenge assumptions and help the salesperson reach a better account judgement"
           ],
           [
            "Governor",
@@ -1233,7 +1233,7 @@
        ]
       },
       {
-       "title": "Challenge the account judgment",
+       "title": "Challenge the account judgement",
        "blocks": [
         {
          "t": "p",
@@ -1421,7 +1421,7 @@
         },
         {
          "t": "p",
-         "h": "First ask the salesperson to explain the task and what good work looks like. If they cannot judge a useful result, teach the underlying sales skill before expecting AI to improve it. Demonstrate the tool where technical familiarity is missing; coach judgment where the person can operate it but accepts weak output."
+         "h": "First ask the salesperson to explain the task and what good work looks like. If they cannot judge a useful result, teach the underlying sales skill before expecting AI to improve it. Demonstrate the tool where technical familiarity is missing; coach judgement where the person can operate it but accepts weak output."
         }
        ]
       },
@@ -1465,7 +1465,7 @@
         },
         {
          "t": "p",
-         "h": "If useful time is saved, deliberately reallocate it to agreed work. Assess judgment and work quality rather than prompt counts. If tool or data rules prevent the use case, select an appropriate alternative instead of treating that constraint as resistance."
+         "h": "If useful time is saved, deliberately reallocate it to agreed work. Assess judgement and work quality rather than prompt counts. If tool or data rules prevent the use case, select an appropriate alternative instead of treating that constraint as resistance."
         }
        ]
       }
@@ -1821,7 +1821,7 @@
         },
         {
          "t": "p",
-         "h": "Schedule quarterly reviews at the start of the year. The final quarterly development review can include annual evaluation and next-year preparation, provided each receives enough attention. Urgent learning or a material change in strategy should be addressed when it arises."
+         "h": "Schedule quarterly reviews at the start of the year. The final quarterly development follow-up can include annual evaluation and next-year preparation, provided each receives enough attention. Urgent learning or a material change in strategy should be addressed when it arises."
         }
        ]
       },
@@ -1846,7 +1846,7 @@
            "Review the starting point and strategy. Agree priorities, evidence, time, support and review dates. Produce the development plan."
           ],
           [
-           "Quarterly development review",
+           "Quarterly development follow-up",
            "Are priorities progressing and is capability improving?",
            "Review commitments and evidence, examine learning and obstacles, assess support and decide what changes. Update the plan and next actions."
           ],
@@ -1867,7 +1867,7 @@
           ],
           [
            "Ongoing coaching",
-           "What specific skill, judgment or habit needs attention?",
+           "What specific skill, judgement or habit needs attention?",
            "Work through a real situation, practise or investigate the gap, and agree an action and review point."
           ]
          ]
@@ -1895,7 +1895,7 @@
         },
         {
          "t": "p",
-         "h": "The leader owns consistency across the market. Calibrate disputed or materially different judgments with other leaders using the same criteria. Revisit an account between quarterly reviews when significant evidence changes."
+         "h": "The leader owns consistency across the market. Calibrate disputed or materially different judgements with other leaders using the same criteria. Revisit an account between quarterly reviews when significant evidence changes."
         }
        ]
       },
@@ -2529,7 +2529,7 @@
       },
       {
        "t": "p",
-       "h": "Questions about personal aspirations, feelings or financial priorities should be relevant and voluntary. Keep the conversation within the person's chosen boundaries. Avoid language that assumes guilt, assigns a hidden motive or turns a development question into a judgment about personal worth."
+       "h": "Questions about personal aspirations, feelings or financial priorities should be relevant and voluntary. Keep the conversation within the person's chosen boundaries. Avoid language that assumes guilt, assigns a hidden motive or turns a development question into a judgement about personal worth."
       }
      ],
      "subs": [
@@ -3422,7 +3422,7 @@
     },
     {
      "id": "quarterly-development-review-record",
-     "title": "Quarterly development review record",
+     "title": "Quarterly development follow-up record",
      "placeholder": true,
      "intro": [
       {
@@ -3687,7 +3687,7 @@
      "intro": [
       {
        "t": "p",
-       "h": "Use three individual meetings and one team meeting. The individual meetings examine the salesperson's territory, judgments and execution. The team meeting coordinates shared opportunity traffic, responsibilities and support. It should resolve matters that benefit from the team being together."
+       "h": "Use three individual meetings and one team meeting. The individual meetings examine the salesperson's territory, judgements and execution. The team meeting coordinates shared opportunity traffic, responsibilities and support. It should resolve matters that benefit from the team being together."
       }
      ],
      "subs": [
@@ -3756,19 +3756,19 @@
          ],
          "rows": [
           [
-           "Individual Pipeline and Opportunity",
+           "1:1 Pipeline and Opportunity management",
            "Monthly",
            "90 minutes",
            "Salesperson and sales leader"
           ],
           [
-           "Individual Account",
+           "1:1 Account plan",
            "Quarterly",
            "90 minutes",
            "Salesperson and sales leader"
           ],
           [
-           "Individual Visit and Activity",
+           "1:1 Visit and Activity analysis",
            "Every two weeks as the default; monthly where the planning habit and coverage are reliable",
            "60 minutes",
            "Salesperson and sales leader"
@@ -4969,7 +4969,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Use a focused 30 to 60 minute conversation when the sales development wheel reveals a specific skill, judgment or habit to improve. Use five minutes to define the situation and outcome, ten to examine the gap, ten to practise or choose the approach and five to agree application and review."
+         "h": "Use a focused 30 to 60 minute conversation when the sales development wheel reveals a specific skill, judgement or habit to improve. Use five minutes to define the situation and outcome, ten to examine the gap, ten to practise or choose the approach and five to agree application and review."
         },
         {
          "t": "p",
@@ -5000,6 +5000,229 @@
        ]
       }
      ]
+    },
+    {
+     "id": "why-structured-sales-management",
+     "title": "Why structured sales management",
+     "intro": [
+      {
+       "t": "runway",
+       "caption": "Illustration.",
+       "bars": [
+        {
+         "label": "Q1",
+         "h": 64
+        },
+        {
+         "label": "Q2",
+         "h": 88
+        },
+        {
+         "label": "Q3",
+         "h": 58
+        },
+        {
+         "label": "Q4",
+         "h": 38
+        },
+        {
+         "label": "Unallocated",
+         "h": 46,
+         "open": true
+        }
+       ],
+       "eyebrow": "The reason",
+       "views": [
+        {
+         "button": "Building segment",
+         "title": "Expected Rockfon value per delivery quarter, by building segment",
+         "legend": [
+          "Office",
+          "Education",
+          "Healthcare",
+          "Other"
+         ],
+         "segs": [
+          [
+           36,
+           26,
+           24,
+           14
+          ],
+          [
+           30,
+           30,
+           22,
+           18
+          ],
+          [
+           40,
+           22,
+           24,
+           14
+          ],
+          [
+           28,
+           34,
+           20,
+           18
+          ],
+          [
+           30,
+           22,
+           30,
+           18
+          ]
+         ]
+        },
+        {
+         "button": "Product type",
+         "title": "Expected Rockfon value per delivery quarter, by product type",
+         "legend": [
+          "Tiles",
+          "Grid",
+          "Design"
+         ],
+         "segs": [
+          [
+           48,
+           18,
+           34
+          ],
+          [
+           42,
+           22,
+           36
+          ],
+          [
+           54,
+           14,
+           32
+          ],
+          [
+           40,
+           26,
+           34
+          ],
+          [
+           46,
+           20,
+           34
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "h": "This chart is the question Rocksell has to answer: how much will we deliver, when, to which segments and in which product mix? If we cannot answer it with confidence, we cannot plan production, staff projects or steer the business. That is why we manage sales with structure."
+      }
+     ],
+     "subs": [
+      {
+       "title": "The forecast is three numbers",
+       "blocks": [
+        {
+         "t": "formula",
+         "items": [
+          "Forecast",
+          "=",
+          "sqm",
+          "×",
+          "average price",
+          "×",
+          "win probability"
+         ]
+        },
+        {
+         "t": "p",
+         "h": "Every opportunity carries these three numbers. Together they tell us how much will be delivered from each project, in which month or quarter, to which segment and in which product mix. Add them up across the team and you have the runway."
+        },
+        {
+         "t": "p",
+         "h": "So we govern them. Not once a year in a budget, but every month, opportunity by opportunity."
+        }
+       ]
+      },
+      {
+       "title": "Govern the quality of the numbers",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "A forecast is only as good as the numbers inside it. Each one needs a question behind it."
+        },
+        {
+         "t": "levers",
+         "items": [
+          {
+           "k": "sqm",
+           "title": "Is the area right?",
+           "h": "Too low and we under-plan. Too high and we over-promise.",
+           "ask": [
+            "Is the sqm too low, or too high?",
+            "Are there other areas in the building we have not included?"
+           ]
+          },
+          {
+           "k": "Average price",
+           "title": "Is the price right?",
+           "h": "The price depends on which products we expect to win.",
+           "ask": [
+            "Which price segment is the product in?",
+            "Does the price match the product mix we are proposing?"
+           ]
+          },
+          {
+           "k": "Win probability",
+           "title": "Is the probability earned?",
+           "h": "Probability comes from evidence, not optimism.",
+           "ask": [
+            "Has the opportunity passed the stage gate it claims?",
+            "What evidence supports the probability we have used?"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Govern that there is enough, and that it moves",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "Good numbers are not enough on their own. We also need enough of them, and they cannot sit still."
+        },
+        {
+         "t": "pair",
+         "items": [
+          {
+           "k": "Enough",
+           "title": "Number of opportunities",
+           "h": "A healthy runway needs a steady flow of new opportunities in the right segments. When the count drops, the gap shows up in the forecast two or three quarters later."
+          },
+          {
+           "k": "Moving",
+           "title": "Time spent on each deal",
+           "h": "In our industry we are rarely in charge of a project’s speed. What we control is the time we invest in each deal and whether it still earns that time. Watch how long deals take, and where the hours go."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Where this happens",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "This is what the routines are for, in the 1:1s and in the team meetings alike. In the 1:1 Pipeline and Opportunity management, the leader and the salesperson test the numbers on each opportunity, and the Must-win opportunity deep-dive tests the evidence on must-win opportunities. In the Team Pipeline and Opportunity meeting, the whole team reads the runway together, sees what is moving and agrees where to act. The dashboards show it all on one page."
+        },
+        {
+         "t": "p",
+         "h": "<strong>Structure is not bureaucracy.</strong> It is how we know what is coming, and how we make sure it arrives."
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -5022,7 +5245,7 @@
       },
       {
        "t": "p",
-       "h": "We want to raise the level of professionalism and structure in how we work. That means clearer plans, purposeful customer engagement, reliable information and regular conversations about progress. These habits help people use their judgment well and make it easier to see where support is needed."
+       "h": "We want to raise the level of professionalism and structure in how we work. That means clearer plans, purposeful customer engagement, reliable information and regular conversations about progress. These habits help people use their judgement well and make it easier to see where support is needed."
       },
       {
        "t": "p",

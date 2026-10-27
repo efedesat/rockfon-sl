@@ -86,6 +86,23 @@
             "assets/photos/image36.jpeg"
           ],
           "startHere": false
+        },
+        {
+          "id": "cw-why-structured-sales-management",
+          "title": "Why structured sales management",
+          "group": null,
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "commercial-wheel",
+            "sectionId": "why-structured-sales-management"
+          },
+          "relatedTool": "mt-pipe",
+          "photos": [
+            "assets/photos/image27.jpeg",
+            "assets/photos/image32.jpeg"
+          ],
+          "startHere": false
         }
       ]
     },
@@ -749,7 +766,7 @@
             "part": "commercial-wheel",
             "sectionId": "1-1-pipeline-and-opportunity-meeting"
           },
-          "rhythmRow": "Individual Pipeline and Opportunity",
+          "rhythmRow": "1:1 Pipeline and Opportunity management",
           "pocketCard": 0
         },
         {
@@ -762,7 +779,7 @@
             "part": "commercial-wheel",
             "sectionId": "1-1-account-meeting"
           },
-          "rhythmRow": "Individual Account",
+          "rhythmRow": "1:1 Account plan",
           "pocketCard": 1
         },
         {
@@ -775,7 +792,7 @@
             "part": "commercial-wheel",
             "sectionId": "1-1-visit-and-activity-meeting"
           },
-          "rhythmRow": "Individual Visit and Activity",
+          "rhythmRow": "1:1 Visit and Activity analysis",
           "pocketCard": 2
         },
         {
@@ -859,7 +876,7 @@
         },
         {
           "id": "tk-qdr",
-          "title": "Quarterly development review",
+          "title": "Quarterly development follow-up",
           "type": "record",
           "kind": "Record",
           "tier": "inspiration",
