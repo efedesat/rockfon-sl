@@ -1,0 +1,73 @@
+{
+  "stage": "Beta",
+  "releases": [
+    {
+      "version": "0.3",
+      "date": "2026-10-27",
+      "groups": [
+        {
+          "heading": "New",
+          "items": [
+            "A new article in Chapter 1, “Why structured sales management”, with the quarterly runway chart, the forecast formula and the questions behind each number.",
+            "In the meeting cockpit, a small “Data to look at” button switches the Purpose box to the data for that point, with a link to the dashboard where one applies."
+          ]
+        },
+        {
+          "heading": "New names",
+          "items": [
+            "The three 1:1 meetings are now 1:1 Pipeline and Opportunity management, 1:1 Account plan and 1:1 Visit and Activity analysis.",
+            "The Must-Win Deal Room is now the Must-Win Opportunity Deep-dive.",
+            "Quarterly development review is now Quarterly development follow-up.",
+            "British spelling throughout: judgement, behaviour.",
+            "Links you have saved or shared still work."
+          ]
+        },
+        {
+          "heading": "Simpler pages",
+          "items": [
+            "Toolbox: meeting guides are grouped into Bilat meeting guides and Team meeting guides. Personal development meetings and the Joint visit guide moved to For inspiration.",
+            "Chapter 4: “Three commercial management disciplines” and “Four instances” are now one article, “Three sales management disciplines and cadence”.",
+            "Meeting guides: “More on this meeting” is now on the Overview tab.",
+            "The Opportunity Deep-dive tool is reduced to the five questions, the scores and the evidence profile.",
+            "Cleaner cards and headers, and “Pick up where you left off” is gone."
+          ]
+        },
+        {
+          "heading": "Wording",
+          "items": [
+            "About 140 sentences across the playbook are shorter and plainer, with fewer idioms. The content and meaning are unchanged."
+          ]
+        }
+      ]
+    },
+    {
+      "version": "0.2",
+      "date": "2026-10-21",
+      "groups": [
+        {
+          "heading": "New",
+          "items": [
+            "Meeting cockpit: run each meeting live, with a timer, the agenda, questions to tick off as you ask them, and notes you can email afterwards.",
+            "The Must-Win Opportunity Deep-dive tool: score five dimensions, read the verdict and see the evidence profile.",
+            "Dashboard guide: what each page of the Report shows and which question it answers.",
+            "Joint visit guide: before, during and after the visit."
+          ]
+        }
+      ]
+    },
+    {
+      "version": "0.1",
+      "date": "2026-10-19",
+      "groups": [
+        {
+          "heading": "First version",
+          "items": [
+            "Five chapters, the Toolbox with meeting guides, coaching questions, records and pocket cards, and search.",
+            "Your notes and answers are saved on your device only.",
+            "Feedback on every page."
+          ]
+        }
+      ]
+    }
+  ]
+}

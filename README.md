@@ -1,4 +1,4 @@
-# Rockfon Sales Leadership Playbook · v0.1
+# Rockfon Sales Leadership Playbook
 
 An interactive playbook for Rockfon EA sales leaders, built from the design handoff in [`design/`](design/HANDOFF.md). It is a static React site (Vite) hosted on Vercel, with every page behind a shared password.
 
@@ -62,6 +62,10 @@ Vercel's own Password Protection (a paid add-on) would also work and could repla
 - The v0.2 design changes are recorded in `design/CHANGES_v0.2.md`; `design/prototype/Playbook Prototype v5.dc.html` is the current reference.
 - Structure (chapters, topic order, tiers, photos, tool types) lives in `content/site-map.json`. `keyTools` sets which tools are Key element; `keyToolGroups` sets how they are grouped on the Toolbox page (Bilat meeting guides, Team meeting guides, Coaching methods, CRM guides, Change management guides). For v0.1 the toolbox entries there also carry a few display settings from the prototype: `aka`, `format`, `accordion` and `files`.
 - `src/settings.js` → `storyPages: false` shows the story topic as an ordinary article.
+
+## Versions and "What's new"
+
+`content/changelog.json` holds the stage (for example "Beta") and the releases, newest first. The home page footer shows the stage, the newest version and its date, and links to `/changelog`, which lists every release. To publish a new version, add an entry at the top of `releases` with `version`, `date` (YYYY-MM-DD) and `groups` of short, reader-facing lines.
 
 ## Large screens
 

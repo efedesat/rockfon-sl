@@ -10,6 +10,7 @@ import Topic from './pages/Topic.jsx';
 import Toolbox from './pages/Toolbox.jsx';
 import Tool from './pages/Tool.jsx';
 import Admin from './pages/AdminFeedback.jsx';
+import Changelog from './pages/Changelog.jsx';
 
 export function useNarrow() {
   const get = () => typeof window !== 'undefined' && window.innerWidth < 1000;
@@ -24,6 +25,7 @@ function usePage() {
   const parts = pathname.split('/').filter(Boolean);
   if (!parts.length) return { view: 'home' };
   if (parts[0] === 'guide') return { view: 'guide' };
+  if (parts[0] === 'changelog') return { view: 'changelog' };
   if (parts[0] === 'admin') return { view: 'admin' };
   if (parts[0] === 'read' && parts[2] && BY[parts[2]] && !BY[parts[2]].isTool && !BY[parts[2]].hidden) return { view: 'topic', cur: BY[parts[2]] };
   if (parts[0] === 'read' && BY[parts[1]] && BY[parts[1]].isChapter && !BY[parts[1]].hidden) return { view: 'room', cur: BY[parts[1]] };
@@ -221,18 +223,19 @@ export default function App() {
 
   useEffect(() => { if (mainRef.current) mainRef.current.scrollTop = 0; setContents(false); }, [pathname]);
   useEffect(() => {
-    const t = page.cur ? page.cur.title : page.view === 'toolbox' ? 'Toolbox' : page.view === 'guide' ? 'How to use this playbook' : page.view === 'admin' ? 'Admin' : '';
+    const t = page.cur ? page.cur.title : page.view === 'toolbox' ? 'Toolbox' : page.view === 'guide' ? 'How to use this playbook' : page.view === 'changelog' ? "What's new" : page.view === 'admin' ? 'Admin' : '';
     document.title = (t ? t + ' · ' : '') + 'Sales Leadership Playbook';
   }, [page]);
 
   const fromCh = page.view === 'tool' && page.from && BY[page.from] && BY[page.from].isChapter && !BY[page.from].hidden ? BY[page.from] : null;
   const fromHome = page.view === 'tool' && page.from === 'home';
-  const readSide = ['home', 'guide', 'room', 'topic'].includes(page.view) || !!fromCh || fromHome;
+  const readSide = ['home', 'guide', 'changelog', 'room', 'topic'].includes(page.view) || !!fromCh || fromHome;
   const back = page.view === 'room' || page.view === 'guide' ? { to: '/', label: 'All chapters' }
+    : page.view === 'changelog' ? { to: '/', label: 'Home' }
     : page.view === 'topic' ? { to: `/read/${page.cur.ch.id}`, label: page.cur.ch.title }
       : page.view === 'tool' ? (fromCh ? { to: `/read/${fromCh.id}`, label: fromCh.title } : fromHome ? { to: '/', label: 'Home' } : { to: '/toolbox', label: 'Toolbox' })
         : null;
-  const fbPage = page.view === 'home' ? 'Home' : page.view === 'toolbox' ? 'Toolbox' : page.view === 'guide' ? 'How to use this playbook' : page.cur ? page.cur.title : '';
+  const fbPage = page.view === 'home' ? 'Home' : page.view === 'toolbox' ? 'Toolbox' : page.view === 'guide' ? 'How to use this playbook' : page.view === 'changelog' ? "What's new" : page.cur ? page.cur.title : '';
 
   // Links inside playbook text are plain <a> tags; keep internal ones in the app.
   const onMainClick = e => {
@@ -254,6 +257,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home narrow={narrow} />} />
             <Route path="/guide" element={<Guide narrow={narrow} />} />
+            <Route path="/changelog" element={<Changelog narrow={narrow} />} />
             <Route path="/read/:chapterId" element={<ChapterRoute narrow={narrow} />} />
             <Route path="/read/:chapterId/:topicId" element={<TopicRoute narrow={narrow} mainRef={mainRef} />} />
             <Route path="/toolbox" element={<Toolbox narrow={narrow} />} />
