@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { COCKPIT, COCKPIT_PHASES, dashMatch, isShown, rhythmRow, rhythmTable, secOf, strip, W } from '../content.js';
 import { Blocks, Section, ST } from '../blocks.jsx';
-import { SETTINGS } from '../settings.js';
 import { useMem, useStoredMap } from '../store.js';
 import { Bar, Bars, Btn, Icon } from '../ui.jsx';
 import DealRoom, { dealRoomLines } from './DealRoom.jsx';
@@ -263,7 +262,10 @@ function During({ tool, m, onFinish }) {
   const toggle = () => { if (ck.start) setClock({ id, acc: ck.acc + Date.now() - ck.start, start: null }); else { setClock({ id, acc: ck.acc, start: Date.now() }); setFollow(true); } };
   const finish = () => { if (ck.start) setClock({ id, acc: ck.acc + Date.now() - ck.start, start: null }); onFinish(); };
   const pc = pointContent(id, g), dr = isDealRoomPoint(id, g);
-  const dash = SETTINGS.cockpitData && isShown('tk-dash') ? (pc.data || []).map(dashMatch).find(Boolean) : null;
+  // Purpose by default; "Data to look at" one tap away. The choice carries over between points.
+  const [pane, setPane] = useMem('pointPane', 'purpose');
+  const hasData = !dr && (pc.data || []).length > 0, showData = hasData && pane === 'data';
+  const dash = showData && isShown('tk-dash') ? pc.data.map(dashMatch).find(Boolean) : null;
   const ask = pc.ask || [];
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
@@ -308,20 +310,21 @@ function During({ tool, m, onFinish }) {
             {!follow && started && <button type="button" onClick={() => setFollow(true)} className="tap" style={{ fontSize: 12, fontWeight: 700, color: '#00638E' }}>Follow the clock</button>}
           </div>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '18px 20px', background: '#F2F3F4', borderRadius: 4 }}>
-            <span style={LBL}>Purpose</span>
-            {pc.purpose ? <span style={{ fontSize: 16, lineHeight: 1.55, color: '#142850', fontWeight: 600, textWrap: 'pretty' }}>{pc.purpose}</span> : <Bars widths={['94%', '70%']} bg="#D8D9DA" />}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '18px 20px', background: '#F2F3F4', borderRadius: 4 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', justifyContent: 'space-between', gap: '6px 16px' }}>
+            <span style={LBL}>{showData ? 'Data to look at' : 'Purpose'}</span>
+            {hasData && (
+              <button type="button" aria-pressed={showData} onClick={() => setPane(showData ? 'purpose' : 'data')} className="hv-underline tap" style={{ fontSize: 12, fontWeight: 700, color: '#00638E' }}>
+                {showData ? '← Purpose' : 'Data to look at →'}
+              </button>
+            )}
           </div>
-          {!dr && SETTINGS.cockpitData && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '18px 20px', border: '1px solid #D8D9DA', borderRadius: 4 }}>
-              <span style={LBL}>Data to look at</span>
-              {(pc.data || []).length ? <BulletList items={pc.data} size={14.5} /> : <Bars widths={['80%', '62%', '70%']} />}
-              {dash
-                ? <Link to={`/toolbox/tk-dash?page=${dash[0]}&el=${dash[1]}`} className="hv-tint" style={{ alignSelf: 'flex-start', padding: '7px 12px', border: '1px solid #00638E', borderRadius: 3, fontSize: 12.5, fontWeight: 700, color: '#00638E' }}>Open in the dashboard →</Link>
-                : <span style={{ alignSelf: 'flex-start', padding: '7px 12px', border: '1px dashed #B1B2B4', borderRadius: 3, fontSize: 12.5, fontWeight: 700, color: '#63666A' }}>Open in Rocksell</span>}
-            </div>
-          )}
+          {showData ? (
+            <>
+              <BulletList items={pc.data} size={14.5} />
+              {dash && <Link to={`/toolbox/tk-dash?page=${dash[0]}&el=${dash[1]}`} className="hv-underline" style={{ alignSelf: 'flex-start', fontSize: 12.5, fontWeight: 700, color: '#00638E' }}>Open in the dashboard →</Link>}
+            </>
+          ) : pc.purpose ? <span style={{ fontSize: 16, lineHeight: 1.55, color: '#142850', fontWeight: 600, textWrap: 'pretty' }}>{pc.purpose}</span> : <Bars widths={['94%', '70%']} bg="#D8D9DA" />}
         </div>
         {!dr && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
