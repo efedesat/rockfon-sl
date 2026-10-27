@@ -228,16 +228,16 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Watch for a strong need to:"
+         "h": "Watch for these needs in yourself:"
         },
         {
          "t": "ol",
          "items": [
-          "Be right or appear capable.",
-          "Obtain a particular result from the conversation.",
-          "Be understood or prove a point.",
-          "Secure agreement.",
-          "Avoid being wrong, looking unprepared or hearing “no”."
+          "The need to be right or to appear capable.",
+          "The need to get a particular result from the conversation.",
+          "The need to be understood or to prove a point.",
+          "The need to win agreement.",
+          "The need to avoid being wrong, looking unprepared or hearing “no”."
          ]
         },
         {
@@ -509,14 +509,14 @@
         {
          "t": "ol",
          "items": [
-          "Doing another task or thinking about something else.",
+          "Your attention is on another task or on something else.",
           "Only waiting for a gap to make your own point, instead of listening.",
           "Speaking automatically instead of allowing a quiet moment to think.",
           "Pretending to listen while you wait for your turn to speak.",
           "Hearing only the information that fits your expectations.",
           "Missing relevant tone, facial expression, gestures or other nonverbal information.",
-          "Allowing noise, notifications or other distractions to interfere.",
-          "Listening through assumptions formed by past experience, expected results or judgements about the speaker."
+          "Noise, notifications or other distractions get in the way.",
+          "Assumptions from past experience, expected results or judgements about the speaker shape what you hear."
          ]
         },
         {
@@ -5455,8 +5455,8 @@
      "Agree in one sentence what today must decide."
     ],
     "watch": [
-     "Turning the recap into a full review. Keep to the time.",
-     "Accepting “in progress” without a date."
+     "A recap that grows into a full review. Keep to the time.",
+     "“In progress” accepted without a date."
     ]
    },
    "Pipeline overview": {
@@ -5482,7 +5482,7 @@
     ],
     "watch": [
      "Going deep on single deals. That belongs in the selected opportunities.",
-     "Treating unknown value as zero."
+     "Unknown value treated as zero."
     ]
    },
    "Main pipeline diagnosis": {
@@ -5507,7 +5507,7 @@
      "Agree what they will do more of, and less of."
     ],
     "watch": [
-     "Choosing more than one constraint.",
+     "More than one constraint chosen.",
      "Explaining the problem for them instead of asking."
     ]
    },
@@ -5534,8 +5534,8 @@
      "Agree corrections on the spot."
     ],
     "watch": [
-     "Letting the salesperson choose the record.",
-     "Making it feel like an audit. The aim is reliable information."
+     "A record picked by the salesperson instead of at random.",
+     "A check that feels like an audit. The aim is reliable information."
     ]
    },
    "First selected opportunity": {
@@ -5553,7 +5553,7 @@
     ],
     "watch": [
      "Scores that rise without new evidence.",
-     "Agreeing several actions that won’t happen."
+     "Several actions agreed that won’t happen."
     ]
    },
    "Second selected opportunity": {
@@ -5570,7 +5570,7 @@
     ],
     "watch": [
      "Running out of time for decisions.",
-     "Copying the scores from the first opportunity."
+     "Scores copied from the first opportunity."
     ]
    },
    "Decisions and commitments": {
@@ -5593,7 +5593,7 @@
      "Press “Finish and review notes”, check the summary and email it."
     ],
     "watch": [
-     "Ending without dates.",
+     "A meeting that ends without dates.",
      "Leader commitments that nobody records."
     ]
    }
@@ -5616,7 +5616,7 @@
      "Agree which accounts need extra time today."
     ],
     "watch": [
-     "Reopening segment decisions that were already made."
+     "Segment decisions reopened after they were made."
     ]
    },
    "Segmentation governance": {
@@ -5640,7 +5640,7 @@
      "Check A-accounts that are missing a plan or key contacts."
     ],
     "watch": [
-     "Changing segments based on feeling or one recent event.",
+     "Segments changed because of a feeling or one recent event.",
      "Accounts left unclassified."
     ]
    },
@@ -5664,8 +5664,8 @@
      "Look at unclassified and unlinked time."
     ],
     "watch": [
-     "Reading one quiet quarter as a trend.",
-     "Ignoring unlinked time. It often hides reactive work."
+     "One quiet quarter read as a trend.",
+     "Unlinked time ignored. It often hides reactive work."
     ]
    },
    "In-scope account plans": {
@@ -5689,7 +5689,7 @@
      "Note where the salesperson needs help."
     ],
     "watch": [
-     "Reviewing every account. Stay with the in-scope ones.",
+     "Time spent on every account. Stay with the in-scope ones.",
      "Plans that describe the account but not what will change."
     ]
    },
@@ -5712,7 +5712,7 @@
      "Press “Finish and review notes” and email the summary."
     ],
     "watch": [
-     "Adding work without removing any."
+     "New work added without removing any."
     ]
    }
   },
@@ -5779,7 +5779,7 @@
      "Agree which gaps close first."
     ],
     "watch": [
-     "Spreading attention thinly across every gap."
+     "Attention spread thinly across every gap."
     ]
    },
    "Quality spot-checks": {
@@ -5801,7 +5801,7 @@
      "Give one piece of feedback."
     ],
     "watch": [
-     "Turning it into a review of every visit."
+     "A spot-check that becomes a review of every visit."
     ]
    },
    "Diary capacity and routes": {
@@ -5825,7 +5825,7 @@
     ],
     "watch": [
      "A full diary with no proactive work.",
-     "Accepting a two-week diary that is overbooked."
+     "An overbooked two-week diary accepted as it is."
     ]
    },
    "Actions and follow-up": {
@@ -5895,7 +5895,7 @@
     ],
     "watch": [
      "Status reports from every salesperson. Discuss the exceptions only.",
-     "Skipping the reasons behind losses."
+     "Losses discussed without their reasons."
     ]
    },
    "Quarter profile mix and concentration": {
@@ -5921,7 +5921,7 @@
      "Name one risk to act on."
     ],
     "watch": [
-     "Treating the runway as a firm promise rather than a forecast.",
+     "The runway treated as a firm promise rather than a forecast.",
      "Overlooking value with no quarter."
     ]
    },
