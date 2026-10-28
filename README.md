@@ -63,6 +63,12 @@ Vercel's own Password Protection (a paid add-on) would also work and could repla
 - Structure (chapters, topic order, tiers, photos, tool types) lives in `content/site-map.json`. `keyTools` sets which tools are Key element; `keyToolGroups` sets how they are grouped on the Toolbox page (Bilat meeting guides, Team meeting guides, Coaching methods, CRM guides, Change management guides). For v0.1 the toolbox entries there also carry a few display settings from the prototype: `aka`, `format`, `accordion` and `files`.
 - `src/settings.js` → `storyPages: false` shows the story topic as an ordinary article.
 
+## Training cases (roleplays)
+
+The Dashboards tool page has a **Show** row: *Wireframe* (the default) or *Training case: Daniel / Sofia / Jonas*. A case opens its own page (Pipeline, Accounts, Visits & activity) and fills the existing elements with fictional figures, with a gold "Training data" label in the report bar. Deep links open a case directly: `/toolbox/tk-dash?case=daniel`, `?case=sofia`, `?case=jonas`.
+
+All case data lives in `content/training-cases.json`. Totals shown on screen (top line, runway, average value, segment counts, due list, activity summary) are calculated from the rows, so editing a row keeps them consistent. Dates are written relative to `asOf`. Nothing here touches live data or the cockpit.
+
 ## Versions and "What's new"
 
 `content/changelog.json` holds the stage (for example "Beta") and the releases, newest first. The home page footer shows the stage, the newest version and its date, and links to `/changelog`, which lists every release. To publish a new version, add an entry at the top of `releases` with `version`, `date` (YYYY-MM-DD) and `groups` of short, reader-facing lines.

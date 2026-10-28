@@ -1,0 +1,1450 @@
+{
+  "asOf": "2026-11-02",
+  "_about": "Fictional training cases for the Day 2 roleplays. All names, companies and figures are invented. Currency is EUR. Dates are relative to asOf. Totals on the dashboard (top line, runway, average value, due list) are calculated from these rows.",
+  "currency": "EUR",
+  "cases": [
+    {
+      "id": "daniel",
+      "name": "Daniel",
+      "page": "Pipeline",
+      "profile": "Mixed role, specification and project sales. Six years at Rockfon.",
+      "period": "This quarter",
+      "lastReview": "2026-10-05",
+      "pipeline": {
+        "verticals": [
+          "Healthcare",
+          "Office",
+          "Education",
+          "Other"
+        ],
+        "productMix": {
+          "legend": [
+            "Tiles",
+            "Grid",
+            "Design"
+          ],
+          "byQuarter": {
+            "Q1": [
+              70,
+              22,
+              8
+            ],
+            "Q2": [
+              74,
+              22,
+              4
+            ],
+            "Q3": [
+              66,
+              22,
+              12
+            ],
+            "Q4": [
+              72,
+              23,
+              5
+            ],
+            "Unallocated": [
+              70,
+              22,
+              8
+            ]
+          }
+        },
+        "velocity": {
+          "open": {
+            "last": 22
+          },
+          "averageValue": {
+            "last": 71000
+          },
+          "winRate": {
+            "now": 24,
+            "last": 32
+          },
+          "cycleMonths": {
+            "now": 9,
+            "last": 7
+          }
+        },
+        "open": [
+          {
+            "name": "Northbank Hospital extension",
+            "vertical": "Healthcare",
+            "value": 270000,
+            "alloc": {
+              "Q2": 270000
+            },
+            "created": "2026-03-12",
+            "updated": "2026-10-01",
+            "next": "Wait for main contractor appointment",
+            "due": "2026-11-30",
+            "pin": true,
+            "detail": "18,000 m² hygiene tiles with grid"
+          },
+          {
+            "name": "Riverside Clinic, new ward block",
+            "vertical": "Healthcare",
+            "value": 412000,
+            "alloc": {
+              "Q1": 120000,
+              "Q2": 150000,
+              "Unallocated": 142000
+            },
+            "created": "2026-01-20",
+            "updated": "2026-09-18",
+            "next": "Confirm phasing with the hospital trust",
+            "due": "2026-11-12",
+            "pin": true,
+            "detail": "Phased delivery; part not yet allocated to a quarter"
+          },
+          {
+            "name": "Meridian House office refurbishment",
+            "vertical": "Office",
+            "value": 210000,
+            "alloc": {
+              "Q3": 210000
+            },
+            "created": "2026-02-03",
+            "updated": "2026-10-20",
+            "next": "Client decision on scope (date moved 3 times)",
+            "due": "2026-12-15",
+            "flag": "Stalled",
+            "detail": "6,500 m²"
+          },
+          {
+            "name": "Lindholm School sports hall",
+            "vertical": "Education",
+            "value": 64000,
+            "alloc": {
+              "Q1": 64000
+            },
+            "created": "2026-05-14",
+            "updated": "2026-10-15",
+            "next": "Send revised acoustic calculation",
+            "due": "2026-11-06"
+          },
+          {
+            "name": "Harbour Point offices, floors 3 to 5",
+            "vertical": "Office",
+            "value": 36000,
+            "alloc": {
+              "Q1": 36000
+            },
+            "created": "2026-06-02",
+            "updated": "2026-10-27",
+            "next": "Meet the fit-out contractor",
+            "due": "2026-11-10"
+          },
+          {
+            "name": "Dalby town hall",
+            "vertical": "Other",
+            "value": 22000,
+            "alloc": {
+              "Q1": 22000
+            },
+            "created": "2026-04-21",
+            "updated": "2026-09-02",
+            "next": null,
+            "due": null
+          },
+          {
+            "name": "Vestre Gymnasium refurbishment",
+            "vertical": "Education",
+            "value": 42000,
+            "alloc": {
+              "Q1": 42000
+            },
+            "created": "2026-05-30",
+            "updated": "2026-10-08",
+            "next": "Sample panel to the architect",
+            "due": "2026-10-24"
+          },
+          {
+            "name": "Tender via Kragh Bygg: Elm Street offices",
+            "vertical": "Office",
+            "value": 26000,
+            "alloc": {
+              "Q1": 26000
+            },
+            "created": "2026-10-22",
+            "updated": "2026-10-22",
+            "next": "Price the tender",
+            "due": "2026-11-05"
+          },
+          {
+            "name": "Skovlund nursery",
+            "vertical": "Education",
+            "value": 34000,
+            "alloc": {
+              "Q2": 34000
+            },
+            "created": "2026-07-09",
+            "updated": "2026-10-12",
+            "next": "Book a specification meeting",
+            "due": "2026-11-14"
+          },
+          {
+            "name": "Brightwater retail unit",
+            "vertical": "Other",
+            "value": 28000,
+            "alloc": {
+              "Q2": 28000
+            },
+            "created": "2026-08-19",
+            "updated": "2026-08-27",
+            "next": null,
+            "due": null
+          },
+          {
+            "name": "Port Authority HQ meeting rooms",
+            "vertical": "Office",
+            "value": 20000,
+            "alloc": {
+              "Q2": 20000
+            },
+            "created": "2026-06-25",
+            "updated": "2026-10-05",
+            "next": "Follow up on the design option",
+            "due": "2026-11-03"
+          },
+          {
+            "name": "Sunds kindergarten",
+            "vertical": "Education",
+            "value": 18000,
+            "alloc": {
+              "Q2": 18000
+            },
+            "created": "2026-09-01",
+            "updated": "2026-10-19",
+            "next": "Quote to the installer",
+            "due": "2026-11-07"
+          },
+          {
+            "name": "City Library acoustic upgrade",
+            "vertical": "Other",
+            "value": 50000,
+            "alloc": {
+              "Q3": 50000
+            },
+            "created": "2026-03-30",
+            "updated": "2026-09-24",
+            "next": "Confirm the budget with the municipality",
+            "due": "2026-11-20"
+          },
+          {
+            "name": "Tech Park, building B",
+            "vertical": "Office",
+            "value": 52000,
+            "alloc": {
+              "Q4": 52000
+            },
+            "created": "2026-08-04",
+            "updated": "2026-10-14",
+            "next": "Present to the developer",
+            "due": "2026-11-25"
+          },
+          {
+            "name": "Engholm College canteen",
+            "vertical": "Education",
+            "value": 38000,
+            "alloc": {
+              "Q4": 38000
+            },
+            "created": "2026-07-22",
+            "updated": "2026-10-02",
+            "next": "Visit with the architect",
+            "due": "2026-11-18"
+          },
+          {
+            "name": "Marina Hotel conference wing",
+            "vertical": "Other",
+            "value": 30000,
+            "alloc": {
+              "Unallocated": 30000
+            },
+            "created": "2026-02-17",
+            "updated": "2026-08-12",
+            "next": "Check whether the project is still live",
+            "due": "2026-11-09"
+          },
+          {
+            "name": "Fjordside sports centre",
+            "vertical": "Other",
+            "value": 22000,
+            "alloc": {
+              "Unallocated": 22000
+            },
+            "created": "2026-05-06",
+            "updated": "2026-09-29",
+            "next": "Ask for the tender timeline",
+            "due": "2026-11-16"
+          },
+          {
+            "name": "Northgate school extension",
+            "vertical": "Education",
+            "value": 26000,
+            "alloc": {
+              "Unallocated": 26000
+            },
+            "created": "2026-06-11",
+            "updated": "2026-10-09",
+            "next": "Meet the school's project manager",
+            "due": "2026-11-26"
+          },
+          {
+            "name": "Kongens Square offices",
+            "vertical": "Office",
+            "value": 20000,
+            "alloc": {
+              "Unallocated": 20000
+            },
+            "created": "2026-04-08",
+            "updated": "2026-10-16",
+            "next": "Send the reference project list",
+            "due": "2026-11-11"
+          },
+          {
+            "name": "Tender via Kragh Bygg: Bakers Lane school",
+            "vertical": "Education",
+            "value": null,
+            "alloc": {},
+            "created": "2026-10-26",
+            "updated": "2026-10-26",
+            "next": "Price the tender",
+            "due": "2026-11-09"
+          },
+          {
+            "name": "Tender via Kragh Bygg: Quay 7 apartments",
+            "vertical": "Other",
+            "value": null,
+            "alloc": {},
+            "created": "2026-10-29",
+            "updated": "2026-10-29",
+            "next": "Price the tender",
+            "due": "2026-11-12"
+          },
+          {
+            "name": "Østre Allé apartments, common areas",
+            "vertical": "Other",
+            "value": null,
+            "alloc": {},
+            "created": "2026-06-30",
+            "updated": "2026-09-15",
+            "next": "Find out who specifies",
+            "due": "2026-11-04"
+          },
+          {
+            "name": "Hillside primary school",
+            "vertical": "Education",
+            "value": null,
+            "alloc": {},
+            "created": "2026-08-25",
+            "updated": "2026-10-06",
+            "next": "Ask for drawings",
+            "due": "2026-11-13"
+          },
+          {
+            "name": "Granary Lofts showroom",
+            "vertical": "Office",
+            "value": null,
+            "alloc": {},
+            "created": "2026-09-10",
+            "updated": "2026-09-21",
+            "next": null,
+            "due": null
+          }
+        ],
+        "won": [
+          {
+            "name": "Søndergade health centre",
+            "vertical": "Healthcare",
+            "value": 96000,
+            "created": "2025-11-04",
+            "closed": "2026-09-12",
+            "reason": "Specified early; hygiene tiles with grid"
+          },
+          {
+            "name": "Eastbridge offices, ground floor",
+            "vertical": "Office",
+            "value": 41000,
+            "created": "2026-03-18",
+            "closed": "2026-08-28",
+            "reason": "Design option won on acoustics"
+          },
+          {
+            "name": "Kirkebakken school",
+            "vertical": "Education",
+            "value": 58000,
+            "created": "2025-12-09",
+            "closed": "2026-10-03",
+            "reason": "Relationship with the installer"
+          }
+        ],
+        "lost": [
+          {
+            "name": "Westfield retail park",
+            "vertical": "Other",
+            "value": 120000,
+            "created": "2025-10-14",
+            "closed": "2026-09-30",
+            "reason": "Price: competitor 12% lower"
+          },
+          {
+            "name": "Aalholm offices",
+            "vertical": "Office",
+            "value": 64000,
+            "created": "2026-01-27",
+            "closed": "2026-10-10",
+            "reason": "Price: contractor switched to a cheaper tile"
+          },
+          {
+            "name": "Bay Street medical centre",
+            "vertical": "Healthcare",
+            "value": 88000,
+            "created": "2025-09-30",
+            "closed": "2026-08-21",
+            "reason": "Price"
+          },
+          {
+            "name": "Teglværk apartments",
+            "vertical": "Other",
+            "value": null,
+            "created": "2026-04-02",
+            "closed": "2026-09-08",
+            "reason": "Not specified; decision made before we were involved"
+          },
+          {
+            "name": "Lakeside college library",
+            "vertical": "Education",
+            "value": 47000,
+            "created": "2026-02-11",
+            "closed": "2026-10-18",
+            "reason": "Price: value engineering removed the design option"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sofia",
+      "name": "Sofia",
+      "page": "Accounts",
+      "profile": "Mixed role. Three years at Rockfon.",
+      "period": "This quarter",
+      "accounts": {
+        "counts": {
+          "A": 9,
+          "B": 18,
+          "C": 31,
+          "Unclassified": 4
+        },
+        "rows": [
+          {
+            "name": "Studio Varde",
+            "type": "Architect",
+            "segment": "A",
+            "planReview": {
+              "text": "Feb 2026",
+              "flag": "overdue"
+            },
+            "stakeholders": {
+              "text": "1 contact",
+              "flag": "gap"
+            },
+            "lastEngagement": {
+              "text": "Lunch, 21 Oct"
+            },
+            "nextRequired": {
+              "text": "Dec 2026"
+            },
+            "business": 12000,
+            "pipeline": 600000,
+            "pipelineNote": "4 projects",
+            "inScope": true
+          },
+          {
+            "name": "Holm & Brink Architects",
+            "type": "Architect",
+            "segment": "A",
+            "planReview": {
+              "text": "Sep 2026"
+            },
+            "stakeholders": {
+              "text": "5 contacts"
+            },
+            "lastEngagement": {
+              "text": "Meeting, 14 Oct"
+            },
+            "nextRequired": {
+              "text": "Jan 2027"
+            },
+            "business": 140000,
+            "pipeline": 310000,
+            "inScope": true
+          },
+          {
+            "name": "Eskelund Architects",
+            "type": "Architect",
+            "segment": "A",
+            "planReview": {
+              "text": "Aug 2026"
+            },
+            "stakeholders": {
+              "text": "2 contacts",
+              "flag": "gap"
+            },
+            "lastEngagement": {
+              "text": "Call, 22 Jul"
+            },
+            "nextRequired": {
+              "text": "Oct 2026",
+              "flag": "overdue"
+            },
+            "business": 95000,
+            "pipeline": 180000,
+            "note": "No contact for over 90 days",
+            "inScope": true
+          },
+          {
+            "name": "Holmgaard Construction",
+            "type": "Contractor",
+            "segment": "A",
+            "planReview": {
+              "text": "Missing",
+              "flag": "missing"
+            },
+            "stakeholders": {
+              "text": "4 contacts"
+            },
+            "lastEngagement": {
+              "text": "Site visit, 2 Oct"
+            },
+            "nextRequired": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "business": 310000,
+            "pipeline": 220000,
+            "inScope": true
+          },
+          {
+            "name": "Kestrel Developments",
+            "type": "Developer",
+            "segment": "A",
+            "planReview": {
+              "text": "Jun 2026"
+            },
+            "stakeholders": {
+              "text": "3 contacts"
+            },
+            "lastEngagement": {
+              "text": "Meeting, 9 Sep"
+            },
+            "nextRequired": {
+              "text": "Oct 2026",
+              "flag": "overdue"
+            },
+            "business": 120000,
+            "pipeline": 260000,
+            "inScope": true
+          },
+          {
+            "name": "Ravnsborg Property",
+            "type": "Property owner",
+            "segment": "A",
+            "planReview": {
+              "text": "Missing",
+              "flag": "missing"
+            },
+            "stakeholders": {
+              "text": "1 contact",
+              "flag": "gap"
+            },
+            "lastEngagement": {
+              "text": "Email, 30 Sep"
+            },
+            "nextRequired": {
+              "text": "Nov 2026",
+              "flag": "due"
+            },
+            "business": 180000,
+            "pipeline": 90000,
+            "inScope": true
+          },
+          {
+            "name": "Nordlys Facility Services",
+            "type": "Facility manager",
+            "segment": "A",
+            "planReview": {
+              "text": "Jul 2026"
+            },
+            "stakeholders": {
+              "text": "3 contacts"
+            },
+            "lastEngagement": {
+              "text": "Meeting, 16 Oct"
+            },
+            "nextRequired": {
+              "text": "Dec 2026"
+            },
+            "business": 150000,
+            "pipeline": 60000,
+            "inScope": true
+          },
+          {
+            "name": "Brandt & Søn Contractors",
+            "type": "Contractor",
+            "segment": "A",
+            "planReview": {
+              "text": "Sep 2026"
+            },
+            "stakeholders": {
+              "text": "4 contacts"
+            },
+            "lastEngagement": {
+              "text": "Site visit, 7 Oct"
+            },
+            "nextRequired": {
+              "text": "Oct 2026",
+              "flag": "overdue"
+            },
+            "business": 90000,
+            "pipeline": 140000,
+            "inScope": true
+          },
+          {
+            "name": "Tårnvej Hospital Estates",
+            "type": "Property owner",
+            "segment": "A",
+            "planReview": {
+              "text": "May 2026"
+            },
+            "stakeholders": {
+              "text": "3 contacts"
+            },
+            "lastEngagement": {
+              "text": "Meeting, 1 Oct"
+            },
+            "nextRequired": {
+              "text": "Jan 2027"
+            },
+            "business": 55000,
+            "pipeline": 540000,
+            "inScope": true
+          },
+          {
+            "name": "Lund Moe Architects",
+            "type": "Architect",
+            "segment": "B",
+            "planReview": {
+              "text": "Apr 2026"
+            },
+            "stakeholders": {
+              "text": "3 contacts"
+            },
+            "lastEngagement": {
+              "text": "Workshop, 12 Oct"
+            },
+            "nextRequired": {
+              "text": "Dec 2026"
+            },
+            "business": 60000,
+            "pipeline": 410000,
+            "proposed": "B → A",
+            "inScope": true
+          },
+          {
+            "name": "Norvik Construction",
+            "type": "Contractor",
+            "segment": "C",
+            "planReview": {
+              "text": "None yet"
+            },
+            "stakeholders": {
+              "text": "1 contact"
+            },
+            "lastEngagement": {
+              "text": "Intro meeting, 19 Oct"
+            },
+            "nextRequired": {
+              "text": "Nov 2026",
+              "flag": "due"
+            },
+            "business": 0,
+            "pipeline": 0,
+            "proposed": "C → A",
+            "note": "New contractor: no business and no pipeline yet",
+            "inScope": true
+          },
+          {
+            "name": "Halden Interiors",
+            "type": "Contractor",
+            "segment": "B",
+            "planReview": {
+              "text": "Mar 2026"
+            },
+            "stakeholders": {
+              "text": "2 contacts"
+            },
+            "lastEngagement": {
+              "text": "Site query, 26 Oct"
+            },
+            "nextRequired": {
+              "text": "Nov 2026"
+            },
+            "business": 95000,
+            "pipeline": 30000,
+            "note": "60 hours this quarter, mostly site queries",
+            "inScope": false
+          },
+          {
+            "name": "Vinge Interiors",
+            "type": "Contractor",
+            "segment": "B",
+            "planReview": {
+              "text": "Jun 2026"
+            },
+            "stakeholders": {
+              "text": "2 contacts"
+            },
+            "lastEngagement": {
+              "text": "Site query, 20 Oct"
+            },
+            "nextRequired": {
+              "text": "Dec 2026"
+            },
+            "business": 70000,
+            "pipeline": 25000,
+            "inScope": false
+          },
+          {
+            "name": "Solbakken Byg",
+            "type": "Contractor",
+            "segment": "B",
+            "planReview": {
+              "text": "May 2026"
+            },
+            "stakeholders": {
+              "text": "2 contacts"
+            },
+            "lastEngagement": {
+              "text": "Call, 8 Oct"
+            },
+            "nextRequired": {
+              "text": "Jan 2027"
+            },
+            "business": 45000,
+            "pipeline": 40000,
+            "inScope": false
+          },
+          {
+            "name": "Kastrup Ceiling Fitters",
+            "type": "Installer",
+            "segment": "B",
+            "planReview": {
+              "text": "Apr 2026"
+            },
+            "stakeholders": {
+              "text": "1 contact"
+            },
+            "lastEngagement": {
+              "text": "Site query, 23 Oct"
+            },
+            "nextRequired": {
+              "text": "Dec 2026"
+            },
+            "business": 38000,
+            "pipeline": 10000,
+            "inScope": false
+          },
+          {
+            "name": "Granholm Design",
+            "type": "Architect",
+            "segment": "C",
+            "planReview": {
+              "text": "—"
+            },
+            "stakeholders": {
+              "text": "1 contact"
+            },
+            "lastEngagement": {
+              "text": "Email, 4 Sep"
+            },
+            "nextRequired": {
+              "text": "Mar 2027"
+            },
+            "business": 8000,
+            "pipeline": 15000,
+            "inScope": false
+          },
+          {
+            "name": "Ørsted Lane Dental",
+            "type": "End user",
+            "segment": "C",
+            "planReview": {
+              "text": "—"
+            },
+            "stakeholders": {
+              "text": "1 contact"
+            },
+            "lastEngagement": {
+              "text": "Call, 11 Aug"
+            },
+            "nextRequired": {
+              "text": "Feb 2027"
+            },
+            "business": 4000,
+            "pipeline": 0,
+            "inScope": false
+          },
+          {
+            "name": "Pine Street Builders",
+            "type": "Contractor",
+            "segment": "Unclassified",
+            "planReview": {
+              "text": "—"
+            },
+            "stakeholders": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "lastEngagement": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "nextRequired": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "business": null,
+            "pipeline": null,
+            "inScope": false
+          },
+          {
+            "name": "Vester Acoustics",
+            "type": "Installer",
+            "segment": "Unclassified",
+            "planReview": {
+              "text": "—"
+            },
+            "stakeholders": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "lastEngagement": {
+              "text": "Call, 3 Oct"
+            },
+            "nextRequired": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "business": null,
+            "pipeline": null,
+            "inScope": false
+          },
+          {
+            "name": "Hedeby Schools Trust",
+            "type": "End user",
+            "segment": "Unclassified",
+            "planReview": {
+              "text": "—"
+            },
+            "stakeholders": {
+              "text": "1 contact"
+            },
+            "lastEngagement": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "nextRequired": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "business": null,
+            "pipeline": 12000,
+            "inScope": false
+          },
+          {
+            "name": "Strand Hotel Group",
+            "type": "End user",
+            "segment": "Unclassified",
+            "planReview": {
+              "text": "—"
+            },
+            "stakeholders": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "lastEngagement": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "nextRequired": {
+              "text": "Unknown",
+              "flag": "unknown"
+            },
+            "business": null,
+            "pipeline": null,
+            "inScope": false
+          }
+        ],
+        "effort": {
+          "types": [
+            "Visits and meetings",
+            "Site queries",
+            "Calls and email"
+          ],
+          "segments": [
+            {
+              "segment": "A",
+              "hours": [
+                70,
+                30,
+                30
+              ],
+              "business": 1150000,
+              "pipeline": 2400000
+            },
+            {
+              "segment": "B",
+              "hours": [
+                48,
+                115,
+                30
+              ],
+              "business": 620000,
+              "pipeline": 550000,
+              "top": [
+                {
+                  "account": "Halden Interiors",
+                  "hours": 60,
+                  "detail": "48 h site queries · business €95k a year"
+                },
+                {
+                  "account": "Vinge Interiors",
+                  "hours": 34,
+                  "detail": "mostly site queries"
+                },
+                {
+                  "account": "Kastrup Ceiling Fitters",
+                  "hours": 21,
+                  "detail": "mostly site queries"
+                }
+              ]
+            },
+            {
+              "segment": "C",
+              "hours": [
+                25,
+                20,
+                18
+              ],
+              "business": 210000,
+              "pipeline": 120000
+            },
+            {
+              "segment": "Unclassified",
+              "hours": [
+                5,
+                4,
+                4
+              ],
+              "business": 30000,
+              "pipeline": 12000
+            },
+            {
+              "segment": "Unlinked",
+              "hours": [
+                6,
+                9,
+                6
+              ],
+              "business": null,
+              "pipeline": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "jonas",
+      "name": "Jonas",
+      "page": "Visits & activity",
+      "profile": "Mixed role. Ten years at Rockfon. Well liked by customers.",
+      "period": "Last four weeks",
+      "visits": {
+        "weeks": {
+          "held": [
+            9,
+            11,
+            8,
+            12
+          ],
+          "booked": [
+            3,
+            1,
+            0,
+            0
+          ]
+        },
+        "calendar": [
+          [
+            [
+              {
+                "time": "09:00",
+                "text": "Internal sales meeting",
+                "where": "Office"
+              },
+              {
+                "time": "14:00",
+                "text": "Site query, contractor",
+                "where": "Local",
+                "customer": true
+              }
+            ],
+            [
+              {
+                "time": "07:30–17:00",
+                "text": "Complaint visit, C account",
+                "where": "280 km round trip",
+                "customer": true
+              }
+            ],
+            [
+              {
+                "time": "10:00",
+                "text": "Sample drop-off",
+                "where": "Local",
+                "customer": true
+              }
+            ],
+            [],
+            []
+          ],
+          [
+            [
+              {
+                "time": "09:00",
+                "text": "Internal sales meeting",
+                "where": "Office"
+              }
+            ],
+            [],
+            [
+              {
+                "time": "11:00",
+                "text": "Price request follow-up, contractor",
+                "where": "Local",
+                "customer": true
+              }
+            ],
+            [],
+            []
+          ]
+        ],
+        "coverage": [
+          {
+            "what": "Priority account",
+            "name": "Fyrholm Architects (A)",
+            "last": "22 Jul",
+            "due": {
+              "text": "20 Sep",
+              "flag": "overdue"
+            },
+            "note": "No contact for more than 60 days"
+          },
+          {
+            "what": "Priority account",
+            "name": "Bækgaard Construction (A)",
+            "last": "28 Aug",
+            "due": {
+              "text": "27 Oct",
+              "flag": "overdue"
+            },
+            "note": "No contact for more than 60 days"
+          },
+          {
+            "what": "Priority account",
+            "name": "Tidewater Property (A)",
+            "last": "14 Aug",
+            "due": {
+              "text": "13 Oct",
+              "flag": "overdue"
+            },
+            "note": "No contact for more than 60 days"
+          },
+          {
+            "what": "Large opportunity",
+            "name": "Nørre School campus · Design baffles · about €140k",
+            "last": "Project manager, 8 Oct",
+            "due": {
+              "text": "Decision in 2 months",
+              "flag": "due"
+            },
+            "note": "Decision maker not met"
+          }
+        ],
+        "completed": [
+          {
+            "purpose": "Complaint",
+            "contact": "Site manager, Aske Byg",
+            "outcome": "Damaged boxes replaced",
+            "minutes": 95,
+            "next": "Credit note to the customer",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Site query",
+            "contact": "Foreman, Moller Interiors",
+            "outcome": "Grid detail explained",
+            "minutes": 60,
+            "next": "Send the installation guide",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Specification meeting",
+            "contact": "Architect, Brygge Architects",
+            "outcome": "Design option discussed",
+            "minutes": 90,
+            "next": "Send reference projects",
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Sample drop-off",
+            "contact": "Architect, Krogh Design",
+            "outcome": "Samples left at reception",
+            "minutes": 30,
+            "next": null,
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Price request",
+            "contact": "Buyer, Vejle Ceiling Fitters",
+            "outcome": "Price sent",
+            "minutes": 20,
+            "next": "Follow up on the price",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Account review",
+            "contact": "Purchasing, Aske Byg",
+            "outcome": "Prices for next year agreed",
+            "minutes": 75,
+            "next": "Send the agreement",
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Site query",
+            "contact": "Site manager, Nordhavn Builders",
+            "outcome": "Fixing question answered",
+            "minutes": 45,
+            "next": "Check the fix on site",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Complaint",
+            "contact": "Facility manager, Seaview Hotel",
+            "outcome": "Noise complaint logged",
+            "minutes": 120,
+            "next": "Technical visit",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Project follow-up",
+            "contact": "Project manager, Nørre School campus",
+            "outcome": "Met the project manager, not the decision maker",
+            "minutes": 60,
+            "next": null,
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Price request",
+            "contact": "Buyer, Hvid Byg",
+            "outcome": "Price sent",
+            "minutes": 15,
+            "next": "Follow up on the price",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Sample drop-off",
+            "contact": "Interior designer, Rask Studio",
+            "outcome": "Colour samples delivered",
+            "minutes": 40,
+            "next": "Check the choice",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Site query",
+            "contact": "Installer, Oak Lane Builders",
+            "outcome": "Cut tiles question answered",
+            "minutes": 50,
+            "next": null,
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Lunch and learn",
+            "contact": "Architects, Saltholm Architects",
+            "outcome": "Acoustics presentation held",
+            "minutes": 120,
+            "next": "Send the slides",
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Complaint",
+            "contact": "Project manager, Fenwick Homes",
+            "outcome": "Delivery delay explained",
+            "minutes": 70,
+            "next": "Confirm the new date",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Complaint",
+            "contact": "Site manager, Aske Byg",
+            "outcome": "Damaged boxes replaced",
+            "minutes": 95,
+            "next": "Credit note to the customer",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Project follow-up",
+            "contact": "Developer, Linden Park",
+            "outcome": "Timeline confirmed",
+            "minutes": 45,
+            "next": "Call after the board meeting",
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Site query",
+            "contact": "Foreman, Moller Interiors",
+            "outcome": "Grid detail explained",
+            "minutes": 60,
+            "next": "Send the installation guide",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Sample drop-off",
+            "contact": "Architect, Krogh Design",
+            "outcome": "Samples left at reception",
+            "minutes": 30,
+            "next": null,
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Specification meeting",
+            "contact": "Architect, Krogh Design",
+            "outcome": "Two projects discussed",
+            "minutes": 80,
+            "next": null,
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Price request",
+            "contact": "Buyer, Vejle Ceiling Fitters",
+            "outcome": "Price sent",
+            "minutes": 20,
+            "next": "Follow up on the price",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Site query",
+            "contact": "Site manager, Nordhavn Builders",
+            "outcome": "Fixing question answered",
+            "minutes": 45,
+            "next": "Check the fix on site",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Complaint",
+            "contact": "Facility manager, Seaview Hotel",
+            "outcome": "Noise complaint logged",
+            "minutes": 120,
+            "next": "Technical visit",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Specification meeting",
+            "contact": "Architect, Brygge Architects",
+            "outcome": "Design option discussed",
+            "minutes": 90,
+            "next": "Send reference projects",
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Price request",
+            "contact": "Buyer, Hvid Byg",
+            "outcome": "Price sent",
+            "minutes": 15,
+            "next": "Follow up on the price",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Sample drop-off",
+            "contact": "Interior designer, Rask Studio",
+            "outcome": "Colour samples delivered",
+            "minutes": 40,
+            "next": "Check the choice",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Account review",
+            "contact": "Purchasing, Aske Byg",
+            "outcome": "Prices for next year agreed",
+            "minutes": 75,
+            "next": "Send the agreement",
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Site query",
+            "contact": "Installer, Oak Lane Builders",
+            "outcome": "Cut tiles question answered",
+            "minutes": 50,
+            "next": null,
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Complaint",
+            "contact": "Project manager, Fenwick Homes",
+            "outcome": "Delivery delay explained",
+            "minutes": 70,
+            "next": "Confirm the new date",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Project follow-up",
+            "contact": "Project manager, Nørre School campus",
+            "outcome": "Met the project manager, not the decision maker",
+            "minutes": 60,
+            "next": null,
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Complaint",
+            "contact": "Site manager, Aske Byg",
+            "outcome": "Damaged boxes replaced",
+            "minutes": 95,
+            "next": "Credit note to the customer",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Site query",
+            "contact": "Foreman, Moller Interiors",
+            "outcome": "Grid detail explained",
+            "minutes": 60,
+            "next": "Send the installation guide",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Sample drop-off",
+            "contact": "Architect, Krogh Design",
+            "outcome": "Samples left at reception",
+            "minutes": 30,
+            "next": null,
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Lunch and learn",
+            "contact": "Architects, Saltholm Architects",
+            "outcome": "Acoustics presentation held",
+            "minutes": 120,
+            "next": "Send the slides",
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Price request",
+            "contact": "Buyer, Vejle Ceiling Fitters",
+            "outcome": "Price sent",
+            "minutes": 20,
+            "next": "Follow up on the price",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Site query",
+            "contact": "Site manager, Nordhavn Builders",
+            "outcome": "Fixing question answered",
+            "minutes": 45,
+            "next": "Check the fix on site",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Project follow-up",
+            "contact": "Developer, Linden Park",
+            "outcome": "Timeline confirmed",
+            "minutes": 45,
+            "next": "Call after the board meeting",
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Complaint",
+            "contact": "Facility manager, Seaview Hotel",
+            "outcome": "Noise complaint logged",
+            "minutes": 120,
+            "next": "Technical visit",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Price request",
+            "contact": "Buyer, Hvid Byg",
+            "outcome": "Price sent",
+            "minutes": 15,
+            "next": "Follow up on the price",
+            "customerInitiated": true
+          },
+          {
+            "purpose": "Specification meeting",
+            "contact": "Architect, Krogh Design",
+            "outcome": "Two projects discussed",
+            "minutes": 80,
+            "next": null,
+            "customerInitiated": false
+          },
+          {
+            "purpose": "Sample drop-off",
+            "contact": "Interior designer, Rask Studio",
+            "outcome": "Colour samples delivered",
+            "minutes": 40,
+            "next": "Check the choice",
+            "customerInitiated": true
+          }
+        ],
+        "map": {
+          "office": {
+            "x": 30,
+            "y": 40,
+            "label": "Office (HQ)"
+          },
+          "pins": [
+            {
+              "x": 36,
+              "y": 46,
+              "day": "Mo",
+              "week": 1,
+              "label": "Site query, contractor (local)"
+            },
+            {
+              "x": 88,
+              "y": 82,
+              "day": "Tu",
+              "week": 1,
+              "label": "Complaint visit, C account (280 km round trip)"
+            },
+            {
+              "x": 26,
+              "y": 50,
+              "day": "We",
+              "week": 1,
+              "label": "Sample drop-off (local)"
+            },
+            {
+              "x": 34,
+              "y": 32,
+              "day": "We",
+              "week": 2,
+              "label": "Price request follow-up (local)"
+            }
+          ],
+          "note": "Tuesday, week 1: 280 km round trip for a C-account complaint, far from every other booking."
+        }
+      }
+    }
+  ]
+}
