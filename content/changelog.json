@@ -2,6 +2,34 @@
   "stage": "Beta",
   "releases": [
     {
+      "version": "0.4",
+      "date": "2026-10-30",
+      "groups": [
+        {
+          "heading": "Agreed cadence",
+          "items": [
+            "1:1 Pipeline and Opportunity management: monthly, 60–90 minutes.",
+            "1:1 Account plan: quarterly, 90 minutes.",
+            "1:1 Visit and Activity analysis: monthly, 15–30 minutes.",
+            "The durations are a guide rather than a fixed rule. The meeting agendas and cockpits keep their full time plan, so use what you need."
+          ]
+        },
+        {
+          "heading": "New",
+          "items": [
+            "A Playbook glossary in the Toolbox explains the words used in the playbook, such as sales velocity and win probability. Glossary terms also appear in search."
+          ]
+        },
+        {
+          "heading": "Wording",
+          "items": [
+            "The language is more respectful and less instructive throughout.",
+            "Warning lines read clearly on their own, so they stay clear in translation."
+          ]
+        }
+      ]
+    },
+    {
       "version": "0.3",
       "date": "2026-10-27",
       "groups": [

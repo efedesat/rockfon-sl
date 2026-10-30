@@ -3,7 +3,7 @@
   "terms": [
     {
       "term": "1:1 Account plan",
-      "definition": "A quarterly meeting of at least 90 minutes between the salesperson and the sales leader. It governs account segmentation and reviews the plans for every A account and other in-scope account.",
+      "definition": "A quarterly 90-minute meeting between the salesperson and the sales leader. It governs account segmentation and reviews the plans for every A account and other in-scope account.",
       "source": {
         "part": "commercial-wheel",
         "section": "1-1-account-meeting"
@@ -373,7 +373,7 @@
     },
     {
       "term": "1:1 Pipeline and Opportunity management",
-      "definition": "A monthly meeting of at least 90 minutes. The leader and salesperson review the pipeline, then coach on two opportunities chosen beforehand.",
+      "definition": "A monthly meeting of 60 to 90 minutes. The leader and salesperson review the pipeline, then coach on two opportunities chosen beforehand.",
       "source": {
         "part": "commercial-wheel",
         "section": "1-1-pipeline-and-opportunity-meeting"
@@ -655,7 +655,7 @@
     },
     {
       "term": "1:1 Visit and Activity analysis",
-      "definition": "A meeting every two weeks as the default, for at least 60 minutes. It reviews completed activity, coverage, preparation, proactive and reactive work, and the diary for the next two weeks.",
+      "definition": "A monthly meeting of 15 to 30 minutes. It reviews completed activity, coverage, preparation, proactive and reactive work, and the diary for the next two weeks.",
       "source": {
         "part": "commercial-wheel",
         "section": "1-1-visit-and-activity-meeting"

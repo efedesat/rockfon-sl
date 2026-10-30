@@ -3751,14 +3751,14 @@
          "head": [
           "Meeting",
           "Frequency",
-          "Minimum duration",
+          "Duration",
           "Core participants"
          ],
          "rows": [
           [
            "1:1 Pipeline and Opportunity management",
            "Monthly",
-           "90 minutes",
+           "60–90 minutes",
            "Salesperson and sales leader"
           ],
           [
@@ -3769,8 +3769,8 @@
           ],
           [
            "1:1 Visit and Activity analysis",
-           "Every two weeks as the default; monthly where the planning habit and coverage are reliable",
-           "60 minutes",
+           "Monthly",
+           "15–30 minutes",
            "Salesperson and sales leader"
           ],
           [
@@ -3783,7 +3783,7 @@
         },
         {
          "t": "p",
-         "h": "The sales leader books the year ahead and invites specialists or colleagues only to the items requiring their contribution. These durations are protected minimum working time. Use more time when the scope needs it. If activity meetings are monthly, the salesperson still refreshes the rolling two-week diary weekly; do not leave weeks three and four without a planning routine."
+         "h": "The sales leader books the year ahead and invites specialists or colleagues only to the items requiring their contribution. These durations are a guide rather than a fixed rule. Use more time when the scope needs it. Because activity meetings are monthly, the salesperson still refreshes the rolling two-week diary weekly; do not leave weeks three and four without a planning routine."
         }
        ]
       }
@@ -3867,7 +3867,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Hold this meeting monthly for at least 90 minutes, with the salesperson and sales leader. The salesperson operates the relevant views and owns the commercial actions; the leader challenges evidence, coaches the approach and commits support. Invite another role or specialist for a selected opportunity when their input can change the next decision."
+         "h": "Hold this meeting monthly, for 60 to 90 minutes, with the salesperson and sales leader. The salesperson operates the relevant views and owns the commercial actions; the leader challenges evidence, coaches the approach and commits support. Invite another role or specialist for a selected opportunity when their input can change the next decision."
         },
         {
          "t": "p",
@@ -4209,7 +4209,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Hold this meeting quarterly for at least 90 minutes, with the salesperson and sales leader. Review the complete account portfolio for segmentation governance and the plans for every A account plus other accounts explicitly in scope. Include defined strategic targets even where current business is small."
+         "h": "Hold this meeting quarterly, for 90 minutes, with the salesperson and sales leader. Review the complete account portfolio for segmentation governance and the plans for every A account plus other accounts explicitly in scope. Include defined strategic targets even where current business is small."
         },
         {
          "t": "p",
@@ -4382,7 +4382,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Hold this meeting every two weeks as the default, for at least 60 minutes, with the salesperson and sales leader. A monthly rhythm can be used where the planning habit, coverage and follow-through are reliable. Go back to meeting every two weeks when repeated gaps need closer support."
+         "h": "Hold this meeting monthly, for 15 to 30 minutes, with the salesperson and sales leader."
         },
         {
          "t": "p",
@@ -4538,7 +4538,7 @@
         },
         {
          "t": "p",
-         "h": "If the meeting is monthly, check the coming two weeks in detail. Confirm how the salesperson will update the following two weeks during weekly planning. Use calendar visibility for work planning within the agreed privacy and access arrangements."
+         "h": "Check the coming two weeks in detail, and confirm how the salesperson will update the following two weeks during weekly planning. Use calendar visibility for work planning within the agreed privacy and access arrangements."
         }
        ]
       },
