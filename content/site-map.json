@@ -1120,7 +1120,7 @@
         "name": "Need or pain",
         "question": "Do we know the pain or need, like fire, light or access to the plenum?",
         "verdicts": [
-          "We are guessing what matters to them. Find out who can confirm the need.",
+          "We do not yet know what matters to them. Find out who can confirm the need.",
           "We have a view of the need, but the customer has not confirmed it. Confirm it with the person who owns it.",
           "The customer has confirmed the need. Note who confirmed it and when.",
           "The customer is acting on the need, for example through an evaluation or a decision. Keep it current."

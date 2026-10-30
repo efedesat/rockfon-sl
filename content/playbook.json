@@ -122,7 +122,7 @@
       },
       {
        "t": "p",
-       "h": "Do not keep asking questions when a person needs a clear explanation or a management decision. Equally, do not turn every request for help into a demonstration of the manager's expertise."
+       "h": "Give a clear explanation or management decision when that is what the person needs, rather than more questions. Equally, keep a request for help centred on the person's need, not on the manager's expertise."
       }
      ],
      "subs": [
@@ -141,7 +141,7 @@
         },
         {
          "t": "p",
-         "h": "Effective coaching combines confidence with humility. Give people enough time, check that your message was understood, share useful expertise and put their development ahead of protecting your own image. Technical knowledge and people-development skills both need attention."
+         "h": "Effective coaching combines confidence with humility. Give people enough time, check that your message was understood, share useful expertise and keep the focus on their development. Technical knowledge and people-development skills both need attention."
         }
        ]
       },
@@ -150,7 +150,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "The first six patterns are <strong>failure modes: unproductive habits to recognise and correct</strong>. They are not roles to aim for. Each begins with a useful strength that becomes costly when it is overused or applied badly. Any manager can fall into several patterns, especially under pressure."
+         "h": "The first six patterns are <strong>failure modes: habits that can work against the manager's own intent and are worth recognising and adjusting</strong>. They are not roles to aim for. Each begins with a useful strength that becomes costly when it is overused or applied badly. Any manager can fall into several patterns, especially under pressure."
         },
         {
          "t": "table",
@@ -170,7 +170,7 @@
           [
            "<strong>Pressuring — failure mode</strong>",
            "Persistence, directness and willingness to address performance",
-           "Relies on threats or constant pushing",
+           "Uses pressure or repeated pushing to keep activity going",
            "Connect the work to a meaningful goal and agree clear accountability"
           ],
           [
@@ -207,7 +207,7 @@
         },
         {
          "t": "p",
-         "h": "The Proactive approach uses the valuable qualities of the other patterns without keeping their unproductive habits. Notice a behaviour and its effect. Do not turn the name into a permanent label for yourself or a colleague."
+         "h": "The Proactive approach uses the valuable qualities of the other patterns without keeping their unproductive habits. Notice a behaviour and its effect. Treat each name as a description of a behaviour, not as a permanent label for yourself or a colleague."
         }
        ]
       }
@@ -248,7 +248,7 @@
          "t": "ol",
          "items": [
           "Missing a better solution.",
-          "Blocking useful contributions because you are not listening fully.",
+          "Useful contributions are missed when listening is incomplete.",
           "Dismissing the person's feelings or perspective.",
           "Failing to adjust your communication to the person.",
           "Losing flexibility when new information appears.",
@@ -276,7 +276,7 @@
          "t": "ol",
          "items": [
           "<strong>The story:</strong> the explanation built around what happened.",
-          "<strong>The justification:</strong> the reason used to defend a behaviour or avoid a difficult action.",
+          "<strong>The justification:</strong> the reason given for a behaviour or for holding back from a difficult action.",
           "<strong>The assumption:</strong> something treated as true without enough confirmation.",
           "<strong>The meaning:</strong> what the event is taken to say about the person, customer or situation.",
           "<strong>The mindset:</strong> a repeated way of thinking that shapes expectations and action."
@@ -290,7 +290,7 @@
          "t": "ul",
          "items": [
           "An explanation for behaviour that is not helping.",
-          "Action, inaction or a belief that avoids responsibility.",
+          "Action, inaction or a belief that leaves ownership unclear.",
           "A recurring complaint without a changed response.",
           "Repeated blame, urgency, conflict or perfectionism that absorbs attention.",
           "A justification for circumstances in the past, present or expected future.",
@@ -388,7 +388,7 @@
       },
       {
        "t": "p",
-       "h": "Do not continue the same coaching conversation indefinitely when agreed actions are repeatedly avoided. First investigate the barrier. Missing skill calls for training, missing resources call for support, and unclear expectations call for clarification. Continued unwillingness to meet a clear work requirement needs to be addressed directly."
+       "h": "When agreed actions are repeatedly not completed, change the approach rather than repeating the same coaching conversation indefinitely. First investigate the barrier. Missing skill calls for training, missing resources call for support, and unclear expectations call for clarification. If a clear work requirement continues not to be met, address it directly."
       }
      ],
      "subs": [
@@ -442,7 +442,7 @@
         },
         {
          "t": "p",
-         "h": "Then decide what support fits. Demonstrate an unfamiliar task. Provide missing information or specialist input. Use coaching where the person can think through the issue but needs to examine a choice, assumption or habit. Several gaps may exist together. A weak follow-up routine, uncertainty about the next project decision and fear of bothering the customer may all need attention."
+         "h": "Then decide what support fits. Demonstrate an unfamiliar task. Provide missing information or specialist input. Use coaching where the person can think through the issue but needs to examine a choice, assumption or habit. Several gaps may exist together. An inconsistent follow-up routine, uncertainty about the next project decision and fear of bothering the customer may all need attention."
         }
        ]
       },
@@ -483,7 +483,7 @@
         },
         {
          "t": "p",
-         "h": "<strong>Tom - good project access, weak progress after presentations.</strong> Tom secures meetings but sends extensive product information without finding out what the customer needs to decide. Explore what he believes a presentation should achieve and whether he is avoiding questions or a request for a next step. Practise handling concerns and asking for a clear commitment. Help him check the project fit and decision process rather than assuming that more information will create progress."
+         "h": "<strong>Tom - good project access, limited progress after presentations.</strong> Tom secures meetings but sends extensive product information without finding out what the customer needs to decide. Explore what he believes a presentation should achieve and whether asking questions or requesting a next step feels uncomfortable for him. Practise handling concerns and asking for a clear commitment. Help him check the project fit and decision process rather than assuming that more information will create progress."
         },
         {
          "t": "p",
@@ -499,7 +499,7 @@
      "intro": [
       {
        "t": "p",
-       "h": "Talking too much or assuming you already understand can make a conversation sound helpful while leaving the actual issue untouched. Listening is an active task: pay attention, try to understand what is meant, and check your understanding before you choose a response."
+       "h": "Talking too much or assuming you already understand can leave the actual issue untouched. Before choosing a response, pay attention, try to understand what is meant and check your understanding."
       }
      ],
      "subs": [
@@ -548,7 +548,7 @@
         {
          "t": "ol",
          "items": [
-          "<strong>The underlying need.</strong> A request for more leads may reflect weak qualification. A request for more time may reflect an unclear routine. Explore the need before accepting the first proposed solution.",
+          "<strong>The underlying need.</strong> A request for more leads may reflect uneven qualification. A request for more time may reflect an unclear routine. Explore the need before accepting the first proposed solution.",
           "<strong>What matters to the person.</strong> Listen for priorities, goals, the work experience they want and the support they expect from you.",
           "<strong>Facts and assumptions.</strong> Notice where evidence ends and explanation begins.",
           "<strong>Concerns and fears.</strong> Make room for worries about the customer, products, service, colleagues, the working method or the manager.",
@@ -698,7 +698,7 @@
      "intro": [
       {
        "t": "p",
-       "h": "Persistence is useful. Constant pressure is costly. If people act mainly to avoid a threat, the manager often has to keep up the pressure. A more sustainable approach connects clear work requirements with an outcome the person values."
+       "h": "Persistence is useful. Constant pressure is costly. If people act mainly to avoid a negative outcome, the manager often has to keep up the pressure. A more sustainable approach connects clear work requirements with an outcome the person values."
       }
      ],
      "subs": [
@@ -707,7 +707,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "<strong>Push</strong> means moving someone away from a feared loss through pressure, threats or repeated warnings. It relies heavily on the manager to maintain activity."
+         "h": "<strong>Push</strong> means moving someone away from a feared loss through pressure or repeated warnings. It relies heavily on the manager to maintain activity."
         },
         {
          "t": "p",
@@ -773,7 +773,7 @@
         },
         {
          "t": "p",
-         "h": "Name <strong>the action</strong>, <strong>its useful effect</strong> and <strong>your appreciation</strong>. Acknowledge an achievement on its own merits; do not immediately spoil it with unrelated criticism or an administrative reminder."
+         "h": "Name <strong>the action</strong>, <strong>its useful effect</strong> and <strong>your appreciation</strong>. Acknowledge an achievement on its own merits; keep unrelated criticism or an administrative reminder for a separate moment."
         },
         {
          "t": "p",
@@ -789,7 +789,7 @@
         },
         {
          "t": "p",
-         "h": "Recognise effort, improvement and sound working habits as well as the final order. Be accurate about what you observed; do not claim a result that has not happened."
+         "h": "Recognise effort, improvement and sound working habits as well as the final order. Keep the recognition accurate: refer to what you observed and to results that have actually happened."
         }
        ]
       }
@@ -880,7 +880,7 @@
         },
         {
          "t": "p",
-         "h": "Openness should be relevant and appropriate. It does not require sharing private matters or every thought. Do not use a disclosed weakness to ridicule the person or discourage future honesty. Be clear about confidentiality you can genuinely maintain in your management role."
+         "h": "Openness should be relevant and appropriate. It does not require sharing private matters or every thought. Treat a disclosed weakness with respect, so that it encourages future honesty. Be clear about confidentiality you can genuinely maintain in your management role."
         },
         {
          "t": "p",
@@ -888,7 +888,7 @@
         },
         {
          "t": "p",
-         "h": "Trust develops through repeated experiences. A good meeting does not make up for unreliable or dismissive behaviour afterwards."
+         "h": "Trust develops through repeated experiences, so reliable and respectful behaviour between meetings matters as much as the meetings themselves."
         }
        ]
       },
@@ -905,13 +905,13 @@
           "<strong>Learn something about each other.</strong> Invite a relevant background experience, interest or personal story the person is comfortable sharing. The purpose is understanding and connection.",
           "<strong>Share three work experiences.</strong> Each person prepares a funny experience, a successful experience and a particularly challenging or unusual one. Discuss what the experiences reveal about working together.",
           "<strong>Exchange contribution and improvement feedback.</strong> Once sufficient trust exists, each colleague identifies one valuable contribution and one development area for the person receiving feedback. Give everyone a turn to receive and contribute.",
-          "<strong>Name one development need and organise support.</strong> Each person chooses a weakness they want to work on. Colleagues help find practical support without treating the admission as a personal failure.",
+          "<strong>Name one development need and organise support.</strong> Each person chooses a development area they want to work on. Colleagues help find practical support without treating the admission as a personal failure.",
           "<strong>Seek feedback on communication.</strong> Use a developmental communication profile or invite trusted colleagues to describe how your communication is received, including strengths and blind spots. Keep the focus on development, and allow honest feedback without retaliation."
          ]
         },
         {
          "t": "p",
-         "h": "Do not move directly from a first introduction to high-risk personal feedback. Maintain respectful daily behaviour after any exercise."
+         "h": "Allow trust to build before moving from a first introduction to high-risk personal feedback, and keep daily behaviour respectful after any exercise."
         }
        ]
       },
@@ -928,7 +928,7 @@
         },
         {
          "t": "p",
-         "h": "A supportive opening does not excuse aggressive language. Nor does asking about readiness make a fixed work requirement optional. Clarify the requirement, listen to concerns and agree how to meet it."
+         "h": "Keep the language respectful even when the message is difficult. Asking about readiness does not make a fixed work requirement optional. Clarify the requirement, listen to concerns and agree how to meet it."
         }
        ]
       },
@@ -955,7 +955,7 @@
         },
         {
          "t": "p",
-         "h": "Use a benefit the person actually values. Avoid a generous-sounding phrase that only disguises the manager's preferred outcome."
+         "h": "Use a benefit the person actually values. Use wording that is open about what you want from the person as well as for them."
         }
        ]
       },
@@ -987,7 +987,7 @@
         },
         {
          "t": "p",
-         "h": "The person's explanation may be accurate and straightforward. Accept a credible answer and do not keep questioning solely to confirm your suspicion."
+         "h": "The person's explanation may be accurate and straightforward. Accept a credible answer; there is no need to keep questioning once you understand the situation."
         }
        ]
       }
@@ -1258,7 +1258,7 @@
         },
         {
          "t": "p",
-         "h": "Use the agreed segmentation in account and activity reviews. Compare actual effort with the intended approach. If an account consistently requires more service than planned, address the service method, resource allocation or classification. Do not leave the mismatch hidden in the diary."
+         "h": "Use the agreed segmentation in account and activity reviews. Compare actual effort with the intended approach. If an account consistently requires more service than planned, address the service method, resource allocation or classification. Bring the mismatch out of the diary and into the review."
         }
        ]
       }
@@ -1274,7 +1274,7 @@
       },
       {
        "t": "p",
-       "h": "Without this habit, the first person to contact the salesperson decides how the day goes. Strategic targets lose attention, customer access is arranged too late, preparation and follow-up are squeezed, and travel becomes inefficient. Avoidable unfinished work can extend into personal time. An empty forward diary can also hide reluctance to initiate difficult conversations."
+       "h": "Without this habit, the first person to contact the salesperson decides how the day goes. Strategic targets lose attention, customer access is arranged too late, preparation and follow-up are squeezed, and travel becomes inefficient. Avoidable unfinished work can extend into personal time. An empty forward diary can also mean that difficult conversations are being postponed."
       },
       {
        "t": "p",
@@ -1383,7 +1383,7 @@
         },
         {
          "t": "p",
-         "h": "The salesperson should escalate conflicting priorities they cannot resolve within their authority. Protecting strategic time does not permit ignoring required work or a genuinely urgent customer issue. The leader must make the final trade-off where necessary."
+         "h": "The salesperson should escalate conflicting priorities they cannot resolve within their authority. Protecting strategic time does not replace required work or a genuinely urgent customer issue. The leader must make the final trade-off where necessary."
         }
        ]
       },
@@ -1421,7 +1421,7 @@
         },
         {
          "t": "p",
-         "h": "First ask the salesperson to explain the task and what good work looks like. If they cannot judge a useful result, teach the underlying sales skill before expecting AI to improve it. Demonstrate the tool where technical familiarity is missing; coach judgement where the person can operate it but accepts weak output."
+         "h": "First ask the salesperson to explain the task and what good work looks like. If they cannot judge a useful result, teach the underlying sales skill before expecting AI to improve it. Demonstrate the tool where technical familiarity is missing; coach judgement where the person can operate it but accepts output that needs more work."
         }
        ]
       },
@@ -1444,7 +1444,7 @@
         },
         {
          "t": "p",
-         "h": "Use only information permitted for the tool and purpose. Access to an AI service does not by itself authorise entering customer, commercial or personal information. Use sanitised practice material when permissions are unclear. Do not let generated drafts become records of events that did not happen. Do not send messages or commit the business automatically: first complete the required review and get the necessary authority."
+         "h": "Use only information permitted for the tool and purpose. Access to an AI service does not by itself authorise entering customer, commercial or personal information. Use sanitised practice material when permissions are unclear. Keep records to what actually happened, even where a generated draft suggests otherwise. Before sending a message or committing the business, complete the required review and get the necessary authority."
         }
        ]
       },
@@ -1461,7 +1461,7 @@
         },
         {
          "t": "p",
-         "h": "Ask: Why did you use AI here? What did you verify, change or reject? What did it miss? Could you explain the final message without the tool? Did the completed process improve quality or save time? Where will the saved time go?"
+         "h": "Ask: What led you to use AI here? What did you verify, change or reject? What did it miss? How would you explain the final message in your own words? Did the completed process improve quality or save time? Where will the saved time go?"
         },
         {
          "t": "p",
@@ -1524,7 +1524,7 @@
      "intro": [
       {
        "t": "p",
-       "h": "Coaching cannot depend entirely on spare time after every other task is complete. Consider the manager's selling responsibilities, team size and other commitments before agreeing a schedule. If the workload makes reliable coaching impossible, address capacity and support rather than repeatedly cancelling meetings."
+       "h": "Coaching cannot depend entirely on spare time after every other task is complete. Consider the manager's selling responsibilities, team size and other commitments before agreeing a schedule. If the workload makes reliable coaching impossible, address capacity and support, so that the meetings can be kept."
       },
       {
        "t": "p",
@@ -1545,7 +1545,7 @@
       },
       {
        "t": "p",
-       "h": "Group discussions can support learning but do not replace individual attention. A new skill, immediate issue or improvement effort may require additional contact. Where the manager cannot provide suitable support, consider whether another appropriately experienced or trained coach could help. Do not wait for an annual review to raise a development need that is already visible."
+       "h": "Group discussions can support learning but do not replace individual attention. A new skill, immediate issue or improvement effort may require additional contact. Where the manager cannot provide suitable support, consider whether another appropriately experienced or trained coach could help. Raise a development need as soon as it is visible, rather than waiting for the annual review."
       }
      ],
      "subs": []
@@ -1568,7 +1568,7 @@
       },
       {
        "t": "p",
-       "h": "These are continuing conditions of the relationship. A well-run conversation cannot compensate for repeated cancellations, unclear requirements or support that never arrives."
+       "h": "These are continuing conditions of the relationship. A well-run conversation cannot make up for meetings that keep being cancelled, requirements that stay unclear or support that is not delivered."
       }
      ],
      "subs": []
@@ -1638,7 +1638,7 @@
       },
       {
        "t": "p",
-       "h": "Choose measures that fit the actual role and market. Agree the baseline, intended improvement, evidence, support and review period. Do not convert every possible activity into a quota or import another salesperson's call and appointment numbers. Check whether a measure could improve while the underlying work remains unchanged."
+       "h": "Choose measures that fit the actual role and market. Agree the baseline, intended improvement, evidence, support and review period. Keep quotas for the activities that matter, rather than converting every possible activity, and avoid importing another salesperson's call and appointment numbers. Check whether a measure could improve while the underlying work remains unchanged."
       }
      ],
      "subs": []
@@ -1666,7 +1666,7 @@
         },
         {
          "t": "p",
-         "h": "The leader should review the same evidence and check available support. If market direction is still provisional, identify the assumptions and book a date to confirm the plan. Do not present an unsupported target as an agreed strategy."
+         "h": "The leader should review the same evidence and check available support. If market direction is still provisional, identify the assumptions and book a date to confirm the plan. Until the plan is confirmed, present an unsupported target as provisional rather than as an agreed strategy."
         }
        ]
       },
@@ -1722,7 +1722,7 @@
           ],
           [
            "Commercial progress sought",
-           "By the end of the second quarter, establish four qualified opportunities for evaluation. Do not count a meeting or presentation alone as a qualified opportunity."
+           "By the end of the second quarter, establish four qualified opportunities for evaluation. A meeting or presentation alone does not count as a qualified opportunity."
           ],
           [
            "Evidence required",
@@ -1830,7 +1830,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "For every meeting, the salesperson prepares current evidence and a proposed next decision. The leader prepares questions, checks earlier support commitments and identifies where a management decision may be needed. Use the shared operational records. Do not recreate the same information in a separate recurring report."
+         "h": "For every meeting, the salesperson prepares current evidence and a proposed next decision. The leader prepares questions, checks earlier support commitments and identifies where a management decision may be needed. Use the shared operational records; there is no need to recreate the same information in a separate recurring report."
         },
         {
          "t": "table",
@@ -1982,7 +1982,7 @@
       },
       {
        "t": "p",
-       "h": "Be honest about choice. Say clearly when a process or responsibility is required. The person may still be able to shape the method, timing within agreed limits or support. A development opportunity that is optional should not be presented as compulsory. Seeking commitment does not mean disguising a decision or promising that everybody will agree."
+       "h": "Be honest about choice. Say clearly when a process or responsibility is required. The person may still be able to shape the method, timing within agreed limits or support. A development opportunity that is optional should not be presented as compulsory. Seeking commitment does not mean treating a decision as still open, or promising that everybody will agree."
       }
      ],
      "subs": [
@@ -2037,8 +2037,8 @@
         {
          "t": "ol",
          "items": [
-          "<strong>Remain open to the response.</strong> Do not become so committed to your preferred answer that you stop hearing relevant information.",
-          "<strong>Focus on a meaningful benefit or shared purpose.</strong> Avoid using the conversation mainly to protect your image or obtain a personal advantage.",
+          "<strong>Remain open to the response.</strong> Keep listening for relevant information, even when you have a preferred answer.",
+          "<strong>Focus on a meaningful benefit or shared purpose.</strong> Keep the conversation on the benefit for the person and the shared purpose, rather than on your own image or advantage.",
           "<strong>Be genuine and appropriately open.</strong> Share relevant experience without unsafe or unnecessary personal disclosure.",
           "<strong>Describe the desired improvement.</strong> Discuss consequences where needed, while also explaining what useful progress could look like.",
           "<strong>Develop possibilities together.</strong> Invite workable alternatives rather than assuming there is only one method.",
@@ -2067,11 +2067,11 @@
       },
       {
        "t": "p",
-       "h": "Ask them to help design a practical routine. Decide which information needs checking, when the work will be completed, what resource or technical input is needed and how the next handover will be made. Discuss the cost of continuing the problem without using an unverified worst-case story to create fear."
+       "h": "Ask them to help design a practical routine. Decide which information needs checking, when the work will be completed, what resource or technical input is needed and how the next handover will be made. Discuss the cost of continuing the problem, using verified facts rather than a worst-case story."
       },
       {
        "t": "p",
-       "h": "Accountability includes the manager's behaviour. Follow through on support, review what was agreed and address repeated gaps. If a commitment may be missed, the person should raise the concern before the due date and discuss a revised action. If a consequence is appropriate, make it transparent and agree how a future lapse will be addressed. An agreement the employee owns is different from using threats as the usual way to motivate people."
+       "h": "Accountability includes the manager's behaviour. Follow through on support, review what was agreed and address repeated gaps. If a commitment may be missed, the person should raise the concern before the due date and discuss a revised action. If a consequence is appropriate, make it transparent and agree how a future lapse will be addressed. An agreement the employee owns works better than pressure as the usual way to motivate people."
       }
      ],
      "subs": []
@@ -2272,7 +2272,7 @@
         },
         {
          "t": "p",
-         "h": "Verify what the local Outlook setup actually tracks or synchronises. Explain any manual action, the handling of changes or cancellations and how to check whether an appointment was linked successfully. Follow the agreed scope for business and personal information. Do not promise that all calendar entries or updates appear automatically."
+         "h": "Verify what the local Outlook setup actually tracks or synchronises. Explain any manual action, the handling of changes or cancellations and how to check whether an appointment was linked successfully. Follow the agreed scope for business and personal information. Be clear that not every calendar entry or update appears automatically."
         }
        ]
       },
@@ -2370,7 +2370,7 @@
         },
         {
          "t": "p",
-         "h": "If use is weak, distinguish a skill gap, a system obstacle, duplicated work and persistent refusal to follow the process. Address the actual cause. Leaders should prepare from Rocksell, maintain their own relevant commitments and stop requesting information already available there."
+         "h": "If use is limited, distinguish a skill gap, a system obstacle, duplicated work and continued non-use despite clear expectations and support. Address the actual cause. Leaders should prepare from Rocksell, maintain their own relevant commitments and stop requesting information already available there."
         }
        ]
       }
@@ -2420,7 +2420,7 @@
         },
         {
          "t": "p",
-         "h": "Do not infer motive from one missed commitment. A person may also demonstrate a process in training but struggle to execute it reliably in the actual workload. Test that distinction before concluding that the issue is refusal."
+         "h": "One missed commitment is not enough to infer motive. A person may also demonstrate a process in training but struggle to execute it reliably in the actual workload. Test that distinction before concluding that the issue is refusal."
         }
        ]
       },
@@ -2454,7 +2454,7 @@
         },
         {
          "t": "p",
-         "h": "At the review, examine evidence and decide. Progress may justify continued support or a reasoned extension; persistent non-compliance may require formal action. Follow company policy and local procedure. Dismissal must not be a predetermined outcome."
+         "h": "At the review, examine evidence and decide. Progress may justify continued support or a reasoned extension; persistent failure to meet the requirement may require formal action. Follow company policy and local procedure. Dismissal must not be a predetermined outcome."
         }
        ]
       },
@@ -2463,11 +2463,11 @@
        "blocks": [
         {
          "t": "p",
-         "h": "If the required behaviour is now reliable, acknowledge the improvement and return to normal follow-up. If progress is partial, identify what remains and why any additional period is justified. If a previously unknown barrier emerges, act on it and revise the plan openly. If the person continues to refuse a clear requirement despite practical support, do not restart the same informal coaching indefinitely."
+         "h": "If the required behaviour is now reliable, acknowledge the improvement and return to normal follow-up. If progress is partial, identify what remains and why any additional period is justified. If a previously unknown barrier emerges, act on it and revise the plan openly. If the person still does not meet a clear requirement despite practical support, move beyond informal coaching rather than restarting it indefinitely."
         },
         {
          "t": "p",
-         "h": "Judge the individual case. Do not let strong commercial results automatically excuse persistent refusal to meet legitimate working standards. Do not use escalation to silence useful challenge."
+         "h": "Judge the individual case. Strong commercial results do not automatically outweigh a continuing failure to meet legitimate working standards, and escalation is not a way to close down useful challenge."
         }
        ]
       }
@@ -2634,7 +2634,7 @@
          "items": [
           "What are you holding on to that might prevent a better outcome?",
           "Which belief or expectation is making the situation harder to change?",
-          "What are you trying to control?",
+          "What would you like to keep under your control here, and what could you leave open?",
           "Are we treating this as a choice between only two options? Could another workable option include useful elements of both?",
           "What could you change in your own response that is within your control?"
          ]
@@ -2723,7 +2723,7 @@
           "What could make your communication more useful? Which belief or method might need to change?",
           "Who communicates clearly and constructively in a way you could learn from?",
           "Which part of your own approach could be contributing to the difficulty?",
-          "Are you listening to understand, or mainly preparing to gain agreement or close the discussion?",
+          "How much of your attention goes to understanding, and how much to preparing your reply?",
           "How much room do you give the other person to contribute?",
           "Have you reached a conclusion before hearing the full explanation? How could you check?"
          ]
@@ -2766,7 +2766,7 @@
           "What could follow from this behaviour, and who else could be affected?",
           "Where are the current actions likely to lead?",
           "How does that affect you or your work?",
-          "How long are you willing to continue with the current difficulty before changing something?"
+          "At what point would you want to change something about the current difficulty?"
          ]
         }
        ]
@@ -2828,10 +2828,10 @@
          "t": "ul",
          "items": [
           "Are you waiting for a person, opportunity or time before acting? What can you begin now?",
-          "Which important goal have you stopped working towards?",
+          "Which important goal has moved down your list?",
           "What motivates you to improve?",
           "Which capability or opportunity have you left undeveloped?",
-          "Which work or personal priority have you repeatedly postponed?",
+          "Which work or personal priority has been hard to find time for?",
           "What would make it possible to give that priority some attention now?"
          ]
         }
@@ -3032,7 +3032,7 @@
          "items": [
           "What effort have you invested in continuing this pattern, and what does it provide for you?",
           "What do you gain from the way you currently manage the work or your career?",
-          "Could continuing the activity, avoiding change or accountability, resisting a routine, complaining or blaming also help you avoid something uncomfortable? What might that be?"
+          "Could the current pattern also be protecting you from something uncomfortable? What might that be?"
          ]
         }
        ]
@@ -3155,7 +3155,7 @@
           "Which effort is no longer worth the time or energy it requires? Are you trying to fit more work into the day than is realistically possible?",
           "What different outcome could still give you a sense of achievement?",
           "Why does the objective matter enough for you to keep pushing so hard?",
-          "What part of the situation have you not wanted to examine?",
+          "Which part of the situation has been hardest to look at?",
           "What evidence, and what review point, would help you judge whether the objective is realistic?",
           "Which recurring complaint might show that something needs to be accepted, changed or stopped?"
          ]
@@ -3249,7 +3249,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Use a supportive opening before a difficult observation or a major request. Explain why speaking up matters, name the useful outcome and check that the person is ready. Use it for avoided responsibilities, excessive self-sacrifice, harmful behaviour, or customer requests that go beyond a reasonable limit. Do not accuse the person or promise a guaranteed result."
+         "h": "Use a supportive opening before a difficult observation or a major request. Explain why speaking up matters, name the useful outcome and check that the person is ready. Use it for avoided responsibilities, excessive self-sacrifice, harmful behaviour, or customer requests that go beyond a reasonable limit. Keep the wording free of accusation, and avoid promising a guaranteed result."
         }
        ]
       },
@@ -3258,7 +3258,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Use these questions when the discussion appears to stay at the symptoms or an incomplete account. Keep the wording curious and avoid implying that the person is dishonest."
+         "h": "Use these questions when the discussion appears to stay at the symptoms or an incomplete account. Keep the wording curious and respectful of what the person has already shared."
         },
         {
          "t": "ul",
@@ -3590,7 +3590,7 @@
       },
       {
        "t": "p",
-       "h": "If the planned time is zero, record “not applicable”, not zero performance. Show deliberate changes of priority. These measures show patterns. They do not measure the quality of work, and they do not justify detailed time surveillance."
+       "h": "If the planned time is zero, record “not applicable”, not zero performance. Show deliberate changes of priority. These measures show patterns. They do not measure the quality of work, and they do not call for detailed time tracking."
       }
      ],
      "subs": []
@@ -3645,7 +3645,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Pipeline management examines the whole set of opportunities: creation, size, quality, mix, timing and movement. Opportunity management examines the evidence and actions needed to advance one piece of business. A pipeline can be large but weak, or small because new opportunities are not being generated. These situations need different responses."
+         "h": "Pipeline management examines the whole set of opportunities: creation, size, quality, mix, timing and movement. Opportunity management examines the evidence and actions needed to advance one piece of business. A pipeline can be large but thinly evidenced, or small because new opportunities are not being generated. These situations need different responses."
         },
         {
          "t": "p",
@@ -3700,7 +3700,7 @@
         },
         {
          "t": "p",
-         "h": "Good looks like a clear decision about where effort goes next, with customer-facing actions, support and owners. Red flags include inflated values, unsupported dates, an empty pipeline disguised by a few large entries, or a meeting spent reading every record aloud."
+         "h": "Good looks like a clear decision about where effort goes next, with customer-facing actions, support and owners. Red flags include values above the evidence, unsupported dates, a thin pipeline resting on a few large entries, or a meeting spent reading every record aloud."
         }
        ]
       },
@@ -3825,7 +3825,7 @@
         },
         {
          "t": "p",
-         "h": "Correct straightforward data problems before the meeting. Where the data is still weak, mark the limitation, decide what can responsibly be concluded and assign the correction. Do not treat absent information as zero, and do not spend the full meeting entering records. If the data is too weak for a useful conversation, leave the meeting and ask the salesperson to use the time to update the records."
+         "h": "Correct straightforward data problems before the meeting. Where the data is still incomplete, mark the limitation, decide what can responsibly be concluded and assign the correction. Treat absent information as unknown rather than zero, and keep the meeting for conversation rather than data entry. If the data is not yet good enough for a useful conversation, end the meeting and agree that the salesperson uses the time to update the records."
         }
        ]
       },
@@ -3952,7 +3952,7 @@
         },
         {
          "t": "p",
-         "h": "Volume and coverage: examine the open opportunity count, known Rockfon value and concentration in a few large records. Compare with the role's objectives, historical conversion and lead times where these are genuinely comparable. Do not use one fixed pipeline multiple for every role, and do not treat specification influence value as an order-sales target."
+         "h": "Volume and coverage: examine the open opportunity count, known Rockfon value and concentration in a few large records. Compare with the role's objectives, historical conversion and lead times where these are genuinely comparable. Use a pipeline multiple that fits each role, and keep specification influence value separate from the order-sales target."
         },
         {
          "t": "p",
@@ -3981,11 +3981,11 @@
         },
         {
          "t": "p",
-         "h": "If there are too few suitable opportunities for two honest must-win opportunity deep-dives, use the reserved blocks to qualify real leads and design the generation approach. Record this exception and the evidence required by the next review; do not manufacture opportunities or quietly abandon creation work."
+         "h": "If there are too few suitable opportunities for two must-win opportunity deep-dives, use the reserved blocks to qualify real leads and design the generation approach. Record this exception and the evidence required by the next review; keep the deep-dives for genuine opportunities and keep the creation work going."
         },
         {
          "t": "p",
-         "h": "If the pipeline is sufficiently broad but not advancing, work on decision access, the proposition, stakeholder action, customer timing and specific risks. Requalify weak records or stop spending on them. A healthy total is not a reason to accept unsupported close or delivery dates."
+         "h": "If the pipeline is sufficiently broad but not advancing, work on decision access, the proposition, stakeholder action, customer timing and specific risks. Requalify records that the evidence no longer supports, or stop spending on them. A healthy total is not a reason to accept unsupported close or delivery dates."
         },
         {
          "t": "p",
@@ -3998,11 +3998,11 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Choose a record from the agreed scope rather than letting the salesperson curate every example. Open the evidence behind a material claim: who confirmed the need, how the value was estimated, which decision is next and what justifies the date. Check that the current owner and other roles agree on responsibility."
+         "h": "Choose a record yourself from the agreed scope, so that the sample does not depend on what the salesperson selects. Open the evidence behind a material claim: who confirmed the need, how the value was estimated, which decision is next and what justifies the date. Check that the current owner and other roles agree on responsibility."
         },
         {
          "t": "p",
-         "h": "Distinguish a single recording error from a repeated misunderstanding. Assign a wider sample or a practical correction when a pattern appears. A sample is a quality check, not proof that the whole pipeline is accurate. Avoid public fault-finding. Do not use a missing field in place of understanding the opportunity."
+         "h": "Distinguish a single recording error from a repeated misunderstanding. Assign a wider sample or a practical correction when a pattern appears. A sample is a quality check, not proof that the whole pipeline is accurate. Keep corrections constructive and out of group discussion. Use the record to understand the opportunity, not only to check that fields are filled in."
         }
        ]
       },
@@ -4141,7 +4141,7 @@
         },
         {
          "t": "p",
-         "h": "Do not average the five scores into a probability of winning or use a high total to hide a critical weakness. An opportunity with strong need, solution and access may still be blocked by an unknown decision process. Unknown is a score of one, not 'not applicable'. If a dimension is genuinely not applicable to the defined initiative, record the reason and have the leader confirm the exception."
+         "h": "Read the five scores one by one rather than averaging them into a probability of winning, because a high total can mask a critical gap. An opportunity with strong need, solution and access may still be blocked by an unknown decision process. Unknown is a score of one, not 'not applicable'. If a dimension is genuinely not applicable to the defined initiative, record the reason and have the leader confirm the exception."
         },
         {
          "t": "p",
@@ -4500,7 +4500,7 @@
         },
         {
          "t": "p",
-         "h": "Coverage can involve different modes. Record onsite visits, remote meetings, calls and other activity separately. Do not count a delivery, sample drop or unanswered call as a completed, substantive conversation. Count it only if the shared definition and the actual outcome support that."
+         "h": "Coverage can involve different modes. Record onsite visits, remote meetings, calls and other activity separately. A delivery, sample drop or unanswered call counts as a completed, substantive conversation only if the shared definition and the actual outcome support that."
         }
        ]
       },
@@ -4555,7 +4555,7 @@
         },
         {
          "t": "p",
-         "h": "A cross-country trip for a small number of contacts may be justified by business importance, access or a critical decision. Make the reason explicit. Do not chase visit counts or travel efficiency if this harms an important customer outcome. Do not add unnecessary visits just to justify the mileage."
+         "h": "A cross-country trip for a small number of contacts may be justified by business importance, access or a critical decision. Make the reason explicit. Weigh visit counts and travel efficiency against the customer outcome that matters most. Add a visit when it has a purpose, not to justify the mileage."
         }
        ]
       },
@@ -4682,7 +4682,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "Traffic means the movement of business and responsibility through the team. Ask what changed and why it matters. Do not read every opportunity or ask every person for the same length of update."
+         "h": "Traffic means the movement of business and responsibility through the team. Ask what changed and why it matters. Review by exception, rather than reading every opportunity or asking every person for an update of the same length."
         },
         {
          "t": "p",
@@ -5245,7 +5245,7 @@
       },
       {
        "t": "p",
-       "h": "We want to work in a more professional and structured way. That means clearer plans, purposeful customer engagement, reliable information and regular conversations about progress. These habits help people use their judgement well and make it easier to see where support is needed."
+       "h": "We want to work in a more structured and consistent way. That means clearer plans, purposeful customer engagement, reliable information and regular conversations about progress. These habits help people use their judgement well and make it easier to see where support is needed."
       },
       {
        "t": "p",
@@ -5302,7 +5302,7 @@
       },
       {
        "t": "p",
-       "h": "The easy response is to instruct, train or tell. Send the email, run the workshop, repeat it at the team meeting. It feels like action. It rarely changes what happens in front of a customer next Tuesday."
+       "h": "A common response is to instruct, train or tell: send the email, run the workshop, repeat it at the team meeting. That feels like action, but on its own it rarely changes what happens in front of a customer next Tuesday."
       },
       {
        "t": "statement",
@@ -5318,7 +5318,7 @@
        "blocks": [
         {
          "t": "p",
-         "h": "The meetings in this playbook are where change happens: one account, one opportunity and one visit at a time. Every change we want shows up in the work your team already brings to you. Use it, every time."
+         "h": "The meetings in this playbook are where change happens: one account, one opportunity and one visit at a time. Every change we want shows up in the work your team already brings to you, so every meeting is a chance to coach it."
         },
         {
          "t": "swap",
@@ -5339,7 +5339,7 @@
         },
         {
          "t": "p",
-         "h": "<strong>This is not policing.</strong> You are helping. The aim is that people contribute, and that they do it the right way, because they understand why it matters."
+         "h": "<strong>This is coaching, not checking up.</strong> The aim is that people contribute, and do it well, because they understand why it matters."
         }
        ]
       },
@@ -5469,7 +5469,7 @@
     ],
     "ask": [
      "What new opportunities have you created since last time?",
-     "Which are the largest, and are they still real?",
+     "Which are the largest, and are they still active?",
      "How much do you expect to deliver each quarter?",
      "How much has no quarter or no value yet?",
      "Where are the gaps, and where do we depend on a few deals?"
@@ -5512,7 +5512,7 @@
     ]
    },
    "Random quality check": {
-    "purpose": "Test that one record, chosen by the leader, tells a true and complete story.",
+    "purpose": "Check that one record, chosen by the leader, gives an accurate and complete picture.",
     "data": [
      "Pipeline · Opportunity table: open one opportunity record",
      "Rockfon value or “unknown”, delivery quarter, vertical and product mix",
@@ -5535,7 +5535,7 @@
     ],
     "watch": [
      "A record picked by the salesperson instead of at random.",
-     "A check that feels like an audit. The aim is reliable information."
+     "A check that feels like a test of the person. The aim is reliable information."
     ]
    },
    "First selected opportunity": {
