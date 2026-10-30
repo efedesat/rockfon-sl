@@ -1,3 +1,689 @@
 {
-  "terms": []
+  "_about": "Playbook glossary (Toolbox → Playbook glossary). Words used in the playbook, in plain language; Rocksell fields belong in the CRM glossary. `see` is the topic or tool id for \"Read more\". `source` says where the meaning comes from; `inferred: true` means the playbook uses the word without defining it.",
+  "terms": [
+    {
+      "term": "1:1 Account plan",
+      "definition": "A quarterly meeting of at least 90 minutes between the salesperson and the sales leader. It governs account segmentation and reviews the plans for every A account and other in-scope account.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "1-1-account-meeting"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "mt-acc"
+    },
+    {
+      "term": "Account plan",
+      "definition": "A plan that directs work on one account: commercial focus, the people and relationships needed, growth approach, actions and support. A contact list and sales history are evidence, not a plan.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "three-commercial-management-disciplines"
+      },
+      "group": "Accounts and coverage",
+      "inferred": false,
+      "see": "mt-acc"
+    },
+    {
+      "term": "Accountability",
+      "definition": "Agreeing what will be done, who will do it and how progress will be reviewed. It includes recognising results and discussing missed commitments.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "coaching-in-rockfon-sales"
+      },
+      "group": "Coaching and development",
+      "inferred": false,
+      "see": "sct-1"
+    },
+    {
+      "term": "Ad-hoc coaching",
+      "definition": "A focused conversation of 30 to 60 minutes between reviews, used when a specific skill, judgement or habit needs improving. It is held as needed, not as a compulsory standing meeting.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "personal-development-meeting-rhythm"
+      },
+      "group": "Coaching and development",
+      "inferred": false,
+      "see": "tk-devmeet"
+    },
+    {
+      "term": "Cadence",
+      "definition": "The regular rhythm of meetings in the playbook. It creates accountability and is where change happens, one account, one opportunity and one visit at a time.",
+      "source": {
+        "part": "the-role",
+        "section": "driving-change-through-coaching"
+      },
+      "group": "Routines and meetings",
+      "inferred": true,
+      "see": "role-change"
+    },
+    {
+      "term": "Coaching",
+      "definition": "A structured conversation that helps someone understand a situation, examine their thinking, choose an action and take responsibility for it. The manager asks questions and supports; the salesperson does the thinking.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "coaching-in-rockfon-sales"
+      },
+      "group": "Coaching and development",
+      "inferred": false,
+      "see": "sct-1"
+    },
+    {
+      "term": "Cockpit",
+      "definition": "The tool in the playbook used to run a meeting. The leader enters who they are meeting, ticks the checklists, and emails the meeting notes from it straight after the meeting.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "common-operating-rules"
+      },
+      "group": "Routines and meetings",
+      "inferred": true,
+      "see": "mt-pipe"
+    },
+    {
+      "term": "Commitment",
+      "definition": "Understanding a change, seeing a reason to engage with it and taking responsibility for an agreed action. It grows through a clear, honest conversation, not through a speech alone.",
+      "source": {
+        "part": "leading-people-through-change",
+        "section": "build-commitment-to-change"
+      },
+      "group": "Leading change",
+      "inferred": false,
+      "see": "lptc-2"
+    },
+    {
+      "term": "Conversion",
+      "definition": "How far opportunities move on to being won. When you calculate it, compare like with like: similar roles and similar groups of opportunities.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "1-1-pipeline-and-opportunity-meeting"
+      },
+      "group": "Data and reporting",
+      "inferred": true,
+      "see": "mt-pipe"
+    },
+    {
+      "term": "Coverage",
+      "definition": "Whether priority accounts, large opportunities, strategic customer groups and key people inside large accounts get contact within an agreed period. Periods are set for each account, not one visit target for everyone.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "1-1-visit-and-activity-meeting"
+      },
+      "group": "Accounts and coverage",
+      "inferred": false,
+      "see": "mt-act"
+    },
+    {
+      "term": "Cycle length",
+      "definition": "How long opportunities take to move through the pipeline. It is one of the four sales velocity inputs and is compared with last period.",
+      "source": {
+        "siteMap": "dashboard"
+      },
+      "group": "Data and reporting",
+      "inferred": true,
+      "see": "tk-dash"
+    },
+    {
+      "term": "Dashboard",
+      "definition": "Three pages of shared data used in the meetings: Pipeline, Accounts, and Visits & activity. Each page answers one management question.",
+      "source": {
+        "siteMap": "dashboard"
+      },
+      "group": "Data and reporting",
+      "inferred": false,
+      "see": "tk-dash"
+    },
+    {
+      "term": "Doing the right things, and doing them right",
+      "definition": "Doing the right things means good choices: which accounts, opportunities, people and products. Doing them right means quality: purpose, preparation, the conversation and follow-up. Coach both.",
+      "source": {
+        "part": "the-role",
+        "section": "driving-change-through-coaching"
+      },
+      "group": "Coaching and development",
+      "inferred": false,
+      "see": "role-change"
+    },
+    {
+      "term": "Effectiveness",
+      "definition": "Whether the work achieves the required purpose and quality. Good performance needs both effectiveness and efficiency.",
+      "source": {
+        "part": "leading-people-through-change",
+        "section": "maintain-quality-and-accountability"
+      },
+      "group": "Leading change",
+      "inferred": false,
+      "see": "lptc-3"
+    },
+    {
+      "term": "Efficiency",
+      "definition": "How much time and effort the work takes. Working quickly is not the same as completing the whole task.",
+      "source": {
+        "part": "leading-people-through-change",
+        "section": "maintain-quality-and-accountability"
+      },
+      "group": "Leading change",
+      "inferred": false,
+      "see": "lptc-3"
+    },
+    {
+      "term": "Failure modes",
+      "definition": "Six coaching habits that can work against the manager's own intent: Hero, Pressuring, Talk A Lot, Know it Best, Need to be Perfect and Pleasing. Each starts as a strength that is overused.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "choose-the-right-kind-of-support"
+      },
+      "group": "Coaching and development",
+      "inferred": false,
+      "see": "sct-2"
+    },
+    {
+      "term": "Five dimensions",
+      "definition": "The five areas tested in the Must-Win Opportunity Deep-dive: need or pain, right solution, access to power (who decides), decision process and momentum (recent progress). Each is scored one to four.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "the-must-win-deal-room-as-part-of-1-1-pipeline-and-opportunity-meeting"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "tk-winroom"
+    },
+    {
+      "term": "Forecast",
+      "definition": "Area (sqm) multiplied by average price multiplied by win probability. Every opportunity carries these three numbers, and adding them up across the team gives the runway.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "why-structured-sales-management"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "cw-why-structured-sales-management"
+    },
+    {
+      "term": "Four instances",
+      "definition": "The playbook's meetings: three individual meetings (Pipeline and Opportunity, Account plan, Visit and Activity) and one team meeting. The individual meetings examine the territory; the team meeting coordinates shared opportunities.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "four-instances"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "cw-three-commercial-management-disciplines"
+    },
+    {
+      "term": "Growth map",
+      "definition": "A grid that places each growth initiative by relationship (existing or new) and product or proposition (existing or new). It shows four routes for growth effort.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "coach-for-strategic-growth"
+      },
+      "group": "Accounts and coverage",
+      "inferred": false,
+      "see": "sct-11"
+    },
+    {
+      "term": "Handover",
+      "definition": "When opportunity ownership moves to another person. Both people confirm the current position, stakeholders, commitments, evidence, next decision and next external action, and the new owner accepts.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "team-pipeline-and-opportunity-meeting"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "mt-team"
+    },
+    {
+      "term": "In-scope account",
+      "definition": "An account included in the account plan review: every A account plus other accounts explicitly agreed, including defined strategic targets even where current business is small.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "1-1-account-meeting"
+      },
+      "group": "Accounts and coverage",
+      "inferred": false,
+      "see": "mt-acc"
+    },
+    {
+      "term": "Invoiced sales",
+      "definition": "Actual sales that have been invoiced. Keep them separate from open potential and secured orders, and do not add them together in one total.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "team-pipeline-and-opportunity-meeting"
+      },
+      "group": "Data and reporting",
+      "inferred": true,
+      "see": "mt-team"
+    },
+    {
+      "term": "Known open Rockfon value",
+      "definition": "The total Rockfon value of open opportunities that have a value. It is shown on the Pipeline dashboard beside the number of opportunities with unknown value.",
+      "source": {
+        "siteMap": "dashboard"
+      },
+      "group": "Data and reporting",
+      "inferred": false,
+      "see": "tk-dash"
+    },
+    {
+      "term": "Must-win opportunity",
+      "definition": "An opportunity that gets priority attention and a deliberate plan. It does not allow unapproved pricing, and the team can still decide to requalify, reduce investment or stop.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "team-pipeline-and-opportunity-meeting"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "tk-winroom"
+    },
+    {
+      "term": "Must-Win Opportunity Deep-dive",
+      "definition": "A short coaching conversation on one important opportunity, used in the 1:1 and team pipeline meetings. The owner scores five dimensions on evidence and chooses the next move.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "the-must-win-deal-room-as-part-of-1-1-pipeline-and-opportunity-meeting"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "tk-winroom"
+    },
+    {
+      "term": "Open potential",
+      "definition": "The value of opportunities that are still open and not yet ordered. Keep it separate from secured orders and invoiced sales.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "team-pipeline-and-opportunity-meeting"
+      },
+      "group": "Data and reporting",
+      "inferred": true,
+      "see": "mt-team"
+    },
+    {
+      "term": "Opportunity",
+      "definition": "A specific piece of potential business, with a relevant decision and a person responsible for advancing it. It does not need to pass through every earlier step to be valid.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "three-commercial-management-disciplines"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "cw-three-commercial-management-disciplines"
+    },
+    {
+      "term": "Opportunity owner",
+      "definition": "The one accountable person for an opportunity at a given time. Other contributors are named. In team meetings the owner takes on the salesperson's responsibilities for that opportunity.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "common-operating-rules"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "cw-common-operating-rules"
+    },
+    {
+      "term": "Opportunity table",
+      "definition": "A list on the Pipeline dashboard with owner, Rockfon value or “unknown”, dates, next action and flags such as stalled or no next step. It can be sorted by newest, biggest or last updated.",
+      "source": {
+        "siteMap": "dashboard"
+      },
+      "group": "Data and reporting",
+      "inferred": false,
+      "see": "tk-dash"
+    },
+    {
+      "term": "Persistent failure to change",
+      "definition": "A continuing failure to meet a clear work requirement after explanation and support. It needs a management decision, but disagreement or low enthusiasm alone do not show unwillingness.",
+      "source": {
+        "part": "leading-people-through-change",
+        "section": "address-persistent-failure-to-change"
+      },
+      "group": "Leading change",
+      "inferred": false,
+      "see": "lptc-8"
+    },
+    {
+      "term": "Personal development plan",
+      "definition": "The annual plan that links market strategy to the salesperson's commercial priorities and capability development. Agreeing it is the first coaching conversation, and it guides decisions through the year.",
+      "source": {
+        "part": "sales-coaching-program",
+        "section": "begin-coaching-with-the-annual-personal-development-plan"
+      },
+      "group": "Coaching and development",
+      "inferred": false,
+      "see": "scp-5"
+    },
+    {
+      "term": "Personal development wheel",
+      "definition": "The wheel that sets development priorities and builds the capability to deliver them. It runs together with the sales development wheel, and information flows in both directions.",
+      "source": {
+        "part": "sales-coaching-program",
+        "section": "run-connected-development-and-sales-wheels"
+      },
+      "group": "Coaching and development",
+      "inferred": false,
+      "see": "scp-6"
+    },
+    {
+      "term": "Pipeline",
+      "definition": "The whole set of opportunities. Pipeline management looks at their creation, size, quality, mix, timing and movement.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "three-commercial-management-disciplines"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "mt-pipe"
+    },
+    {
+      "term": "1:1 Pipeline and Opportunity management",
+      "definition": "A monthly meeting of at least 90 minutes. The leader and salesperson review the pipeline, then coach on two opportunities chosen beforehand.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "1-1-pipeline-and-opportunity-meeting"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "mt-pipe"
+    },
+    {
+      "term": "Portfolio coverage grid",
+      "definition": "A table on the Accounts dashboard with one row per account, showing segment, plan review, stakeholder coverage, last meaningful engagement, actual business and open pipeline. By default it shows A and other in-scope accounts.",
+      "source": {
+        "siteMap": "dashboard"
+      },
+      "group": "Data and reporting",
+      "inferred": false,
+      "see": "tk-dash"
+    },
+    {
+      "term": "Proactive approach",
+      "definition": "The effective coaching approach. It uses the valuable qualities of the failure modes, such as helpfulness and persistence, without their unproductive habits. It is not a label for a person.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "choose-the-right-kind-of-support"
+      },
+      "group": "Coaching and development",
+      "inferred": false,
+      "see": "sct-2"
+    },
+    {
+      "term": "Proactive work",
+      "definition": "Work the salesperson starts deliberately, not in response to an incoming event. The word describes how the work began, not how important it is.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "protect-proactive-and-strategic-time"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "sct-14"
+    },
+    {
+      "term": "Product mix",
+      "definition": "Which products make up sales. In the pipeline it is grouped as tile-only, grid-only or tile-and-grid. It affects average price but is not a separate multiplier.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "coach-for-strategic-growth"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "sct-11"
+    },
+    {
+      "term": "Qualified opportunity",
+      "definition": "A project assessed against relevant fit and decision criteria, with evidence to support including it. A meeting or presentation alone does not make an opportunity qualified.",
+      "source": {
+        "part": "sales-coaching-program",
+        "section": "choose-useful-measures-of-progress"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "scp-4"
+    },
+    {
+      "term": "Quarterly development follow-up",
+      "definition": "A 30-minute meeting held four times a year. It compares evidence with the development plan and decides what continues or changes. The final one can feed the annual evaluation.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "personal-development-meeting-rhythm"
+      },
+      "group": "Coaching and development",
+      "inferred": false,
+      "see": "tk-qdr"
+    },
+    {
+      "term": "Reactive work",
+      "definition": "Work that responds to an incoming event, such as a customer request or an unexpected issue. It can be valuable; the leader asks what it displaced.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "protect-proactive-and-strategic-time"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "sct-14"
+    },
+    {
+      "term": "Rocksell",
+      "definition": "The shared operational record for customer, project and sales activity information. Leaders and salespeople use it to prepare, prioritise, follow up and get support.",
+      "source": {
+        "part": "leading-people-through-change",
+        "section": "make-rocksell-useful-to-the-salesperson"
+      },
+      "group": "Data and reporting",
+      "inferred": false,
+      "see": "lptc-7"
+    },
+    {
+      "term": "Rolling two-week plan",
+      "definition": "A visible plan for the coming two weeks, refreshed every week. The second week may be less detailed but should already hold deliberate commercial commitments.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "build-a-professional-planning-habit"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "tk-plan"
+    },
+    {
+      "term": "Runway",
+      "definition": "A chart of expected Rockfon value for each delivery quarter, plus an Unallocated bar. It can be split by vertical or product mix and shows timing, concentration and mix.",
+      "source": {
+        "siteMap": "dashboard"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "cw-why-structured-sales-management"
+    },
+    {
+      "term": "Sales development wheel",
+      "definition": "The wheel that turns development priorities into account choices, pipeline progress and activity. It connects the three management disciplines through regular decisions.",
+      "source": {
+        "part": "sales-coaching-program",
+        "section": "run-connected-development-and-sales-wheels"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "scp-6"
+    },
+    {
+      "term": "Sales velocity",
+      "definition": "A measure on the Pipeline dashboard made of four inputs: open opportunities, average value, win rate and cycle length. The input that moved most shows where the pipeline is stuck.",
+      "source": {
+        "siteMap": "dashboard"
+      },
+      "group": "Data and reporting",
+      "inferred": false,
+      "see": "tk-dash"
+    },
+    {
+      "term": "Secured orders",
+      "definition": "Orders that Rockfon has secured. Keep them separate from specification progress, open potential and invoiced sales.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "common-operating-rules"
+      },
+      "group": "Data and reporting",
+      "inferred": true,
+      "see": "cw-common-operating-rules"
+    },
+    {
+      "term": "Segment A / B / C",
+      "definition": "Account categories set by the market's agreed ABC criteria. If none exist yet, a working start is A for priority investment, B for selective development, C for efficient coverage and service.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "manage-customer-segmentation"
+      },
+      "group": "Accounts and coverage",
+      "inferred": false,
+      "see": "sct-12"
+    },
+    {
+      "term": "Six Steps of a Change Conversation",
+      "definition": "A sequence for talking about change: get connected, state the possibility, ask permission, state what you want for the person, have the conversation, agree a clear conclusion. Use it naturally, not as a script.",
+      "source": {
+        "part": "leading-people-through-change",
+        "section": "build-commitment-to-change"
+      },
+      "group": "Leading change",
+      "inferred": false,
+      "see": "lptc-2"
+    },
+    {
+      "term": "Specification influence",
+      "definition": "Progress in getting Rockfon into a project's specification. Record it separately from secured orders and sales, and do not treat its value as an order-sales target.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "common-operating-rules"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": true,
+      "see": "cw-common-operating-rules"
+    },
+    {
+      "term": "Stage gate",
+      "definition": "A defined step that an opportunity must pass, with evidence, before it counts as further advanced.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "why-structured-sales-management"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": true,
+      "see": "cw-why-structured-sales-management"
+    },
+    {
+      "term": "Stakeholder coverage",
+      "definition": "Enough credible access to the people and roles that affect an account's relevant decisions, such as decision-makers, specifiers and purchasing. It is not a number of names.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "1-1-account-meeting"
+      },
+      "group": "Accounts and coverage",
+      "inferred": false,
+      "see": "mt-acc"
+    },
+    {
+      "term": "Strategic work",
+      "definition": "Work that advances an agreed market or development priority. It overlaps with proactive and reactive work, so do not add the categories into a false total.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "protect-proactive-and-strategic-time"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "sct-14"
+    },
+    {
+      "term": "Team Pipeline and Opportunity meeting",
+      "definition": "A monthly team meeting of at least 120 minutes, chaired by the sales leader. It coordinates opportunity traffic, ownership, handovers and support, and runs deep-dives on normally two must-win opportunities.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "team-pipeline-and-opportunity-meeting"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "mt-team"
+    },
+    {
+      "term": "Three sales management disciplines",
+      "definition": "Pipeline and Opportunity management (the business we try to win), Account management (the relationships we invest in) and Visit and Activity management (the work and time that deliver those choices).",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "three-commercial-management-disciplines"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "cw-three-commercial-management-disciplines"
+    },
+    {
+      "term": "Traffic",
+      "definition": "The movement of business and responsibility through the team: what entered, advanced, was won or lost, was removed or slipped. The team reviews it by exception.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "team-pipeline-and-opportunity-meeting"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "mt-team"
+    },
+    {
+      "term": "Unallocated",
+      "definition": "The part of expected value with no delivery quarter yet, or spread over quarters with no credible split. It is shown as its own bar on the runway.",
+      "source": {
+        "siteMap": "dashboard"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "cw-why-structured-sales-management"
+    },
+    {
+      "term": "Unknown value",
+      "definition": "An opportunity whose Rockfon value is not yet known. Flag important ones, and never treat unknown value as zero.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "1-1-pipeline-and-opportunity-meeting"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": false,
+      "see": "mt-pipe"
+    },
+    {
+      "term": "Vertical",
+      "definition": "A market category of building, such as healthcare, office or education. Vertical mix shows whether the pipeline supports the strategy.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "1-1-pipeline-and-opportunity-meeting"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": true,
+      "see": "mt-pipe"
+    },
+    {
+      "term": "1:1 Visit and Activity analysis",
+      "definition": "A meeting every two weeks as the default, for at least 60 minutes. It reviews completed activity, coverage, preparation, proactive and reactive work, and the diary for the next two weeks.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "1-1-visit-and-activity-meeting"
+      },
+      "group": "Routines and meetings",
+      "inferred": false,
+      "see": "mt-act"
+    },
+    {
+      "term": "Win probability",
+      "definition": "How likely we are to win an opportunity. It is one of the three forecast numbers and must come from evidence, not optimism.",
+      "source": {
+        "part": "commercial-wheel",
+        "section": "why-structured-sales-management"
+      },
+      "group": "Pipeline and opportunities",
+      "inferred": true,
+      "see": "cw-why-structured-sales-management"
+    },
+    {
+      "term": "Win rate",
+      "definition": "The share of opportunities that are won. It is one of the four sales velocity inputs and is compared with last period.",
+      "source": {
+        "siteMap": "dashboard"
+      },
+      "group": "Data and reporting",
+      "inferred": true,
+      "see": "tk-dash"
+    }
+  ]
 }

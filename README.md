@@ -63,6 +63,10 @@ Vercel's own Password Protection (a paid add-on) would also work and could repla
 - Structure (chapters, topic order, tiers, photos, tool types) lives in `content/site-map.json`. `keyTools` sets which tools are Key element; `keyToolGroups` sets how they are grouped on the Toolbox page (Bilat meeting guides, Team meeting guides, Coaching methods, CRM guides, Change management guides). For v0.1 the toolbox entries there also carry a few display settings from the prototype: `aka`, `format`, `accordion` and `files`.
 - `src/settings.js` → `storyPages: false` shows the story topic as an ordinary article.
 
+## Playbook glossary
+
+Toolbox → For inspiration → **Playbook glossary** (`/toolbox/tk-terms`) explains words used in the playbook. Terms live in `content/glossary.json` (`term`, `definition`, `group`, optional `see` = topic or tool id for "Read more"). Glossary terms also appear in the header search. It is separate from the **CRM glossary and data requirements**, which is for Rocksell fields and the semantic model.
+
 ## Training cases (roleplays)
 
 The Dashboards tool page has a **Show** row: *Wireframe* (the default) or *Training case: Daniel / Sofia / Jonas*. A case opens its own page (Pipeline, Accounts, Visits & activity) and fills the existing elements with fictional figures, with a gold "Training data" label in the report bar. Deep links open a case directly: `/toolbox/tk-dash?case=daniel`, `?case=sofia`, `?case=jonas`.

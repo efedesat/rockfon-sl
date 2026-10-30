@@ -15,6 +15,8 @@ export default function Terms({ narrow }) {
   const qq = q.trim().toLowerCase();
   const list = GLOSSARY.filter(t => (!group || t.group === group) && (!qq || (t.term + ' ' + t.definition).toLowerCase().includes(qq)))
     .slice().sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+  // Coming from the header search: clear this page's filters so the term is visible.
+  useEffect(() => { if (focus) { setQ(''); setGroup(''); } }, [focus]);
   useEffect(() => {
     if (!focus) return;
     const el = document.getElementById('term-' + focus);
