@@ -36,7 +36,7 @@ export default function Toolbox({ narrow }) {
       </section>
       <section style={{ display: 'flex', flexDirection: 'column', gap: 20, paddingTop: 8, borderTop: '1px solid #D8D9DA' }}>
         <button type="button" aria-expanded={more} aria-controls="more-tools" onClick={() => setParams(more ? {} : { more: '1' }, { replace: true })} className="tap" style={{ alignSelf: 'flex-start', display: 'flex', alignItems: 'center', gap: 8, padding: '8px 0', fontSize: 14, fontWeight: 800, color: '#00638E' }}>
-          {more ? 'Fewer tools ↑' : 'For inspiration: coaching questions, records, downloads ↓'}
+          {more ? 'Fewer tools ↑' : 'For inspiration: coaching questions, records, glossary, downloads ↓'}
         </button>
         {more && (
           <div id="more-tools" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: '28px 32px' }}>

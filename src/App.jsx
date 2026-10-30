@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
-import { BY, CHAPTERS, KEY_TOOLS, TOPICS, TOOLS, pathOf, qbCats, secOf, topicPath } from './content.js';
+import { BY, CHAPTERS, GLOSSARY, KEY_TOOLS, TOPICS, TOOLS, isShown, pathOf, qbCats, secOf, termSlug, topicPath } from './content.js';
 import { clearMyNotes, useStored } from './store.js';
 import { Icon } from './ui.jsx';
 import Home from './pages/Home.jsx';
@@ -47,24 +47,29 @@ function Search({ narrow }) {
   const qq = q.trim().toLowerCase();
   const subTitles = t => { const s = secOf(t); return s ? s.subs.map(x => x.title).join(' ') : ''; };
   const results = qq ? [...TOPICS.filter(p => !p.link), ...TOOLS].filter(p => (p.title + ' ' + (p.ch ? p.ch.title : p.group) + ' ' + (p.kind || '') + ' ' + subTitles(p) + (p.type === 'qbank' ? ' ' + qbCats().map(c => c.title).join(' ') : '')).toLowerCase().includes(qq)).slice(0, 6) : [];
-  const go = p => { setQ(''); setOpen(false); navigate(pathOf(p)); };
+  // Glossary terms whose name matches, shown after the pages (only while the glossary is shown).
+  const terms = qq && isShown('tk-terms') ? GLOSSARY.filter(t => t.term.toLowerCase().includes(qq)).slice(0, 3)
+    .map(t => ({ id: 'term:' + t.term, title: t.term, glossary: true, to: '/toolbox/tk-terms?term=' + termSlug(t.term) })) : [];
+  const hits = [...results.slice(0, terms.length ? 5 : 6), ...terms];
+  const hrefOf = p => (p.glossary ? p.to : pathOf(p));
+  const go = p => { setQ(''); setOpen(false); navigate(hrefOf(p)); };
   return (
     <div ref={box} style={{ position: 'relative', width: narrow ? 170 : 240 }} onKeyDown={e => { if (e.key === 'Escape') { setOpen(false); } }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, height: 38, padding: '0 12px', borderRadius: 4, background: 'rgba(255,255,255,.1)', border: '1px solid rgba(255,255,255,.22)' }}>
         {Icon.search()}
         <input type="search" aria-label="Search" value={q} onChange={e => { setQ(e.target.value); setOpen(true); }} onFocus={() => setOpen(true)}
-          onKeyDown={e => { if (e.key === 'Enter' && results[0]) go(results[0]); }}
+          onKeyDown={e => { if (e.key === 'Enter' && hits[0]) go(hits[0]); }}
           placeholder="Search" style={{ flex: 1, minWidth: 0, background: 'transparent', border: 0, outline: 'none', color: '#fff', fontSize: 13, boxShadow: 'none' }} />
       </div>
       {open && qq && (
         <div role="listbox" style={{ position: 'absolute', top: 44, right: 0, width: 340, maxWidth: '90vw', background: '#fff', color: '#1A1A1A', border: '1px solid #D8D9DA', borderRadius: 4, boxShadow: '0 8px 24px rgba(20,40,80,.16)', padding: 6, display: 'flex', flexDirection: 'column', zIndex: 60 }}>
-          {results.map(p => (
-            <Link key={p.id} to={pathOf(p)} onClick={() => { setQ(''); setOpen(false); }} className="hv-cloud" style={{ padding: '9px 10px', borderRadius: 3, display: 'flex', flexDirection: 'column', gap: 2 }}>
-              <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: '#63666A' }}>{p.ch ? `Read · ${p.ch.title}` : 'Toolbox'}</span>
+          {hits.map(p => (
+            <Link key={p.id} to={hrefOf(p)} onClick={() => { setQ(''); setOpen(false); }} className="hv-cloud" style={{ padding: '9px 10px', borderRadius: 3, display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: '#63666A' }}>{p.glossary ? 'Glossary' : p.ch ? `Read · ${p.ch.title}` : 'Toolbox'}</span>
               <span style={{ fontSize: 14, fontWeight: 700, color: '#00638E' }}>{p.title}</span>
             </Link>
           ))}
-          {!results.length && <div style={{ padding: 10, fontSize: 13, color: '#63666A' }}>Nothing matches this search.</div>}
+          {!hits.length && <div style={{ padding: 10, fontSize: 13, color: '#63666A' }}>Nothing matches this search.</div>}
         </div>
       )}
     </div>

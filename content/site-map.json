@@ -1045,6 +1045,20 @@
           "contentRef": null
         }
       ]
+    },
+    {
+      "group": "REFERENCE",
+      "tools": [
+        {
+          "id": "tk-terms",
+          "title": "Playbook glossary",
+          "type": "terms",
+          "kind": "Glossary",
+          "tier": "inspiration",
+          "contentRef": null,
+          "subtitle": "Words used in the playbook, in plain language"
+        }
+      ]
     }
   ],
   "keyTools": [

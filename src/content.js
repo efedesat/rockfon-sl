@@ -2,12 +2,16 @@
 // from content/playbook.json. No playbook copy lives in code.
 import siteMap from '../content/site-map.json';
 import playbook from '../content/playbook.json';
+import glossary from '../content/glossary.json';
 
 export const LIB = playbook.parts;
 // Cockpit content per meeting and agenda topic: purpose, data, ask, run, watch.
 export const COCKPIT = playbook.cockpit || {};
 export const COCKPIT_PHASES = playbook.cockpitPhases || {};
 export const DEAL_ROOM = siteMap.dealRoom;
+// Playbook glossary (Toolbox → Playbook glossary), A–Z. `see` is a topic or tool id.
+export const GLOSSARY = glossary.terms;
+export const termSlug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 export const DASHBOARD = siteMap.dashboard || [];
 // Finds the dashboard element a "Data to look at" line refers to: [page, element].
 export function dashMatch(str) {

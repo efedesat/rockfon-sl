@@ -7,6 +7,7 @@ import { Bar, Bars, Btn, Icon, PillToggle, Tag, TierLabel } from '../ui.jsx';
 import Meeting from './Meeting.jsx';
 import DealRoom from './DealRoom.jsx';
 import Dashboard from './Dashboard.jsx';
+import Terms from './Terms.jsx';
 
 const LBL = { fontSize: 11, fontWeight: 700, letterSpacing: '.12em', color: '#63666A' };
 
@@ -277,11 +278,11 @@ function Glossary() {
   );
 }
 
-const BODY = { doc: Doc, record: Record, qbank: QBank, meeting: Meeting, visit: Visit, dashboard: Dashboard, accordion: Accordion, pocket: Pocket, downloads: Downloads, voices: Voices, glossary: Glossary };
+const BODY = { doc: Doc, record: Record, qbank: QBank, meeting: Meeting, visit: Visit, dashboard: Dashboard, accordion: Accordion, pocket: Pocket, downloads: Downloads, voices: Voices, glossary: Glossary, terms: Terms };
 
 export default function Tool({ tool, narrow }) {
   const Body = BODY[tool.type];
-  const hasContent = !!secOf(tool) || tool.type === 'qbank' || tool.type === 'meeting';
+  const hasContent = !!secOf(tool) || tool.type === 'qbank' || tool.type === 'meeting' || tool.type === 'terms';
   const { state } = useLocation();
   const from = state && state.from;
   return (
