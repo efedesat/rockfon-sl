@@ -87,7 +87,7 @@ export function Wheels({ chId }) {
 // ── Four instances ──────────────────────────────────────────────────
 export function FourInstances({ sec, chId }) {
   const [fi, setFi] = useState(0);
-  const rhSub = sec.subs.find(x => x.title === 'The minimum commercial rhythm'), rt = rhSub && rhSub.blocks.find(b => b.t === 'table');
+  const rhSub = sec.subs.find(x => x.title === 'The commercial rhythm'), rt = rhSub && rhSub.blocks.find(b => b.t === 'table');
   const meets = sec.subs.filter(x => x !== rhSub), i = Math.min(fi, meets.length - 1), mt = meets[i];
   const tl = mt ? TOOLS.find(x => x.title === mt.title) : null;
   const M = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'], cols = 'minmax(150px,1.6fr) repeat(12,minmax(0,1fr))';

@@ -97,7 +97,7 @@ export const minsOf = t => { const sec = secOf(t); return sec ? Math.max(2, Math
 export function rhythmTable() {
   const cw = LIB['commercial-wheel'];
   const sec = cw && cw.sections.find(x => x.id === 'four-instances');
-  const sub = sec && sec.subs.find(x => x.title === 'The minimum commercial rhythm');
+  const sub = sec && sec.subs.find(x => x.title === 'The commercial rhythm');
   return sub ? sub.blocks.find(b => b.t === 'table') : null;
 }
 export function rhythmRow(tool) {
