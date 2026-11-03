@@ -75,7 +75,7 @@ All case data lives in `content/training-cases.json`. Totals shown on screen (to
 
 ## Versions and "What's new"
 
-`content/changelog.json` holds the stage (for example "Beta") and the releases, newest first. The home page footer shows the stage, the newest version and its date, and links to `/changelog`, which lists every release. To publish a new version, add an entry at the top of `releases` with `version`, `date` (YYYY-MM-DD) and `groups` of short, reader-facing lines.
+`content/changelog.json` holds the stage (for example "Beta") and the releases, newest first. The home page footer shows the stage, the newest version and its date. The `/changelog` page listing every release is hidden for now; set `changelog: true` in `src/settings.js` to show it again (the footer then links to it). To publish a new version, add an entry at the top of `releases` with `version`, `date` (YYYY-MM-DD) and `groups` of short, reader-facing lines.
 
 ## Large screens
 

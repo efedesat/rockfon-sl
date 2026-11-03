@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { BY, CHAPTERS, isKeyChapter, isShown, topicPath } from '../content.js';
 import { Icon } from '../ui.jsx';
 import { fmtDate, LATEST, STAGE } from './Changelog.jsx';
+import { SETTINGS } from '../settings.js';
 
 // Tile looks of the "ceiling grid", by position. Leading change keeps its own
 // photo wherever it lands (CHAPTER_TILE).
@@ -81,9 +82,15 @@ export default function Home({ narrow }) {
             </span>
           </Link>
         </nav>
-        <Link to="/changelog" className="hv-op1" style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: '#fff', opacity: 0.55 }}>
-          {STAGE} · Version {LATEST.version} · Updated {fmtDate(LATEST.date)} · What's new →
-        </Link>
+        {SETTINGS.changelog ? (
+          <Link to="/changelog" className="hv-op1" style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: '#fff', opacity: 0.55 }}>
+            {STAGE} · Version {LATEST.version} · Updated {fmtDate(LATEST.date)} · What's new →
+          </Link>
+        ) : (
+          <span style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 700, letterSpacing: '.16em', textTransform: 'uppercase', color: '#fff', opacity: 0.55 }}>
+            {STAGE} · Version {LATEST.version} · Updated {fmtDate(LATEST.date)}
+          </span>
+        )}
       </div>
     </div>
   );

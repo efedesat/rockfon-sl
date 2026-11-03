@@ -11,6 +11,7 @@ import Toolbox from './pages/Toolbox.jsx';
 import Tool from './pages/Tool.jsx';
 import Admin from './pages/AdminFeedback.jsx';
 import Changelog from './pages/Changelog.jsx';
+import { SETTINGS } from './settings.js';
 
 export function useNarrow() {
   const get = () => typeof window !== 'undefined' && window.innerWidth < 1000;
@@ -25,7 +26,7 @@ function usePage() {
   const parts = pathname.split('/').filter(Boolean);
   if (!parts.length) return { view: 'home' };
   if (parts[0] === 'guide') return { view: 'guide' };
-  if (parts[0] === 'changelog') return { view: 'changelog' };
+  if (parts[0] === 'changelog' && SETTINGS.changelog) return { view: 'changelog' };
   if (parts[0] === 'admin') return { view: 'admin' };
   if (parts[0] === 'read' && parts[2] && BY[parts[2]] && !BY[parts[2]].isTool && !BY[parts[2]].hidden) return { view: 'topic', cur: BY[parts[2]] };
   if (parts[0] === 'read' && BY[parts[1]] && BY[parts[1]].isChapter && !BY[parts[1]].hidden) return { view: 'room', cur: BY[parts[1]] };
@@ -262,7 +263,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home narrow={narrow} />} />
             <Route path="/guide" element={<Guide narrow={narrow} />} />
-            <Route path="/changelog" element={<Changelog narrow={narrow} />} />
+            {SETTINGS.changelog && <Route path="/changelog" element={<Changelog narrow={narrow} />} />}
             <Route path="/read/:chapterId" element={<ChapterRoute narrow={narrow} />} />
             <Route path="/read/:chapterId/:topicId" element={<TopicRoute narrow={narrow} mainRef={mainRef} />} />
             <Route path="/toolbox" element={<Toolbox narrow={narrow} />} />
