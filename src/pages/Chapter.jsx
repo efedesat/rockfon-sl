@@ -36,13 +36,17 @@ export default function Chapter({ ch, narrow }) {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
                 <h2 style={{ ...H, margin: 0 }}>START HERE</h2>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(170px,1fr))', gap: 10 }}>
-                  {start.map((t, i) => (
-                    <Link key={t.id} to={topicPath(t)} className="hv-navy tr" style={{ display: 'flex', flexDirection: 'column', gap: 10, minHeight: 150, padding: '18px 18px 16px', background: '#142850', color: '#fff', borderRadius: 4 }}>
-                      <span style={{ fontSize: 22, fontWeight: 800, color: '#45A6DE' }}>{String(i + 1).padStart(2, '0')}</span>
-                      <span style={{ fontSize: 15, fontWeight: 800, lineHeight: 1.3, textWrap: 'pretty' }}>{t.title}</span>
-                      <span style={{ fontSize: 12, fontWeight: 600, opacity: 0.75, marginTop: 'auto' }}>{minsOf(t)} min read</span>
-                    </Link>
-                  ))}
+                  {start.map((t, i) => {
+                    // A single Start here card is a compact row; several sit side by side as tall cards.
+                    const one = start.length === 1;
+                    return (
+                      <Link key={t.id} to={topicPath(t)} className="hv-navy tr" style={{ display: 'flex', flexDirection: one ? 'row' : 'column', alignItems: one ? 'center' : 'stretch', gap: one ? 16 : 10, minHeight: one ? 0 : 150, padding: one ? '16px 18px' : '18px 18px 16px', background: '#142850', color: '#fff', borderRadius: 4 }}>
+                        <span style={{ fontSize: 22, fontWeight: 800, color: '#45A6DE' }}>{String(i + 1).padStart(2, '0')}</span>
+                        <span style={{ flex: one ? 1 : 'none', fontSize: one ? 16 : 15, fontWeight: 800, lineHeight: 1.3, textWrap: 'pretty' }}>{t.title}</span>
+                        <span style={{ fontSize: 12, fontWeight: 600, opacity: 0.75, marginTop: one ? 0 : 'auto', whiteSpace: 'nowrap' }}>{minsOf(t)} min read</span>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}
