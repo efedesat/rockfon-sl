@@ -121,7 +121,7 @@
           "id": "sct-grow",
           "title": "The GROW model",
           "group": null,
-          "pageType": "editorial",
+          "pageType": "model",
           "module": null,
           "contentRef": {
             "part": "sales-coaching-training",
@@ -637,7 +637,7 @@
           "id": "lptc-adkar",
           "title": "The ADKAR model",
           "group": null,
-          "pageType": "editorial",
+          "pageType": "model",
           "module": null,
           "contentRef": {
             "part": "leading-people-through-change",

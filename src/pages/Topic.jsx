@@ -19,7 +19,6 @@ function TopicEnd({ t }) {
     <div className="no-print" style={{ maxWidth: 760, margin: '0 auto', padding: '56px 32px 140px', display: 'flex', flexDirection: 'column', gap: 40 }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '24px 26px', background: '#F2F3F4', borderRadius: 4 }}>
         <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.14em', color: '#00638E' }}>PAUSE AND REFLECT</span>
-        <Bar h={15} bg="#B1B2B4" w="78%" />
         <textarea aria-label="Your notes" value={note} onChange={e => setNote(t.id, e.target.value)} placeholder="Your notes. Only you can see these."
           style={{ minHeight: 96, resize: 'vertical', border: '1px solid #D8D9DA', borderRadius: 3, padding: '12px 14px', fontSize: 14, lineHeight: 1.5, color: '#1A1A1A', outline: 'none', background: '#fff' }} />
         <span style={{ fontSize: 11, color: '#63666A' }}>{note ? 'Saved on this device' : 'Saved automatically on this device'}</span>
@@ -130,8 +129,28 @@ function Article({ t, sec }) {
     // The role's articles read straight through, without an "In this topic" list.
     body = <Section sec={sec} toc={(t.contentRef || {}).part !== 'the-role'} noIntro={t.module === 'wheels'} linkFrom={t.ch.id} />;
   }
+  // Model pages (GROW, ADKAR): a light header with the model's letters instead of a photo.
+  const steps = t.type === 'model' && sec ? sec.intro.find(b => b.t === 'steps') : null;
   return (
     <>
+      {steps ? (
+        <div style={{ background: '#F2F3F4', borderBottom: '1px solid #D8D9DA' }}>
+          <div style={{ maxWidth: 760, margin: '0 auto', padding: '96px 32px 44px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <TierLabel tier={tier} hint={false} />
+            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.16em', color: '#63666A', textTransform: 'uppercase' }}>Chapter {t.ch.n} · {t.ch.title}</span>
+            <h1 style={{ margin: 0, fontSize: 42, lineHeight: 1.1, fontWeight: 800, color: '#142850', textWrap: 'pretty' }}>{t.title}</h1>
+            <div aria-hidden="true" style={{ display: 'flex', flexWrap: 'wrap', gap: 8, paddingTop: 10 }}>
+              {steps.items.map((it, i) => (
+                <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 6, width: 92 }}>
+                  <span style={{ width: 64, height: 64, borderRadius: 4, background: '#142850', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 34, fontWeight: 800 }}>{it.k}</span>
+                  <span style={{ fontSize: 12.5, fontWeight: 700, color: '#142850' }}>{it.title}</span>
+                </div>
+              ))}
+            </div>
+            <span style={{ fontSize: 12, fontWeight: 700, color: '#63666A', paddingTop: 6 }}>{minsOf(t)} min read</span>
+          </div>
+        </div>
+      ) : (
       <div style={{ position: 'relative', height: 440, background: `#142850 url(${t.imgs[0]}) center/cover`, display: 'flex', alignItems: 'flex-end' }}>
         <div className="scrim" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg,rgba(20,40,80,.94) 0%,rgba(20,40,80,.35) 60%,rgba(20,40,80,.5) 100%)' }} />
         <div style={{ position: 'relative', width: '100%', maxWidth: 760, margin: '0 auto', padding: '0 32px 44px', display: 'flex', flexDirection: 'column', gap: 14, color: '#fff' }}>
@@ -141,6 +160,7 @@ function Article({ t, sec }) {
           <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.75, paddingTop: 6 }}>{minsOf(t)} min read</span>
         </div>
       </div>
+      )}
       <div style={{ maxWidth: 760, margin: '0 auto', padding: '48px 32px 0', display: 'flex', flexDirection: 'column', gap: 40 }}>
         {!sec && <Bars widths={['100%', '88%', '93%', '40%']} h={12} gap={12} />}
         <div style={{ paddingTop: 8, display: 'flex', flexDirection: 'column', gap: 44 }}>

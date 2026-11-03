@@ -1476,6 +1476,14 @@
      "title": "The GROW model",
      "intro": [
       {
+       "t": "p",
+       "h": "GROW is a simple structure for a coaching conversation. It moves from what the person wants to achieve, through what is happening now and what they could do, to a clear commitment. The salesperson does the thinking; the leader asks the questions and keeps the conversation moving."
+      },
+      {
+       "t": "p",
+       "h": "It fits the way we coach at Rockfon. It builds ownership, it works in five minutes or in an hour, and it ends with an action that can be followed up in the next meeting."
+      },
+      {
        "t": "steps",
        "items": [
         {
@@ -1515,9 +1523,34 @@
          ]
         }
        ]
+      },
+      {
+       "t": "p",
+       "h": "GROW was popularised by Sir John Whitmore in his book <em>Coaching for Performance</em>."
       }
      ],
      "subs": [
+      {
+       "title": "Moving through the four steps",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "<strong>Goal.</strong> Agree what the conversation should achieve before discussing the problem. A clear goal keeps the conversation short and focused. If the goal changes along the way, say so and agree the new one."
+        },
+        {
+         "t": "p",
+         "h": "<strong>Reality.</strong> Separate facts from assumptions and opinions, and ask what has already been tried. Most of the value is here: when the situation is clear, good options often become obvious."
+        },
+        {
+         "t": "p",
+         "h": "<strong>Options.</strong> Let the salesperson suggest options before you add yours, and ask \"What else?\" at least once. Offer your own idea as one option among several, not as the answer."
+        },
+        {
+         "t": "p",
+         "h": "<strong>Will.</strong> Ask the person to choose. End with an action, an owner and a date, and agree how you will follow it up. Without a clear Will, the conversation stays a discussion."
+        }
+       ]
+      },
       {
        "title": "Where to use it",
        "blocks": [
@@ -1545,6 +1578,10 @@
            "h": "To work through a shared problem and agree who does what"
           }
          ]
+        },
+        {
+         "t": "p",
+         "h": "In the playbook, GROW gives structure to the coaching part of the 1:1 meetings, to ad-hoc coaching between reviews and to the questions in the <a href=\"/toolbox/tk-qbank\">Coaching questions</a> tool."
         }
        ]
       },
@@ -1560,6 +1597,15 @@
           "End with an action, an owner and a date",
           "Follow up on it in the next meeting"
          ]
+        }
+       ]
+      },
+      {
+       "title": "An example",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "Illustrative example: Maria's must-win office project has not moved for six weeks. <strong>Goal:</strong> she wants to leave the conversation with a next step that brings the decision closer. <strong>Reality:</strong> the architect likes the design option, but nobody has met the contractor who will make the decision. <strong>Options:</strong> ask the architect for an introduction, join the contractor's next site meeting, or invite the contractor to a reference project. <strong>Will:</strong> Maria asks the architect for the introduction on Monday and reports back in the next 1:1."
         }
        ]
       }
@@ -2576,6 +2622,10 @@
        "h": "How an individual adopts a change. It shows the leader where progress is blocked, so they can choose the right response."
       },
       {
+       "t": "p",
+       "h": "Change in a team happens one person at a time. Two people can hear the same message and be stuck in different places: one does not see why the change is needed, the other is willing but does not yet know how. ADKAR gives the leader a shared language to find where each person is and respond to that, instead of repeating the same message to everyone."
+      },
+      {
        "t": "steps",
        "items": [
         {
@@ -2611,6 +2661,28 @@
       }
      ],
      "subs": [
+      {
+       "title": "Use it to find where progress is blocked",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "The five steps build on each other. Desire rarely grows without Awareness, and training adds little for someone who does not yet want to take part. Start at the first step that is missing and work forward from there."
+        },
+        {
+         "t": "ol",
+         "items": [
+          "Listen to how the person talks about the change, and look at what they actually do.",
+          "Use the signs in each step below to find the first step that is missing.",
+          "Respond to that step, not only to what you see on the surface.",
+          "Check again in the next meeting. People can move forward, and they can slip back."
+         ]
+        },
+        {
+         "t": "p",
+         "h": "ADKAR works alongside the other guidance in this chapter. Use it to prepare a change conversation, and to decide what support someone needs before concluding that a change is not happening."
+        }
+       ]
+      },
       {
        "title": "Awareness: Why is this change needed?",
        "blocks": [
@@ -2738,6 +2810,15 @@
            ]
           }
          ]
+        }
+       ]
+      },
+      {
+       "title": "An example",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "Illustrative example: Peter records his visits in Rocksell but still keeps his own spreadsheet of opportunities. He can explain why the shared pipeline matters (Awareness) and says he supports it (Desire). When the leader asks him to show his last updates, it becomes clear that he is unsure which fields the pipeline review relies on (Knowledge). Instead of repeating why Rocksell matters, the leader works through one opportunity with him and asks him to update the next one himself."
         }
        ]
       },
