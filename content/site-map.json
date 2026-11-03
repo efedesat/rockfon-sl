@@ -118,6 +118,23 @@
       ],
       "topics": [
         {
+          "id": "sct-grow",
+          "title": "The GROW model",
+          "group": null,
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "sales-coaching-training",
+            "sectionId": "the-grow-model"
+          },
+          "relatedTool": "tk-qbank",
+          "photos": [
+            "assets/photos/image45.jpeg",
+            "assets/photos/image46.jpeg"
+          ],
+          "startHere": true
+        },
+        {
           "id": "sct-1",
           "title": "Coaching in Rockfon sales",
           "group": "Sales coaching training",
@@ -616,6 +633,23 @@
         "tk-kit"
       ],
       "topics": [
+        {
+          "id": "lptc-adkar",
+          "title": "The ADKAR model",
+          "group": null,
+          "pageType": "editorial",
+          "module": null,
+          "contentRef": {
+            "part": "leading-people-through-change",
+            "sectionId": "the-adkar-model"
+          },
+          "relatedTool": null,
+          "photos": [
+            "assets/photos/image50.jpeg",
+            "assets/photos/image49.jpeg"
+          ],
+          "startHere": true
+        },
         {
           "id": "lptc-1",
           "title": "Prepare people before asking for change",

@@ -1,5 +1,5 @@
 // Renders playbook.json blocks ({t: 'p'|'ul'|'ol'|'table'|'quote'|'statement'|'swap'|'pair'|
-// 'runway'|'formula'|'levers'}) exactly as written. Layout only: the wording comes from the content file.
+// 'runway'|'formula'|'levers'|'steps'|'columns'}) exactly as written. Layout only: the wording comes from the content file.
 import { useState } from 'react';
 import { strip, TOOLS } from './content.js';
 import { ToolLinkCard } from './ui.jsx';
@@ -216,8 +216,8 @@ export function Block({ b, lede, dark }) {
       {b.items.map((it, j) => (
         <div key={j} style={{ padding: '22px 22px 20px', border: '1px solid #D8D9DA', borderRadius: 4, display: 'flex', flexDirection: 'column', gap: 10 }}>
           <span style={ST.eyebrow}>{it.k}</span>
-          <span style={{ fontSize: 19, lineHeight: 1.25, fontWeight: 800, color: '#142850' }}>{it.title}</span>
-          <Rich style={{ fontSize: 15.5, lineHeight: 1.55, color: '#1A1A1A', textWrap: 'pretty' }} html={it.h} />
+          {it.title && <span style={{ fontSize: 19, lineHeight: 1.25, fontWeight: 800, color: '#142850' }}>{it.title}</span>}
+          {it.h && <Rich style={{ fontSize: 15.5, lineHeight: 1.55, color: '#1A1A1A', textWrap: 'pretty' }} html={it.h} />}
           {(it.ask || []).length > 0 && (
             <ul style={{ listStyle: 'none', margin: '6px 0 0', padding: '12px 0 0', borderTop: '1px solid #EEEFF0', display: 'flex', flexDirection: 'column', gap: 8 }}>
               {it.ask.map((q, k) => (
@@ -228,6 +228,49 @@ export function Block({ b, lede, dark }) {
               ))}
             </ul>
           )}
+        </div>
+      ))}
+    </div>
+  );
+  // Lettered steps of a model (GROW, ADKAR): letter, name, then a question (h) and/or questions (ask).
+  // One row of cards by default; stack: true stacks them for longer texts.
+  if (b.t === 'steps') return (
+    <ol className={b.stack ? '' : 'steps-grid'} style={{ '--n': b.items.length, listStyle: 'none', margin: 0, padding: 0, gap: 8, ...(b.stack ? { display: 'flex', flexDirection: 'column' } : null) }}>
+      {b.items.map((it, j) => (
+        <li key={j} style={{ minWidth: 0, display: 'flex', flexDirection: 'column', gap: 10, padding: '16px 14px 18px', background: '#F2F3F4', borderRadius: 4 }}>
+          <span style={{ display: 'flex', flexDirection: b.stack ? 'row' : 'column', alignItems: b.stack ? 'center' : 'flex-start', gap: b.stack ? 12 : 8 }}>
+            <span aria-hidden="true" style={{ flex: 'none', width: 40, height: 40, borderRadius: 3, background: '#142850', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, fontWeight: 800 }}>{it.k}</span>
+            <span style={{ fontSize: !b.stack && b.items.length > 4 ? 15 : 17, lineHeight: 1.2, fontWeight: 800, color: '#142850' }}>{it.title}</span>
+          </span>
+          {it.h && <Rich style={{ fontSize: 15, lineHeight: 1.5, color: '#1A1A1A', textWrap: 'pretty' }} html={it.h} />}
+          {(it.ask || []).length > 0 && (
+            <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 7 }}>
+              {it.ask.map((q, k) => (
+                <li key={k} style={{ display: 'flex', gap: 9, alignItems: 'baseline' }}>
+                  <span aria-hidden="true" style={{ flex: 'none', width: 6, height: 6, borderRadius: 1, background: '#00638E', transform: 'translateY(-3px)' }} />
+                  <Rich style={{ fontSize: 14.5, lineHeight: 1.45, color: '#142850', fontWeight: 600 }} html={q} />
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ol>
+  );
+  // Side-by-side lists with a label each, e.g. "Signs it is missing" / "What the leader does".
+  if (b.t === 'columns') return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12 }}>
+      {b.items.map((it, j) => (
+        <div key={j} style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '18px 20px', borderRadius: 4, ...(j ? { border: '1px solid #00638E' } : { background: '#F2F3F4' }) }}>
+          <span style={{ ...ST.eyebrow, color: j ? '#00638E' : '#63666A' }}>{it.k}</span>
+          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {it.items.map((x, k) => (
+              <li key={k} style={{ display: 'flex', gap: 10, alignItems: 'baseline' }}>
+                <span aria-hidden="true" style={{ flex: 'none', width: 6, height: 6, borderRadius: 1, background: j ? '#00638E' : '#8A8D91', transform: 'translateY(-3px)' }} />
+                <Rich style={{ fontSize: 15.5, lineHeight: 1.5, color: '#1A1A1A' }} html={x} />
+              </li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>

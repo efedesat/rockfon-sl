@@ -684,6 +684,26 @@
       "group": "Data and reporting",
       "inferred": true,
       "see": "tk-dash"
+    },
+    {
+      "term": "GROW model",
+      "definition": "A coaching model in four steps: Goal, Reality, Options and Will. Use it whenever someone needs to think: on yourself, with a salesperson, on skills or with your team.",
+      "source": {
+        "part": "sales-coaching-training",
+        "section": "the-grow-model"
+      },
+      "see": "sct-grow",
+      "group": "Coaching and development"
+    },
+    {
+      "term": "ADKAR model",
+      "definition": "How an individual adopts a change, in five steps: Awareness, Desire, Knowledge, Ability and Reinforcement. It shows the leader where progress is blocked. ADKAR is a model by Prosci.",
+      "source": {
+        "part": "leading-people-through-change",
+        "section": "the-adkar-model"
+      },
+      "see": "lptc-adkar",
+      "group": "Leading change"
     }
   ]
 }

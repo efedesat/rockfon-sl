@@ -1470,6 +1470,100 @@
        ]
       }
      ]
+    },
+    {
+     "id": "the-grow-model",
+     "title": "The GROW model",
+     "intro": [
+      {
+       "t": "steps",
+       "items": [
+        {
+         "k": "G",
+         "title": "Goal",
+         "ask": [
+          "What do you want to achieve?",
+          "What would a good outcome look like?",
+          "What do you want from this conversation?"
+         ]
+        },
+        {
+         "k": "R",
+         "title": "Reality",
+         "ask": [
+          "What is happening now?",
+          "What have you tried so far?",
+          "What do you know, and what are you assuming?"
+         ]
+        },
+        {
+         "k": "O",
+         "title": "Options",
+         "ask": [
+          "What could you do?",
+          "What else could you do?",
+          "What would you do if you had no constraints?"
+         ]
+        },
+        {
+         "k": "W",
+         "title": "Will",
+         "ask": [
+          "What will you do?",
+          "Which option will you choose?",
+          "What is the first step, and when?"
+         ]
+        }
+       ]
+      }
+     ],
+     "subs": [
+      {
+       "title": "Where to use it",
+       "blocks": [
+        {
+         "t": "p",
+         "h": "Use it whenever someone needs to think."
+        },
+        {
+         "t": "levers",
+         "items": [
+          {
+           "k": "On yourself",
+           "h": "To prepare for a meeting or think through a decision"
+          },
+          {
+           "k": "With a salesperson",
+           "h": "On an opportunity, an account or a situation they want to handle better"
+          },
+          {
+           "k": "On skills",
+           "h": "To improve a specific skill, such as a customer conversation or planning"
+          },
+          {
+           "k": "With your team",
+           "h": "To work through a shared problem and agree who does what"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "How to use it",
+       "blocks": [
+        {
+         "t": "ol",
+         "items": [
+          "Agree the goal first",
+          "Stay in Reality until the facts are clear",
+          "Let the salesperson find the options",
+          "End with an action, an owner and a date",
+          "Follow up on it in the next meeting"
+         ]
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -2468,6 +2562,218 @@
         {
          "t": "p",
          "h": "Judge the individual case. Strong commercial results do not automatically outweigh a continuing failure to meet legitimate working standards, and escalation is not a way to close down useful challenge."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "the-adkar-model",
+     "title": "The ADKAR model",
+     "intro": [
+      {
+       "t": "p",
+       "h": "How an individual adopts a change. It shows the leader where progress is blocked, so they can choose the right response."
+      },
+      {
+       "t": "steps",
+       "items": [
+        {
+         "k": "A",
+         "title": "Awareness",
+         "h": "Does the person understand why the change is needed?"
+        },
+        {
+         "k": "D",
+         "title": "Desire",
+         "h": "What affects their willingness to participate?"
+        },
+        {
+         "k": "K",
+         "title": "Knowledge",
+         "h": "Do they know what to do and how?"
+        },
+        {
+         "k": "A",
+         "title": "Ability",
+         "h": "Can they perform it in their actual working conditions?"
+        },
+        {
+         "k": "R",
+         "title": "Reinforcement",
+         "h": "What will help the behaviour continue?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "h": "ADKAR is a model by Prosci."
+      }
+     ],
+     "subs": [
+      {
+       "title": "Awareness: Why is this change needed?",
+       "blocks": [
+        {
+         "t": "columns",
+         "items": [
+          {
+           "k": "Signs it is missing",
+           "items": [
+            "Asks why we are doing this",
+            "Sees it as a management decision with no reason",
+            "Thinks the current way works fine"
+           ]
+          },
+          {
+           "k": "What the leader does",
+           "items": [
+            "Explain the business reason, not only the decision",
+            "Say what happens if nothing changes",
+            "Ask them to explain the reason back"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Desire: Do they want to take part?",
+       "blocks": [
+        {
+         "t": "columns",
+         "items": [
+          {
+           "k": "Signs it is missing",
+           "items": [
+            "Understands the reason but holds back",
+            "Objections about time, autonomy or past initiatives",
+            "Agrees quietly, then nothing happens"
+           ]
+          },
+          {
+           "k": "What the leader does",
+           "items": [
+            "Listen to the objection before answering",
+            "Show what is in it for them",
+            "Be clear about what is fixed. Desire is not a veto"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Knowledge: Do they know what to do and how?",
+       "blocks": [
+        {
+         "t": "columns",
+         "items": [
+          {
+           "k": "Signs it is missing",
+           "items": [
+            "Willing, but unsure where to start",
+            "Asks the same questions again",
+            "Does it differently each time"
+           ]
+          },
+          {
+           "k": "What the leader does",
+           "items": [
+            "Show the steps",
+            "Give a clear example of what good looks like",
+            "Ask them to explain or show it back"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Ability: Can they do it in their real work?",
+       "blocks": [
+        {
+         "t": "columns",
+         "items": [
+          {
+           "k": "Signs it is missing",
+           "items": [
+            "Knows the steps, but it does not happen",
+            "Quality drops under pressure",
+            "Workload, access or confidence get in the way"
+           ]
+          },
+          {
+           "k": "What the leader does",
+           "items": [
+            "Practise on real work",
+            "Remove genuine obstacles",
+            "Coach until it is reliable"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "Reinforcement: Will the new behaviour last?",
+       "blocks": [
+        {
+         "t": "columns",
+         "items": [
+          {
+           "k": "Signs it is missing",
+           "items": [
+            "Good start, then old habits return",
+            "Only happens when someone checks",
+            "Nothing happens when it stops"
+           ]
+          },
+          {
+           "k": "What the leader does",
+           "items": [
+            "Use it consistently in reviews",
+            "Recognise improvement",
+            "Follow through on missed commitments"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "title": "How we apply it to the new meetings and Rocksell",
+       "blocks": [
+        {
+         "t": "steps",
+         "items": [
+          {
+           "k": "A",
+           "title": "Awareness",
+           "h": "Explain the commercial problem the meetings and shared CRM information should address. Use examples of missed follow-up, weak preparation or unclear ownership."
+          },
+          {
+           "k": "D",
+           "title": "Desire",
+           "h": "Explore the perceived benefit, time cost, loss of autonomy and credibility of previous initiatives. Hear the objection before answering it."
+          },
+          {
+           "k": "K",
+           "title": "Knowledge",
+           "h": "Demonstrate the agreed Rocksell workflow and meeting preparation. Ask the salesperson to explain or demonstrate it themselves."
+          },
+          {
+           "k": "A",
+           "title": "Ability",
+           "h": "Check practical execution, access, confidence, workload and calendar capacity. Practise where needed and resolve genuine obstacles."
+          },
+          {
+           "k": "R",
+           "title": "Reinforcement",
+           "h": "Use the information consistently in reviews, recognise improvement, deliver promised support and address missed commitments."
+          }
+         ],
+         "stack": true
         }
        ]
       }

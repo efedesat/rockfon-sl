@@ -2,6 +2,20 @@
   "stage": "Beta",
   "releases": [
     {
+      "version": "0.5",
+      "date": "2026-11-03",
+      "groups": [
+        {
+          "heading": "New",
+          "items": [
+            "Chapter 2: the GROW coaching model, with its questions, where to use it and how to use it.",
+            "Chapter 5: the ADKAR model, with the signs that each step is missing, what the leader does, and how we apply it to the new meetings and Rocksell.",
+            "GROW and ADKAR are also in the Playbook glossary."
+          ]
+        }
+      ]
+    },
+    {
       "version": "0.4",
       "date": "2026-10-30",
       "groups": [

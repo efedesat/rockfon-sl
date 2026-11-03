@@ -76,6 +76,10 @@ textarea::placeholder { color: #8A8D91; }
 .btn-full { width: 100%; }
 .btn:disabled { opacity: .45; cursor: default; pointer-events: none; }
 
+/* Lettered model steps (GROW, ADKAR): one row on wide screens, two columns on phones. */
+.steps-grid { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); }
+@media (max-width: 720px) { .steps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
 @media (pointer: coarse) {
   .tap { min-height: 44px; min-width: 44px; }
 }
