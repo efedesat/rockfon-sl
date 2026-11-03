@@ -282,7 +282,7 @@ const BODY = { doc: Doc, record: Record, qbank: QBank, meeting: Meeting, visit: 
 
 export default function Tool({ tool, narrow }) {
   const Body = BODY[tool.type];
-  const hasContent = !!secOf(tool) || tool.type === 'qbank' || tool.type === 'meeting' || tool.type === 'terms';
+  const hasContent = !!secOf(tool) || tool.type === 'qbank' || tool.type === 'meeting' || tool.type === 'terms' || tool.type === 'dashboard';
   const { state } = useLocation();
   const from = state && state.from;
   return (
